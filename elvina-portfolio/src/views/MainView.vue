@@ -1,11 +1,11 @@
 <template>
   <!-- navbar start -->
-  <navigation-bar></navigation-bar>
+  <navigation-element></navigation-element>
   <!-- navbar end -->
 </template>
 
 <script>
-import NavigationBar from '../components/NavigationBar.vue';
+import NavigationElement from '../components/NavigationElement.vue';
 export default {
   components: {
     NavigationBar,
