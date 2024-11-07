@@ -5,22 +5,20 @@
 </template>
 
 <script>
-  import MainPage from './components/MainPage.vue'
+import MainPage from './components/MainPage.vue';
 export default {
   components: {
-    MainPage
+    MainPage,
   },
   data() {
     return {
-      isMobile: false
-    }
+      isMobile: false,
+    };
   },
   mounted() {
-    this.isMobile = window.innerWidth < 768
-  }
-}
+    this.isMobile = window.innerWidth < 768;
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
