@@ -6,13 +6,30 @@
         'bg-[#fff]': isScrolled && !isMobile(),
         'bg-[#fff]': isMobile(),
       }"
-      class="fixed w-full z-50 px-6 md:px-10 2xl:px-40"
+      class="fixed w-full z-50 md:px-10 2xl:px-40"
     >
-      <div class="container mx-auto flex justify-between items-center">
+      <div class="container">
+        <div class="container mx-auto flex justify-between items-center h-[120px]" :class="{'hidden': isMobile()}">
         <!-- Logo -->
-        <div class="logo flex items-center">
-          <h1 class="elvina-logo">Elvina</h1>
+        <div class="logo">
+          <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
         </div>
+        <div class="center-nav flex flex-row">
+          <a href=""><p class="font-inter text-base pr-[52px]">About</p></a>
+          <a href=""><p class="font-inter text-base">Case Studies</p></a>
+        </div>
+
+        <div class="right-nav flex flex-row items-center">
+          <a href="#"><p class="font-inter text-base pr-[52px]">Download Resume</p></a>
+          <a
+            href="#_"
+            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
+
         <!-- button Hamburger -->
         <div class="lg:hidden">
           <button class="text-white focus:outline-none mt-1" @click.stop="toggleMobileMenu">
@@ -42,8 +59,6 @@
               />
             </svg>
           </button>
-
-          <!-- Links Desktop -->
         </div>
       </div>
     </nav>
@@ -62,8 +77,19 @@ export default {
     toggleMobileMenu() {
       this.mobileMenuOpen = !this.mobileMenuOpen;
     },
+    handleClickOutside(event) {
+      if (this.mobileMenuOpen && !event.target.closest('.sidebar')) {
+        this.mobileMenuOpen = false;
+      }
+    },
     isMobile() {
       return window.innerWidth < 1024;
+    },
+    handleScroll() {
+      this.isScrolled = window.scrollY > 0;
+      // if (this.showMenu && window.innerWidth < 768) {
+      //     this.isScrolled = true;
+      // }
     },
   },
 };

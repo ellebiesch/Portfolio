@@ -13,6 +13,14 @@ const routes = [
         alias: '/',
         component: MainPage,
       },
+      {
+        path: '/about',
+        component: MainPage, //aboutpage
+      },
+      {
+        path: '/case-study',
+        component: MainPage, //Case Studies
+      },
     ],
   },
   {
