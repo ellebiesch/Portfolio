@@ -8,7 +8,7 @@
 import NavigationElement from '../components/NavigationElement.vue';
 export default {
   components: {
-    NavigationBar,
+    NavigationElement,
   },
 };
 </script>
