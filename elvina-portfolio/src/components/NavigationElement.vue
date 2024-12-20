@@ -1,12 +1,7 @@
 <template>
   <div class="navigation">
     <nav
-      :class="{
-        'bg-[#fff]': !isScrolled && !isMobile(),
-        'bg-[#fff]': isScrolled && !isMobile(),
-        'bg-[#fff]': isMobile(),
-      }"
-      class="fixed w-full z-50 md:px-10 2xl:px-40"
+      class="fixed w-full z-50 md:px-10 2xl:px-40 bg-[#fff]"
     >
       <div class=" container mx-auto flex justify-between items-center lg:block" :class="{'justify-end': isMobile()}">
           <div class="hidden lg:flex items-center justify-between text-black h-[50px] my-6">
@@ -40,13 +35,31 @@
               </svg>
             </button>
         </div>
+        <!-- Sidebar Menu -->
+         <transition name="slide">
+          <div v-if="mobileMenuOpen" class="sidebar fixed bg-[#E3F1F3] w-60 md:w-80 h-screen z-40 mt-[56px]" @click.stop>
+            <!-- Links -->
+             <div class="flex flex-col uppercase font-inter">
+              <router-link to="/" class="text-white flex items-center py-5 hover:bg-[#D9D9D9] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#000]': $route.path === '/' }"  @click="mobileMenuOpen = false">
+                <div class="flex flex-row justify-center items-center ml-4 gap-2">
+                    <p class="tracking-widest font-bold text-xs">Elvina</p>
+                </div>
+            </router-link>
+             </div>
+          </div>
+         </transition> 
+         <!-- TRYING TO COPY BALLYBOY NAVIGATION NEED TO REWORK -->
       </div>
     </nav>
   </div>
 </template>
 
 <script>
+import RouterLink from './RouterLink.vue';
 export default {
+  components: {
+    RouterLink,
+  },
   data() {
     return {
       mobileMenuOpen: false,
@@ -70,6 +83,14 @@ export default {
       if (this.showMenu && window.innerWidth < 768) {
           this.isScrolled = true;
       }
+    },
+    mounted() {
+      window.addEventListener('click', this.handleClickOutside);
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    beforeUnmount() {
+      window.removeEventListener('click', this.handleClickOutside);
+      window.removeEventListener('scroll', this.handleScroll);
     },
   },
 };
