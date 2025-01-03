@@ -3,8 +3,14 @@
     <nav
       class="fixed w-full z-50 md:px-10 2xl:px-40 bg-[#fff]"
     >
-      <div class=" container mx-auto flex justify-between items-center lg:block" :class="{'justify-end': isMobile()}">
+      <div class=" container mx-auto flex justify-between items-center relative lg:block">
+        
+        <!-- Logo -->
+        <div class="logo">
+              <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
+            </div>
           <div class="hidden lg:flex items-center justify-between text-black h-[50px] my-6">
+
           <!-- Logo -->
             <div class="logo">
               <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
@@ -25,7 +31,7 @@
             </div>
         </div>
         <!-- button Hamburger -->
-        <div class="lg:hidden ">
+        <div class="lg:hidden absolute top-0 right-0">
             <button class="text-white focus:outline-none mt-1" @click.stop="toggleMobileMenu"  >
               <svg v-show="mobileMenuOpen == false" v-motion-pop-visible  xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="color: #000;">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
@@ -37,7 +43,7 @@
         </div>
         <!-- Sidebar Menu -->
          <transition name="slide">
-          <div v-if="mobileMenuOpen" class="sidebar fixed bg-[#E3F1F3] w-60 md:w-80 h-screen z-40 mt-[56px]" @click.stop>
+          <div v-if="mobileMenuOpen" class="sidebar fixed bg-[#E3F1F3] top-0 bottom-0 w-60 md:w-80 z-40 mt-[38px]" :class="{'justify-start': isMobile()}" @click.stop>
             <!-- Links -->
              <div class="flex flex-col uppercase font-inter">
               <router-link to="/" class="text-white flex items-center py-5 hover:bg-[#D9D9D9] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#000]': $route.path === '/' }"  @click="mobileMenuOpen = false">
