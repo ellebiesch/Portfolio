@@ -18,7 +18,7 @@ const routes = [
         component: MainPage, //aboutpage
       },
       {
-        path: '/case-study',
+        path: '/case-studies',
         component: MainPage, //Case Studies
       },
     ],

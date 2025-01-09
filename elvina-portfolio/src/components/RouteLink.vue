@@ -1,7 +1,7 @@
 <template>
     <router-link 
     :to="to"
-    class="relative flex items-center px-5 py-6 text-xs duration-300 ease-in-out group"
+    class="relative flex items-center px-5 py-0 text-xs duration-300 ease-in-out group"
     :class="{
       'bg-light-gradient bg-no-repeat bg-[length:200%_100%] border-b-2 border-b-[#000]': isActive
     }"
@@ -17,7 +17,7 @@
         'opacity-0': !isHovered && !isActive
       }" 
     ></span>
-    <p class="tracking-widest font-bold">{{ label }}</p>
+    <p class="tracking-widest font-medium text-base text-[#000]">{{ label }}</p>
   </router-link>
   </template>
   
@@ -25,7 +25,6 @@
   export default {
     props: {
       to: { type: String, required: true },
-      icon: { type: String, required: true },
       label: { type: String, required: true },
       isActive: { type: Boolean, default: false },
     },

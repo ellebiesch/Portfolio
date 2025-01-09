@@ -1,27 +1,38 @@
 <template>
   <div class="navigation">
     <nav
-      class="fixed w-full z-50 md:px-10 2xl:px-40 bg-[#fff]"
+      class="fixed w-full z-50 md:px-10 2xl:px-40 px-5 py-2.5 bg-[#fff]"
     >
       <div class=" container mx-auto flex justify-between items-center relative lg:block">
         
         <!-- Logo -->
-        <div class="logo">
+        <div class="logo lg:hidden">
               <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
-            </div>
-          <div class="hidden lg:flex items-center justify-between text-black h-[50px] my-6">
+        </div>
 
+        <!-- DESKTOP LINKS -->
+        <div class="hidden lg:flex items-center justify-between text-black h-[25px] my-6 mx-28">
           <!-- Logo -->
-            <div class="logo">
+            <div class="logo min-w-[200px]">
               <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
             </div>
-            <div class="center-nav flex flex-row">
-              <a href=""><p class="font-inter text-base pr-[52px]">About</p></a>
-              <a href=""><p class="font-inter text-base">Case Studies</p></a>
+            <div class="center-nav xl:ml-[5%] lg:ml-[0px] flex flex-row font-inter">
+              <!-- <a href=""><p class="font-inter text-base pr-[52px]">About</p></a>
+              <a href=""><p class="font-inter text-base">Case Studies</p></a> -->
+              <RouteLink 
+              to="/challenges"
+              label="About"
+              :isActive="$route.path === '/about'"
+              />
+              <RouteLink 
+              to="/case-studies"
+              label="Case Studies"
+              :isActive="$route.path === '/case-studies'"
+              />
             </div>
 
             <div class="right-nav flex flex-row items-center">
-              <a href="#"><p class="font-inter text-base pr-[52px]">Download Resume</p></a>
+              <a href="#"><p class="font-inter font-medium pr-[52px]">Download Resume</p></a>
               <a
                 href="#_"
                 class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none"
@@ -42,29 +53,47 @@
             </button>
         </div>
         <!-- Sidebar Menu -->
-         <transition name="slide">
-          <div v-if="mobileMenuOpen" class="sidebar fixed bg-[#E3F1F3] top-0 bottom-0 w-60 md:w-80 z-40 mt-[38px]" :class="{'justify-start': isMobile()}" @click.stop>
-            <!-- Links -->
-             <div class="flex flex-col uppercase font-inter">
-              <router-link to="/" class="text-white flex items-center py-5 hover:bg-[#D9D9D9] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#000]': $route.path === '/' }"  @click="mobileMenuOpen = false">
-                <div class="flex flex-row justify-center items-center ml-4 gap-2">
-                    <p class="tracking-widest font-bold text-xs">Elvina</p>
-                </div>
-            </router-link>
-             </div>
-          </div>
-         </transition> 
+          
          <!-- TRYING TO COPY BALLYBOY NAVIGATION NEED TO REWORK -->
       </div>
     </nav>
+    <transition name="slide">
+          <div v-if="mobileMenuOpen" class="sidebar fixed bg-[#FFF] top-0 bottom-0 w-60 md:w-80 z-40 mt-[50px]" :class="{'justify-start': isMobile()}" @click.stop>
+            <!-- Links -->
+             <div class="flex flex-col uppercase font-inter">
+                <router-link to="/about" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]': $route.path === '/about' }" @click="mobileMenuOpen = false">
+                  <div class="flex flex-row justify-center items-center ml-4 gap-2">
+                      <p class="tracking-widest font-bold text-xs text-[#000]">About</p>
+                  </div>
+              </router-link>
+              <router-link to="/case-studies" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]': $route.path === '/case-studies' }" @click="mobileMenuOpen = false">
+                  <div class="flex flex-row justify-center items-center ml-4 gap-2">
+                      <p class="tracking-widest font-bold text-xs text-[#000]">Case Studies</p>
+                  </div>
+              </router-link>
+              <router-link to="/resume" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]': $route.path === '/resume' }" @click="mobileMenuOpen = false">
+                  <div class="flex flex-row justify-center items-center ml-4 gap-2">
+                      <p class="tracking-widest font-bold text-xs text-[#000]">Download Resume</p>
+                  </div>
+              </router-link>
+
+              <!-- REWORK THE CONTACT PAGE TO DIRECTO TO THE CONTACT SECTION ONLY RATHER THAN DIFFERENT PAGE -->
+              <router-link to="/contact" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#D1D1D1]': $route.path === '/contact' }" @click="mobileMenuOpen = false">
+                  <div class="flex flex-row justify-center items-center ml-4 gap-2">
+                      <p class="tracking-widest font-bold text-xs text-[#000]"> Contact</p>
+                  </div>
+              </router-link> 
+             </div>
+          </div>
+      </transition>
   </div>
 </template>
 
 <script>
-import RouterLink from './RouterLink.vue';
+import RouteLink from './RouteLink.vue';
 export default {
   components: {
-    RouterLink,
+    RouteLink,
   },
   data() {
     return {
@@ -101,4 +130,14 @@ export default {
   },
 };
 </script>
-<style scoped></style>
+<style scoped>
+.slide-enter-active, .slide-leave-active {
+  transition: transform 0.3s ease;
+}
+.slide-enter-from {
+  transform: translateX(-100%);
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+}
+</style>
