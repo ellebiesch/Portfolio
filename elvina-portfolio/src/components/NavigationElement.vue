@@ -14,13 +14,13 @@
         <div class="hidden lg:flex items-center justify-between text-black h-[25px] my-6 mx-28">
           <!-- Logo -->
             <div class="logo min-w-[200px]">
-              <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
+              <a href="/"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
             </div>
             <div class="center-nav xl:ml-[5%] lg:ml-[0px] flex flex-row font-inter">
               <!-- <a href=""><p class="font-inter text-base pr-[52px]">About</p></a>
               <a href=""><p class="font-inter text-base">Case Studies</p></a> -->
               <RouteLink 
-              to="/challenges"
+              to="/about"
               label="About"
               :isActive="$route.path === '/about'"
               />
