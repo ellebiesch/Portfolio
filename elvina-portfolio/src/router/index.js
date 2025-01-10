@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import MainView from '../views/MainView.vue';
 import ErrorView from '../views/ErrorView.vue';
 import MainPage from '../pages/MainPage.vue';
+import AboutPage from '../pages/AboutPage.vue';
 
 const routes = [
   {
@@ -15,7 +16,7 @@ const routes = [
       },
       {
         path: '/about',
-        component: MainPage, //aboutpage
+        component: AboutPage, //aboutpage
       },
       {
         path: '/case-studies',
