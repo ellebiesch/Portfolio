@@ -14,12 +14,12 @@
 <script>
 import NavigationElement from '../components/NavigationElement.vue';
 import LoadingElement from '../components/LoadingElement.vue';
-//import FooterElement from '../components/FooterElement.vue';
+import FooterElement from '../components/FooterElement.vue';
 export default {
   components: {
     NavigationElement,
     LoadingElement,
-    //FooterElement
+    FooterElement
   },
   data() {
     return {
