@@ -1,16 +1,16 @@
 <template>
   <!-- Footer start -->
   <section class="footer-bg bg-gradient-to-t h-auto w-full flex">
-    <div class="w-full">
-      <div class="flex flex-row justify-between items-center mx-auto">
+    <div class="w-full lg:mx-28 sm:mx-5">
+      <div class="flex sm:flex-row xs:flex-col xs:justify-center xs:items-start sm:justify-between sm:items-center sm:mx-auto xs:m-0 h-[142px] xs:gap-y-3 xs:mx-5">
         <div class="logo">
-              <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
+              <a href="#"><h1 class="elvina-logo font-sans lg:text-2xl md:text-xl font-bold">Elvina.</h1></a>
         </div>
-          <div class=" font-inter text-[#000] text-[11px] font-medium text-base tracking-widest">
+          <div class=" font-inter text-[#000] text-[11px] font-medium lg:text-base md:text-sm tracking-widest">
             © 2025 Elvina Garcia. All rights reserved.
           </div>
 
-          <div class="social-links flex flex-row justify-center items-center">
+          <div class="social-links flex flex-row sm:justify-between items-center lg:gap-x-8 xs:gap-x-3">
             <a href="#" target="_blank">
               <img src="../assets/facebook.png" alt="facebook" class="w-7 h-7">
             </a>
