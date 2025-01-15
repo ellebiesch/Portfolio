@@ -1,14 +1,10 @@
 <template>
-  <!-- navbar start -->
-  <navigation-element v-if="loading == false"></navigation-element>
-  <!-- navbar end -->
+    <navigation-element v-if="!loading" />
+    
+      <loading-element v-if="loading" />
+      <router-view v-if="!loading" />
 
-  <loading-element v-if="loading == true"></loading-element>
-  <router-view v-if="loading == false"></router-view>
-
-  <!-- footer start -->
-  <footer-element v-if="loading == false"></footer-element>
-  <!-- footer end -->
+    <footer-element v-if="!loading" class="absolute bottom-0 w-full" />
 </template>
 
 <script>
