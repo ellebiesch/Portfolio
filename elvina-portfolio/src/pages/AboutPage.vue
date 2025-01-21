@@ -26,7 +26,7 @@
           </div>
         </div>
         <div class="design-section font-inter mt-40">
-          <h2 class="text-black text-center font-bold text-2xl">Design Process</h2>
+          <h2 class="text-black text-center font-bold text-[40px]">Design Process</h2>
         </div>
     </section>
 </template>
