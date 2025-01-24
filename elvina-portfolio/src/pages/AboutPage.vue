@@ -27,6 +27,31 @@
         </div>
         <div class="design-section font-inter mt-40">
           <h2 class="text-black text-center font-bold text-[40px]">Design Process</h2>
+          <div class="flex flex-row justify-center items-center mt-10">
+            <div class="item flex flex-row items-center justify-center w-[130px] h-[130px] items-center ">
+              <p class="text-[15px] font-semibold text-black text-center mr-5">Discovery & Research</p>
+            </div>
+            <img src="../assets/Arrow-black.svg" alt="arrow">
+            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
+              <p class="text-[13px] text-gray-400 text-center mr-5">Ideation & Conceptualization</p>
+            </div>
+            <img src="../assets/Arrow-fade.svg" alt="arrow">
+            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
+              <p class="text-[13px] text-gray-400 text-center">Wireframing & Structuring</p>
+            </div>
+            <img src="../assets/Arrow-fade.svg" alt="arrow">
+            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center justify-center px-2 mx-3">
+              <p class="text-[13px] text-gray-400 text-center">Protyping</p>
+            </div>
+            <img src="../assets/Arrow-fade.svg" alt="arrow">
+            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
+              <p class="text-[13px] text-gray-400 text-center">Testing & Iteration</p>
+            </div>
+            <img src="../assets/Arrow-fade.svg" alt="arrow">
+            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
+              <p class="text-[13px] text-gray-400 text-center">Handoff & Documentation</p>
+            </div>
+          </div>
         </div>
     </section>
 </template>
