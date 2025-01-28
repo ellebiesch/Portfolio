@@ -1,6 +1,6 @@
 <template>
   <!-- Footer start -->
-  <section class="footer-bg bg-gradient-to-t h-auto w-full flex">
+  <footer class="footer-bg bg-gradient-to-t h-[142px] w-full flex">
     <div class="w-full lg:mx-28 sm:mx-5">
       <div class="flex sm:flex-row xs:flex-col xs:justify-center xs:items-start sm:justify-between sm:items-center sm:mx-auto xs:m-0 h-[142px] xs:gap-y-3 xs:mx-5">
         <div class="logo">
@@ -24,7 +24,7 @@
 
         </div>
       </div>
-  </section>
+    </footer>
   <!-- Footer end -->
 </template>
 
