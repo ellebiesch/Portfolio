@@ -33,18 +33,18 @@
   <section class="services-section container font-inter max-w-full py-10">
     <div class="container">
       <h1 class="label title font-extrabold text-3xl text-center xl:py-4">Services</h1>
-      <div class="service-wrapper flex flex-row items-center justify-center gap-10 py-10">
-        <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 w-[370px] h-full p-[50px]">
+      <div class="service-wrapper flex flex-row flex-wrap items-stretch items-center justify-center gap-10 py-10">
+        <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
           <img :src="uxDesignServiceIcon" class="icon" alt="pencil edit">
           <p class="sub text-[22px] text-black font-semibold">UX and UI Design</p>
           <p class="description text-base font-normal text-black opacity-70">User research methodologies, user interface for both Mobile App and B2B and B2C SaaS Products</p>
         </div>
-        <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 w-[370px] h-full p-[50px]">
+        <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
           <img :src="interactionDesignServiceIcon" class="icon" alt="pencil edit">
           <p class="sub text-[22px] text-black font-semibold">Interaction Design</p>
           <p class="description text-base font-normal text-black opacity-70">Low and High fidelity mockups for user stimulation, animations and micro-interactions and transitions</p>
         </div>
-        <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 w-[370px] h-full p-[50px]">
+        <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
           <img :src="uxAuditServiceIcon" class="icon" alt="pencil edit">
           <p class="sub text-[22px] text-black font-semibold">UX Audits</p>
           <p class="description text-base font-normal text-black opacity-70">Product recommendations on UX improvements</p>
