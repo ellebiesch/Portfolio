@@ -1,26 +1,24 @@
 <template>
-  <div class="container">
-    <main-page></main-page>
+  <div class="">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import MainPage from './components/MainPage.vue'
+// import MainView from '../src/views/MainView.vue';
 export default {
   components: {
-    MainPage
+    // MainView,
   },
   data() {
     return {
-      isMobile: false
-    }
+      isMobile: false,
+    };
   },
   mounted() {
-    this.isMobile = window.innerWidth < 768
-  }
-}
+    this.isMobile = window.innerWidth < 768;
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
