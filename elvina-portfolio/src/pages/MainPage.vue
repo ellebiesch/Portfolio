@@ -32,7 +32,7 @@
 
   <section class="services-section container font-inter max-w-full py-10">
     <div class="container">
-      <h1 class="label title font-extrabold text-3xl text-center xl:py-4">Services</h1>
+      <h1 class="label title font-extrabold text-[40px] text-center xl:py-4">Services</h1>
       <div class="service-wrapper flex flex-row flex-wrap items-stretch items-center justify-center gap-10 py-10">
         <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
           <img :src="uxDesignServiceIcon" class="icon" alt="pencil edit">
@@ -52,6 +52,8 @@
       </div>
     </div>
   </section>
+  <testimonials-section></testimonials-section>
+  <contact-form></contact-form>
 
 </div>
 </template> 
@@ -60,18 +62,22 @@
 import CaseStudyOne from '../sections/CaseStudyOne.vue';
 import CaseStudyTwo from '../sections/CaseStudyTwo.vue';
 import CaseStudyThree from '../sections/CaseStudyThree.vue';
+import TestimonialsSection from '@/sections/TestimonialsSection.vue';
+import ContactForm from '@/sections/ContactForm.vue';
 
 export default {
   components: {
     CaseStudyOne,
     CaseStudyTwo,
-    CaseStudyThree
+    CaseStudyThree,
+    TestimonialsSection,
+    ContactForm
   },
   data() {
     return {
-      uxDesignServiceIcon: new URL('../assets/service-ux-and-design-icon.svg', import.meta.url).href,
-      interactionDesignServiceIcon: new URL('../assets/service-interaction-design-icon.svg', import.meta.url).href,
-      uxAuditServiceIcon: new URL('../assets/service-ux-audits-icon.svg', import.meta.url).href
+      uxDesignServiceIcon: new URL('@/assets/service-ux-and-design-icon.svg', import.meta.url).href,
+      interactionDesignServiceIcon: new URL('@/assets/service-interaction-design-icon.svg', import.meta.url).href,
+      uxAuditServiceIcon: new URL('@/assets/service-ux-audits-icon.svg', import.meta.url).href
     }
 }
 };
