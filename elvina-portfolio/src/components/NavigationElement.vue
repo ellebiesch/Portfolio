@@ -53,8 +53,6 @@
             </button>
         </div>
         <!-- Sidebar Menu -->
-          
-         <!-- TRYING TO COPY BALLYBOY NAVIGATION NEED TO REWORK -->
       </div>
     </nav>
     <transition name="slide">
