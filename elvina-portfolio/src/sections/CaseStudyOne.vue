@@ -6,7 +6,7 @@
                 <div class="case-study-text flex flex-col items-center justify-center lg:w-[477px] lg:h-[260px] gap-5">
                     <h2 class="uppercase text-[20px] font-normal text-center"> case study 1</h2>
                     <div class="paragraph text-center">
-                        <h1 class="font-extrabold text-3xl pb-2">Genie</h1>
+                        <h1 class="font-extrabold text-[40px] pb-2">Genie</h1>
                         <p class="text-xl font-medium pt-2 pb-5">
                             Empowering Elders to Cherish and Share Their Life's Stories: A Thoughtfully Designed Mobile App for Preserving Meaningful Moments
                         </p>
@@ -37,7 +37,7 @@
                 <div class="case-study-text flex flex-col items-center justify-center lg:w-[477px] lg:h-[260px] gap-5">
                     <h2 class="uppercase text-[20px] font-normal text-center"> case study 1</h2>
                     <div class="paragraph text-center">
-                        <h1 class="font-extrabold text-3xl pb-2">Genie</h1>
+                        <h1 class="font-extrabold text-[40px] pb-2">Genie</h1>
                         <p class="text-xl font-medium pt-2 pb-5">
                             Empowering Elders to Cherish and Share Their Life's Stories: A Thoughtfully Designed Mobile App for Preserving Meaningful Moments
                         </p>

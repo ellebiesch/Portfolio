@@ -27,30 +27,142 @@
         </div>
         <div class="design-section font-inter mt-40">
           <h2 class="text-black text-center font-bold text-[40px]">Design Process</h2>
-          <div class="flex flex-row justify-center items-center mt-10">
-            <div class="item flex flex-row items-center justify-center w-[130px] h-[130px] items-center ">
-              <p class="text-[15px] font-semibold text-black text-center mr-5">Discovery & Research</p>
+          <div class="mt-20 flex flex-col items-center justify-center">
+            <img class="md:ml-[220px]" src="../assets/Arrow-header.svg" alt="">
+          </div>
+          <div class="overall-items-content  flex flex-row items-start justify-center">
+       
+            <div class="each-item">
+              <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
+                    <div class="inner-item flex flex-row w-[130px] h-[130px] rounded-full border-1 items-center px-2">
+                      <p class="text-[14px] text-black text-center font-semibold">Discovery & Research</p>
+                </div>
+                <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                  <img class="w-[14px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                  <p class="font-medium text-base text-black text-center w-[153px] h-auto">I dive deep into your business and user needs through research and analysis to identify key pain points.</p>
+                </div>
+              </div>
             </div>
-            <img src="../assets/Arrow-black.svg" alt="arrow">
-            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
-              <p class="text-[13px] text-gray-400 text-center mr-5">Ideation & Conceptualization</p>
+            <img class="mt-15" src="../assets/Arrow-black.svg" alt="arrow">
+            
+            <div class="each-item">
+              <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
+                  <div class="inner-item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2">
+                    <p class="text-[13px] text-gray-400 text-center">Ideation & Conceptualization</p>
+                  </div>
+                  <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                    <img class="w-[14px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <p class="font-medium text-base text-black text-center w-[153px] h-auto">I brainstorm and outline innovative solutions, focusing on user journeys and core features.</p>
+                  </div>
+              </div>
             </div>
-            <img src="../assets/Arrow-fade.svg" alt="arrow">
-            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
-              <p class="text-[13px] text-gray-400 text-center">Wireframing & Structuring</p>
+            <img class="mt-15" src="../assets/Arrow-fade.svg" alt="arrow">
+            <div class="each-item">
+              <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
+                  <div class="inner-item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2">
+                    <p class="text-[13px] text-gray-400 text-center">Wireframing & Structuring</p>
+                  </div>
+                  <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                    <img class="w-[14px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <p class="font-medium text-base text-black text-center w-[153px] h-auto">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
+                  </div>
+              </div>
             </div>
-            <img src="../assets/Arrow-fade.svg" alt="arrow">
-            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center justify-center px-2 mx-3">
-              <p class="text-[13px] text-gray-400 text-center">Protyping</p>
+            <img class="mt-15" src="../assets/Arrow-fade.svg" alt="arrow">
+
+            <div class="each-item">
+              <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
+                  <div class="inner-item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2">
+                    <p class="text-[13px] text-gray-400 text-center md:ml-6">Protyping</p>
+                  </div>
+                  <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                    <img class="w-[14px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <p class="font-medium text-base text-black text-center w-[153px] h-auto">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
+                  </div>
+              </div>
             </div>
-            <img src="../assets/Arrow-fade.svg" alt="arrow">
-            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
-              <p class="text-[13px] text-gray-400 text-center">Testing & Iteration</p>
+            <img class="mt-15" src="../assets/Arrow-fade.svg" alt="arrow">
+
+            <div class="each-item">
+              <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
+                  <div class="inner-item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2">
+                    <p class="text-[13px] text-gray-400 text-center">Testing & Iteration</p>
+                  </div>
+                  <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                    <img class="w-[14px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <p class="font-medium text-base text-black text-center w-[153px] h-auto">I test designs with real users, gather insights, and refine the product through continuous iterations.</p>
+                  </div>
+              </div>
             </div>
-            <img src="../assets/Arrow-fade.svg" alt="arrow">
-            <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
-              <p class="text-[13px] text-gray-400 text-center">Handoff & Documentation</p>
+            <img class="mt-15" src="../assets/Arrow-fade.svg" alt="arrow">
+
+            <div class="each-item">
+              <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
+                  <div class="inner-item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2">
+                    <p class="text-[13px] text-gray-400 text-center">Handoff & Documentation</p>
+                  </div>
+                  <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                    <img class="w-[14px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <p class="font-medium text-base text-black text-center w-[153px] h-auto">I provide detailed design systems and documentation for a smooth handoff to developers.</p>
+                  </div>
+              </div>
             </div>
+
+
+            
+            <!-- <div class="flex flex-row justify-center items-center mt-10">
+              <div class="item flex flex-row items-center justify-center w-[130px] h-[130px] items-center ">
+                <p class="text-[15px] font-semibold text-black text-center mr-5">Discovery & Research</p>
+              </div>
+              <img src="../assets/Arrow-black.svg" alt="arrow">
+              <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
+                <p class="text-[13px] text-gray-400 text-center mr-5">Ideation & Conceptualization</p>
+              </div>
+              <img src="../assets/Arrow-fade.svg" alt="arrow">
+              <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
+                <p class="text-[13px] text-gray-400 text-center">Wireframing & Structuring</p>
+              </div>
+              <img src="../assets/Arrow-fade.svg" alt="arrow">
+              <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center justify-center px-2 mx-3">
+                <p class="text-[13px] text-gray-400 text-center">Protyping</p>
+              </div>
+              <img src="../assets/Arrow-fade.svg" alt="arrow">
+              <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
+                <p class="text-[13px] text-gray-400 text-center">Testing & Iteration</p>
+              </div>
+              <img src="../assets/Arrow-fade.svg" alt="arrow">
+              <div class="item flex flex-row w-[130px] h-[130px] rounded-full border-2 border-gray-300 items-center px-2 mx-3">
+                <p class="text-[13px] text-gray-400 text-center">Handoff & Documentation</p>
+              </div>
+            </div>   -->
+            
+            <!-- 
+            <div class="flex flex-row">
+              <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                <img class="w-[14px] h-auto z-50" src="../assets/two-circle-connector.svg" alt="">
+                <p class="font-medium text-base text-black text-center mr-5 w-[153px] h-auto">I dive deep into your business and user needs through research and analysis to identify key pain points.</p>
+              </div>
+              <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                <img class="w-[14px] h-auto z-50" src="../assets/two-circle-connector.svg" alt="">
+                <p class="font-medium text-base text-black text-center mr-5 w-[153px] h-auto">I brainstorm and outline innovative solutions, focusing on user journeys and core features.</p>
+              </div>
+              <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                <img class="w-[14px] h-auto z-50" src="../assets/two-circle-connector.svg" alt="">
+                <p class="font-medium text-base text-black text-center mr-5 w-[153px] h-auto">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
+              </div>
+              <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                <img class="w-[14px] h-auto z-50" src="../assets/two-circle-connector.svg" alt="">
+                <p class="font-medium text-base text-black text-center mr-5 w-[153px] h-auto">I build interactive prototypes to visualize the user experience and gather feedback.</p>
+              </div>
+              <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                <img class="w-[14px] h-auto z-50" src="../assets/two-circle-connector.svg" alt="">
+                <p class="font-medium text-base text-black text-center mr-5 w-[153px] h-auto">I test designs with real users, gather insights, and refine the product through continuous iterations.</p>
+              </div>
+              <div class="label flex flex-col flex-wrap justify-center items-center text-center">
+                <img class="w-[14px] h-auto z-50" src="../assets/two-circle-connector.svg" alt="">
+                <p class="font-medium text-base text-black text-center mr-5 w-[153px] h-auto">I provide detailed design systems and documentation for a smooth handoff to developers.</p>
+              </div>
+            </div> -->
           </div>
         </div>
     </section>

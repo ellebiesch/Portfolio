@@ -1,11 +1,11 @@
 <template>
-    <section class="h-auto case-two">
+    <section class="h-auto">
         <div class="container mt-[100px] min-h-screen">
             <div class="content-wrapper font-inter flex flex-col justify-evenly items-center gap-4">
                 <div class="case-study-text flex flex-col items-center justify-center gap-5">
                     <h2 class="uppercase text-[20px] font-normal text-center"> case study 2</h2>
                     <div class="paragraph text-center lg:w-[900px]">
-                        <h1 class="font-extrabold text-3xl pb-2">Navix Health CRM</h1>
+                        <h1 class="font-extrabold text-[40px] pb-2">Navix Health CRM</h1>
                         <p class="text-xl font-medium pt-3 pb-7">
                             Transforming Patient Care and Streamlining Operations: A UX/UI Case Study on Redesigning the CRM Module for a Healthcare SaaS Platform
                         </p>
@@ -18,7 +18,6 @@
                             v-lazy="caseStudyTwoImg" 
                             class="lg:w-full lg:h-[514px]" 
                             alt="navix">
-                        <!-- <img src="../assets/navix-crm.png" class="" alt="navix"> -->
                     </div>
                 </div>
             </div>
