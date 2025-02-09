@@ -28,7 +28,7 @@
         <div class="design-section font-inter mt-40">
           <h2 class="text-black text-center font-bold text-[40px]">Design Process</h2>
           <div class="mt-20 flex flex-col items-center justify-center">
-            <img class="md:ml-[220px]" src="../assets/Arrow-header.svg" alt="">
+            <img class="md:ml-[220px]" src="../assets/arrow-header.svg" alt="">
           </div>
           <div class="overall-items-content  flex flex-row items-start justify-center">
        
