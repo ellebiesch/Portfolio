@@ -1,7 +1,7 @@
 <template>
     <section class="h-auto">
         <div class="container mt-[100px] min-h-screen">
-            <div class="content-wrapper font-inter flex flex-col justify-evenly items-center gap-4">
+            <div v-if="$route.path === '/case-studies'" class="content-wrapper bg-[#fafafa] font-inter flex flex-col justify-evenly items-center gap-4 xl:pt-[113px]">
                 <div class="case-study-text flex flex-col items-center justify-center gap-5">
                     <h2 class="uppercase text-[20px] font-normal text-center"> case study 2</h2>
                     <div class="paragraph text-center lg:w-[900px]">
