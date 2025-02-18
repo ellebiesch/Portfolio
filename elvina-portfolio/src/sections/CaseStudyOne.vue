@@ -7,7 +7,7 @@
                     <h2 class="uppercase text-[20px] font-normal text-center"> case study 1</h2>
                     <div class="paragraph text-center">
                         <h1 class="font-extrabold text-[40px] pb-2">Genie</h1>
-                        <p class="text-xl font-medium pt-2 pb-5">
+                        <p class="text-xl font-medium pt-2 pb-5 text-black/80">
                             Empowering Elders to Cherish and Share Their Life's Stories: A Thoughtfully Designed Mobile App for Preserving Meaningful Moments
                         </p>
                         <router-link to="/case-studies" class="button text-[14px] font-normal py-2 px-4 border-2 border-black rounded-md" >Read More</router-link>
@@ -38,7 +38,7 @@
                     <h2 class="uppercase text-[20px] font-normal text-center"> case study 1</h2>
                     <div class="paragraph text-center">
                         <h1 class="font-extrabold text-[40px] pb-2">Genie</h1>
-                        <p class="text-xl font-medium pt-2 pb-5">
+                        <p class="text-xl font-medium pt-2 pb-5 text-black/80">
                             Empowering Elders to Cherish and Share Their Life's Stories: A Thoughtfully Designed Mobile App for Preserving Meaningful Moments
                         </p>
                         <router-link to="/case-studies" class="button text-[14px] font-normal py-2 px-4 border-2 border-black rounded-md" >Read More</router-link>

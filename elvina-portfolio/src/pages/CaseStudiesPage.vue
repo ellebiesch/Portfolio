@@ -8,7 +8,9 @@
         <case-study-two></case-study-two>
         <case-study-three></case-study-three>
         <case-study-four></case-study-four>
-        
+        <case-study-five></case-study-five>
+        <testimonials-section></testimonials-section>
+        <contact-form></contact-form>
         
     </section>
 </template>
@@ -19,12 +21,18 @@
   import CaseStudyTwo from '@/sections/CaseStudyTwo.vue';
   import CaseStudyThree from '@/sections/CaseStudyThree.vue';
   import CaseStudyFour from '@/sections/CaseStudyFour.vue';
+  import CaseStudyFive from '@/sections/CaseStudyFive.vue';
+  import TestimonialsSection from '@/sections/TestimonialsSection.vue';
+  import ContactForm from '@/sections/ContactForm.vue';
   export default {
     components: {
         CaseStudyOne,
         CaseStudyTwo,
         CaseStudyThree,
-        CaseStudyFour
+        CaseStudyFour,
+        CaseStudyFive,
+        TestimonialsSection,
+        ContactForm
     }
   };
   </script>

@@ -6,13 +6,13 @@
                     <h2 class="uppercase text-[20px] font-normal text-center"> case study 2</h2>
                     <div class="paragraph text-center lg:w-[900px]">
                         <h1 class="font-extrabold text-[40px] pb-2">Navix Health CRM</h1>
-                        <p class="text-xl font-medium pt-3 pb-7">
+                        <p class="text-xl font-medium pt-3 pb-7 text-black/80">
                             Transforming Patient Care and Streamlining Operations: A UX/UI Case Study on Redesigning the CRM Module for a Healthcare SaaS Platform
                         </p>
                         <router-link to="/case-studies" class="button text-[14px] font-normal py-2 px-4 border-2 border-black rounded-md" >Read More</router-link>
                     </div>
                 </div>
-                <div class="phone-image">
+                <div class="image-wrapper">
                     <div class="content-wrapper flex justify-center items-center mt-10">
                         <img 
                             v-lazy="caseStudyTwoImg" 
