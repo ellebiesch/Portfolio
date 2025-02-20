@@ -1,7 +1,7 @@
 <template>
     <section class="h-auto">
         <div class="container min-h-screen">
-            <div :class="{ 'bg-[#fafafa]': $route.path === '/' }" class="content-wrapper font-inter flex flex-row justify-center items-center gap-4 pt-[118px] 3xl:pr-[20px]">
+            <div :class="{ 'bg-[#fafafa]': $route.path === '/' }" class="content-wrapper font-gellix flex flex-row justify-center items-center gap-4 pt-[118px] 3xl:pr-[20px]">
                 <div class="phone-image -translate-x-1/4">
                     <div class="content-wrapper flex justify-center items-center pb-3">
                         <img 
