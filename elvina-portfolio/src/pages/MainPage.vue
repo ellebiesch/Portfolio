@@ -1,12 +1,12 @@
 <template>
-  <div class="h-auto 2xl:pt-[140px] 3xl:pt-[80px]" >
+  <div class="h-auto 2xl:pt-[140px] 3xl:pt-[80px] xs:pt-[80px]" >
     <section class="hero-section">
     <div id="main" class=" xl:px-[125px] 2xl:h-auto xs:px-3 sm:px-3 px-5">
       <div class="flex flex-col min-h-screen items-center justify-center lg:mb-[100px]">
         <div class="col-md-8 w-full flex flex-col justify-center items-center font-gellix">
-          <h1 class="container lg:text-7xl xl:font-extrabold lg:font-bold text-2xl xs:mt-8 md:text-3xl font-semibold text-center ">Simplify the interface, amplify the experience</h1>
-          <p class="text-black lg:text-2xl flex justify-center items-center py-8 sm:text-base sm:flex-row sm:gap-2 xs:text-base font-bold">Hi, 
-            <span class="flex items-center justify-center"> <img src="../assets/wave.png" alt="hand-wave" class="h-full w-[40px]"></span> I am Elvina. I create clear and effective design for seamless user experiences</p>
+          <h1 class="container xs:mt-[20px] text-2xl font-semibold text-center xs:text-[60px] xs:font-extrabold leading-none">Simplify the interface, amplify the experience</h1>
+          <p class="text-black lg:text-2xl text-center py-8 sm:text-base sm:flex-row sm:gap-2 text-2xl font-extrabold">Hi,👋 I am Elvina. I create clear and effective design for seamless user experiences
+          </p>
         
             <div class="hero-button flex flex-row flex-wrap justify-center gap-x-5">
               <a
@@ -23,7 +23,7 @@
               </a>
             </div>
 
-            <div class="hero-image max-w-full pt-[110px] flex flex-col justify-center items-center ">
+            <div class="hero-image max-w-full pt-[110px] xs:pt-[40px] xs:mb-[80px] md:pt-[60px] flex flex-col justify-center items-center ">
               <img src="../assets/thinking-hero-img.svg" class="md:h-full md:w-[512px] 2xl:w-[612px] 2xl:h-auto mx-auto" alt="">
             </div>
         </div>
@@ -31,14 +31,14 @@
     </div>
   </section>
 
-  <section class="container font-gellix max-w-full py-10 bg-[#fafafa]">
-    <h1 class="title font-extrabold text-2xl text-center xl:py-4 uppercase text-black/40">companies I have worked with</h1>
-    <div class="company-icon flex flex-row items-center justify-center gap-12 my-10 opacity-60">
-      <img src="../assets/atlas-icon.png" class="h-auto w-[108px]" alt="atlas logo">
-      <img src="../assets/rogomi-icon.png" class="h-auto w-[84px]" alt="rogomo logo">
-      <img src="../assets/fishbase-icon.png" class="h-auto w-[113px]" alt="fishbase logo">
-      <img src="../assets/rlc-icon.png" class="h-auto w-[40px]" alt="rlc logo">
-      <img src="../assets/g36o-logo.png" class="h-auto w-[70px]" alt="g36o logo">
+  <section class="container font-gellix max-w-full py-10 xs:py-5 bg-[#fafafa]">
+    <h1 class="title font-extrabold md:text-2xl xs:text-[20px] text-center xl:py-4 uppercase text-black/40">organizations I have worked with</h1>
+    <div class="company-icon flex flex-row items-center justify-center md:gap-12 xs:gap-4 sm:my-10 xs:my-5 opacity-60">
+      <img src="../assets/atlas-icon.png" class="h-auto sm:w-[108px] xs:w-[78px]" alt="atlas logo">
+      <img src="../assets/rogomi-icon.png" class="h-auto sm:w-[84px] xs:w-[54px]" alt="rogomo logo">
+      <img src="../assets/fishbase-icon.png" class="h-auto sm:w-[113px] xs:w-[83px]" alt="fishbase logo">
+      <img src="../assets/rlc-icon.png" class="h-auto sm:w-[40px] xs:w-[30px]" alt="rlc logo">
+      <img src="../assets/g36o-logo.png" class="h-auto xs:hidden sm:block sm:w-[70px]" alt="g36o logo">
     </div>
   </section>
 
@@ -75,17 +75,17 @@
 </template> 
 
 <script>
-import ExperienceSection from '@/sections/ExperienceSection.vue';
-import TestimonialsSection from '@/sections/TestimonialsSection.vue';
-import ContactForm from '@/sections/ContactForm.vue';
-import DiscoverSection from '@/sections/DiscoverSection.vue';
+// import ExperienceSection from '@/sections/ExperienceSection.vue';
+// import TestimonialsSection from '@/sections/TestimonialsSection.vue';
+// import ContactForm from '@/sections/ContactForm.vue';
+// import DiscoverSection from '@/sections/DiscoverSection.vue';
 
 export default {
   components: {
-    TestimonialsSection,
-    ContactForm,
-    ExperienceSection,
-    DiscoverSection
+    // TestimonialsSection,
+    // ContactForm,
+    // ExperienceSection,
+    // DiscoverSection
   },
   data() {
     return {
