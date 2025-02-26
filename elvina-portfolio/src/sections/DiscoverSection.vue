@@ -9,7 +9,7 @@
                     <a 
                         href="#_" 
                         class="inline-flex items-center justify-center text-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 border-black/20 
-                                border-2 rounded-lg hover:bg-gray-200 focus:shadow-outline focus:outline-none xs:mx-auto xs:text-[14px]"> See All Works </a>
+                                border-2 rounded-lg hover:bg-gray-200 focus:shadow-outline focus:outline-none xs:mx-auto sm:m-[0] xs:text-[14px]"> See All Works </a>
                 </div>
                 <div class="discover-img-wrapper">
                     <img src="../assets/discover-img.svg" class="h-auto md:min-w-[516px] xs:min-w-auto" alt="">
