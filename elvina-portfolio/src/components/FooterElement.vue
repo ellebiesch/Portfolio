@@ -10,7 +10,7 @@
             © 2025 Elvina Garcia. All rights reserved.
           </div>
 
-          <div class="social-links flex flex-row sm:justify-between items-center lg:gap-x-8 xs:gap-x-3">
+          <!-- <div class="social-links flex flex-row sm:justify-between items-center lg:gap-x-8 xs:gap-x-3">
             <a href="#" target="_blank">
               <img src="../assets/facebook.png" alt="facebook" class="w-7 h-7">
             </a>
@@ -20,7 +20,7 @@
             <a href="#" target="_blank">
               <img src="../assets/instagram.png" alt="instagram" class="w-7 h-7">
             </a>
-          </div>
+          </div> -->
 
         </div>
       </div>

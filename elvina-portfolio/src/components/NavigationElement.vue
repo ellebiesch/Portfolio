@@ -7,14 +7,14 @@
         
         <!-- Logo -->
         <div class="logo lg:hidden">
-              <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold xs:text-[20px]">Elvina.</h1></a>
+              <a href="#"><h1 class="elvina-logo font-gellix text-2xl font-bold xs:text-[20px]">Elvina.</h1></a>
         </div>
 
         <!-- DESKTOP LINKS -->
         <div class="hidden lg:flex items-center justify-between text-black h-[25px] my-6 mx-28">
           <!-- Logo -->
             <div class="logo min-w-[200px]">
-              <a href="/"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
+              <a href="/"><h1 class="elvina-logo font-gellix text-2xl font-bold">Elvina.</h1></a>
             </div>
             <div class="center-nav xl:ml-[5%] lg:ml-[0px] flex flex-row font-gellix">
               <!-- <a href=""><p class="font-gellix text-base pr-[52px]">About</p></a>
@@ -35,7 +35,7 @@
               <a href="#"><p class="font-gellix font-medium pr-[52px]">Download Resume</p></a>
               <a
                 href="#_"
-                class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none"
+                class="inline-flex font-gellix items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none"
               >
                 Contact
               </a>
@@ -77,7 +77,7 @@
 
               <!-- REWORK THE CONTACT PAGE TO DIRECT TO THE CONTACT SECTION ONLY RATHER THAN DIFFERENT PAGE -->
               <router-link to="/contact" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#D1D1D1]': $route.path === '/contact' }" @click="mobileMenuOpen = false">
-                  <div class="flex flex-row justify-center items-center ml-4 gap-2">
+                  <div class="flex flex-row justify-center items-center ml-4 gap-2 font-gellix">
                       <p class="tracking-widest font-bold text-xs text-[#000]"> Contact</p>
                   </div>
               </router-link> 
