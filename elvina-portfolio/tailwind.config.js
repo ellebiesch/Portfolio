@@ -32,6 +32,7 @@ export default {
         // sans: ['DM Sans', 'sans-serif'],
         sans: ['DM Sans', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
+        gellix: ['Gellix', 'sans-serif']
       },
     },
   },

@@ -1,6 +1,6 @@
 <template>
     <section class="h-auto 2xl:pt-[140px]">
-      <div class="flex flex-col justify-center items-center font-inter gap-y-5">
+      <div class="flex flex-col justify-center items-center font-gellix gap-y-5">
         <p class="uppercase text-[20px] font-medium text-gray-800">featured</p>
         <h1 class="font-extrabold text-[64px]">Case Studies</h1>
       </div>

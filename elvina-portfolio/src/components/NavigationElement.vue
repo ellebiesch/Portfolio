@@ -1,13 +1,13 @@
 <template>
   <div class="navigation">
     <nav
-      class="fixed w-full z-50 md:px-10 2xl:px-40 px-5 py-2.5 bg-[#fff]"
+      class="fixed w-full z-50 md:px-10 2xl:px-40 px-5 py-2.5 bg-[#fff] xs:min-h-[80px] md:min-h-[115px]"
     >
-      <div class=" container mx-auto flex justify-between items-center relative lg:block">
+      <div class=" container mx-auto flex justify-between items-center relative lg:block ">
         
         <!-- Logo -->
         <div class="logo lg:hidden">
-              <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
+              <a href="#"><h1 class="elvina-logo font-sans text-2xl font-bold xs:text-[20px]">Elvina.</h1></a>
         </div>
 
         <!-- DESKTOP LINKS -->
@@ -16,9 +16,9 @@
             <div class="logo min-w-[200px]">
               <a href="/"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
             </div>
-            <div class="center-nav xl:ml-[5%] lg:ml-[0px] flex flex-row font-inter">
-              <!-- <a href=""><p class="font-inter text-base pr-[52px]">About</p></a>
-              <a href=""><p class="font-inter text-base">Case Studies</p></a> -->
+            <div class="center-nav xl:ml-[5%] lg:ml-[0px] flex flex-row font-gellix">
+              <!-- <a href=""><p class="font-gellix text-base pr-[52px]">About</p></a>
+              <a href=""><p class="font-gellix text-base">Case Studies</p></a> -->
               <RouteLink 
               to="/about"
               label="About"
@@ -32,7 +32,7 @@
             </div>
 
             <div class="right-nav flex flex-row items-center">
-              <a href="#"><p class="font-inter font-medium pr-[52px]">Download Resume</p></a>
+              <a href="#"><p class="font-gellix font-medium pr-[52px]">Download Resume</p></a>
               <a
                 href="#_"
                 class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none"
@@ -56,9 +56,9 @@
       </div>
     </nav>
     <transition name="slide">
-          <div v-if="mobileMenuOpen" class="sidebar fixed bg-[#FFF] top-0 bottom-0 w-60 md:w-80 z-40 mt-[50px]" :class="{'justify-start': isMobile()}" @click.stop>
+          <div v-if="mobileMenuOpen" class="sidebar fixed bg-[#FFF] top-0 bottom-0 w-60 md:w-80 z-40 mt-[80px]" :class="{'justify-start': isMobile()}" @click.stop>
             <!-- Links -->
-             <div class="flex flex-col uppercase font-inter">
+             <div class="flex flex-col uppercase font-gellix">
                 <router-link to="/about" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]': $route.path === '/about' }" @click="mobileMenuOpen = false">
                   <div class="flex flex-row justify-center items-center ml-4 gap-2">
                       <p class="tracking-widest font-bold text-xs text-[#000]">About</p>
@@ -75,7 +75,7 @@
                   </div>
               </router-link>
 
-              <!-- REWORK THE CONTACT PAGE TO DIRECTO TO THE CONTACT SECTION ONLY RATHER THAN DIFFERENT PAGE -->
+              <!-- REWORK THE CONTACT PAGE TO DIRECT TO THE CONTACT SECTION ONLY RATHER THAN DIFFERENT PAGE -->
               <router-link to="/contact" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#D1D1D1]': $route.path === '/contact' }" @click="mobileMenuOpen = false">
                   <div class="flex flex-row justify-center items-center ml-4 gap-2">
                       <p class="tracking-widest font-bold text-xs text-[#000]"> Contact</p>

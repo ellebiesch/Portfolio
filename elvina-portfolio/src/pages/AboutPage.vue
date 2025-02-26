@@ -5,13 +5,13 @@
           <img src="../assets/about-profile-image.png" alt="user image" loading="lazy" decoding="async" class="xl:h-[186px] lg:h-[130px] xs:h-[90px] w-auto object-cover rounded-full absolute xs:top-[70%] bg-white">
         </div>
         <div class="container xl:px-[125px] 2xl:h-auto">
-          <div class="flex flex-col justify-center m-w-[1170px] items-center font-inter xl:mt-[120px] lg:mt-[77px] xs:mt-[57px]">
+          <div class="flex flex-col justify-center m-w-[1170px] items-center font-gellix xl:mt-[120px] lg:mt-[77px] xs:mt-[57px]">
             <div class="flex flex-row justify-center items-center gap-x-2 lg:mx-28">
               <h1 class="flex flex-row items-center text-black xl:text-[64px] lg:text-3xl sm:text-2xl xs:text-xl font-bold text-center 2xl:ml:16 xl:ml-10 xs:ml-6 3xl:ml-[70px]">Kumusta! 
                 <span class=""><img loading="lazy" decoding="async" src="../assets/wave.png" alt="hand-wave" class="xl:h-[65px] lg:h-[50px] xs:h-[30px] w-auto"></span></h1>
               </div>
 
-              <div class="about-parag font-inter text-left flex flex-col items-center lg:gap-y-5 max-w-[1167px] lg:width-1167px mx-auto pt-9 w-full xs:px-5">
+              <div class="about-parag font-gellix text-left flex flex-col items-center lg:gap-y-5 max-w-[1167px] lg:width-1167px mx-auto pt-9 w-full xs:px-5">
 
                 <p class="text-black lg:text-base font-medium">Hey, I am Elvina! I’m a Product Designer, and I’ve made it my mission to create digital experiences that are as seamless as they are delightful! Whether it’s crafting B2B SaaS web and mobile apps or designing those oh-so-satisfying screens, I’m all about making things that just feel right for the user.</p>
                 <p class="text-black lg:text-base font-medium">I’ve worked across industries like <span class="font-bold"> Behavioral Healthcare, Recruitment, and Logistics,</span> which means I’m no stranger to complex challenges. But that’s where the fun begins! I dive into projects with a sprint-based approach—no dragging timelines here, 
@@ -25,7 +25,7 @@
             
           </div>
         </div>
-        <div class="design-section font-inter mt-40">
+        <div class="design-section font-gellix mt-40">
           <h2 class="text-black text-center font-bold text-[40px]">Design Process</h2>
           <div class="mt-20 flex flex-col items-center justify-center">
             <img class="md:ml-[220px]" src="../assets/arrow-header.svg" alt="">
