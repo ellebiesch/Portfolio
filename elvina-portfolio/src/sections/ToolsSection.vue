@@ -1,6 +1,6 @@
 <template>
     <section class="h-auto">
-        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap font-inter bg-[#fafafa] md:py-20">
+        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap font-gellix bg-[#fafafa] md:py-20">
             <div class="title">
                 <h1 class="font-extrabold text-[40px] text-center">Tools</h1>
             </div>

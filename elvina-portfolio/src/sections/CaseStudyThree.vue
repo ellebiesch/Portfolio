@@ -1,7 +1,7 @@
 <template>
     <section class="h-auto">
         <div class="container min-h-screen">
-            <div class="content-wrapper font-inter flex flex-row justify-center items-center gap-4 bg-[#fafafa] pt-[118px] 3xl:pr-[20px]">
+            <div :class="{ 'bg-[#fafafa]': $route.path === '/' }" class="content-wrapper font-gellix flex flex-row justify-center items-center gap-4 pt-[118px] 3xl:pr-[20px]">
                 <div class="phone-image -translate-x-1/4">
                     <div class="content-wrapper flex justify-center items-center pb-3">
                         <img 
@@ -14,7 +14,7 @@
                     <h2 class="uppercase text-[20px] font-normal text-center"> case study 3</h2>
                     <div class="paragraph text-center lg:min-w-[515px] lg:w-full">
                         <h1 class="font-extrabold text-[40px] pb-2">Atlas</h1>
-                        <p class="text-xl font-medium pt-2 pb-5">
+                        <p class="text-xl font-medium pt-2 pb-5 text-black/80">
                             Revolutionizing the User Experience of a Next-Generation Applicant Tracking System
                         </p>
                         <router-link to="/case-studies" class="button text-[14px] font-normal py-2 px-4 border-2 border-black rounded-md" >Read More</router-link>
