@@ -4,7 +4,7 @@
     <div id="main" class=" xl:px-[125px] 2xl:h-auto xs:px-3 sm:px-3 px-5">
       <div class="flex flex-col min-h-screen items-center justify-center lg:mb-[100px]">
         <div class="col-md-8 w-full flex flex-col justify-center items-center font-gellix">
-          <h1 class="container xs:mt-[20px] text-2xl font-semibold text-center xs:text-[60px] xs:font-extrabold leading-none">Simplify the interface, amplify the experience</h1>
+          <h1 class="container xs:mt-[20px] 2xl:mt-[100px] text-2xl font-semibold text-center xs:text-[60px] xs:font-extrabold leading-none">Simplify the interface, amplify the experience</h1>
           <p class="text-black lg:text-2xl text-center py-8 sm:text-base sm:flex-row sm:gap-2 text-2xl font-extrabold">Hi,👋 I am Elvina. I create clear and effective design for seamless user experiences
           </p>
         
@@ -50,20 +50,20 @@
       <h1 class="label title font-extrabold text-[40px] text-center xl:py-4">Services</h1>
       <p class="sub-title text-center font-medium text-[18px] md:w-[800px] md:mx-auto">From creating wireframes and prototypes to developing high-fidelity mockups and animations, able to utilize a range of design tools to bring my designs to life.</p>
       <div class="service-wrapper flex flex-row flex-wrap items-stretch items-center justify-center gap-10 py-10">
-        <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
+        <div class="item text-center flex flex-col justify-center items-center rounded-md border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
           <img :src="uxDesignServiceIcon" class="icon" alt="pencil edit">
-          <p class="sub text-[22px] text-black font-semibold">UX and UI Design</p>
-          <p class="description text-base font-normal text-black opacity-70">User research methodologies, user interface for both Mobile App and B2B and B2C SaaS Products</p>
+          <p class="sub text-[24px] text-black font-extrabold">UX and UI Design</p>
+          <p class="description text-base font-normal text-black">User research methodologies, user interface for both Mobile App and B2B and B2C SaaS Products</p>
         </div>
-        <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
+        <div class="item text-center flex flex-col justify-center items-center rounded-md border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
           <img :src="interactionDesignServiceIcon" class="icon" alt="pencil edit">
-          <p class="sub text-[22px] text-black font-semibold">Interaction Design</p>
-          <p class="description text-base font-normal text-black opacity-70">Low and High fidelity mockups for user stimulation, animations and micro-interactions and transitions</p>
+          <p class="sub text-[24px] text-black font-extrabold">Interaction Design</p>
+          <p class="description text-base font-normal text-black">Low and High fidelity mockups for user stimulation, animations and micro-interactions and transitions</p>
         </div>
-        <div class="item text-center flex flex-col justify-center items-center rounded-md border-[1.5px] border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
+        <div class="item text-center flex flex-col justify-center items-center rounded-md border-black/30 gap-4 md:w-[370px] min-h-[370px] p-[50px]">
           <img :src="uxAuditServiceIcon" class="icon" alt="pencil edit">
-          <p class="sub text-[22px] text-black font-semibold">UX Audits</p>
-          <p class="description text-base font-normal text-black opacity-70">Product recommendations on UX improvements</p>
+          <p class="sub text-[24px] text-black font-extrabold">UX Audits</p>
+          <p class="description text-base font-normal text-black">Product recommendations on UX improvements</p>
         </div>
       </div>
     </div>
@@ -75,17 +75,17 @@
 </template> 
 
 <script>
-// import ExperienceSection from '@/sections/ExperienceSection.vue';
-// import TestimonialsSection from '@/sections/TestimonialsSection.vue';
-// import ContactForm from '@/sections/ContactForm.vue';
-// import DiscoverSection from '@/sections/DiscoverSection.vue';
+import ExperienceSection from '@/sections/ExperienceSection.vue';
+import DiscoverSection from '@/sections/DiscoverSection.vue';
+import TestimonialsSection from '@/sections/TestimonialsSection.vue';
+import ContactForm from '@/sections/ContactForm.vue';
 
 export default {
   components: {
-    // TestimonialsSection,
-    // ContactForm,
-    // ExperienceSection,
-    // DiscoverSection
+    ExperienceSection,
+    DiscoverSection,
+    TestimonialsSection,
+    ContactForm,
   },
   data() {
     return {
