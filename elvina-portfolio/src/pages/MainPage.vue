@@ -1,11 +1,11 @@
 <template>
-  <div class="h-auto 2xl:pt-[140px] 3xl:pt-[80px] xs:pt-[80px]" >
+  <div class="h-auto 2xl:pt-[140px] 3xl:pt-[80px] xs:pt-[80px] overflow-hidden container">
     <section class="hero-section">
     <div id="main" class=" xl:px-[125px] 2xl:h-auto xs:px-3 sm:px-3 px-5">
       <div class="flex flex-col min-h-screen items-center justify-center lg:mb-[100px]">
         <div class="col-md-8 w-full flex flex-col justify-center items-center font-gellix">
-          <h1 class="container xs:mt-[20px] 2xl:mt-[100px] text-2xl font-semibold text-center xs:text-[60px] xs:font-extrabold leading-none">Simplify the interface, amplify the experience</h1>
-          <p class="text-black lg:text-2xl text-center py-8 sm:text-base sm:flex-row sm:gap-2 text-2xl font-extrabold">Hi,👋 I am Elvina. I create clear and effective design for seamless user experiences
+          <h1 class="container xs:mt-[20px] 2xl:mt-[100px] text-2xl font-semibold text-center xs:text-[46px] xl:text-[60px] xs:font-extrabold leading-none">Simplify the interface, amplify the experience</h1>
+          <p class="text-black lg:text-2xl text-center py-8 sm:text-base sm:flex-row sm:gap-2 xs:text-[20px] font-extrabold">Hi,👋 I am Elvina. I create clear and effective design for seamless user experiences
           </p>
         
             <div class="hero-button flex flex-row flex-wrap justify-center gap-x-5">
@@ -46,7 +46,7 @@
   <discover-section></discover-section>
   
   <section class="services-section container font-gellix max-w-full py-10">
-    <div class="container">
+    <div class="mx-[15px]">
       <h1 class="label title font-extrabold text-[40px] text-center xl:py-4">Services</h1>
       <p class="sub-title text-center font-medium text-[18px] md:w-[800px] md:mx-auto">From creating wireframes and prototypes to developing high-fidelity mockups and animations, able to utilize a range of design tools to bring my designs to life.</p>
       <div class="service-wrapper flex flex-row flex-wrap items-stretch items-center justify-center gap-10 py-10">

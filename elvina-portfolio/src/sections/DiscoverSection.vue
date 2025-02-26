@@ -1,7 +1,7 @@
 <template>
-    <section class="h-auto xs:px-[25px]">
-        <div class="content-wrapper flex flex-col items-center justify-center bg-[#fafafa] md:py-32">
-            <div class="flex xl:flex-row xs:flex-col-reverse flex-wrap xl:items-start sm:items-center xs:items-center md:justify-between xs:justify-center gap-x-4 xs:py-10">
+    <section class="h-auto">
+        <div class="content-wrapper flex flex-col items-center justify-center bg-[#fafafa] md:py-32 container">
+            <div class="flex xl:flex-row xs:flex-col-reverse flex-wrap xl:items-start sm:items-center xs:items-center md:justify-between xs:justify-center gap-x-4 xs:py-10 mx-[15px]">
                 <div class="text-label flex flex-col justify-center items-start gap-y-4 font-gellix md:w-[700px] xs:min-w-auto xs:py-6">
                     <h1 class="md:font-semibold xs:font-semibold text-black md:text-[40px] xs:text-[24px] lg:text-left ">Discover the products I've helped shape</h1>
                     <p class="text-black/80 font-medium sm:text-[20px] xs:text-base text-left">I collaborate closely with clients to deeply understand their business goals and audience needs, 
@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <div class="company-logo-wrapper flex flex-row flex-wrap gap-10 sm:max-w-[445px] lg:max-w-full justify-center">
+            <div class="company-logo-wrapper flex flex-row flex-wrap gap-10 sm:max-w-[445px] lg:max-w-full justify-center mx-[15px]">
                 <div class="item flex flex-col justify-start items-center lg:max-w-[370px]">
                     <div class="logo-img drop-shadow-sm bg-[#fff]">
                       <img v-lazy="navixLogoImg" class="h-auto lg:min-w-[200px] xl:min-w-[370px] md:min-w-[445px] bg-[#fff] drop-shadow-lg rounded-sm rounded" alt="navix-logo">

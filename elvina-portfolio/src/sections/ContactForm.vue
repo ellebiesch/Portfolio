@@ -1,6 +1,6 @@
 <template>
     <section class="h-auto">
-        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap font-gellix min-h-screen">
+        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap font-gellix min-h-screen xs:mx-[15px] lg:container">
             <div class="title flex flex-wrap flex-col justify-center items-start font-gellix md:w-[370px] h-auto">
                 <img src="../assets/contact-form-puzzle.svg" alt=""> 
                 <h1 class="font-semibold text-[40px] text-left mb-10">Let's create something meaningful</h1>
@@ -13,12 +13,12 @@
                     <p class="font-medium text-black text-[18px] py-4">elvinagarcia0710@gmail.com</p>
                 </div>
             </div>
-            <div class="wrapper font-gellix bg-[#f1f1f1] rounded-md xs:min-w-[400px] xs:h-auto">
+            <div class="wrapper font-gellix border rounded-md xs:w-[340px] sm:w-auto xs:h-auto">
                 <div class="content flex flex-col text-left justify-center items-start  py-[48px] px-[32px] gap-6">
                     <p class="uppercase text-[14px] text-gray-800 font-bold">e-mail</p>
                     <input 
                     type="text" 
-                    class="pl-4 w-full min-h-[50px] rounded-md bg-white border-0 focus:ring-0 placeholder:font-gellix placeholder:text-[18px] 
+                    class="pl-4 w-full min-h-[50px] rounded-md bg-white border focus:ring-0 placeholder:font-gellix placeholder:text-[18px] 
                             placeholder:text-gray-300 placeholder:font-medium focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
                     placeholder="Your email">
                     <p class="message uppercase text-gray-800 text-[14px] font-bold">message</p>
@@ -32,7 +32,7 @@
                     <p class="uppercase text-gray-800 text-[14px] font-bold">Name</p>
                     <div class="yourname flex flex-row flex-wrap justify-center items-start">
                         <input 
-                        class="pl-4 mr-4 md:w-[458px] xs:w-full rounded-md min-h-[50px] bg-white border-0 focus:ring-0 placeholder:font-gellix placeholder:text-[18px] 
+                        class="pl-4 border mr-4 md:w-[458px] xs:w-full rounded-md min-h-[50px] bg-white border-0 focus:ring-0 placeholder:font-gellix placeholder:text-[18px] 
                                 placeholder:text-gray-300 placeholder:font-medium focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
                         type="text" 
                         placeholder="Your name"> 
