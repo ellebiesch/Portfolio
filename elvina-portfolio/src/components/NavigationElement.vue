@@ -31,11 +31,11 @@
               />
             </div>
 
-            <div class="right-nav flex flex-row items-center">
+            <div class="right-nav flex flex-row items-center text-white">
               <a href="#"><p class="font-gellix font-medium pr-[52px]">Download Resume</p></a>
               <a
                 href="#_"
-                class="inline-flex font-gellix items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 bg-gray-900 rounded-lg hover:bg-gray-800 focus:shadow-outline focus:outline-none"
+                class="inline-flex font-gellix items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 bg-gray-900 rounded-lg hover:bg-white hover:text-black border focus:shadow-outline focus:outline-none"
               >
                 Contact
               </a>
