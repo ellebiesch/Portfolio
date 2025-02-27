@@ -31,7 +31,7 @@
               />
             </div>
 
-            <div class="right-nav flex flex-row items-center text-white">
+            <div class="right-nav flex flex-row items-center ">
               <a href="#"><p class="font-gellix font-medium pr-[52px]">Download Resume</p></a>
               <a
                 href="#_"
