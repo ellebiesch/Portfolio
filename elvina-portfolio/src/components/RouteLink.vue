@@ -1,7 +1,7 @@
 <template>
     <router-link 
     :to="to"
-    class="relative flex items-center px-5 py-0 text-xs duration-300 ease-in-out group"
+    class="relative flex items-center px-5 py-0 text-xs duration-150 ease-in-out group hover:border-b-2 border-black "
     :class="{
       'bg-light-gradient bg-no-repeat bg-[length:200%_100%] border-b-2 border-b-[#000]': isActive
     }"
