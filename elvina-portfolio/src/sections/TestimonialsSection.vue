@@ -1,10 +1,10 @@
 <template>
     <section class="h-auto">
         <div class=" mt-[100px] flex flex-row  items-center justify-evenly flex-wrap font-gellix bg-[#fafafa] md:py-20 xs:py-10 container">
-            <div class="title xs:py-8">
+            <div v-motion-slide-visible-once-left class="title xs:py-8">
                 <h1 class="font-semibold text-[40px] text-center">Testimonials</h1>
             </div>
-            <div class="wrapper">
+            <div v-motion-slide-visible-once-right class="wrapper">
                 <div class="item flex flex-row xs:flex-col flex-wrap sm:items-start xs:items-center xs:justify-center md:gap-6 sm:gap-4 xs:gap-y-10 md:pt-5">
                     <img v-lazy="testimonialUser" class="rounded-full md:w-[72px] min-h-[70px]" alt="testimonial user">
                     <div class="content flex flex-col justify-start items-start md:w-[542px] min-h-[190px] gap-2 mx-[15px]">

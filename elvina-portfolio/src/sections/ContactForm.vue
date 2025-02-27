@@ -1,7 +1,7 @@
 <template>
     <section class="h-auto">
         <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap font-gellix min-h-screen xs:mx-[15px] lg:container">
-            <div class="title flex flex-wrap flex-col justify-center items-start font-gellix md:w-[370px] h-auto">
+            <div v-motion-slide-visible-once-left class="title flex flex-wrap flex-col justify-center items-start font-gellix md:w-[370px] h-auto">
                 <img src="../assets/contact-form-puzzle.svg" alt=""> 
                 <h1 class="font-semibold text-[40px] text-left mb-10">Let's create something meaningful</h1>
                 <div class="flex flex-row justify-center items-center gap-x-2">
@@ -13,7 +13,7 @@
                     <p class="font-medium text-black text-[18px] py-4">elvinagarcia0710@gmail.com</p>
                 </div>
             </div>
-            <div class="wrapper font-gellix border rounded-md xs:w-[340px] sm:w-auto xs:h-auto">
+            <div v-motion-slide-visible-once-right class="wrapper font-gellix border rounded-md xs:w-[340px] sm:w-auto xs:h-auto">
                 <div class="content flex flex-col text-left justify-center items-start  py-[48px] px-[32px] gap-6">
                     <p class="uppercase text-[14px] text-gray-800 font-bold">e-mail</p>
                     <input 
@@ -36,8 +36,8 @@
                                 placeholder:text-gray-300 placeholder:font-medium focus:outline-none focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:border-blue-500" 
                         type="text" 
                         placeholder="Your name"> 
-                        <router-link to="" class="xs:mt-[40px] sm:m-auto">
-                            <a href="#" class="button text-base font-semibold px-[47px] py-[13px] bg-black rounded-md">Send</a>
+                        <router-link to="" class="xs:mt-[40px] sm:m-auto text-white">
+                            <a href="#" class="inline-flex items-center justify-center text-base font-semibold px-[47px] py-[13px] bg-gray-900 rounded-md border hover:bg-white hover:text-black transition duration-200 tracking-wide focus:shadow-outline focus:outline-none">Send</a>
                         </router-link>
                     </div>
                 </div>
