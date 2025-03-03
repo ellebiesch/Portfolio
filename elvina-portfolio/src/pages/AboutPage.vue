@@ -4,7 +4,7 @@
           <img src="../assets/about-page-banner.png" alt="banner" loading="lazy" decoding="async" class="lg:h-full lg:w-full object-cover md:w-auto xs:h-[168px]">
           <img src="../assets/about-profile-image.png" alt="user image" loading="lazy" decoding="async" class="xl:h-[186px] lg:h-[130px] xs:h-[90px] w-auto object-cover rounded-full absolute xs:top-[70%] bg-white">
         </div>
-        <div class="container xl:px-[125px] 2xl:h-auto">
+        <div class=" xl:px-[125px] 2xl:h-auto">
           <div class="flex flex-col justify-center m-w-[1170px] items-center font-gellix xl:mt-[120px] lg:mt-[77px] xs:mt-[57px]">
             <div class="flex flex-row justify-center items-center gap-x-2 lg:mx-28">
               <h1 v-motion-slide-visible-once-bottom class="flex flex-row items-center text-black xl:text-[64px] lg:text-3xl xs:text-[34px] font-bold text-center 2xl:ml:16 xl:ml-10 xs:ml-6 3xl:ml-[70px]">Kumusta! 
@@ -121,6 +121,16 @@
         <div class="design-section lg:hidden xs:block block font-gellix mt-40">
           <h2 class="text-black text-center font-bold text-[40px]">Design Process</h2>
           <div class="overall-items-content  flex flex-row items-start justify-center">
+
+            <div class="mobile-items-content flex flex-col items-center justify-center mt-10">
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+                <div class="text-content">
+                  <p class="title text-black text-[14px] font-medium text-center">Discovery & Research</p>
+                  <p class="label text-black/70 text-[14px] text-center ">I dive Deep into your business and user needs through research and analysis to identify key pain points.</p>
+                </div>
+              </div>
+              <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15" src="../assets/Arrow-black.svg" alt="arrow">
+            </div>
        
 
           </div>

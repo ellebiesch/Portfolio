@@ -7,7 +7,7 @@
         
         <!-- Logo -->
         <div class="logo lg:hidden">
-              <a href="#"><h1 class="elvina-logo font-gellix text-2xl font-bold xs:text-[20px]">Elvina.</h1></a>
+              <a href="/"><h1 class="elvina-logo font-gellix text-2xl font-bold xs:text-[20px]">Elvina.</h1></a>
         </div>
 
         <!-- DESKTOP LINKS -->

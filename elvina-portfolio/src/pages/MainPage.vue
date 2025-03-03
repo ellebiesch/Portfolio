@@ -1,5 +1,5 @@
 <template>
-  <div class="h-auto 2xl:pt-[140px] 3xl:pt-[80px] xs:pt-[80px] overflow-hidden container">
+  <div class="h-auto 2xl:pt-[140px] 3xl:pt-[80px] xs:pt-[80px] overflow-hidden">
     <section class="hero-section">
     <div id="main" class=" xl:px-[125px] 2xl:h-auto xs:px-3 sm:px-3 px-5">
       <div class="flex flex-col min-h-screen items-center justify-center lg:mb-[100px]">
