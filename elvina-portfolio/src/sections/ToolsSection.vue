@@ -1,12 +1,12 @@
 <template>
     <section class="h-auto">
-        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap gap-y-7 font-gellix bg-[#fafafa] md:py-20">
-            <div class="title flex flex-col flex-wrap justify-center items-center">
+        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap gap-y-7 font-gellix md:py-20 overflow-hidden">
+            <div v-motion-slide-visible-once-right class="title flex flex-col flex-wrap justify-center items-center">
                 <h1 class="font-extrabold text-[40px]">Tools</h1>
-                <p class="label lg:w-[250px] lg:text-left text-black/80 lg:text-xl xs:text-center">My digital sidekicks that make me look like a genius (most of the time)</p>
+                <p class="label lg:w-[250px] lg:text-left text-black/80 lg:text-xl xs:text-center xs:px-8">My digital sidekicks that make me look like a genius (most of the time)</p>
             </div>
             <div class="wrapper h-auto md:w-[744px]">
-                <div class=" grid grid-cols-5 gap-6">
+                <div v-motion-slide-visible-once-left class=" grid grid-cols-5 gap-6">
                   <div class="img-wrapper min-h-full">
                     <img v-lazy="figmaImg" class="sm:w-[56px] sm:h-[74px] xs:h-[33px] xs:w-auto" alt="figma logo">
                   </div>

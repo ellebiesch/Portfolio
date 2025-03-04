@@ -30,7 +30,7 @@
         </div>
         
         <!-- Design Process Dekstop View -->
-        <div class="design-section hidden lg:block font-gellix mt-40">
+        <div class="bg-[#fafafa] design-section hidden lg:block font-gellix mt-40">
           <h2 v-motion-slide-visible-once-bottom class="text-black text-center font-bold text-[40px]">Design Process</h2>
           <div class="mt-20 flex flex-col items-center justify-center">
             <img class="xl:ml-[220px] lg:ml-[178px] xl:w-[462px] lg:w-[362px]" src="../assets/arrow-header.svg" alt="">
@@ -118,21 +118,72 @@
         </div>
 
         <!-- Design Process Mobile View -->
-        <div class="design-section lg:hidden xs:block block font-gellix mt-40">
-          <h2 class="text-black text-center font-bold text-[40px]">Design Process</h2>
-          <div class="overall-items-content  flex flex-row items-start justify-center">
+        <div class="bg-[#fafafa] design-section lg:hidden xs:block block font-gellix mt-40 py-10 ">
+          <h2 v-motion-slide-visible-once-buttom class="text-black text-center font-bold text-[40px]">Design Process</h2>
+          <div class="overall-items-content  flex flex-row items-start justify-center ">
 
-            <div class="mobile-items-content flex flex-col items-center justify-center mt-10">
+            <div class="mobile-items-content flex flex-col items-center justify-center mt-10 ">
+              
               <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
                 <div class="text-content">
-                  <p class="title text-black text-[14px] font-medium text-center">Discovery & Research</p>
-                  <p class="label text-black/70 text-[14px] text-center ">I dive Deep into your business and user needs through research and analysis to identify key pain points.</p>
+                  <div class="w-[130px] h-auto flex flex-col items-center justify-center mx-auto">
+                    <p v-motion-slide-visible-once-top class="title text-black text-base py-1 font-medium text-center">Discovery & Research</p>
+                  </div>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/70 text-[14px] text-center ">I dive Deep into your business and user needs through research and analysis to identify key pain points.</p>
                 </div>
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15" src="../assets/Arrow-black.svg" alt="arrow">
-            </div>
-       
 
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+                <div class="text-content">
+                  <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
+                    <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Ideation & Conceptualization</p>
+                  </div>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I brainstorm and outline innovative solutions, focusing on user journeys and core features.</p>
+                </div>
+              </div>
+              <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
+
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+                <div class="text-content">
+                  <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
+                    <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Wireframing & Structuring</p>
+                  </div>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
+                </div>
+              </div>
+              <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
+
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+                <div class="text-content">
+                  <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
+                    <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Protyping</p>
+                  </div>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
+                </div>
+              </div>
+              <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
+
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+                <div class="text-content">
+                  <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
+                    <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Testing & Iteration</p>
+                  </div>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I test designs with real users, gather insights, and refine the product through continuous iterations.</p>
+                </div>
+              </div>
+              <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
+
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+                <div class="text-content">
+                  <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
+                    <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Handoff & Documentation</p>
+                  </div>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I provide detailed design systems and documentation for a smooth handoff to developers.</p>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
 
