@@ -1,6 +1,6 @@
 <template>
     <section class="h-auto">
-        <div class="content-wrapper flex flex-col items-center justify-center bg-[#fafafa] md:py-32 container">
+        <div class="content-wrapper flex flex-col items-center justify-center bg-[#fafafa] md:py-32">
             <div class="flex xl:flex-row xs:flex-col-reverse flex-wrap xl:items-start sm:items-center xs:items-center md:justify-between xs:justify-center gap-x-4 xs:py-10 mx-[15px]">
                 <div class="text-label flex flex-col justify-center items-start gap-y-4 font-gellix md:w-[700px] xs:min-w-auto xs:py-6">
                     <h1 v-motion-slide-visible-once-bottom class="md:font-semibold xs:font-semibold text-black md:text-[40px] xs:text-[24px] lg:text-left ">Discover the products I've helped shape</h1>
