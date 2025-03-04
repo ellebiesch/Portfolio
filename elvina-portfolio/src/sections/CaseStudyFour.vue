@@ -1,7 +1,7 @@
 <template>
     <section class="h-auto">
         <div class="container my-32">
-            <div class="content-wrapper font-inter flex flex-row justify-evenly items-center gap-4 bg-[#fafafa] xl:pt-[113px]">
+            <div class="content-wrapper font-gellix flex flex-row justify-evenly items-center gap-4 bg-[#fafafa] xl:pt-[113px]">
                 <div class="case-study-text flex flex-col items-center justify-center lg:w-[477px] lg:h-[260px] gap-5">
                     <h2 class="uppercase text-[20px] font-normal text-center"> case study 4</h2>
                     <div class="paragraph text-center">

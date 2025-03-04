@@ -1,40 +1,41 @@
 <template>
     <section class="h-auto">
-        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap font-gellix bg-[#fafafa] md:py-20">
-            <div class="title">
-                <h1 class="font-extrabold text-[40px] text-center">Tools</h1>
+        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap gap-y-7 font-gellix md:py-20 overflow-hidden">
+            <div v-motion-slide-visible-once-right class="title flex flex-col flex-wrap justify-center items-center">
+                <h1 class="font-extrabold text-[40px]">Tools</h1>
+                <p class="label lg:w-[250px] lg:text-left text-black/80 lg:text-xl xs:text-center xs:px-8">My digital sidekicks that make me look like a genius (most of the time)</p>
             </div>
             <div class="wrapper h-auto md:w-[744px]">
-                <div class=" grid grid-cols-5 gap-y-7">
+                <div v-motion-slide-visible-once-left class=" grid grid-cols-5 gap-6">
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="figmaImg" class="w-[56px] h-[74px]" alt="figma logo">
+                    <img v-lazy="figmaImg" class="sm:w-[56px] sm:h-[74px] xs:h-[33px] xs:w-auto" alt="figma logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="adobeXdImg" class="w-[74px] h-[74px]" alt="adobeXD logo">
+                    <img v-lazy="adobeXdImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="adobeXD logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="lottieFilesImg" class="w-[74px] h-[74px]" alt="lottiefiles logo">
+                    <img v-lazy="lottieFilesImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="lottiefiles logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="midjourneyImg" class="w-[74px] h-[74px]" alt="midjourney logo">
+                    <img v-lazy="midjourneyImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="midjourney logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="jiraImg" class="w-[74px] h-[74px]" alt="jira logo">
+                    <img v-lazy="jiraImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="jira logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="confluenceImg" class="w-[74px] h-[74px]" alt="atlassian confluence logo">
+                    <img v-lazy="confluenceImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="atlassian confluence logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="trelloImg" class="w-[74px] h-[74px]" alt="trello logo">
+                    <img v-lazy="trelloImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="trello logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="mondayImg" class="w-[74px] h-[74px]" alt="monday.com logo">
+                    <img v-lazy="mondayImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="monday.com logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="adobeIllustratorImg" class="w-[74px] h-[74px]" alt="adobe illustrator logo">
+                    <img v-lazy="adobeIllustratorImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="adobe illustrator logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="miroImg" class="w-[74px] h-[74px]" alt="miro logo">
+                    <img v-lazy="miroImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="miro logo">
                   </div>
 
 

@@ -1,6 +1,6 @@
 <template>
     <section class="h-auto">
-        <div class=" mt-[100px] flex flex-row  items-center justify-evenly flex-wrap font-gellix bg-[#fafafa] md:py-20 xs:py-10 container">
+        <div class=" mt-[100px] flex flex-row  items-center justify-evenly flex-wrap font-gellix bg-[#fafafa] md:py-20 xs:py-10">
             <div v-motion-slide-visible-once-left class="title xs:py-8">
                 <h1 class="font-semibold text-[40px] text-center">Testimonials</h1>
             </div>
