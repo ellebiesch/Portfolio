@@ -1,5 +1,5 @@
 <template>
-    <section class="h-auto">
+    <section class="h-auto overflow-hidden">
         <div class="about-page-banner max-w-full relative flex flex-col justify-center items-center pt-5">
           <img src="../assets/about-page-banner.png" alt="banner" loading="lazy" decoding="async" class="lg:h-full lg:w-full object-cover md:w-auto xs:h-[168px]">
           <img src="../assets/about-profile-image.png" alt="user image" loading="lazy" decoding="async" class="xl:h-[186px] lg:h-[130px] xs:h-[90px] w-auto object-cover rounded-full absolute xs:top-[70%] bg-white">
