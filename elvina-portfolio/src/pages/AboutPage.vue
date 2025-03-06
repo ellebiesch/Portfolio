@@ -118,7 +118,7 @@
         </div>
 
         <!-- Design Process Mobile View -->
-        <div class="bg-[#fafafa] design-section lg:hidden xs:block block font-gellix mt-40 py-10 ">
+        <!-- <div class="bg-[#fafafa] design-section lg:hidden xs:block block font-gellix mt-40 py-10 ">
           <h2 v-motion-slide-visible-once-buttom class="text-black text-center font-bold text-[40px]">Design Process</h2>
           <div class="overall-items-content  flex flex-row items-start justify-center ">
 
@@ -129,7 +129,7 @@
                   <div class="w-[130px] h-auto flex flex-col items-center justify-center mx-auto">
                     <p v-motion-slide-visible-once-top class="title text-black text-base py-1 font-medium text-center">Discovery & Research</p>
                   </div>
-                  <p v-motion-slide-visible-once-bottom class="label text-black/70 text-[14px] text-center ">I dive Deep into your business and user needs through research and analysis to identify key pain points.</p>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/70 text-[14px] text-center pt-5">I dive Deep into your business and user needs through research and analysis to identify key pain points.</p>
                 </div>
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15" src="../assets/Arrow-black.svg" alt="arrow">
@@ -139,7 +139,7 @@
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Ideation & Conceptualization</p>
                   </div>
-                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I brainstorm and outline innovative solutions, focusing on user journeys and core features.</p>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center pt-5">I brainstorm and outline innovative solutions, focusing on user journeys and core features.</p>
                 </div>
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
@@ -149,7 +149,7 @@
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Wireframing & Structuring</p>
                   </div>
-                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center pt-5">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
                 </div>
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
@@ -159,7 +159,7 @@
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Protyping</p>
                   </div>
-                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center pt-5">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
                 </div>
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
@@ -169,7 +169,7 @@
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Testing & Iteration</p>
                   </div>
-                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I test designs with real users, gather insights, and refine the product through continuous iterations.</p>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center pt-5">I test designs with real users, gather insights, and refine the product through continuous iterations.</p>
                 </div>
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
@@ -179,13 +179,47 @@
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Handoff & Documentation</p>
                   </div>
-                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center ">I provide detailed design systems and documentation for a smooth handoff to developers.</p>
+                  <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center pt-5">I provide detailed design systems and documentation for a smooth handoff to developers.</p>
                 </div>
               </div>
 
             </div>
           </div>
+        </div> -->
+
+        <!-- Design Process Mobile View -->
+<div class="bg-[#fafafa] design-section lg:hidden xs:block block font-gellix mt-40 py-10">
+  <h2 v-motion-slide-visible-once-bottom class="text-black text-center font-bold text-[40px]">Design Process</h2>
+  <div class="overall-items-content flex flex-row items-start justify-center">
+    <div class="mobile-items-content flex flex-col items-center justify-center mt-10">
+      
+      <!-- Static Discovery & Research Section -->
+      <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+        <div class="text-content">
+          <div class="w-[130px] h-auto flex flex-col items-center justify-center mx-auto">
+            <p v-motion-slide-visible-once-top class="title text-black text-base py-1 font-medium text-center">Discovery & Research</p>
+          </div>
+          <p v-motion-slide-visible-once-bottom class="label text-black/70 text-[14px] text-center pt-5">I dive deep into your business and user needs through research and analysis to identify key pain points.</p>
         </div>
+      </div>
+      <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15" src="../assets/Arrow-black.svg" alt="arrow">
+
+      <!-- Dynamic Sections Using v-for -->
+      <template v-for="(item, index) in designProcessItems" :key="index">
+        <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+          <div class="text-content">
+            <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
+              <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">{{ item.title }}</p>
+            </div>
+            <p v-motion-slide-visible-once-bottom class="label text-black/50 text-[14px] text-center pt-5">{{ item.description }}</p>
+          </div>
+        </div>
+        <img v-if="index < designProcessItems.length - 1" class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
+      </template>
+    </div>
+  </div>
+</div>
+
 
     </section>
       <tools-section></tools-section>
@@ -197,12 +231,44 @@
 import ToolsSection from '@/sections/ToolsSection.vue';
 import ContactForm from '@/sections/ContactForm.vue';
 
+  // export default {
+  //   components: {
+  //     ToolsSection,
+  //     ContactForm
+  //   }
+  // };
   export default {
-    components: {
-      ToolsSection,
-      ContactForm
-    }
-  };
+  data() {
+    return {
+      components: {
+        ToolsSection,
+        ContactForm
+      },
+      designProcessItems: [
+        {
+          title: 'Ideation & Conceptualization',
+          description: 'I brainstorm and outline innovative solutions, focusing on user journeys and core features.',
+        },
+        {
+          title: 'Wireframing & Structuring',
+          description: 'I create detailed, responsive wireframes to map out the structure and flow of your product.',
+        },
+        {
+          title: 'Prototyping',
+          description: 'I create detailed, responsive wireframes to map out the structure and flow of your product.',
+        },
+        {
+          title: 'Testing & Iteration',
+          description: 'I test designs with real users, gather insights, and refine the product through continuous iterations.',
+        },
+        {
+          title: 'Handoff & Documentation',
+          description: 'I provide detailed design systems and documentation for a smooth handoff to developers.',
+        },
+      ],
+    };
+  },
+};
 </script>
   
   <style scoped></style>
