@@ -30,7 +30,7 @@
         </div>
         
         <!-- Design Process Dekstop View -->
-        <div class="bg-[#fafafa] design-section hidden lg:block font-gellix mt-40">
+        <div class="bg-[#fafafa] design-section hidden lg:block font-gellix mt-40 py-[120px]">
           <h2 v-motion-slide-visible-once-bottom class="text-black text-center font-bold text-[40px]">Design Process</h2>
           <div class="mt-20 flex flex-col items-center justify-center">
             <img class="xl:ml-[220px] lg:ml-[178px] xl:w-[462px] lg:w-[362px]" src="../assets/arrow-header.svg" alt="">
@@ -238,12 +238,12 @@ import ContactForm from '@/sections/ContactForm.vue';
   //   }
   // };
   export default {
+    components: {
+      ToolsSection,
+      ContactForm
+    },
   data() {
     return {
-      components: {
-        ToolsSection,
-        ContactForm
-      },
       designProcessItems: [
         {
           title: 'Ideation & Conceptualization',
