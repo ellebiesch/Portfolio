@@ -39,11 +39,11 @@
        
             <div class="each-item">
               <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
-                    <div v-motion-slide-visible-once-top class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-1 items-center px-2">
+                    <div  v-motion-fade-visible-once class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-1 items-center px-2">
                       <p class="text-[14px] text-black text-center font-semibold">Discovery & Research</p>
                 </div>
                 <div class="label flex flex-col flex-wrap justify-center items-center text-center">
-                  <img class="xl:w-[14px] lg:w-[10px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                  <img class="xl:w-[14px] lg:w-[10px] h-auto my-4" src="../assets/two-circle-connector.svg" alt="">
                   <p v-motion-slide-visible-once-bottom class="font-medium xl:text-base lg:text-[14px] text-black/80 text-center xl:w-[153px] lg:w-[130px] h-auto">I dive deep into your business and user needs through research and analysis to identify key pain points.</p>
                 </div>
               </div>
@@ -52,11 +52,11 @@
             
             <div class="each-item">
               <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
-                  <div v-motion-slide-visible-once-top class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
+                  <div  v-motion-fade-visible-once class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
                     <p class="xl:text-[13px] lg:text-[10px] text-gray-400 text-center">Ideation & Conceptualization</p>
                   </div>
                   <div class="label flex flex-col flex-wrap justify-center items-center text-center">
-                    <img class="xl:w-[14px] lg:w-[10px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <img class="xl:w-[14px] lg:w-[10px] h-auto my-4" src="../assets/two-circle-connector.svg" alt="">
                     <p v-motion-slide-visible-once-bottom class="font-medium xl:text-base lg:text-[14px] text-black/50 text-center xl:w-[153px] lg:w-[130px] h-auto">I brainstorm and outline innovative solutions, focusing on user journeys and core features.</p>
                   </div>
               </div>
@@ -65,11 +65,11 @@
 
             <div class="each-item">
               <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
-                  <div v-motion-slide-visible-once-top class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
+                  <div  v-motion-fade-visible-once class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
                     <p class="xl:text-[13px] lg:text-[10px] text-gray-400 text-center">Wireframing & Structuring</p>
                   </div>
                   <div class="label flex flex-col flex-wrap justify-center items-center text-center">
-                    <img class="xl:w-[14px] lg:w-[10px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <img class="xl:w-[14px] lg:w-[10px] h-auto my-4" src="../assets/two-circle-connector.svg" alt="">
                     <p v-motion-slide-visible-once-bottom class="font-medium xl:text-base lg:text-[14px] text-black/50 text-center xl:w-[153px] lg:w-[130px] h-auto">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
                   </div>
               </div>
@@ -78,11 +78,11 @@
 
             <div class="each-item">
               <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
-                  <div v-motion-slide-visible-once-top class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
+                  <div  v-motion-fade-visible-once class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
                     <p class="xl:text-[13px] lg:text-[10px] text-gray-400 text-center md:ml-6 lg:ml-5">Protyping</p>
                   </div>
                   <div class="label flex flex-col flex-wrap justify-center items-center text-center">
-                    <img class="xl:w-[14px] lg:w-[10px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <img class="xl:w-[14px] lg:w-[10px] h-auto my-4" src="../assets/two-circle-connector.svg" alt="">
                     <p v-motion-slide-visible-once-bottom class="font-medium xl:text-base lg:text-[14px] text-black/50 text-center xl:w-[153px] lg:w-[130px] h-auto">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
                   </div>
               </div>
@@ -91,11 +91,11 @@
 
             <div class="each-item">
               <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
-                  <div class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
-                    <p v-motion-slide-visible-once-top class="xl:text-[13px] lg:text-[10px] text-gray-400 text-center">Testing & Iteration</p>
+                  <div  v-motion-fade-visible-once class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
+                    <p  class="xl:text-[13px] lg:text-[10px] text-gray-400 text-center">Testing & Iteration</p>
                   </div>
                   <div class="label flex flex-col flex-wrap justify-center items-center text-center">
-                    <img class="xl:w-[14px] lg:w-[10px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <img class="xl:w-[14px] lg:w-[10px] h-auto my-4" src="../assets/two-circle-connector.svg" alt="">
                     <p v-motion-slide-visible-once-bottom class="font-medium xl:text-base lg:text-[14px] text-black/50 text-center xl:w-[153px] lg:w-[130px] h-auto">I test designs with real users, gather insights, and refine the product through continuous iterations.</p>
                   </div>
               </div>
@@ -104,11 +104,11 @@
 
             <div class="each-item">
               <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
-                  <div v-motion-slide-visible-once-top class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
+                  <div v-motion-fade-visible-once v-mot class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
                     <p class="xl:text-[13px] lg:text-[10px] text-gray-400 text-center">Handoff & Documentation</p>
                   </div>
                   <div class="label flex flex-col flex-wrap justify-center items-center text-center">
-                    <img class="xl:w-[14px] lg:w-[10px] h-auto z-50 my-4" src="../assets/two-circle-connector.svg" alt="">
+                    <img class="xl:w-[14px] lg:w-[10px] h-auto my-4" src="../assets/two-circle-connector.svg" alt="">
                     <p v-motion-slide-visible-once-bottom class="font-medium xl:text-base lg:text-[14px] text-black/50 text-center xl:w-[153px] lg:w-[130px] h-auto">I provide detailed design systems and documentation for a smooth handoff to developers.</p>
                   </div>
               </div>

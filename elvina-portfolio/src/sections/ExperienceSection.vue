@@ -5,7 +5,7 @@
                 <img v-motion-slide-visible-once-bottom src="@/assets/paper-plane.svg" class="h-auto md:w-[197px]" alt="">
             </div>
             <h1 v-motion-slide-visible-once-bottom class="title font-semibold lg:text-[40px] xs:text-[32px] text-black xs:text-center w-full">Let's build something impactful</h1>
-            <p v-motion-slide-visible-once-bottom class="description xl:text-center xs:text-left font-medium text-black/80 lg:text-[20px] xs:text-[14px] md:text-base mx-auto leading-2 md:w-[1009px]">
+            <p v-motion-slide-visible-once-bottom class="description xl:text-center xs:text-left font-medium text-black/80 lg:text-[20px] xs:text-[14px] md:text-[16px] mx-auto leading-2 md:w-[1009px]">
                 I’ve worked with amazing businesses, from innovative startups to large-scale enterprises, 
                 crafting seamless UX/UI designs that drive real business impact. My expertise lies in UX design for B2B SaaS web and mobile applications, 
                 along with branding and web design.  I’ve collaborated with companies in behavioral healthcare, recruitment, transportation, and real estate, 

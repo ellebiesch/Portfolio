@@ -25,20 +25,10 @@
                         <p class="text-title uppercase text-black font-extrabold text-[30px] pt-6">sass</p>
                         <p class="text-desc lg:text-base text-black/80 font-medium">I have designed various SAAS products which allowed me to successfully deliver high-quality and impactful products.</p>
                         <div class="case-button flex flex-row gap-x-4 items-center">
-                           <router-link 
-                                to="/case-studies" 
-                                class="case-button flex flex-row gap-x-4 items-center"
-                                @mouseenter="isHoveredArrowOne = true"
-                                @mouseleave="isHoveredArrowOne = false"
-                              >
-                                <p class="text-black font-medium lg:text-base font-gellix">See Case Study</p>
-                                <img 
-                                  src="@/assets/arrow-button.svg" 
-                                  class="min-h-[24px] w-auto transition-transform duration-300" 
-                                  :class="{ 'translate-x-2': isHoveredArrowOne }"
-                                  alt="arrow-right"
-                                >
-                              </router-link>
+                              <case-study-button 
+                                to="/case-studies"
+                                label="See Case Study">
+                              </case-study-button>
                         </div>
                     </div>
                 </div>
@@ -50,20 +40,10 @@
                         <p class="text-title  text-black font-extrabold text-[30px] pt-6">Mobile</p>
                         <p class="text-desc lg:text-base text-black/80 font-medium">Designed several mobile products which allowed me to enchance users tasks effeciently. </p>
                         <div class="case-button flex flex-row gap-x-4 items-center">
-                           <router-link 
-                                to="/case-studies" 
-                                class="case-button flex flex-row gap-x-4 items-center"
-                                @mouseenter="isHoveredArrowTwo = true"
-                                @mouseleave="isHoveredArrowTwo = false"
-                              >
-                                <p class="text-black font-medium lg:text-base font-gellix">See Case Study</p>
-                                <img 
-                                  src="@/assets/arrow-button.svg" 
-                                  class="min-h-[24px] w-auto transition-transform duration-300" 
-                                  :class="{ 'translate-x-2': isHoveredArrowTwo }"
-                                  alt="arrow-right"
-                                >
-                              </router-link>
+                              <case-study-button 
+                                to="/case-studies"
+                                label="See Case Study">
+                              </case-study-button>
                         </div>
                     </div>
                 </div>
@@ -75,20 +55,10 @@
                         <p class="text-title  text-black font-extrabold text-[30px] pt-6">Websites</p>
                         <p class="text-desc lg:text-base text-black/80 font-medium">Crafted intuitive and engaging web experiences that prioritize usability, accessbility and seamless interaction</p>
                         <div class="case-button flex flex-row gap-x-4 items-center">
-                           <router-link 
-                                to="/case-studies" 
-                                class="case-button flex flex-row gap-x-4 items-center"
-                                @mouseenter="isHoveredArrowThree = true"
-                                @mouseleave="isHoveredArrowThree = false"
-                              >
-                                <p class="text-black font-medium lg:text-base font-gellix">See Case Study</p>
-                                <img 
-                                  src="@/assets/arrow-button.svg" 
-                                  class="min-h-[24px] w-auto transition-transform duration-300" 
-                                  :class="{ 'translate-x-2': isHoveredArrowThree }"
-                                  alt="arrow-right"
-                                >
-                              </router-link>
+                              <case-study-button 
+                                to="/case-studies"
+                                label="See Case Study">
+                              </case-study-button>
                         </div>
                     </div>
                 </div>
@@ -100,7 +70,12 @@
   </template>
   
   <script>
+import CaseStudyButton from '@/components/CaseStudyButton.vue';
+
   export default {
+    components: {
+      CaseStudyButton
+    },
     //composition api for images
     setup(){
       
