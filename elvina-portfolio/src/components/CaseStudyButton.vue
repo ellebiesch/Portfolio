@@ -6,7 +6,7 @@
             @mouseenter="isHovered = true"
             @mouseleave="isHovered = false"
             >
-                <p class="text-black font-medium lg:text-base font-gellix">{{ label }}</p>
+                <p class="text-black font-medium lg:text-base font-gellix xs:text-[14px]">{{ label }}</p>
                     <img 
                         src="@/assets/arrow-button.svg" 
                         class="min-h-[24px] w-auto transition-transform duration-300" 

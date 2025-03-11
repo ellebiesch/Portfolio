@@ -1,5 +1,5 @@
 <template>
-    <section class="h-auto 2xl:pt-[140px]">
+    <section class="h-auto 2xl:pt-[140px] xs:px-[22px] md:px-[35px] xl:px-0">
       
       <div class="case-study-hero">
         <div class="content flex flex-wrap items-center justify-around gap-y-10 border-b-2 border-gray-300 xs:mx-5 xs:py-[100px] md:py-[120px] lg:mx-[50px] xl:py-[140px] xl:mx-[100px] xl:flex-row xl:my-auto xl:py-0">
@@ -69,11 +69,11 @@
     setup(){ 
       //composition api
         //how to pass this image from different page to this template
-        const caseStudyOneImg = new URL('@/assets/case-study-phone.jpg', import.meta.url).href
+        const caseStudyOneImg = new URL('@/assets/case-study-phone.png', import.meta.url).href
         const caseStudyTwoImg = new URL('@/assets/case-study-navix-image.jpg', import.meta.url).href
         const caseStudyThreeImg = new URL('@/assets/case-study-fishbase-image.jpg', import.meta.url).href
-        const caseStudyFourImg = new URL('@/assets/case-study-atlas-image.jpg', import.meta.url).href
-        const caseStudyFiveImg = new URL('@/assets/case-study-whitewood-image.jpg', import.meta.url).href
+        const caseStudyFourImg = new URL('@/assets/case-study-atlas-image.png', import.meta.url).href
+        const caseStudyFiveImg = new URL('@/assets/case-study-whitewood-image.png', import.meta.url).href
 
         return { 
             caseStudyOneImg, 
