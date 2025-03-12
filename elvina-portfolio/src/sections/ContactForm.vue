@@ -1,6 +1,6 @@
 <template>
     <section class="h-auto">
-        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap font-gellix min-h-screen xs:mx-[15px] lg:container overflow-hidden">
+        <div class=" mt-[100px] flex flex-row items-center justify-between lg:mx-auto lg:px-7 flex-wrap font-gellix min-h-screen xs:mx-[15px] lg:container overflow-hidden">
             <div v-motion-slide-visible-once-left class="title flex flex-wrap flex-col justify-center items-start font-gellix md:w-[370px] h-auto">
                 <img src="../assets/contact-form-puzzle.svg" alt=""> 
                 <h1 class="font-semibold text-[40px] text-left mb-10">Let's create something meaningful</h1>
