@@ -32,8 +32,10 @@ const routes = [
   },
 ];
 
+const app = 'app';
+
 const router = createRouter({
-  history: createWebHistory(import.meta.env.VITE_BASE_URL),
+  history: createWebHistory(app),
   routes,
 
   // eslint-disable-next-line
