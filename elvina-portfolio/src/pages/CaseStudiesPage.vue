@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <case-study
+      <!-- <case-study
         label="Empowering Elders to Cherish and Share Their Life's Stories: A Thoughtfully Designed Mobile App for Preserving Meaningful Moments"
         :image-source="caseStudyOneImg"
         type="mobile"
@@ -49,8 +49,17 @@
         :image-source="caseStudyFiveImg"
         type="web"
         >
-      </case-study>
+      </case-study> -->
 
+      <div class="">
+        <case-study 
+          v-for=" (study, index) in caseStudies"
+          :key="index"
+          :label="study.label"
+          :image-source="study.imageSource"
+          :type="study.type">
+        </case-study>
+      </div>
     
         <contact-form></contact-form>
         
@@ -59,6 +68,7 @@
 
   
   <script>
+  import {ref, onMounted} from 'vue';
   import ContactForm from '@/sections/ContactForm.vue';
   import CaseStudy from '@/components/CaseStudy.vue';
   export default {
@@ -66,24 +76,70 @@
         ContactForm,
         CaseStudy,
     },
-    setup(){ 
-      //composition api
-        //how to pass this image from different page to this template
-        const caseStudyOneImg = new URL('@/assets/case-study-phone.png', import.meta.url).href
-        const caseStudyTwoImg = new URL('@/assets/case-study-navix-image.jpg', import.meta.url).href
-        const caseStudyThreeImg = new URL('@/assets/case-study-fishbase-image.jpg', import.meta.url).href
-        const caseStudyFourImg = new URL('@/assets/case-study-atlas-image.png', import.meta.url).href
-        const caseStudyFiveImg = new URL('@/assets/case-study-whitewood-image.png', import.meta.url).href
+    setup() {
+    const caseStudies = ref([]);
 
-        return { 
-            caseStudyOneImg, 
-            caseStudyTwoImg, 
-            caseStudyThreeImg, 
-            caseStudyFourImg, 
-            caseStudyFiveImg};
-        
-        },
-  };
+    // Function to preload an image
+    const preloadImage = (src) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    };
+
+    // Preload all images before rendering the page
+    onMounted(async () => {
+      const images = [
+        new URL('@/assets/case-study-phone.jpg', import.meta.url).href,
+        new URL('@/assets/case-study-navix-image.jpg', import.meta.url).href,
+        new URL('@/assets/case-study-fishbase-image.jpg', import.meta.url).href,
+        new URL('@/assets/case-study-atlas-image.png', import.meta.url).href,
+        new URL('@/assets/case-study-whitewood-image.png', import.meta.url).href,
+      ];
+
+      try {
+        // Preload all images
+        await Promise.all(images.map(preloadImage));
+
+        caseStudies.value = [
+          {
+            label: "Empowering Elders to Cherish and Share Their Life's Stories: A Thoughtfully Designed Mobile App for Preserving Meaningful Moments",
+            imageSource: images[0],
+            type: 'mobile',
+          },
+          {
+            label: "Transforming Patient Care and Streamlining Operations: A UX/UI Case Study on Redesigning the CRM Module for a Healthcare Saas Platform",
+            imageSource: images[1],           
+            type: 'web',
+          },
+          {
+            label:"Simplifying Scientific Data for Fish Enthusiasts: A User - Centered Approach for the Fishbase Guide App",
+            imageSource: images[2],
+            type:"mobile"
+          },
+          {
+            label:"Revolutionizing the User Experience of a Next-Generation Applicant Tracking System",
+            imageSource: images[3],
+            type:"web"
+          },
+          {
+            label:"Revamping Whitewood Transport's Digital Experience: A UX Case Study on Improving User Engagement and Accessibility",
+            imageSource: images[4],
+            type:"web"
+          },
+        ];
+      } catch (error) {
+        console.error('Error preloading images:', error);
+      }
+    });
+
+    return {
+      caseStudies,
+    };
+  },
+};
   </script>
   
   <style scoped></style>
