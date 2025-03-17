@@ -4,6 +4,7 @@ import ErrorView from '../views/ErrorView.vue';
 import MainPage from '../pages/MainPage.vue';
 import AboutPage from '../pages/AboutPage.vue';
 import CaseStudiesPage from '@/pages/CaseStudiesPage.vue';
+import LoadingElement from '@/components/LoadingElement.vue';
 
 const routes = [
   {
@@ -22,6 +23,10 @@ const routes = [
       {
         path: '/case-studies',
         component: CaseStudiesPage, //Case Studies
+      },
+      {
+        path: '/loading',
+        component: LoadingElement, //Case Studies
       },
     ],
   },

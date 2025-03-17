@@ -5,7 +5,7 @@
         <div class="content flex flex-wrap items-center justify-around gap-y-10 border-b-2 border-gray-300 xs:mx-5 xs:py-[100px] md:py-[120px] lg:mx-[50px] xl:py-[140px] xl:mx-[100px] xl:flex-row xl:my-auto xl:py-0">
           <div class="text-content flex flex-col w-auto justify-center font-gellix xs:items-center xs:text-center lg:items-start xl:text-left">
             <p class="text-black font-bold xs:text-[20px] md:text-[24px] lg:text-base xl:text-[24px]">Case Studies</p>
-            <h1 class="text-black font-extrabold xs:pb-5 lg:pb-0 lg:text-[42px] md:text-[72px] xl:text-[72px]">5 Projects</h1>
+            <h1 class="text-black font-extrabold xs:pb-5 lg:pb-0 xs:text-[52px] lg:text-[42px] md:text-[72px] xl:text-[72px]">5 Projects</h1>
             <p class="text-black font-medium xs:px-5 xs:text-[16px] md:text-[20px] md:px-0 lg:w-[320px] xl:min-w-[500px] lg:text-left leading-[1.5]">Exploring the Intersection of Design and Innovation: My UX Design Journey</p>
           </div>
           <div class="hero-image xl:max-w-full">

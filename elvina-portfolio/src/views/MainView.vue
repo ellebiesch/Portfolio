@@ -19,9 +19,15 @@ export default {
   },
   data() {
     return {
-      loading: false,
+      loading: true,
     };
   },
+  mounted(){
+    setTimeout(()=>{
+      this.loading = false
+      console.log('Loading Completed: ', this.loading)
+    }, 1000)
+  }
 };
 </script>
 
