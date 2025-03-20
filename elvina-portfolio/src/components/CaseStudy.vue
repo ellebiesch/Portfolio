@@ -16,7 +16,8 @@
             <case-study-button
               class="py-8" 
               to="/case-study-item"
-              label="See Case Study">
+              label="See Case Study"
+              case-study="genie">
             </case-study-button>
           </div>
         </div>
