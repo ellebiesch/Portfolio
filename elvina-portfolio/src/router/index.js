@@ -5,6 +5,7 @@ import MainPage from '../pages/MainPage.vue';
 import AboutPage from '../pages/AboutPage.vue';
 import CaseStudiesPage from '@/pages/CaseStudiesPage.vue';
 import LoadingElement from '@/components/LoadingElement.vue';
+import CaseStudyItem from '@/pages/CaseStudyItem.vue';
 
 const routes = [
   {
@@ -25,6 +26,10 @@ const routes = [
         component: CaseStudiesPage, //Case Studies
       },
       {
+        path: '/case-study-item',
+        component: CaseStudyItem, //Case Studies
+      },
+      {
         path: '/loading',
         component: LoadingElement, //Case Studies
       },
@@ -38,7 +43,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL, '/app'),
   routes,
 
   // eslint-disable-next-line

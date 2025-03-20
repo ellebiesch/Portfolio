@@ -26,7 +26,7 @@ export default {
     setTimeout(()=>{
       this.loading = false
       console.log('Loading Completed: ', this.loading)
-    }, 1000)
+    }, 1300)
   }
 };
 </script>

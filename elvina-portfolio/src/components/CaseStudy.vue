@@ -1,5 +1,5 @@
 <template>
-    <div class="case-study-container xl:mx-[100px] md:py-[140px] xs:py-[70px]">
+    <div class="case-study-container xl:mx-[100px] md:py-[140px] xs:py-[70px] z-1">
         <div class="case-study-wrapper flex md:flex-row xs:flex-col flex-wrap xl:justify-evenly items-center xs:gap-y-8 md:gap-x-10 border-b-2 border-gray-300 xl:pb-[170px] md:pb-[120px]">
             <div 
                 v-motion-slide-visible-once-left
@@ -15,7 +15,7 @@
             </p>
             <case-study-button
               class="py-8" 
-              to="#"
+              to="/case-study-item"
               label="See Case Study">
             </case-study-button>
           </div>
@@ -32,6 +32,10 @@
         },
 
         props:{
+            subPage: {
+                type: Number,
+                required: true,
+            },
             label: { 
                 type: String, 
                 required: true 
