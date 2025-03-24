@@ -27,7 +27,8 @@
                         <div class="case-button flex flex-row gap-x-4 items-center">
                               <case-study-button 
                                 to="/case-studies"
-                                label="See Case Study">
+                                label="See Case Study"
+                                case-study="navix">
                               </case-study-button>
                         </div>
                     </div>
@@ -42,7 +43,8 @@
                         <div class="case-button flex flex-row gap-x-4 items-center">
                               <case-study-button 
                                 to="/case-studies"
-                                label="See Case Study">
+                                label="See Case Study"
+                                case-study="rogomi">
                               </case-study-button>
                         </div>
                     </div>
@@ -57,7 +59,8 @@
                         <div class="case-button flex flex-row gap-x-4 items-center">
                               <case-study-button 
                                 to="/case-studies"
-                                label="See Case Study">
+                                label="See Case Study"
+                                case-study="rogomi">
                               </case-study-button>
                         </div>
                     </div>
