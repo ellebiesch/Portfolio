@@ -15,9 +15,9 @@
             </p>
             <case-study-button
               class="py-8" 
-              to="/case-study-item"
+              to="/case-studies"
               label="See Case Study"
-              case-study="genie">
+              :case-study="`${subPage}`">
             </case-study-button>
           </div>
         </div>
@@ -34,7 +34,7 @@
 
         props:{
             subPage: {
-                type: Number,
+                type: String,
                 required: true,
             },
             label: { 

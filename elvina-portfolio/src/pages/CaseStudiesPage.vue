@@ -1,6 +1,7 @@
 <template>
   <loading-element v-if="loading"/>
-  <section class="h-auto 2xl:pt-[140px] xs:px-[22px] md:px-[35px] xl:px-0">
+  <router-view v-if="!loading" :class="{ block: hasSubPath() }"></router-view>
+  <section v-if="!hasSubPath()" class="h-auto 2xl:pt-[140px] xs:px-[22px] md:px-[35px] xl:px-0">
     
     <div class="case-study-hero">
       <div class="content flex flex-wrap items-center justify-around gap-y-10 border-b-2 border-gray-300 xs:mx-5 xs:py-[100px] md:py-[120px] lg:mx-[50px] xl:py-[140px] xl:mx-[100px] xl:flex-row xl:my-auto xl:py-0">
@@ -56,7 +57,7 @@
       <case-study 
         v-for=" (study, index) in caseStudies"
         :key="index"
-        :sub-page="index"
+        :sub-page="study.subPage"
         :label="study.label"
         :image-source="study.imageSource"
         :type="study.type">
@@ -107,31 +108,36 @@ export default {
       // Preload all images
       await Promise.all(images.map(preloadImage));
 
-      caseStudies.value = [
+      caseStudies.value = [ //possible to add more case study
         {
           label: "Empowering Elders to Cherish and Share Their Life's Stories: A Thoughtfully Designed Mobile App for Preserving Meaningful Moments",
           imageSource: images[0],
           type: 'mobile',
+          subPage: 'genie',
         },
         {
           label: "Transforming Patient Care and Streamlining Operations: A UX/UI Case Study on Redesigning the CRM Module for a Healthcare Saas Platform",
           imageSource: images[1],           
           type: 'web',
+          subPage: 'under-construction',
         },
         {
           label:"Simplifying Scientific Data for Fish Enthusiasts: A User - Centered Approach for the Fishbase Guide App",
           imageSource: images[2],
-          type:"mobile"
+          type:"mobile",
+          subPage: 'under-construction',
         },
         {
           label:"Revolutionizing the User Experience of a Next-Generation Applicant Tracking System",
           imageSource: images[3],
-          type:"web"
+          type:"web",
+          subPage: 'under-construction',
         },
         {
           label:"Revamping Whitewood Transport's Digital Experience: A UX Case Study on Improving User Engagement and Accessibility",
           imageSource: images[4],
-          type:"web"
+          type:"web",
+          subPage: 'under-construction',
         },
       ];
     } catch (error) {
@@ -145,7 +151,7 @@ export default {
 },
 data(){
     return {
-      loading: true
+      loading: true,
     }
 },
 mounted(){
@@ -153,7 +159,12 @@ mounted(){
     this.loading = false
     console.log('Loading Completed: ', this.loading)
   }, 1300)
-}
+},
+methods: {
+  hasSubPath(){
+    return this.$route.path.split('/').length > 2;
+  }
+},
 
 };
 </script>

@@ -6,6 +6,8 @@ import AboutPage from '../pages/AboutPage.vue';
 import CaseStudiesPage from '@/pages/CaseStudiesPage.vue';
 import LoadingElement from '@/components/LoadingElement.vue';
 import CaseStudyItem from '@/pages/CaseStudyItem.vue';
+import CaseStudyGenie from '@/components/CaseStudyGenie.vue';
+import UnderConstruction from '@/components/UnderConstruction.vue';
 
 const routes = [
   {
@@ -23,7 +25,17 @@ const routes = [
       },
       {
         path: '/case-studies',
-        component: CaseStudiesPage, //Case Studies
+        component: CaseStudiesPage,
+        children: [
+          {
+            path: 'genie',
+            component: CaseStudyGenie,
+
+        },
+        {
+          path: 'under-construction',
+          component: UnderConstruction,
+        },], //Case Studies
       },
       {
         path: '/case-study-item',
@@ -31,8 +43,9 @@ const routes = [
       },
       {
         path: '/loading',
-        component: LoadingElement, //Case Studies
+        component: LoadingElement,
       },
+      
     ],
   },
   {

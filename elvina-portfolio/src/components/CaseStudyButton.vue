@@ -1,8 +1,8 @@
 <template>
-    <div class="case-button flex flex-row gap-x-4 items-center">
-          <router-link 
-            :to="to" 
-            class="case-button flex flex-row gap-x-4 items-center"
+    <div class="">
+          <router-link
+            class="case-button flex flex-row gap-x-4 items-center" 
+            :to="`${to}/${caseStudy}`"
             @mouseenter="isHovered = true"
             @mouseleave="isHovered = false"
             >
@@ -13,6 +13,7 @@
                         :class="{ 'translate-x-2': isHovered }"
                         alt="arrow-right">
             </router-link>
+            <!-- <p class="text-black">{{ caseStudy }}</p> -->
         </div>
 </template>
 
