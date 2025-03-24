@@ -1,20 +1,23 @@
 <template>
-    <div class="case-study-container xl:mx-[100px] md:py-[140px] xs:py-[70px]">
+    <div class="case-study-container xl:mx-[100px] md:py-[140px] xs:py-[70px] z-1">
         <div class="case-study-wrapper flex md:flex-row xs:flex-col flex-wrap xl:justify-evenly items-center xs:gap-y-8 md:gap-x-10 border-b-2 border-gray-300 xl:pb-[170px] md:pb-[120px]">
             <div 
+                v-motion-slide-visible-once-left
                 class="image-cont bg-[#F3F4F5] border-0 rounded-lg xs:pt-[50px]" 
                 :class="containerClasses">
-                <img v-lazy="imageSource" :class="imageClasses" alt="phone ui">
+                <img :src="imageSource" :class="imageClasses" alt="phone ui">
             </div>
             <div class="case-study-desc font-gellix">
             <p 
+                v-motion-slide-visible-once-right
                 class="case-label font-semibold xl:text-[32px] lg:max-w-[500px] leading-[1.2] xs:text-[24px] lg:text-[28px] text-left"
                 :class="textClasses"> {{ label }}
             </p>
             <case-study-button
               class="py-8" 
-              to="#"
-              label="See Case Study">
+              to="/case-studies"
+              label="See Case Study"
+              :case-study="`${subPage}`">
             </case-study-button>
           </div>
         </div>
@@ -30,6 +33,10 @@
         },
 
         props:{
+            subPage: {
+                type: String,
+                required: true,
+            },
             label: { 
                 type: String, 
                 required: true 

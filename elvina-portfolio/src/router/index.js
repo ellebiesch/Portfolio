@@ -4,6 +4,10 @@ import ErrorView from '../views/ErrorView.vue';
 import MainPage from '../pages/MainPage.vue';
 import AboutPage from '../pages/AboutPage.vue';
 import CaseStudiesPage from '@/pages/CaseStudiesPage.vue';
+import LoadingElement from '@/components/LoadingElement.vue';
+import CaseStudyItem from '@/pages/CaseStudyItem.vue';
+import CaseStudyGenie from '@/components/CaseStudyGenie.vue';
+import UnderConstruction from '@/components/UnderConstruction.vue';
 
 const routes = [
   {
@@ -21,8 +25,27 @@ const routes = [
       },
       {
         path: '/case-studies',
-        component: CaseStudiesPage, //Case Studies
+        component: CaseStudiesPage,
+        children: [
+          {
+            path: 'genie',
+            component: CaseStudyGenie,
+
+        },
+        {
+          path: 'under-construction',
+          component: UnderConstruction,
+        },], //Case Studies
       },
+      {
+        path: '/case-study-item',
+        component: CaseStudyItem, //Case Studies
+      },
+      {
+        path: '/loading',
+        component: LoadingElement,
+      },
+      
     ],
   },
   {
@@ -33,7 +56,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL, '/app'),
   routes,
 
   // eslint-disable-next-line
