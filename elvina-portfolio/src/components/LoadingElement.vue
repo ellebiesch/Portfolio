@@ -2,10 +2,16 @@
   <transition name="slide-up" @after-leave="onTransitioned">
     <div v-if="loading" class="loading-screen" >
       <div class="h-full flex flex-col justify-center items-center">
-        <div class="m-auto flex flex-col gap-y-5 justify-center items-center">
+        <!-- <div class="m-auto flex flex-col gap-y-5 justify-center items-center">
           <img loading="lazy" src="@/assets/loading-hero-image.svg" class="lg:w-[390px] h-auto xs:w-[330px]" alt="elvina" />
           <div class="text-black font-extrabold text-[30px] mx-auto font-gellix xl:text-[62px]">
             Loading<span class="dot dot-1">.</span><span class="dot dot-2">.</span><span class="dot dot-3">.</span>
+          </div>
+        </div> -->
+        <div class="m-auto flex flex-col flex-nowrap">
+          <div class="dripping flex flex-col justify-center items-center">
+            <div class="loading-dripper"></div>
+            <div class="loading-teardrop"></div>
           </div>
         </div>
       </div>
@@ -37,6 +43,14 @@ emits: ['loading-complete'],
 </script>
 
 <style scoped>
+
+.loading-dripper{
+  background: url('@/assets/loading-dripper.svg');
+}
+.loading-teardrop{
+  background: url('@/assets/loading-teardrop.svg');
+}
+
 .loading-screen {
   position: fixed;
   top: 0;

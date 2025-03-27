@@ -22,12 +22,12 @@ export default {
       loading: true,
     };
   },
-  mounted(){
-    setTimeout(()=>{
-      this.loading = false
-      console.log('Loading Completed: ', this.loading)
-    }, 1300)
-  }
+  // mounted(){
+  //   setTimeout(()=>{
+  //     this.loading = false
+  //     console.log('Loading Completed: ', this.loading)
+  //   }, 1300)
+  // }
 };
 </script>
 
