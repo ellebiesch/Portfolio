@@ -3,7 +3,7 @@
     :to="to"
     class="relative flex items-center px-5 py-0 text-xs duration-150 ease-in-out group  "
     :class="{
-      'bg-light-gradient bg-no-repeat bg-[length:200%_100%] border-b-2 border-b-[#000]': isActive
+      'bg-light-gradient bg-no-repeat bg-[length:200%_100%] ': isActive
     }"
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
