@@ -1,5 +1,5 @@
 <template>
-      <div class="main-wrapper flex flex-col xl:mx-[100px] lg:mx-[50px] xs:mx-[20px]">
+      <div class="main-wrapper flex flex-col xl:mx-[100px] lg:mx-[50px] xs:mx-[20px] justify-center items-center">
         <div class="text-content font-gellix flex flex-col justify-center items-center gap-y-6 xs:pt-[100px] xs:pb-[50px] md:pt-[120px]  xl:pb-[80px] xl:pt-[140px]  xl:my-auto xl:py-0">
             <p class="head-title text-black font-normal md:text-[18px] lg:text-[20px]">Genie</p>
             <p class="case-study-title text-black font-extrabold xs:text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-[38px] text-center 2xl:max-w-[70%] leading-[1.2]">Empowering Elders to Cherish and Share Their Life's Stories: A Thoughtfully Designed Mobile App for Preserving Meaningful Moments</p>
@@ -14,7 +14,7 @@
                 <img class="xs:max-h-[160px] sm:max-h-[250px] md:max-h-[320px] lg:max-h-[420px] w-auto sm:pl-[20px]  md:pl-[30px] md:pr-[20px] xl:pl-[60px] 2xl:pr-[90px]" :src="images[2]" alt="genie-mobile">
             </div>
         </div>
-        <div class="goal flex flex-col flex-wrap justify-start items-start font-gellix sm:pt-[110px] gap-y-10">
+        <div class="goal flex flex-col flex-wrap font-gellix sm:pt-[110px] gap-y-10 ">
             <div class="">
                 <p class="font-extrabold text-black text-[24px] uppercase">Goal</p>
                 <p class="text-[16px] text-gray-700 text-left py-2" >To design an intuitive, user-centered mobile app that empowers older adults to preserve their life stories and memories 
@@ -34,7 +34,7 @@
             <img class="h-auto xs:max-w-[330px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px] mx-auto xs:py-[3rem] lg:py-[7rem]" :src="images[3]" alt="">
         </div>
 
-        <div class=" flex flex-col flex-wrap justify-start items-start font-gellix sm:pt-[60px] gap-y-10">
+        <div class=" flex flex-col flex-wrap font-gellix sm:pt-[60px] gap-y-10">
             <div class="">
                 <p class="font-extrabold text-black text-[24px] uppercase">Key Design Challenges</p>
                 <p class="text-[16px] text-gray-800 text-left py-1" >Simplicity: Ensuring that the interface is straightforward, with large, readable text, clear buttons, and minimal options on each screen.</p>
