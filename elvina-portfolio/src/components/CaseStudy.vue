@@ -10,7 +10,7 @@
             <div class="case-study-desc font-gellix">
             <p 
                 v-motion-slide-visible-once-right
-                class="case-label font-semibold xl:text-[32px] lg:max-w-[500px] leading-[1.2] xs:text-[24px] lg:text-[28px] text-left"
+                class="case-label font-extrabold xl:text-[32px] lg:max-w-[500px] leading-[1.2] xs:text-[24px] lg:text-[28px] text-left"
                 :class="textClasses"> {{ label }}
             </p>
             <case-study-button

@@ -6,8 +6,9 @@ import AboutPage from '../pages/AboutPage.vue';
 import CaseStudiesPage from '@/pages/CaseStudiesPage.vue';
 import LoadingElement from '@/components/LoadingElement.vue';
 import CaseStudyItem from '@/pages/CaseStudyItem.vue';
-import CaseStudyGenie from '@/components/CaseStudyGenie.vue';
+import CaseStudyGenie from '@/pages/CaseStudyGenie.vue';
 import UnderConstruction from '@/components/UnderConstruction.vue';
+import CaseStudyNavix from '@/pages/CaseStudyNavix.vue';
 
 const routes = [
   {
@@ -30,7 +31,10 @@ const routes = [
           {
             path: 'genie',
             component: CaseStudyGenie,
-
+        },
+          {
+            path: 'navix',
+            component: CaseStudyNavix,
         },
         {
           path: 'under-construction',
