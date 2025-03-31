@@ -6,7 +6,7 @@
         <div class="logo">
               <a href="#"><h1 class="elvina-logo font-gellix lg:text-2xl md:text-xl font-bold">Elvina.</h1></a>
         </div>
-          <div class=" font-gellix text-[#000] text-[11px] font-medium lg:text-base md:text-sm tracking-widest">
+          <div class=" font-gellix text-[#000] text-[11px] font-medium lg:text-base md:text-sm tracking-normal">
             © 2025 Elvina Garcia. All rights reserved.
           </div>
 
