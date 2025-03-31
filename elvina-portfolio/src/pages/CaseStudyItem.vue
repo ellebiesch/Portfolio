@@ -13,7 +13,7 @@
   
   <script>
   import ContactForm from '@/sections/ContactForm.vue';
-  import CaseStudyGenie from '@/components/CaseStudyGenie.vue';
+  import CaseStudyGenie from '@/pages/CaseStudyGenie.vue';
   export default {
     components: {
         ContactForm,

@@ -29,7 +29,7 @@
                     <img v-lazy="trelloImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="trello logo">
                   </div>
                   <div class="img-wrapper min-h-full">
-                    <img v-lazy="mondayImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="monday.com logo">
+                    <img v-lazy="mondayImg" class="sm:w-[86px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="monday.com logo">
                   </div>
                   <div class="img-wrapper min-h-full">
                     <img v-lazy="adobeIllustratorImg" class="sm:w-[74px] sm:h-[74px] xs:h-[33px] xs:w-[auto]" alt="adobe illustrator logo">
