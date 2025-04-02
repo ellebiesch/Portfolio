@@ -13,7 +13,7 @@
               <p class="font-extrabold text-black text-[24px] uppercase xs:pt-10 md:pt-0">Problem Statement</p>
               <p class="text-[16px] text-gray-800 text-left py-2 font-semibold" >The existing UI of Navix Health CRM was outdated, complex, and difficult to navigate, leading to poor user adoption and inefficiencies in healthcare workflows. Users struggled with cluttered layouts, redundant actions, and a lack of intuitive interactions, negatively impacting the overall user experience</p>
           </div>    
-          <div class="">
+          <div v-motion-slide-visible-once-bottom class="">
               <p class="font-extrabold text-black text-[24px] uppercase">Goal</p>
               <p class="text-[16px] text-gray-800 text-left py-2 font-semibold" >Revamp the UI to enhance the UX, making the platform more intuitive, visually appealing, and efficient for healthcare professionals.</p>
           </div>
