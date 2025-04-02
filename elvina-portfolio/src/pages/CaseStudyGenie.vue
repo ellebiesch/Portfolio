@@ -7,7 +7,7 @@
                                                                         Many are looking for ways to document their life stories but may need help with digital tools. Genie aims to bridge this gap 
                                                                         by providing an accessible and friendly platform where older adults can easily create memory books with the assistance of a designated Genie.</p>
         </div>
-        <div class="case-hero-image flex flex-col justify-center items-center">
+        <div v-motion-pop-visible-once class="case-hero-image flex flex-col justify-center items-center">
             <div class="flex flex-row flex-nowrap gap-7 justify-center items-center bg-[#f5f5f5] xs:py-[30px] xs:px-[30px] sm:py-[70px] md:py-[100px] lg:pl-[60px] lg:pr-[20px] xs:rounded-lg md:rounded-xl border-0">
                 <img class="xs:max-h-[160px] sm:max-h-[250px] md:max-h-[320px] lg:max-h-[420px] w-auto xs:pl-[10px] md:pl-[50px] lg:pl-[25px] lg:pr-[20px] 2xl:pl-[60px]" :src="images[1]" alt="genie-mobile">
                 <img class="xs:max-h-[160px] sm:max-h-[250px] md:max-h-[320px] lg:max-h-[420px] w-auto" :src="images[0]" alt="genie-mobile">
@@ -48,7 +48,7 @@
             </div>    
         </div>
         <div class="py-10">
-            <img class="h-auto xs:max-w-[330px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px] mx-auto" :src="images[4]" alt="">
+            <img v-motion-pop-visible-once class="h-auto xs:max-w-[330px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1100px] mx-auto" :src="images[4]" alt="">
         </div>
 
         <div v-motion-slide-visible-once-bottom class=" flex flex-col flex-wrap justify-start items-start font-gellix sm:pt-[60px] gap-y-10">
@@ -57,7 +57,7 @@
                 <p class="text-gray-700 text-[18px] font-semibold text-left py-2"><span class="text-black font-extrabold text-[20px]">High-Fidelity Wireframes: </span> Developed a fully interactive prototype in Figma, incorporating color, typography, and accessible UI elements to mirror the final design</p>
             </div>  
         </div>
-        <div class="md:py-[100px] xs:py-[50px] overflow-hidden">
+        <div v-motion-pop-visible-once class="md:py-[100px] xs:py-[50px] overflow-hidden">
             <img class="h-auto xs:max-w-[330px] sm:max-w-[500px] md:max-w-[800px] lg:max-w-full mx-auto" :src="images[5]" alt="">
         </div>
     </div>
