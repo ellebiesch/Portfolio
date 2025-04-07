@@ -1,5 +1,5 @@
 <template>
-    <section class="h-auto">
+    <section id="contact-form" class="h-auto" >
         <div class=" mt-[100px] flex flex-row items-center justify-between lg:px-7 flex-wrap font-gellix min-h-screen xs:mx-[15px] lg:mx-[100px] overflow-hidden">
             <div v-motion-slide-visible-once-left class="title flex flex-wrap flex-col justify-center items-start font-gellix md:w-[370px] h-auto">
                 <img src="../assets/contact-form-puzzle.svg" alt=""> 
