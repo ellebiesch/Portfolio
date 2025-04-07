@@ -9,6 +9,7 @@ import CaseStudyItem from '@/pages/CaseStudyItem.vue';
 import CaseStudyGenie from '@/pages/CaseStudyGenie.vue';
 import UnderConstruction from '@/components/UnderConstruction.vue';
 import CaseStudyNavix from '@/pages/CaseStudyNavix.vue';
+import EnvTest from '@/components/EnvTest.vue';
 
 const routes = [
   {
@@ -40,6 +41,10 @@ const routes = [
           path: 'under-construction',
           component: UnderConstruction,
         },], //Case Studies
+      },
+      {
+        path: '/env-test',
+        component: EnvTest,
       },
       {
         path: '/case-study-item',
