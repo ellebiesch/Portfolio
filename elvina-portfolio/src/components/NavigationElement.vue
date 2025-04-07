@@ -32,9 +32,9 @@
             </div>
 
             <div class="right-nav flex flex-row items-center text-white">
-              <a href="#"><p class="font-gellix font-medium pr-[52px] text-black">Download Resume</p></a>
+              <a :href="resumeLink" target="_blank" @click="linkValue"><p class="font-gellix font-medium pr-[52px] text-black">Download Resume</p></a>
               <a
-                href="#_"
+                href="#contact-form"
                 class=" inline-flex font-gellix items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 bg-gray-900 rounded-lg hover:bg-white hover:text-black border focus:shadow-outline focus:outline-none"
               >
                 Contact
@@ -69,18 +69,20 @@
                       <p class="tracking-widest font-bold text-xs text-[#000]">Case Studies</p>
                   </div>
               </router-link>
-              <router-link to="/resume" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]': $route.path === '/resume' }" @click="mobileMenuOpen = false">
-                  <div class="flex flex-row justify-center items-center ml-4 gap-2">
-                      <p class="tracking-widest font-bold text-xs text-[#000]">Download Resume</p>
-                  </div>
-              </router-link>
+              <div class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10 bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]" @click="mobileMenuOpen = false">
+                  <a :href="resumeLink" target="_blank" @click="linkValue">
+                    <div class="flex flex-row justify-center items-center ml-4 gap-2">
+                          <p class="tracking-widest font-bold text-xs text-[#000]">Download Resume</p>
+                      </div>
+                  </a>  
+                </div>
 
               <!-- REWORK THE CONTACT PAGE TO DIRECT TO THE CONTACT SECTION ONLY RATHER THAN DIFFERENT PAGE -->
-              <router-link to="/contact" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#D1D1D1]': $route.path === '/contact' }" @click="mobileMenuOpen = false">
+              <a href="#contact-form" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#D1D1D1]': $route.path === '/contact' }" @click="mobileMenuOpen = false">
                   <div class="flex flex-row justify-center items-center ml-4 gap-2 font-gellix">
                       <p class="tracking-widest font-bold text-xs text-[#000]"> Contact</p>
                   </div>
-              </router-link> 
+                </a> 
              </div>
           </div>
       </transition>
@@ -97,9 +99,13 @@ export default {
     return {
       mobileMenuOpen: false,
       isScrolled: false,
+      resumeLink: import.meta.env.VITE_RESUME_LINK
     };
   },
   methods: {
+    linkValue(){
+      console.log(this.resumeLink)
+    },
     toggleMobileMenu() {
       this.mobileMenuOpen = !this.mobileMenuOpen;
     },
@@ -120,6 +126,7 @@ export default {
     mounted() {
       window.addEventListener('click', this.handleClickOutside);
       window.addEventListener('scroll', this.handleScroll);
+      console.log('Resume link:', this.resumeLink);
     },
     beforeUnmount() {
       window.removeEventListener('click', this.handleClickOutside);
