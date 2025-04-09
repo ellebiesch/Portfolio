@@ -79,7 +79,7 @@
             <div class="each-item">
               <div class="flex flex-col flex-wrap items-center justify-center text-center min-w-full h-auto">
                   <div  v-motion-fade-visible-once class="inner-item flex flex-row xl:w-[130px] xl:h-[130px] lg:w-[100px] lg:h-[100px] rounded-full border-2 border-gray-300 items-center px-2">
-                    <p class="xl:text-[13px] lg:text-[10px] text-gray-400 text-center md:ml-6 lg:ml-5">Protyping</p>
+                    <p class="xl:text-[13px] lg:text-[10px] text-gray-400 text-center md:ml-6 lg:ml-5">Prototyping</p>
                   </div>
                   <div class="label flex flex-col flex-wrap justify-center items-center text-center">
                     <img class="xl:w-[14px] lg:w-[10px] h-auto my-4" src="../assets/two-circle-connector.svg" alt="">
