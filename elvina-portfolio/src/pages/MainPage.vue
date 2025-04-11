@@ -13,15 +13,16 @@
               href="#_"
               class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide border transition duration-200 bg-gray-900 rounded-lg hover:bg-white hover:text-black focus:shadow-outline focus:outline-none"
             >
-              Get Started
+              Contact
             </a>
               <div class="text-black">
-                <a
-                  href="#_"
+                <router-link
+                  to="/case-studies"
                   class="inline-flex items-center justify-center h-12 px-8 font-medium tracking-wide transition duration-200 border-black/20 border rounded-lg hover:bg-black hover:text-white focus:shadow-outline focus:outline-none"
+                  @click="mobileMenuOpen = false"
                 >
-                  Hire Me!
-                </a>
+                  View Work
+              </router-link>
               </div>
             </div>
 
@@ -93,7 +94,9 @@ export default {
     return {
       uxDesignServiceIcon: new URL('@/assets/service-ux-and-design-icon.svg', import.meta.url).href,
       interactionDesignServiceIcon: new URL('@/assets/service-interaction-design-icon.svg', import.meta.url).href,
-      uxAuditServiceIcon: new URL('@/assets/service-ux-audits-icon.svg', import.meta.url).href
+      uxAuditServiceIcon: new URL('@/assets/service-ux-audits-icon.svg', import.meta.url).href,
+
+      mobileMenuOpen: false,
     }
 }
 };

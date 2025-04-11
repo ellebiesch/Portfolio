@@ -37,7 +37,7 @@
                 href="#contact-form"
                 class=" inline-flex font-gellix items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 bg-gray-900 rounded-lg hover:bg-white hover:text-black border focus:shadow-outline focus:outline-none"
               >
-                Contact
+              Get in Touch
               </a>
             </div>
         </div>
@@ -80,7 +80,7 @@
               <!-- REWORK THE CONTACT PAGE TO DIRECT TO THE CONTACT SECTION ONLY RATHER THAN DIFFERENT PAGE -->
               <a href="#contact-form" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#D1D1D1]': $route.path === '/contact' }" @click="mobileMenuOpen = false">
                   <div class="flex flex-row justify-center items-center ml-4 gap-2 font-gellix">
-                      <p class="tracking-widest font-bold text-xs text-[#000]"> Contact</p>
+                      <p class="tracking-widest font-bold text-xs text-[#000]"> Get in Touch</p>
                   </div>
                 </a> 
              </div>
