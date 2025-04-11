@@ -6,10 +6,10 @@
                     <h1 v-motion-slide-visible-once-bottom class="md:font-semibold xs:font-semibold text-black md:text-[40px] xs:text-[24px] lg:text-left ">Discover the products I've helped shape</h1>
                     <p v-motion-slide-visible-once-bottom class="text-black/80 font-medium sm:text-[20px] xs:text-base text-left">I collaborate closely with clients to deeply understand their business goals and audience needs, 
                         crafting intuitive, high-impact designs that not only meet expectations but exceed them—delivering seamless experiences that drive real results</p>
-                    <a  
-                      v-motion-slide-visible-once-right href="#_" 
+                    <router-link  
+                      v-motion-slide-visible-once-right to="/case-studies" 
                           class="inline-flex items-center justify-center text-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 border-black/20 
-                                  border-2 rounded-lg hover:bg-gray-200 focus:shadow-outline focus:outline-none xs:mx-auto sm:m-[0] xs:text-[14px]"> See All Works </a>
+                                  border-2 rounded-lg hover:bg-gray-200 focus:shadow-outline focus:outline-none xs:mx-auto sm:m-[0] xs:text-[14px]"> See All Works </router-link>
                 </div>
                 <div class="discover-img-wrapper">
                     <img v-motion-slide-visible-once-right src="../assets/discover-img.svg" class="h-auto md:min-w-[516px] xs:min-w-auto" alt="">
