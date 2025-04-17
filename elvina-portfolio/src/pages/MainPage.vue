@@ -10,7 +10,7 @@
         
             <div class="hero-button flex flex-row flex-wrap justify-center gap-x-5 text-white">
               <a
-              href="#_"
+              href="#contact-form"
               class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide border transition duration-200 bg-gray-900 rounded-lg hover:bg-white hover:text-black focus:shadow-outline focus:outline-none"
             >
               Contact
