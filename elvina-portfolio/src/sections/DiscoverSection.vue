@@ -44,7 +44,7 @@
                               <case-study-button 
                                 to="/case-studies"
                                 label="See Case Study"
-                                case-study="rogomi">
+                                case-study="under-construction">
                               </case-study-button>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                               <case-study-button 
                                 to="/case-studies"
                                 label="See Case Study"
-                                case-study="rogomi">
+                                case-study="under-construction">
                               </case-study-button>
                         </div>
                     </div>
