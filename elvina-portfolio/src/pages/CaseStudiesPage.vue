@@ -32,6 +32,7 @@
     </div>
   
       <contact-form></contact-form>
+      <improve-ux></improve-ux>
       
   </section>
 </template>
@@ -39,14 +40,16 @@
 
 <script>
 import {ref, onMounted} from 'vue';
-import ContactForm from '@/sections/ContactForm.vue';
+//import ContactForm from '@/sections/ContactForm.vue';
 import CaseStudy from '@/components/CaseStudy.vue';
 import LoadingElement from '@/components/LoadingElement.vue';
+import ImproveUx from '@/sections/ImproveUx.vue';
 export default {
   components: {
-      ContactForm,
+      //ContactForm,
       CaseStudy,
-      LoadingElement
+      LoadingElement,
+      ImproveUx
   },
   setup() {
   const caseStudies = ref([]);
@@ -83,7 +86,7 @@ export default {
           subPage: 'genie',
         },
         {
-          label: "Transforming Patient Care and Streamlining Operations: A UX/UI Case Study on Redesigning the CRM Module for a Healthcare Saas Platform",
+          label: "70% Faster Form Creation: Rebuilding EHR Documentation for Simplicity and Speed",
           imageSource: images[1],           
           type: 'web',
           subPage: 'navix',
@@ -95,13 +98,13 @@ export default {
           subPage: 'under-construction',
         },
         {
-          label:"Revolutionizing the User Experience of a Next-Generation Applicant Tracking System",
+          label:"45% More Productive: How We Revamp Atlas ATS into a High-Performing Hiring Platform",
           imageSource: images[3],
           type:"web",
           subPage: 'under-construction',
         },
         {
-          label:"Revamping Whitewood Transport's Digital Experience: A UX Case Study on Improving User Engagement and Accessibility",
+          label:"Driving Digital Transformation: The Whitewood Transportation Website Revamp",
           imageSource: images[4],
           type:"web",
           subPage: 'under-construction',
