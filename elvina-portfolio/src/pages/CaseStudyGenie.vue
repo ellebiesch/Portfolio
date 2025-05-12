@@ -62,13 +62,19 @@
         </div>
     </div>
 
+    <ImproveUx></ImproveUx>
+
   </template>
   
   
   <script>
   import { ref, onMounted, onUnmounted, computed } from 'vue';
+  import ImproveUx from '@/sections/ImproveUx.vue';
 
 export default {
+    components: {
+        ImproveUx,
+    },
     setup() {
         const images = ref([]);
         const windowWidth = ref(window.innerWidth); // Track window width

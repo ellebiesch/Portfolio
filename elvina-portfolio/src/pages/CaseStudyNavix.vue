@@ -18,7 +18,7 @@
               <p class="text-[16px] text-gray-800 text-left py-2 font-semibold" >Revamp the UI to enhance the UX, making the platform more intuitive, visually appealing, and efficient for healthcare professionals.</p>
           </div>
       </div>
-
+<!-- 
        <div class="design-process font-gellix flex flex-col sm:pt-[130px] justify-between items-center">
           <h1 v-motion-slide-visible-once-bottom class="font-semibold text-black lg:text-[43px] xs:text-[36px] md:text-[40px] text-center xs:py-10 sm:py-5">Design Process</h1>
       </div>
@@ -82,16 +82,23 @@
               <p class="text-[16px] text-gray-800 text-left py-2 font-semibold" >The UI revamp of Navix Health CRM significantly enhanced the overall UX, improving usability, efficiency, and visual appeal. By focusing on intuitive design, structured layouts, and responsive interactions, the new UI empowers 
                     healthcare professionals to navigate the platform effortlessly, ultimately improving patient care and operational workflows.</p>
           </div>
-      </div>
-  </div>
+      </div> -->
+   
+    </div>
+
+  <ImproveUx></ImproveUx>
 
 </template>
 
 
 <script>
 import { ref, onMounted, onUnmounted, computed } from 'vue';
+import ImproveUx from '@/sections/ImproveUx.vue';
 
 export default {
+    components: {
+        ImproveUx,
+    },
   setup() {
       const images = ref([]);
       const windowWidth = ref(window.innerWidth); // Track window width

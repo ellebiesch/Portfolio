@@ -72,7 +72,8 @@
     </div>
   </section>
   <testimonials-section></testimonials-section>
-  <contact-form></contact-form>
+  <improve-ux></improve-ux>
+  <!-- <contact-form></contact-form> -->
 
 </div>
 </template> 
@@ -81,14 +82,16 @@
 import ExperienceSection from '@/sections/ExperienceSection.vue';
 import DiscoverSection from '@/sections/DiscoverSection.vue';
 import TestimonialsSection from '@/sections/TestimonialsSection.vue';
-import ContactForm from '@/sections/ContactForm.vue';
+import ImproveUx from '@/sections/ImproveUx.vue';
+//import ContactForm from '@/sections/ContactForm.vue';
 
 export default {
   components: {
     ExperienceSection,
     DiscoverSection,
     TestimonialsSection,
-    ContactForm,
+    ImproveUx,
+    //ContactForm,
   },
   data() {
     return {
