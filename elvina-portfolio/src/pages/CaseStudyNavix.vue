@@ -1,97 +1,170 @@
 <template>
     <div class="main-wrapper flex flex-col xl:mx-[200px] lg:mx-[50px] xs:mx-[20px] justify-center items-center xs:mb-[50px] xl:mb-[100px]">
-      <div class="text-content font-gellix flex flex-col justify-center items-center gap-y-6 xs:pt-[100px] xs:pb-[50px] md:pt-[120px]  xl:pb-[80px] xl:pt-[140px]  xl:my-auto xl:py-0">
-          <p v-motion-slide-visible-once-bottom class="head-title text-black font-normal md:text-[18px] lg:text-[20px]">Navix Health CRM</p>
-          <p v-motion-slide-visible-once-bottom class="case-study-title text-black font-extrabold xs:text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-[38px] text-center 2xl:max-w-[70%] leading-[1.2] font-gellix">Transforming Healthcare Efficiency: The Ultimate Navix Health CRM UI Overhaul</p>
-      </div>
-      <div class="case-hero-image flex flex-col justify-center items-center font-gellix">
-          <img v-motion-pop-visible-once :src="images[0]" class="h-auto xs:w-[380px] sm:w-[500px] lg:w-[800px] xl:w-[900px]" alt="">
-          <p v-motion-slide-visible-once-bottom class="case-study-desc text-black font-semibold md:text-[16px] text-left w-full  pt-[100px]" >Navix Health CRM is a customer relationship management platform designed to streamline healthcare operations, improve patient engagement, and enhance care coordination for medical professionals.</p>
+        <div class="text-content font-gellix flex flex-col justify-center items-center gap-y-6 xs:pt-[100px] xs:pb-[50px] md:pt-[120px]  xl:pb-[80px] xl:pt-[140px]  xl:my-auto xl:py-0">
+            <p v-motion-slide-visible-once-bottom class="head-title text-black font-normal md:text-[18px] lg:text-[20px]">Navix Health CRM</p>
+            <p v-motion-slide-visible-once-bottom class="case-study-title text-black font-extrabold xs:text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-[38px] text-center 2xl:max-w-[70%] leading-[1.2] font-gellix">70% Faster Form Creation: Rebuilding EHR Documentation for Simplicity and Speed </p>
         </div>
-      <div class="goal flex flex-col flex-wrap font-gellix sm:pt-[110px] gap-y-10 ">
-          <div class="">
-              <p class="font-extrabold text-black text-[24px] uppercase xs:pt-10 md:pt-0">Problem Statement</p>
-              <p class="text-[16px] text-gray-800 text-left py-2 font-semibold" >The existing UI of Navix Health CRM was outdated, complex, and difficult to navigate, leading to poor user adoption and inefficiencies in healthcare workflows. Users struggled with cluttered layouts, redundant actions, and a lack of intuitive interactions, negatively impacting the overall user experience</p>
-          </div>    
-          <div v-motion-slide-visible-once-bottom class="">
-              <p class="font-extrabold text-black text-[24px] uppercase">Goal</p>
-              <p class="text-[16px] text-gray-800 text-left py-2 font-semibold" >Revamp the UI to enhance the UX, making the platform more intuitive, visually appealing, and efficient for healthcare professionals.</p>
-          </div>
-      </div>
+        <div class="case-hero-image flex flex-col justify-center items-center font-gellix">
+            <img v-motion-pop-visible-once :src="images[0]" class="h-auto xs:w-[380px] sm:w-[500px] lg:w-[800px] xl:w-[900px]" alt="">
+            <p v-motion-slide-visible-once-bottom class="case-study-desc text-black font-semibold md:text-[20px] text-left w-full  pt-[100px]" >Navix is a behavioral health SaaS platform that streamlines documentation, workflows, and client management. One of the key challenges faced by our users — especially clinicians and case managers — was the lack of a simple, 
+                scalable way to create and manage client documentation forms. <br> We set out to design a custom. Form Builder module, allowing users to create dynamic, reusable forms within the platform without relying on the support or dev teams.</p>
+            </div>
 
-       <div class="design-process font-gellix flex flex-col sm:pt-[130px] justify-between items-center">
-          <h1 v-motion-slide-visible-once-bottom class="font-semibold text-black lg:text-[43px] xs:text-[36px] md:text-[40px] text-center xs:py-10 sm:py-5">Design Process</h1>
-      </div>
+        <div class=" flex flex-col flex-wrap font-gellix sm:pt-[60px] gap-y-10">
+            <div v-motion-slide-visible-once-bottom class="">
+                <p class="font-extrabold text-black text-[24px] uppercase">Problem Statement</p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Overwhelming, form-heavy UIs that were hard to navigate</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Users had no autonomy over building or editing their own forms</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>No flexibility for non-tech users to customize fields</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Redundant data entry that fatigued clinicians and slowed workflow</span>
+                        </span> 
+                    </p>
+            </div>
+            <div v-motion-slide-visible-once-bottom class="">
+                    <p class="font-extrabold text-black text-[24px] uppercase">Goal</p>
+                    <span class="inline-flex ml-2 xs:pl-4 py-2 sm:pl-7">
+                        <img :src="images[1]" alt="" class="h-5 w-auto mr-1">
+                        <span class="text-[20px] text-gray-800 font-extrabold mr-1"> 
+                            <span class="text-[20px] text-gray-800 font-semibold">Our goal was to build a user-friendly, drag-and-drop form builder that could serve the needs of multiple behavioral health programs — from youth services to adult therapy — while maintaining form consistency and reducing internal dependencies.</span>
+                        </span>
+                    </span>
+            </div>
+        </div>
+        <div class="design-process font-gellix flex flex-col sm:pt-[130px] justify-between items-center">
+            <h1 v-motion-slide-visible-once-bottom class="font-semibold text-black lg:text-[43px] xs:text-[36px] md:text-[40px] text-center xs:py-10 sm:py-5">🚀 Our Lean Approach: Discovery & Prototyping</h1>
+            <p class="text-black text-center font-semibold xs:text-[16px] md:text-[20px]">Given timeline constraints and our team's existing knowledge of the domain, we skipped formal research documentation and focused on:</p>
+        </div>
+        <div class=" flex flex-col flex-wrap font-gellix sm:pt-[30px] gap-y-10 w-full">
+            <div v-motion-slide-visible-once-bottom class="">
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Quick Internal Syncs – aligned with our Product Manager and Business Team to identify common pain points</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Support Ticket Reviews – mined feedback from existing form-related tickets</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Competitive Benchmarking – drew inspiration from Jotform, TheraNest, and Typeform</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Rapid Low-Fidelity Wireframes – immediately translated insights into wireframes to validate direction</span>
+                        </span> 
+                    </p>
+            </div>
+        </div>
+        <div class="design-process font-gellix flex flex-col sm:pt-[130px] justify-between items-center">
+            <h1 v-motion-slide-visible-once-bottom class="font-semibold text-black lg:text-[43px] xs:text-[36px] md:text-[40px] text-center xs:py-10 sm:py-5">📐 Low-Fidelity Wireframes</h1>
+            <p class="text-black text-center font-semibold xs:text-[16px] md:text-[20px]">We focused on usability, visual simplicity and modularity:</p>
+        </div>
+        <div class=" flex flex-col flex-wrap font-gellix sm:pt-[30px] gap-y-10 w-full">
+            <div v-motion-slide-visible-once-bottom class="">
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Drag-and-drop interface for field placement</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Quick-add templates for commonly used forms</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Field logic and validation controls with inline previews</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>Modular field blocks with clear labels and tooltips</span>
+                        </span> 
+                    </p>
+            </div>
+        </div>
+        <div class="flex xs:flex-col lg:flex-row justify-center items-center xs:gap-y-10 lg:gap-x-10 xs:my-7 md:my-10">
+            <img :src="images[2]" class="xl:h-[458px] w-auto" alt="">
+            <img :src="images[3]" class="xl:h-[458px] w-auto" alt="">
+        </div>
+        <div class="design-process font-gellix flex flex-col sm:pt-[130px] justify-start items-start w-full">
+            <h1 v-motion-slide-visible-once-bottom class="font-semibold text-black lg:text-[43px] xs:text-[36px] md:text-[40px] text-left xs:py-10 sm:py-5">📊 Results & Impact</h1>
+        </div>
+        <div class=" flex flex-col flex-wrap font-gellix sm:pt-[30px] gap-y-10 w-full">
+            <div v-motion-slide-visible-once-bottom class="">
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>⚡️ 70% reduction in form creation time</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>📈 2.5x increase in form usage across programs</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>🧾 Over 50 custom forms created in the first 6 weeks post-launch</span>
+                        </span> 
+                    </p>
+                <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
+                        <span class="inline-flex ml-2 py-0 sm:pl-7">
+                            <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
+                            <span>🛠️ Minor support requests — most issues were resolved in-product</span>
+                        </span> 
+                    </p>
+            </div>
+        </div>
+    </div>
 
-      <div class=" flex flex-col flex-wrap font-gellix sm:pt-[60px] gap-y-10">
-          <div v-motion-slide-visible-once-bottom class="">
-              <p class="font-extrabold text-black text-[24px] uppercase">Research & Discovery</p>
-              <p class="text-[16px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
-                    <span class="inline-flex ml-2 py-0 sm:pl-7">
-                        <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
-                        <span>Conducted stakeholder interviews with doctors, nurses, and administrative staff to understand pain points </span>
-                    </span> 
-                </p>
-              <p class="text-[16px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
-                    <span class="inline-flex ml-2 py-0 sm:pl-7">
-                        <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
-                        <span>Performed heuristic evaluations to identify UI inconsistencies and friction points.</span>
-                    </span> 
-                </p>
-              <p class="text-[16px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
-                    <span class="inline-flex ml-2 py-0 sm:pl-7">
-                        <img :src="images[1]" class="xs:h-5 w-auto mr-1" alt="">
-                        <span>Analyzed competitor CRM solutions to benchmark modern UI standards and best practices.</span>
-                    </span> 
-                </p>
-          </div>
-          <div v-motion-slide-visible-once-bottom class="">
-            <p class="font-extrabold text-black text-[24px] uppercase">Enhancements:</p>
-            <span class="inline-flex ml-2 xs:pl-4 py-2 sm:pl-7">
-                <img :src="images[1]" alt="" class="h-5 w-auto mr-1">
-                <span class="text-[16px] text-gray-800 font-extrabold mr-1">Modernized Interface: 
-                    <span class="text-[16px] text-gray-800 font-semibold">Redesigned the visual elements to follow a clean, minimalistic, and accessible design language.</span>
-                </span>
-            </span>
-            <span class="inline-flex ml-2 xs:pl-4 py-2 sm:pl-7">
-                <img :src="images[1]" alt="" class="h-5 w-auto mr-1">
-                <span class="text-[16px] text-gray-800 font-extrabold mr-1">Compact Design: 
-                    <span class="text-[16px] text-gray-800 font-semibold">Optimized screen space by reducing unnecessary elements, allowing for a more focused and efficient user interface.</span>
-                </span>
-            </span>
-            <span class="inline-flex ml-2 xs:pl-4 py-2 sm:pl-7">
-                <img :src="images[1]" alt="" class="h-5 w-auto mr-1">
-                <span class="text-[16px] text-gray-800 font-extrabold mr-1">Enhanced Interactions: 
-                    <span class="text-[16px] text-gray-800 font-semibold"> Implemented micro-interactions and hover states for a more responsive and engaging experience.</span>
-                </span>
-            </span>
-            <span class="inline-flex ml-2 py-2 pl-7">
-                <img :src="images[1]" alt="" class="h-5 w-auto mr-1">
-                <span class="text-[16px] text-gray-800 font-extrabold mr-1">Mobile-Responsive Redesign: 
-                    <span class="text-[16px] text-gray-800 font-semibold">Ensured a seamless experience across desktop, tablet, and mobile devices.</span>
-                </span>
-            </span>
-         </div>
-         
-         <div v-motion-slide-visible-once-bottom class="">
-              <p class="font-extrabold text-black text-[24px] uppercase">Result</p>
-              <p class="text-[16px] text-gray-800 text-left py-2 font-semibold" >Increased task efficiency by 45% through a more intuitive interface with a user satisfaction of 80% positive feedback rating post - revamp</p>
-          </div>
-          <div v-motion-slide-visible-once-bottom class="">
-              <p class="font-extrabold text-black text-[24px] uppercase">Conclusion</p>
-              <p class="text-[16px] text-gray-800 text-left py-2 font-semibold" >The UI revamp of Navix Health CRM significantly enhanced the overall UX, improving usability, efficiency, and visual appeal. By focusing on intuitive design, structured layouts, and responsive interactions, the new UI empowers 
-                    healthcare professionals to navigate the platform effortlessly, ultimately improving patient care and operational workflows.</p>
-          </div>
-      </div>
-  </div>
+  <reflection-section></reflection-section>
+  <improve-ux></improve-ux>
 
 </template>
 
 
 <script>
 import { ref, onMounted, onUnmounted, computed } from 'vue';
+import ImproveUx from '@/sections/ImproveUx.vue';
+import ReflectionSection from '@/sections/ReflectionSection.vue';
 
 export default {
+    components: {
+        ImproveUx,
+        ReflectionSection,
+    },
   setup() {
       const images = ref([]);
       const windowWidth = ref(window.innerWidth); // Track window width
@@ -109,6 +182,8 @@ export default {
       const imagePaths = [
           new URL('@/assets/case-study-navix-hero-img.jpg', import.meta.url).href,
           new URL('@/assets/enter-arrow.svg', import.meta.url).href,
+          new URL('@/assets/low-fid-img1.png', import.meta.url).href,
+          new URL('@/assets/low-fid-img2.png', import.meta.url).href,
       ];
 
       try {

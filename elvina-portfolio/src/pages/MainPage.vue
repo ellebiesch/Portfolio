@@ -10,19 +10,26 @@
         
             <div class="hero-button flex flex-row flex-wrap justify-center gap-x-5 text-white">
               <a
-              href="#contact-form"
+              href="#contact"
               class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide border transition duration-200 bg-gray-900 rounded-lg hover:bg-white hover:text-black focus:shadow-outline focus:outline-none"
             >
               Contact
             </a>
               <div class="text-black">
                 <router-link
-                  to="/case-studies"
+                  to="/case-studies/under-construction"
                   class="inline-flex items-center justify-center h-12 px-8 font-medium tracking-wide transition duration-200 border-black/20 border rounded-lg hover:bg-black hover:text-white focus:shadow-outline focus:outline-none"
                   @click="mobileMenuOpen = false"
                 >
                   View Work
               </router-link>
+                <!-- <router-link
+                  to="/case-studies"
+                  class="inline-flex items-center justify-center h-12 px-8 font-medium tracking-wide transition duration-200 border-black/20 border rounded-lg hover:bg-black hover:text-white focus:shadow-outline focus:outline-none"
+                  @click="mobileMenuOpen = false"
+                >
+                  View Work
+              </router-link> -->
               </div>
             </div>
 
@@ -72,7 +79,8 @@
     </div>
   </section>
   <testimonials-section></testimonials-section>
-  <contact-form></contact-form>
+  <improve-ux></improve-ux>
+  <!-- <contact-form></contact-form> -->
 
 </div>
 </template> 
@@ -81,14 +89,16 @@
 import ExperienceSection from '@/sections/ExperienceSection.vue';
 import DiscoverSection from '@/sections/DiscoverSection.vue';
 import TestimonialsSection from '@/sections/TestimonialsSection.vue';
-import ContactForm from '@/sections/ContactForm.vue';
+import ImproveUx from '@/sections/ImproveUx.vue';
+//import ContactForm from '@/sections/ContactForm.vue';
 
 export default {
   components: {
     ExperienceSection,
     DiscoverSection,
     TestimonialsSection,
-    ContactForm,
+    ImproveUx,
+    //ContactForm,
   },
   data() {
     return {

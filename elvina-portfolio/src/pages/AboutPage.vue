@@ -223,24 +223,18 @@
 
     </section>
       <tools-section></tools-section>
-      <contact-form></contact-form>
+      <improve-ux></improve-ux>
 </template>
 
   
 <script>
 import ToolsSection from '@/sections/ToolsSection.vue';
-import ContactForm from '@/sections/ContactForm.vue';
+import ImproveUx from '@/sections/ImproveUx.vue';
 
-  // export default {
-  //   components: {
-  //     ToolsSection,
-  //     ContactForm
-  //   }
-  // };
   export default {
     components: {
       ToolsSection,
-      ContactForm
+      ImproveUx
     },
   data() {
     return {
