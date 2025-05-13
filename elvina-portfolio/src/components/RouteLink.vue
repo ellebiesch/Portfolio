@@ -17,7 +17,7 @@
         'opacity-0': !isHovered && !isActive
       }" 
     ></span>
-    <p class="tracking-normal font-medium text-base text-[#000]">{{ label }}</p>
+    <p  class="tracking-normal font-medium text-base text-[#000]">{{ label }}"</p>
   </router-link>
   </template>
   

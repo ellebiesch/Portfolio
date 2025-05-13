@@ -24,8 +24,13 @@
               label="About"
               :isActive="$route.path === '/about'"
               />
-              <RouteLink 
+              <!-- <RouteLink 
               to="/case-studies"
+              label="Case Studies"
+              :isActive="$route.path === '/case-studies'"
+              /> -->
+              <RouteLink 
+              to="/case-studies/under-construction"
               label="Case Studies"
               :isActive="$route.path === '/case-studies'"
               />
@@ -34,10 +39,10 @@
             <div class="right-nav flex flex-row items-center text-white">
               <a :href="resumeLink" target="_blank" @click="linkValue"><p class="font-gellix font-medium pr-[52px] text-black">Download Resume</p></a>
               <a
-                href="#contact-form"
+                href="#contact"
                 class=" inline-flex font-gellix items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 bg-gray-900 rounded-lg hover:bg-white hover:text-black border focus:shadow-outline focus:outline-none"
               >
-              Get in Touch
+              Contact
               </a>
             </div>
         </div>
@@ -64,11 +69,16 @@
                       <p class="tracking-widest font-bold text-xs text-[#000]">About</p>
                   </div>
               </router-link>
-              <router-link to="/case-studies" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]': $route.path === '/case-studies' }" @click="mobileMenuOpen = false">
+              <router-link to="/case-studies/under-construction" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]': $route.path === '/case-studies' }" @click="mobileMenuOpen = false">
                   <div class="flex flex-row justify-center items-center ml-4 gap-2">
                       <p class="tracking-widest font-bold text-xs text-[#000]">Case Studies</p>
                   </div>
               </router-link>
+              <!-- <router-link to="/case-studies" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]': $route.path === '/case-studies' }" @click="mobileMenuOpen = false">
+                  <div class="flex flex-row justify-center items-center ml-4 gap-2">
+                      <p class="tracking-widest font-bold text-xs text-[#000]">Case Studies</p>
+                  </div>
+              </router-link> -->
               <div class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10 bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]" @click="mobileMenuOpen = false">
                   <a :href="resumeLink" target="_blank" @click="linkValue">
                     <div class="flex flex-row justify-center items-center ml-4 gap-2">
@@ -76,11 +86,9 @@
                       </div>
                   </a>  
                 </div>
-
-              <!-- REWORK THE CONTACT PAGE TO DIRECT TO THE CONTACT SECTION ONLY RATHER THAN DIFFERENT PAGE -->
-              <a href="#contact-form" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#D1D1D1]': $route.path === '/contact' }" @click="mobileMenuOpen = false">
+              <a href="#contact" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#D1D1D1]': $route.path === '/contact' }" @click="mobileMenuOpen = false">
                   <div class="flex flex-row justify-center items-center ml-4 gap-2 font-gellix">
-                      <p class="tracking-widest font-bold text-xs text-[#000]"> Get in Touch</p>
+                      <p class="tracking-widest font-bold text-xs text-[#000]"> Contact</p>
                   </div>
                 </a> 
              </div>
