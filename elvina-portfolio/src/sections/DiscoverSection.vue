@@ -7,9 +7,13 @@
                     <p v-motion-slide-visible-once-bottom class="text-black/80 font-medium sm:text-[20px] xs:text-base text-left">I collaborate closely with clients to deeply understand their business goals and audience needs, 
                         crafting intuitive, high-impact designs that not only meet expectations but exceed them—delivering seamless experiences that drive real results</p>
                     <router-link  
-                      v-motion-slide-visible-once-right to="/case-studies" 
+                      v-motion-slide-visible-once-right to="/case-studies/under-construction" 
                           class="inline-flex items-center justify-center text-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 border-black/20 
                                   border-2 rounded-lg hover:bg-gray-200 focus:shadow-outline focus:outline-none xs:mx-auto sm:m-[0] xs:text-[14px]"> See All Works </router-link>
+                    <!-- <router-link  
+                      v-motion-slide-visible-once-right to="/case-studies" 
+                          class="inline-flex items-center justify-center text-center h-12 px-6 font-medium tracking-wide text-black transition duration-200 border-black/20 
+                                  border-2 rounded-lg hover:bg-gray-200 focus:shadow-outline focus:outline-none xs:mx-auto sm:m-[0] xs:text-[14px]"> See All Works </router-link> -->
                 </div>
                 <div class="discover-img-wrapper">
                     <img v-motion-slide-visible-once-right src="../assets/discover-img.svg" class="h-auto md:min-w-[516px] xs:min-w-auto" alt="">
