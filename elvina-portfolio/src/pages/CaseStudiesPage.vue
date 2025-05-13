@@ -31,7 +31,7 @@
       </case-study>
     </div>
   
-      <contact-form></contact-form>
+      <!-- <contact-form></contact-form> -->
       <improve-ux></improve-ux>
       
   </section>
@@ -83,13 +83,15 @@ export default {
           label: "Empowering Elders to Cherish and Share Their Life's Stories: A Thoughtfully Designed Mobile App for Preserving Meaningful Moments",
           imageSource: images[0],
           type: 'mobile',
-          subPage: 'genie',
+          //subPage: 'genie',
+          subPage: 'under-construction',
         },
         {
           label: "70% Faster Form Creation: Rebuilding EHR Documentation for Simplicity and Speed",
           imageSource: images[1],           
           type: 'web',
-          subPage: 'navix',
+          //subPage: 'navix',
+          subPage: 'under-construction',
         },
         {
           label:"Simplifying Scientific Data for Fish Enthusiasts: A User - Centered Approach for the Fishbase Guide App",

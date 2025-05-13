@@ -25,10 +25,15 @@
                         <p class="text-title uppercase text-black font-extrabold text-[30px] pt-6">sass</p>
                         <p class="text-desc lg:text-base text-black/80 font-medium">I have designed various SAAS products which allowed me to successfully deliver high-quality and impactful products.</p>
                         <div class="case-button flex flex-row gap-x-4 items-center">
-                              <case-study-button 
+                              <!-- <case-study-button 
                                 to="/case-studies"
                                 label="See Case Study"
                                 case-study="navix">
+                              </case-study-button> -->
+                              <case-study-button 
+                                to="/case-studies"
+                                label="See Case Study"
+                                case-study="under-construction">
                               </case-study-button>
                         </div>
                     </div>
@@ -41,10 +46,15 @@
                         <p class="text-title  text-black font-extrabold text-[30px] pt-6">Mobile</p>
                         <p class="text-desc lg:text-base text-black/80 font-medium">Designed several mobile products which allowed me to enchance users tasks effeciently. </p>
                         <div class="case-button flex flex-row gap-x-4 items-center">
-                              <case-study-button 
+                              <!-- <case-study-button 
                                 to="/case-studies"
                                 label="See Case Study"
                                 case-study="rogomi">
+                              </case-study-button> -->
+                              <case-study-button 
+                                to="/case-studies"
+                                label="See Case Study"
+                                case-study="under-construction">
                               </case-study-button>
                         </div>
                     </div>
@@ -57,10 +67,15 @@
                         <p class="text-title  text-black font-extrabold text-[30px] pt-6">Websites</p>
                         <p class="text-desc lg:text-base text-black/80 font-medium">Crafted intuitive and engaging web experiences that prioritize usability, accessbility and seamless interaction</p>
                         <div class="case-button flex flex-row gap-x-4 items-center">
-                              <case-study-button 
+                              <!-- <case-study-button 
                                 to="/case-studies"
                                 label="See Case Study"
                                 case-study="rogomi">
+                              </case-study-button> -->
+                              <case-study-button 
+                                to="/case-studies"
+                                label="See Case Study"
+                                case-study="under-construction">
                               </case-study-button>
                         </div>
                     </div>

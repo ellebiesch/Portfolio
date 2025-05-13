@@ -22,7 +22,7 @@
         props: {
             to: { type: String, required: true },
             label: {type: String, required: true },
-            caseStudy: {type: String, required: true}
+            caseStudy: { type: String, default: "" }
         },
         data(){
             return{
