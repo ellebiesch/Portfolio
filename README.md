@@ -14,6 +14,7 @@ UX Design Portfolio
     - NavigationElement,
     - DiscoverSection,
     - MainPage
+    - index.js
 
 
 
