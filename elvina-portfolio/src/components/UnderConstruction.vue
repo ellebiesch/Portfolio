@@ -1,7 +1,7 @@
 <template>
       <div class="loading-screen" >
         <div class="h-full flex flex-col justify-center items-center md:pt-[200px] lg:pb-[100px] xs:pt-[100px]">
-          <div class="m-auto flex flex-col gap-y-5 justify-center items-center">
+          <div v-motion-slide-visible-once-bottom class="m-auto flex flex-col gap-y-5 justify-center items-center">
             <img loading="lazy" src="@/assets/loading-hero-image.svg" class="lg:w-[350px] h-auto xs:w-[330px]" alt="elvina" />
             <div class="text-black font-extrabold mx-auto font-gellix flex flex-col justify-center items-center xl:px-[200px] xs:px-[10px]">
               <p class="font-extrabold lg:text-[62px] xs:text-[30px] text-center" >UX STUDY: Coming Soon...ish🚀</p>
