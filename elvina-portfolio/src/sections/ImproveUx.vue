@@ -1,6 +1,6 @@
 <template>
     <section id="contact" class="h-auto">
-        <div v-motion-slide-visible-once-bottom class="content-wrapper flex flex-col justify-center items-center font-gellix bg-gray-900 xs:mx-[12px] sm:mx-[35px] lg:mx-[40px] xs:py-[80px] xs:mt-[70px] xl:py-[150px] rounded-t-[36px] gap-y-2">
+        <div v-motion-slide-visible-once-bottom class="content-wrapper flex flex-col justify-center items-center font-gellix bg-[#000] xs:mx-[12px] sm:mx-[35px] lg:mx-[40px] xs:py-[80px] xs:mt-[70px] xl:py-[240px] rounded-t-[36px] gap-y-2">
             <div class="contents font-gellix">
                 <img src="../assets/oc-puzzle-white.svg" class="" alt=""> 
                 <div class="">
