@@ -32,7 +32,7 @@
               <RouteLink 
               to="/case-studies/under-construction"
               label="Case Studies"
-              :isActive="$route.path === '/case-studies'"
+              :isActive="$route.path === '/case-studies/under-construction'"
               />
             </div>
 

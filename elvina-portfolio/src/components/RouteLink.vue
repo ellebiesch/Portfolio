@@ -3,7 +3,7 @@
     :to="to"
     class="relative flex items-center px-5 py-0 text-xs duration-150 ease-in-out group  "
     :class="{
-      'bg-light-gradient bg-no-repeat bg-[length:200%_100%] ': isActive
+      'bg-light-gradient bg-no-repeat bg-[length:200%_100%] font-extrabold': isActive
     }"
     @mouseenter="isHovered = true"
     @mouseleave="isHovered = false"
@@ -17,7 +17,7 @@
         'opacity-0': !isHovered && !isActive
       }" 
     ></span>
-    <p class="tracking-normal font-medium text-base text-[#000]">{{ label }}</p>
+    <p class="tracking-normal text-base text-[#000]" :class=" isActive ? 'font-extrabold' : 'font-medium' " >{{ label }}</p>
   </router-link>
   </template>
   
