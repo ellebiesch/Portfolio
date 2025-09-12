@@ -26,7 +26,7 @@
                       <img v-lazy="navixLogoImg" class="h-auto lg:min-w-[200px] xl:min-w-[370px] md:min-w-[445px] bg-[#fff] drop-shadow-lg rounded-sm rounded" alt="navix-logo">
                     </div>
                     <div v-motion-slide-visible-once-bottom class="text-content font-gellix flex flex-col justify-start flex-wrap gap-y-6">
-                        <p class="text-title uppercase text-black font-extrabold text-[30px] pt-6">sass</p>
+                        <p class="text-title uppercase text-black font-extrabold text-[30px] pt-6">saas</p>
                         <p class="text-desc lg:text-base text-black/80 font-medium">I have designed various SAAS products which allowed me to successfully deliver high-quality and impactful products.</p>
                         <div class="case-button flex flex-row gap-x-4 items-center">
                               <!-- <case-study-button 
