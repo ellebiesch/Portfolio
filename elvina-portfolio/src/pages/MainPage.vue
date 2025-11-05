@@ -41,7 +41,7 @@
     </div>
   </section>
 
-  <section v-motion-slide-visible-once-bottom class="container font-gellix max-w-full py-10 xs:py-5 bg-[#fafafa]">
+  <!-- <section v-motion-slide-visible-once-bottom class="container font-gellix max-w-full py-10 xs:py-5 bg-[#fafafa]">
     <h1 class="title font-extrabold md:text-2xl xs:text-[20px] text-center xl:py-4 uppercase text-black/40">organizations I have worked with</h1>
     <div class="company-icon flex flex-row items-center justify-center md:gap-12 xs:gap-4 sm:my-10 xs:my-5 opacity-60">
       <img src="../assets/atlas-icon.png" class="h-auto sm:w-[108px] xs:w-[78px]" alt="atlas logo">
@@ -50,7 +50,8 @@
       <img src="../assets/rlc-icon.png" class="h-auto sm:w-[40px] xs:w-[30px]" alt="rlc logo">
       <img src="../assets/g36o-logo.png" class="h-auto xs:hidden sm:block sm:w-[70px]" alt="g36o logo">
     </div>
-  </section>
+  </section> -->
+  <companies-section></companies-section>
 
   <experience-section></experience-section>
   <discover-section></discover-section>
@@ -90,6 +91,7 @@ import ExperienceSection from '@/sections/ExperienceSection.vue';
 import DiscoverSection from '@/sections/DiscoverSection.vue';
 import TestimonialsSection from '@/sections/TestimonialsSection.vue';
 import ImproveUx from '@/sections/ImproveUx.vue';
+import CompaniesSection from '@/components/CompaniesSection.vue';
 //import ContactForm from '@/sections/ContactForm.vue';
 
 export default {
@@ -98,6 +100,7 @@ export default {
     DiscoverSection,
     TestimonialsSection,
     ImproveUx,
+    CompaniesSection
     //ContactForm,
   },
   data() {
