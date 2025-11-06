@@ -1,33 +1,54 @@
 <template>
-    <section class="h-auto">
-        <div class=" mt-[100px] flex flex-row  items-center justify-evenly flex-wrap font-gellix bg-[#fafafa] md:py-20 xs:py-10">
-            <div v-motion-slide-visible-once-left class="title xs:py-8">
-                <h1 class="font-semibold text-[40px] text-center">Testimonials</h1>
-            </div>
-            <div v-motion-slide-visible-once-right class="wrapper">
-                <div class="item flex flex-row xs:flex-col flex-wrap sm:items-start xs:items-center xs:justify-center md:gap-6 sm:gap-4 xs:gap-y-10 md:pt-5">
-                    <img v-lazy="testimonialUser" class="rounded-full md:w-[72px] min-h-[70px]" alt="testimonial user">
-                    <div class="content flex flex-col justify-start items-start md:w-[542px] min-h-[190px] gap-2 mx-[15px]">
-                        <p class="text-black font-normal text-base text-justify">The redesign of our applicant tracking system was outstanding. She took the time to understand our needs and our users, and the result was a sleek, user-friendly interface that has dramatically improved our hiring process. Their attention to detail and focus on interaction design made all the difference</p>
-                        <p class="uppercase text-black font-bold text-sm opacity-30">alex h., CEO AND FOUNDER</p>
-                    </div>
-                </div>
-            </div>
-            
+  <section class="bg-[#fafafa] font-gellix w-full flex flex-row items-center justify-around py-20">
+    <!-- Title -->
+    <div v-motion-slide-visible-once-left class="mb-12">
+      <h1 class="font-semibold text-[36px] md:text-[40px] text-center text-black">
+        Testimonials
+      </h1>
+    </div>
+
+    <!-- Testimonial Card -->
+    <div
+      v-motion-slide-visible-once-right
+      class="max-w-[720px] flex flex-col items-start justify-start px-6"
+    >
+      <!-- Quote -->
+      <p class="italic text-[18px] font-bold md:text-[20px] leading-relaxed text-black/80 mb-10 text-left">
+        “ Elvina brought creativity, thoughtfulness, and a strong user-centric mindset to every
+        project. Her contributions made a meaningful impact on our product experience and internal
+        workflows. “
+      </p>
+
+      <!-- Author Info -->
+      <div class="flex flex-row justify-start items-center gap-2">
+        <img
+          v-lazy="testimonialUser"
+          alt="testimonial user"
+          class="rounded-full w-[72px] h-[72px] object-cover"
+        />
+        <div class="flex flex-col justify-start gap-y-3 pl-3">
+            <p class="font-semibold text-lg text-black">JUSTIN LU</p>
+          <p class="text-[14px] text-gray-500 tracking-wide uppercase">
+            CEO AND CO-FOUNDER, TRUCKPEDIA
+          </p>
         </div>
-    </section>
-  </template>
-  
+        
+      </div>
+    </div>
+  </section>
+</template>
+
 <script>
 export default {
-
-    //composition api for images
-  setup(){
-    const testimonialUser = new URL('../assets/testimonial-user.png', import.meta.url).href
-    return {testimonialUser};
+  setup() {
+    const testimonialUser = new URL('../assets/testimonial-user.png', import.meta.url).href;
+    return { testimonialUser };
   }
-}
+};
 </script>
-  
-  <style scope></style>
-  
+
+<style scoped>
+p {
+  max-width: 700px;
+}
+</style>
