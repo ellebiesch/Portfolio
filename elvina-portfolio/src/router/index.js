@@ -3,7 +3,7 @@ import MainView from '../views/MainView.vue';
 import ErrorView from '../views/ErrorView.vue';
 import MainPage from '../pages/MainPage.vue';
 import AboutPage from '../pages/AboutPage.vue';
-//import CaseStudiesPage from '@/pages/CaseStudiesPage.vue';
+import CaseStudiesPage from '@/pages/CaseStudiesPage.vue';
 import LoadingElement from '@/components/LoadingElement.vue';
 import CaseStudyItem from '@/pages/CaseStudyItem.vue';
 import CaseStudyGenie from '@/pages/CaseStudyGenie.vue';
@@ -27,7 +27,8 @@ const routes = [
       },
       {
         path: '/case-studies',
-        component: UnderConstruction, //CaseStudiesPage
+        //component: UnderConstruction, //CaseStudiesPage
+        component: CaseStudiesPage,
         children: [
           {
             path: 'genie',
