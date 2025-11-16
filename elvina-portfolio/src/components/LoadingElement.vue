@@ -23,7 +23,7 @@
           </div>
         </div>
         <div class="px-5 mx-auto flex flex-col flex-wrap justify-center items-center mt-10">
-          <div class="text-black font-extrabold text-[24px] mx-auto font-gellix xl:text-[32px] text-center">
+          <div class="text-black font-extrabold text-[24px] mx-auto font-sans xl:text-[32px] text-center">
             Loading<span class="dot dot-1">.</span><span class="dot dot-2">.</span><span class="dot dot-3">.</span><span>because good things takes time</span>
           </div>
         </div>

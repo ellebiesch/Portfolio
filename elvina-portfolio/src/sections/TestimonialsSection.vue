@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-[#fafafa] font-gellix w-full flex flex-col md:flex-row md:px-5 items-center justify-around py-20">
+  <section class="bg-[#fafafa] font-sans w-full flex flex-col md:flex-row md:px-5 items-center justify-around py-20">
     <!-- Title -->
     <div v-motion-slide-visible-once-left class="mb-12">
       <h1 class="font-semibold text-[36px] md:text-[40px] text-center text-black">

@@ -29,10 +29,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        // sans: ['DM Sans', 'sans-serif'],
-        sans: ['DM Sans', 'sans-serif'],
-        inter: ['Inter', 'sans-serif'],
-        gellix: ['Gellix', 'sans-serif']
+        sans: ['Geist', 'sans-serif'],
       },
     },
   },

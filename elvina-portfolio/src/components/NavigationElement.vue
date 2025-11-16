@@ -7,18 +7,18 @@
         
         <!-- Logo -->
         <div class="logo lg:hidden">
-              <a href="/"><h1 class="elvina-logo font-gellix text-2xl font-bold xs:text-[20px]">Elvina.</h1></a>
+              <a href="/"><h1 class="elvina-logo font-sans text-2xl font-bold xs:text-[20px]">Elvina.</h1></a>
         </div>
 
         <!-- DESKTOP LINKS -->
         <div class="hidden lg:flex items-center justify-between text-black h-[25px] my-6 mx-28">
           <!-- Logo -->
             <div class="logo min-w-[200px]">
-              <a href="/"><h1 class="elvina-logo font-gellix text-2xl font-bold">Elvina.</h1></a>
+              <a href="/"><h1 class="elvina-logo font-sans text-2xl font-bold">Elvina.</h1></a>
             </div>
-            <div class="center-nav xl:ml-[5%] lg:ml-[0px] flex flex-row font-gellix">
-              <!-- <a href=""><p class="font-gellix text-base pr-[52px]">About</p></a>
-              <a href=""><p class="font-gellix text-base">Case Studies</p></a> -->
+            <div class="center-nav xl:ml-[5%] lg:ml-[0px] flex flex-row font-sans">
+              <!-- <a href=""><p class="font-sans text-base pr-[52px]">About</p></a>
+              <a href=""><p class="font-sans text-base">Case Studies</p></a> -->
               <RouteLink 
               to="/about"
               label="About"
@@ -37,10 +37,10 @@
             </div>
 
             <div class="right-nav flex flex-row items-center text-white">
-              <a :href="resumeLink" target="_blank" @click="linkValue"><p class="font-gellix font-medium pr-[52px] text-black">Download Resume</p></a>
+              <a :href="resumeLink" target="_blank" @click="linkValue"><p class="font-sans font-medium pr-[52px] text-black">Download Resume</p></a>
               <a
                 href="#contact"
-                class=" inline-flex font-gellix items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 bg-gray-900 rounded-lg hover:bg-white hover:text-black border focus:shadow-outline focus:outline-none"
+                class=" inline-flex font-sans items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 bg-gray-900 rounded-lg hover:bg-white hover:text-black border focus:shadow-outline focus:outline-none"
               >
               Contact
               </a>
@@ -63,7 +63,7 @@
     <transition name="slide">
           <div v-if="mobileMenuOpen" class="sidebar fixed bg-[#FFF] top-0 bottom-0 w-60 md:w-80 z-40 mt-[80px]" :class="{'justify-start': isMobile()}" @click.stop>
             <!-- Links -->
-             <div class="flex flex-col uppercase font-gellix">
+             <div class="flex flex-col uppercase font-sans">
                 <router-link to="/about" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#F5F5F6]': $route.path === '/about' }" @click="mobileMenuOpen = false">
                   <div class="flex flex-row justify-center items-center ml-4 gap-2">
                       <p class="tracking-widest font-bold text-xs text-[#000]">About</p>
@@ -87,7 +87,7 @@
                   </a>  
                 </div>
               <a href="#contact" class=" flex items-center py-5 hover:bg-[#D1D1D1] hover:bg-opacity-10" :class="{ 'bg-[#D9D9D9] bg-opacity-10 border-l-2 border-l-[#D1D1D1]': $route.path === '/contact' }" @click="mobileMenuOpen = false">
-                  <div class="flex flex-row justify-center items-center ml-4 gap-2 font-gellix">
+                  <div class="flex flex-row justify-center items-center ml-4 gap-2 font-sans">
                       <p class="tracking-widest font-bold text-xs text-[#000]"> Contact</p>
                   </div>
                 </a> 

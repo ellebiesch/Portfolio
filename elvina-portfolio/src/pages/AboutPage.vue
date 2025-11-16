@@ -5,7 +5,7 @@
           <img src="../assets/about-profile-image.png" alt="user image" loading="lazy" decoding="async" class="xl:h-[186px] lg:h-[130px] xs:h-[90px] w-auto object-cover rounded-full absolute xs:top-[70%] bg-white">
         </div>
         <div class=" xl:px-[125px] 2xl:h-auto">
-          <div class="flex flex-col justify-center m-w-[1170px] items-center font-gellix xl:mt-[120px] lg:mt-[77px] xs:mt-[57px]">
+          <div class="flex flex-col justify-center m-w-[1170px] items-center font-sans xl:mt-[120px] lg:mt-[77px] xs:mt-[57px]">
             <div class="flex flex-row justify-center items-center gap-x-2 lg:mx-28">
               <h1 v-motion-slide-visible-once-bottom class="flex flex-row items-center text-black xl:text-[64px] lg:text-3xl xs:text-[34px] font-bold text-center 2xl:ml:16 xl:ml-10 xs:ml-6 3xl:ml-[70px]">Kumusta! 
                 <span class="pb-3 w-auto">
@@ -14,7 +14,7 @@
               </h1>
               </div>
 
-              <div class="about-parag font-gellix text-left flex flex-col items-center gap-y-5 max-w-[1167px] lg:width-1167px mx-auto pt-9 w-full xs:px-5">
+              <div class="about-parag font-sans text-left flex flex-col items-center gap-y-5 max-w-[1167px] lg:width-1167px mx-auto pt-9 w-full xs:px-5">
 
                 <p v-motion-slide-visible-once-bottom class="text-black lg:text-base font-medium">Hey, I am Elvina! I’m a Product Designer, and I’ve made it my mission to create digital experiences that are as seamless as they are delightful! Whether it’s crafting B2B SaaS web and mobile apps or designing those oh-so-satisfying screens, I’m all about making things that just feel right for the user.</p>
                 <p v-motion-slide-visible-once-bottom class="text-black lg:text-base font-medium">I’ve worked across industries like <span class="font-bold"> Behavioral Healthcare, Recruitment, and Logistics,</span> which means I’m no stranger to complex challenges. But that’s where the fun begins! I dive into projects with a sprint-based approach—no dragging timelines here, 
@@ -30,7 +30,7 @@
         </div>
         
         <!-- Design Process Dekstop View -->
-        <div class="bg-[#fafafa] design-section hidden lg:block font-gellix mt-40 py-[120px]">
+        <div class="bg-[#fafafa] design-section hidden lg:block font-sans mt-40 py-[120px]">
           <h2 v-motion-slide-visible-once-bottom class="text-black text-center font-bold text-[40px]">Design Process</h2>
           <div class="mt-20 flex flex-col items-center justify-center">
             <img class="xl:ml-[220px] lg:ml-[178px] xl:w-[462px] lg:w-[362px]" src="../assets/arrow-header.svg" alt="">
@@ -118,13 +118,13 @@
         </div>
 
         <!-- Design Process Mobile View -->
-        <!-- <div class="bg-[#fafafa] design-section lg:hidden xs:block block font-gellix mt-40 py-10 ">
+        <!-- <div class="bg-[#fafafa] design-section lg:hidden xs:block block font-sans mt-40 py-10 ">
           <h2 v-motion-slide-visible-once-buttom class="text-black text-center font-bold text-[40px]">Design Process</h2>
           <div class="overall-items-content  flex flex-row items-start justify-center ">
 
             <div class="mobile-items-content flex flex-col items-center justify-center mt-10 ">
               
-              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-sans w-[280px] h-auto">
                 <div class="text-content">
                   <div class="w-[130px] h-auto flex flex-col items-center justify-center mx-auto">
                     <p v-motion-slide-visible-once-top class="title text-black text-base py-1 font-medium text-center">Discovery & Research</p>
@@ -134,7 +134,7 @@
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15" src="../assets/Arrow-black.svg" alt="arrow">
 
-              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-sans w-[280px] h-auto">
                 <div class="text-content">
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Ideation & Conceptualization</p>
@@ -144,7 +144,7 @@
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
 
-              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-sans w-[280px] h-auto">
                 <div class="text-content">
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Wireframing & Structuring</p>
@@ -154,7 +154,7 @@
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
 
-              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-sans w-[280px] h-auto">
                 <div class="text-content">
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Protyping</p>
@@ -164,7 +164,7 @@
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
 
-              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-sans w-[280px] h-auto">
                 <div class="text-content">
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Testing & Iteration</p>
@@ -174,7 +174,7 @@
               </div>
               <img class="rotate-90 transform origin-center w-[60px] h-[14px] my-auto mt-15 opacity-30" src="../assets/Arrow-black.svg" alt="arrow">
 
-              <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+              <div class="each-item flex flex-col flex-wrap items-center justify-center font-sans w-[280px] h-auto">
                 <div class="text-content">
                   <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
                     <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">Handoff & Documentation</p>
@@ -188,13 +188,13 @@
         </div> -->
 
         <!-- Design Process Mobile View -->
-<div class="bg-[#fafafa] design-section lg:hidden xs:block block font-gellix mt-40 py-10">
+<div class="bg-[#fafafa] design-section lg:hidden xs:block block font-sans mt-40 py-10">
   <h2 v-motion-slide-visible-once-bottom class="text-black text-center font-bold text-[40px]">Design Process</h2>
   <div class="overall-items-content flex flex-row items-start justify-center">
     <div class="mobile-items-content flex flex-col items-center justify-center mt-10">
       
       <!-- Static Discovery & Research Section -->
-      <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+      <div class="each-item flex flex-col flex-wrap items-center justify-center font-sans w-[280px] h-auto">
         <div class="text-content">
           <div class="w-[130px] h-auto flex flex-col items-center justify-center mx-auto">
             <p v-motion-slide-visible-once-top class="title text-black text-base py-1 font-medium text-center">Discovery & Research</p>
@@ -206,7 +206,7 @@
 
       <!-- Dynamic Sections Using v-for -->
       <template v-for="(item, index) in designProcessItems" :key="index">
-        <div class="each-item flex flex-col flex-wrap items-center justify-center font-gellix w-[280px] h-auto">
+        <div class="each-item flex flex-col flex-wrap items-center justify-center font-sans w-[280px] h-auto">
           <div class="text-content">
             <div class="rounded-full border-2 border-gray-300 w-[130px] h-[130px] flex items-center justify-center px-[8px] mx-auto mt-11">
               <p v-motion-slide-visible-once-top class="title text-black/50 text-base py-1 font-medium text-gray-400 text-center break-all">{{ item.title }}</p>

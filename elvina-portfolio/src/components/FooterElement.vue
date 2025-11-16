@@ -5,9 +5,9 @@
       <div class="flex sm:flex-row xs:flex-col xs:justify-center xs:items-start sm:justify-between sm:items-center sm:mx-auto xs:m-0 h-[142px] xs:gap-y-3 xs:mx-5">
         <div class="logo">
               <!-- <a href="#"></a> -->
-              <router-link to="/"><h1 class="elvina-logo font-gellix lg:text-2xl md:text-xl font-bold">Elvina.</h1></router-link>
+              <router-link to="/"><h1 class="elvina-logo font-sans lg:text-2xl md:text-xl font-bold">Elvina.</h1></router-link>
         </div>
-          <div class=" font-gellix text-[#000] text-[11px] font-medium lg:text-base md:text-sm tracking-normal">
+          <div class=" font-sans text-[#000] text-[11px] font-medium lg:text-base md:text-sm tracking-normal">
             © 2025 Elvina Garcia. All rights reserved.
           </div>
 

@@ -3,7 +3,7 @@
     <section class="hero-section">
     <div id="main" class=" xl:px-[125px] 2xl:h-auto xs:px-3 sm:px-3 px-5">
       <div class="flex flex-col min-h-screen items-center justify-center lg:mb-[100px]">
-        <div class="col-md-8 w-full flex flex-col justify-center items-center font-gellix">
+        <div class="col-md-8 w-full flex flex-col justify-center items-center font-sans">
           <h1 v-motion-slide-visible-once-bottom class="container xs:mt-[20px] 2xl:mt-[100px] text-2xl font-semibold text-center xs:text-[46px] xl:text-[60px] xs:font-extrabold leading-none">Simplify the interface, amplify the experience</h1>
           <p v-motion-slide-visible-once-bottom class="text-black lg:text-2xl text-center py-8 sm:text-base sm:flex-row sm:gap-2 xs:text-[20px] font-extrabold">Hi,👋 I am Elvina. I create clear and effective design for seamless user experiences
           </p>
@@ -41,7 +41,7 @@
     </div>
   </section>
 
-  <!-- <section v-motion-slide-visible-once-bottom class="container font-gellix max-w-full py-10 xs:py-5 bg-[#fafafa]">
+  <!-- <section v-motion-slide-visible-once-bottom class="container font-sans max-w-full py-10 xs:py-5 bg-[#fafafa]">
     <h1 class="title font-extrabold md:text-2xl xs:text-[20px] text-center xl:py-4 uppercase text-black/40">organizations I have worked with</h1>
     <div class="company-icon flex flex-row items-center justify-center md:gap-12 xs:gap-4 sm:my-10 xs:my-5 opacity-60">
       <img src="../assets/atlas-icon.png" class="h-auto sm:w-[108px] xs:w-[78px]" alt="atlas logo">
@@ -56,7 +56,7 @@
   <experience-section></experience-section>
   <discover-section></discover-section>
   
-  <section class="services-section container font-gellix max-w-full py-10">
+  <section class="services-section container font-sans max-w-full py-10">
     <div class="mx-[15px]">
       <h1 v-motion-slide-visible-once-bottom  class="label title font-extrabold text-[40px] text-center xl:py-4">Services</h1>
       <p v-motion-slide-visible-once-bottom  class="sub-title text-center font-medium text-[18px] md:w-[800px] md:mx-auto">From creating wireframes and prototypes to developing high-fidelity mockups and animations, able to utilize a range of design tools to bring my designs to life.</p>

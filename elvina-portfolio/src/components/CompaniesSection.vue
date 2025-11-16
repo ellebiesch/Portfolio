@@ -1,5 +1,5 @@
 <template>
-  <section v-motion-slide-visible-once-bottom class="font-gellix w-full xs:py-12 md:py-16 lg:py-20 bg-[#fafafa] overflow-hidden">
+  <section v-motion-slide-visible-once-bottom class="font-sans w-full xs:py-12 md:py-16 lg:py-20 bg-[#fafafa] overflow-hidden">
     <!-- Section Title -->
     <h1 class="title font-semibold xs:text-[20px] sm:text-[22px] md:text-[24px] lg:text-[36px] text-center xs:mb-8 md:mb-12 text-black/70">
       Organizations I have worked & collaborate with

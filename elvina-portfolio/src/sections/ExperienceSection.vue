@@ -1,6 +1,6 @@
 <template>
     <section class="h-auto">
-        <div class="content-wrapper flex flex-col flex-nowrap justify-center items-center font-gellix gap-y-6 my-32 mx-[15px]">
+        <div class="content-wrapper flex flex-col flex-nowrap justify-center items-center font-sans gap-y-6 my-32 mx-[15px]">
             <div class="title-image">
                 <img v-motion-slide-visible-once-bottom src="@/assets/paper-plane.svg" class="h-auto md:w-[197px]" alt="">
             </div>

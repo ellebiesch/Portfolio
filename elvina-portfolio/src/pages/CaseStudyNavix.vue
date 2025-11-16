@@ -1,16 +1,16 @@
 <template>
     <div class="main-wrapper flex flex-col xl:mx-[200px] lg:mx-[50px] xs:mx-[20px] justify-center items-center xs:mb-[50px] xl:mb-[100px]">
-        <div class="text-content font-gellix flex flex-col justify-center items-center gap-y-6 xs:pt-[100px] xs:pb-[50px] md:pt-[120px]  xl:pb-[80px] xl:pt-[140px]  xl:my-auto xl:py-0">
+        <div class="text-content font-sans flex flex-col justify-center items-center gap-y-6 xs:pt-[100px] xs:pb-[50px] md:pt-[120px]  xl:pb-[80px] xl:pt-[140px]  xl:my-auto xl:py-0">
             <p v-motion-slide-visible-once-bottom class="head-title text-black font-normal md:text-[18px] lg:text-[20px]">Navix Health CRM</p>
-            <p v-motion-slide-visible-once-bottom class="case-study-title text-black font-extrabold xs:text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-[38px] text-center 2xl:max-w-[70%] leading-[1.2] font-gellix">70% Faster Form Creation: Rebuilding EHR Documentation for Simplicity and Speed </p>
+            <p v-motion-slide-visible-once-bottom class="case-study-title text-black font-extrabold xs:text-[20px] md:text-[24px] lg:text-[32px] 2xl:text-[38px] text-center 2xl:max-w-[70%] leading-[1.2] font-sans">70% Faster Form Creation: Rebuilding EHR Documentation for Simplicity and Speed </p>
         </div>
-        <div class="case-hero-image flex flex-col justify-center items-center font-gellix">
+        <div class="case-hero-image flex flex-col justify-center items-center font-sans">
             <img v-motion-pop-visible-once :src="images[0]" class="h-auto xs:w-[380px] sm:w-[500px] lg:w-[800px] xl:w-[900px]" alt="">
             <p v-motion-slide-visible-once-bottom class="case-study-desc text-black font-semibold md:text-[20px] text-left w-full  pt-[100px]" >Navix is a behavioral health SaaS platform that streamlines documentation, workflows, and client management. One of the key challenges faced by our users — especially clinicians and case managers — was the lack of a simple, 
                 scalable way to create and manage client documentation forms. <br> We set out to design a custom. Form Builder module, allowing users to create dynamic, reusable forms within the platform without relying on the support or dev teams.</p>
             </div>
 
-        <div class=" flex flex-col flex-wrap font-gellix sm:pt-[60px] gap-y-10">
+        <div class=" flex flex-col flex-wrap font-sans sm:pt-[60px] gap-y-10">
             <div v-motion-slide-visible-once-bottom class="">
                 <p class="font-extrabold text-black text-[24px] uppercase">Problem Statement</p>
                 <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
@@ -48,11 +48,11 @@
                     </span>
             </div>
         </div>
-        <div class="design-process font-gellix flex flex-col sm:pt-[130px] justify-between items-center">
+        <div class="design-process font-sans flex flex-col sm:pt-[130px] justify-between items-center">
             <h1 v-motion-slide-visible-once-bottom class="font-semibold text-black lg:text-[43px] xs:text-[36px] md:text-[40px] text-center xs:py-10 sm:py-5">🚀 Our Lean Approach: Discovery & Prototyping</h1>
             <p class="text-black text-center font-semibold xs:text-[16px] md:text-[20px]">Given timeline constraints and our team's existing knowledge of the domain, we skipped formal research documentation and focused on:</p>
         </div>
-        <div class=" flex flex-col flex-wrap font-gellix sm:pt-[30px] gap-y-10 w-full">
+        <div class=" flex flex-col flex-wrap font-sans sm:pt-[30px] gap-y-10 w-full">
             <div v-motion-slide-visible-once-bottom class="">
                 <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
                         <span class="inline-flex ml-2 py-0 sm:pl-7">
@@ -80,11 +80,11 @@
                     </p>
             </div>
         </div>
-        <div class="design-process font-gellix flex flex-col sm:pt-[130px] justify-between items-center">
+        <div class="design-process font-sans flex flex-col sm:pt-[130px] justify-between items-center">
             <h1 v-motion-slide-visible-once-bottom class="font-semibold text-black lg:text-[43px] xs:text-[36px] md:text-[40px] text-center xs:py-10 sm:py-5">📐 Low-Fidelity Wireframes</h1>
             <p class="text-black text-center font-semibold xs:text-[16px] md:text-[20px]">We focused on usability, visual simplicity and modularity:</p>
         </div>
-        <div class=" flex flex-col flex-wrap font-gellix sm:pt-[30px] gap-y-10 w-full">
+        <div class=" flex flex-col flex-wrap font-sans sm:pt-[30px] gap-y-10 w-full">
             <div v-motion-slide-visible-once-bottom class="">
                 <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
                         <span class="inline-flex ml-2 py-0 sm:pl-7">
@@ -116,10 +116,10 @@
             <img :src="images[2]" class="xl:h-[458px] w-auto" alt="">
             <img :src="images[3]" class="xl:h-[458px] w-auto" alt="">
         </div>
-        <div class="design-process font-gellix flex flex-col sm:pt-[130px] justify-start items-start w-full">
+        <div class="design-process font-sans flex flex-col sm:pt-[130px] justify-start items-start w-full">
             <h1 v-motion-slide-visible-once-bottom class="font-semibold text-black lg:text-[43px] xs:text-[36px] md:text-[40px] text-left xs:py-10 sm:py-5">📊 Results & Impact</h1>
         </div>
-        <div class=" flex flex-col flex-wrap font-gellix sm:pt-[30px] gap-y-10 w-full">
+        <div class=" flex flex-col flex-wrap font-sans sm:pt-[30px] gap-y-10 w-full">
             <div v-motion-slide-visible-once-bottom class="">
                 <p class="text-[20px] text-gray-800 text-left xl:py-2 lg:py-0 xs:pl-4 sm:pl-0 font-semibold " > 
                         <span class="inline-flex ml-2 py-0 sm:pl-7">

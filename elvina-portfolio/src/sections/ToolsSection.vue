@@ -1,6 +1,6 @@
 <template>
     <section class="h-auto">
-        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap gap-y-7 font-gellix md:py-20 overflow-hidden">
+        <div class=" mt-[100px] flex flex-row items-center justify-evenly flex-wrap gap-y-7 font-sans md:py-20 overflow-hidden">
             <div v-motion-slide-visible-once-right class="title flex flex-col flex-wrap justify-center items-center">
                 <h1 class="font-extrabold text-[40px]">Tools</h1>
                 <p class="label lg:w-[350px] lg:text-left text-black/80 lg:text-xl xs:text-center xs:px-8">My digital sidekicks that make me look like a genius (most of the time)</p>
