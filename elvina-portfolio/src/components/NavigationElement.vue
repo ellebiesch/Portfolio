@@ -24,16 +24,16 @@
               label="About"
               :isActive="$route.path === '/about'"
               />
-              <RouteLink 
+              <!-- <RouteLink 
               to="/case-studies"
               label="Case Studies"
               :isActive="$route.path === '/case-studies'"
-              />
-              <!-- <RouteLink 
+              /> -->
+              <RouteLink 
               to="/case-studies/under-construction"
               label="Case Studies"
               :isActive="$route.path === '/case-studies/under-construction'"
-              /> -->
+              />
             </div>
 
             <div class="right-nav flex flex-row items-center text-white">
