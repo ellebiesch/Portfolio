@@ -2,14 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router';
 import MainView from '../views/MainView.vue';
 import ErrorView from '../views/ErrorView.vue';
 import MainPage from '../pages/MainPage.vue';
-import AboutPage from '../pages/AboutPage.vue';
-import CaseStudiesPage from '@/pages/CaseStudiesPage.vue';
-import LoadingElement from '@/components/LoadingElement.vue';
-import CaseStudyItem from '@/pages/CaseStudyItem.vue';
-import CaseStudyGenie from '@/pages/CaseStudyGenie.vue';
-import UnderConstruction from '@/components/UnderConstruction.vue';
 import CaseStudyNavix from '@/pages/CaseStudyNavix.vue';
-import EnvTest from '@/components/EnvTest.vue';
+import CaseStudyAtlas from '@/pages/CaseStudyAtlas.vue';
+import CaseStudyPrimoro from '@/pages/CaseStudyPrimoro.vue';
 
 const routes = [
   {
@@ -22,40 +17,22 @@ const routes = [
         component: MainPage,
       },
       {
+        // Convenience: /about points at the home About section
         path: '/about',
-        component: AboutPage, //aboutpage
+        redirect: { path: '/home', hash: '#about' },
       },
       {
-        path: '/case-studies',
-        //component: UnderConstruction, //CaseStudiesPage
-        component: CaseStudiesPage,
-        children: [
-          {
-            path: 'genie',
-            component: CaseStudyGenie,
-        },
-          {
-            path: 'navix',
-            component: CaseStudyNavix,
-        },
-        {
-          path: 'under-construction',
-          component: UnderConstruction,
-        },], //Case Studies
+        path: '/case-studies/navix',
+        component: CaseStudyNavix,
       },
       {
-        path: '/env-test',
-        component: EnvTest,
+        path: '/case-studies/atlas',
+        component: CaseStudyAtlas,
       },
       {
-        path: '/case-study-item',
-        component: CaseStudyItem, //Case Studies
+        path: '/case-studies/primoro',
+        component: CaseStudyPrimoro,
       },
-      {
-        path: '/loading',
-        component: LoadingElement,
-      },
-      
     ],
   },
   {
@@ -69,8 +46,10 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL, '/app'),
   routes,
 
-  // eslint-disable-next-line
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior(to) {
+    if (to.hash) {
+      return { el: to.hash, behavior: 'smooth' };
+    }
     return { top: 0 };
   },
 });

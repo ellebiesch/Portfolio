@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elvina Garcia — Product Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FFFFFF;
+  --bg-soft: #F7F6F2;
+  --bg-card: #FAFAF7;
+  --ink: #0B0B0A;
+  --ink-soft: #4A453E;
+  --ink-muted: #8E887F;
+  --rule: #E8E4DC;
+  --accent: #E8623C;
+  --accent-soft: #D87657;
+  --accent-glow: #F4D4C5;
+  --gold: #C8A572;
+  --display: 'Bricolage Grotesque', sans-serif;
+  --sans: 'Bricolage Grotesque', sans-serif;
+  --mono: 'Geist Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border-bottom: 1px solid rgba(232, 228, 220, 0.6);
+  z-index: 100;
+}
+nav .container { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; padding-bottom: 16px; }
+.brand {
+  font-family: var(--display); font-weight: 600; font-size: 22px;
+  letter-spacing: -0.01em; color: var(--ink); text-decoration: none;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.brand-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; display: inline-block; }
+.brand sup { font-family: var(--mono); font-size: 10px; vertical-align: super; margin-left: 2px; color: var(--ink-muted); font-weight: 400; }
+.nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+.nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 400; transition: color 0.2s; position: relative; }
+.nav-links a:not(.nav-cta)::after {
+  content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 1px; background: var(--accent); transition: width 0.3s ease;
+}
+.nav-links a:not(.nav-cta):hover::after { width: 100%; }
+.nav-cta {
+  font-size: 13px; font-weight: 500; padding: 10px 18px; border-radius: 999px;
+  background: var(--accent); color: white !important; transition: all 0.25s;
+  display: inline-flex; align-items: center; gap: 6px;
+  box-shadow: 0 4px 12px -4px rgba(139, 58, 47, 0.4);
+}
+.nav-cta:hover { background: var(--ink) !important; transform: translateY(-1px); box-shadow: 0 10px 24px -8px rgba(11, 11, 10, 0.4); }
+
+/* HERO */
+.hero { padding-top: 140px; padding-bottom: 120px; border-bottom: 1px solid var(--rule); position: relative; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; top: 0; right: -10%; width: 70%; height: 100%;
+  background: radial-gradient(circle at 70% 30%, rgba(216, 118, 87, 0.15) 0%, rgba(244, 212, 197, 0.08) 30%, transparent 60%);
+  pointer-events: none; z-index: 0;
+}
+.hero::after {
+  content: ""; position: absolute; bottom: 0; left: -5%; width: 50%; height: 60%;
+  background: radial-gradient(circle at 30% 70%, rgba(200, 165, 114, 0.1) 0%, transparent 50%);
+  pointer-events: none; z-index: 0;
+}
+.hero .container { position: relative; z-index: 1; }
+.status-pill {
+  display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px;
+  background: var(--bg); border: 1px solid var(--rule); border-radius: 999px;
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--ink-soft);
+  margin-bottom: 48px; animation: fadeUp 0.8s ease-out; box-shadow: 0 1px 2px rgba(11, 11, 10, 0.03);
+}
+.status-pill::before {
+  content: ""; display: inline-block; width: 7px; height: 7px; background: #4ADE80; border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2); animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2); }
+  50% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+.hero h1 {
+  font-family: var(--display); font-size: clamp(54px, 9vw, 144px);
+  font-weight: 500; line-height: 1.0; letter-spacing: -0.04em;
+  max-width: 1200px; margin-bottom: 48px;
+  font-variation-settings: "opsz" 96, "wdth": 90;
+  animation: fadeUp 0.9s ease-out 0.1s both;
+}
+.hero h1 em { font-style: italic; font-weight: 300; color: var(--accent); position: relative; font-variation-settings: "opsz" 96, "wdth" 100, "wght" 600; }
+.hero h1 em::after {
+  content: ""; position: absolute; left: 0; bottom: 0.08em; width: 100%; height: 0.04em;
+  background: var(--accent-soft); opacity: 0.4; border-radius: 2px;
+}
+.hero-sub { font-size: 21px; line-height: 1.5; color: var(--ink-soft); max-width: 640px; margin-bottom: 56px; animation: fadeUp 1s ease-out 0.2s both; }
+.hero-cta { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-bottom: 96px; animation: fadeUp 1.1s ease-out 0.3s both; }
+.btn {
+  font-family: var(--sans); font-size: 15px; padding: 16px 28px; border-radius: 999px;
+  text-decoration: none; transition: all 0.25s ease; display: inline-flex; align-items: center; gap: 8px;
+  font-weight: 500; border: 1px solid transparent;
+}
+.btn-primary { background: var(--ink); color: #ffffff; box-shadow: 0 4px 16px -4px rgba(11, 11, 10, 0.2); }
+.btn-primary:hover { background: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 28px -8px rgba(139, 58, 47, 0.5); }
+.btn-secondary { background: transparent; color: #E8623C var(--ink); border: 2px solid var(--ink); }
+.btn-secondary:hover { background: var(--ink); color: white; transform: translateY(-2px); }
+.btn .arrow { transition: transform 0.25s; }
+.btn:hover .arrow { transform: translateX(4px); }
+
+.hero-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+  border-top: 1px solid var(--rule); padding-top: 40px;
+  animation: fadeUp 1.2s ease-out 0.4s both;
+}
+.stat { padding-right: 32px; border-right: 1px solid var(--rule); }
+.stat:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--display); font-size: 64px; font-weight: 500; line-height: 1;
+  letter-spacing: -0.04em; color: var(--ink); margin-bottom: 8px;
+  display: flex; align-items: baseline; gap: 4px;
+  font-variation-settings: "opsz" 72, "wdth" 90, "wght" 500;
+}
+.stat-num .plus { font-family: var(--mono); font-size: 20px; color: var(--accent); margin-left: 4px; }
+.stat-label { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-muted); line-height: 1.5; }
+
+/* CLIENTS */
+.clients { padding: 80px 0; border-bottom: 1px solid var(--rule); background: var(--bg-soft); }
+.section-label {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-soft); margin-bottom: 40px; display: flex; align-items: baseline; gap: 16px;
+}
+.section-label .num { color: var(--accent); font-weight: 500; }
+.section-label::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.client-list { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--rule); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.client {
+  background: var(--bg-soft); padding: 36px 28px; display: flex; flex-direction: column; gap: 8px;
+  transition: all 0.4s ease; position: relative; overflow: hidden;
+}
+.client::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(216, 118, 87, 0.06) 0%, transparent 60%);
+  opacity: 0; transition: opacity 0.4s;
+}
+.client:hover { background: white; }
+.client:hover::before { opacity: 1; }
+.client-name { font-family: var(--display); font-size: 22px; font-weight: 500; letter-spacing: -0.015em; position: relative; line-height: 1.15; }
+.client-domain { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.06em; position: relative; }
+
+/* ABOUT */
+.about { padding: 160px 0; border-bottom: 1px solid var(--rule); }
+.about-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 96px; align-items: start; }
+.about-eyebrow { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 24px; }
+.about-title { font-family: var(--display); font-size: clamp(40px, 5vw, 64px); font-weight: 500; line-height: 0.98; letter-spacing: -0.025em; font-variation-settings: "opsz" 96, "wdth" 95; }
+.about-title em { font-style: normal; font-weight: 500; color: var(--accent); }
+.about-body p { font-size: 19px; line-height: 1.65; margin-bottom: 24px; color: var(--ink-soft); }
+.about-body p:first-child { font-size: 24px; color: var(--ink); line-height: 1.45; }
+.about-body p:first-child::first-letter {
+  font-family: var(--display); font-size: 1.5em; font-weight: 600; color: var(--accent); margin-right: 0.05em;
+}
+
+/* PROCESS */
+.process { padding: 160px 0; border-bottom: 1px solid var(--rule); background: var(--bg-soft); position: relative; overflow: hidden; }
+.process::before { content: ""; position: absolute; top: -10%; left: -10%; width: 50%; height: 70%; background: radial-gradient(circle, rgba(216, 118, 87, 0.06) 0%, transparent 60%); pointer-events: none; }
+.process .container { position: relative; z-index: 1; }
+.process-header { margin-bottom: 72px; display: grid; grid-template-columns: 1fr 1.6fr; gap: 96px; align-items: end; }
+.process-title { font-family: var(--display); font-size: clamp(56px, 8vw, 96px); font-weight: 500; letter-spacing: -0.035em; line-height: 0.92; font-variation-settings: "opsz" 96, "wdth" 95; }
+.process-title em { font-style: normal; font-weight: 500; color: var(--accent); }
+.process-sub { font-size: 19px; line-height: 1.6; color: var(--ink-soft); }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 20px; overflow: hidden; }
+.process-step {
+  background: var(--bg); padding: 40px 32px 36px; display: flex; flex-direction: column; gap: 14px;
+  transition: all 0.3s ease; position: relative; min-height: 220px;
+}
+.process-step::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.5s ease; }
+.process-step:hover { background: var(--bg-soft); }
+.process-step:hover::before { transform: scaleX(1); }
+.step-num {
+  font-family: var(--display); font-size: 56px; font-weight: 500; line-height: 1; color: var(--ink);
+  letter-spacing: -0.04em; margin-bottom: 4px; font-variation-settings: "opsz" 96, "wdth" 95;
+}
+.step-title { font-family: var(--display); font-size: 26px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; font-variation-settings: "opsz" 96, "wdth" 95; }
+.step-title em { font-style: normal; font-weight: 500; color: var(--accent); }
+.step-body { font-size: 15px; line-height: 1.6; color: var(--ink-soft); }
+
+/* TOOLS */
+.tools { padding: 160px 0; border-bottom: 1px solid var(--rule); }
+.tools-header { margin-bottom: 72px; display: grid; grid-template-columns: 1fr 1.6fr; gap: 96px; align-items: end; }
+.tools-sub { font-size: 19px; line-height: 1.6; color: var(--ink-soft); }
+.tools-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 20px; overflow: hidden; }
+.tool {
+  background: var(--bg); padding: 32px 24px; display: flex; flex-direction: column; gap: 6px;
+  transition: all 0.3s ease; position: relative; overflow: hidden;
+}
+.tool::before { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(216, 118, 87, 0.06) 0%, transparent 60%); opacity: 0; transition: opacity 0.4s; }
+.tool:hover { background: var(--bg-soft); }
+.tool:hover::before { opacity: 1; }
+.tool-name { font-family: var(--display); font-size: 30px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.1; position: relative; font-variation-settings: "opsz" 96, "wdth" 95; }
+.tool-cat { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.06em; position: relative; }
+
+/* WORK */
+.work { padding: 160px 0; border-bottom: 1px solid var(--rule); }
+.work-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 80px; gap: 32px; }
+.work-title { font-family: var(--display); font-size: clamp(56px, 8vw, 96px); font-weight: 500; letter-spacing: -0.035em; line-height: 0.92; font-variation-settings: "opsz" 96, "wdth" 95; }
+.work-title em { font-style: normal; font-weight: 500; color: var(--accent); }
+.work-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.case-anchor { text-decoration: none; color: inherit; display: contents; }
+.case {
+  background: var(--bg-soft); border-radius: 24px; overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); position: relative;
+  border: 1px solid var(--rule); display: flex; flex-direction: column;
+}
+.case:hover { transform: translateY(-6px); box-shadow: 0 24px 48px -16px rgba(11, 11, 10, 0.15); border-color: var(--ink); }
+.case.featured { grid-column: span 2; }
+.case-preview {
+  height: 280px; position: relative; overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+  border-bottom: 1px solid var(--rule);
+}
+.case.featured .case-preview { height: 360px; }
+.preview-navix { background: linear-gradient(135deg, #1a3a3a 0%, #2a5454 50%, #3d7373 100%); }
+.preview-foxbury { background: linear-gradient(135deg, #f4ebe0 0%, #e8d4b8 50%, #c8a572 100%); }
+.preview-cargoos { background: linear-gradient(135deg, #0b0b0a 0%, #2a2624 60%, #4a453e 100%); }
+.preview-atlas { background: linear-gradient(135deg, #8B3A2F 0%, #BC5A4B 60%, #D87657 100%); }
+.preview-truckpedia { background: linear-gradient(135deg, #2d3748 0%, #4a5568 50%, #718096 100%); }
+.preview-decor { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.preview-decor svg { width: 60%; height: auto; opacity: 0.95; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.2)); transition: transform 0.5s ease; }
+.case:hover .preview-decor svg { transform: scale(1.04) translateY(-4px); }
+.case-body { padding: 32px; display: flex; flex-direction: column; gap: 16px; flex: 1; }
+.case-top { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.case-number { font-family: var(--mono); font-size: 12px; color: var(--accent); letter-spacing: 0.06em; text-transform: uppercase; }
+.case-year { font-family: var(--mono); font-size: 12px; color: var(--ink-muted); letter-spacing: 0.04em; }
+.case-title { font-family: var(--display); font-size: 40px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.05; font-variation-settings: "opsz" 96, "wdth" 95; }
+.case-title em { font-style: normal; font-weight: 500; color: var(--accent); }
+.case-summary { font-size: 16px; line-height: 1.55; color: var(--ink-soft); }
+.case-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.tag { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 11px; background: var(--bg); border: 1px solid var(--rule); border-radius: 999px; color: var(--ink-soft); }
+.case-attrs { display: flex; gap: 32px; padding-top: 20px; border-top: 1px solid var(--rule); margin-top: auto; }
+.case-attr { display: flex; flex-direction: column; gap: 2px; }
+.attr-label { font-family: var(--mono); font-size: 10px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); }
+.attr-value { font-size: 14px; color: var(--ink); font-weight: 500; }
+.case-link {
+  display: inline-flex; align-items: center; gap: 6px; font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.04em; color: var(--ink); text-decoration: none; position: absolute;
+  top: 24px; right: 24px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px);
+  padding: 8px 14px; border-radius: 999px; transition: all 0.3s; z-index: 2;
+  opacity: 0; transform: translateX(8px);
+}
+.case:hover .case-link { opacity: 1; transform: translateX(0); }
+.case-link:hover { background: var(--ink); color: white; }
+
+/* SERVICES */
+.services { padding: 160px 0; border-bottom: 1px solid var(--rule); background: var(--bg-soft); position: relative; overflow: hidden; }
+.services::before { content: ""; position: absolute; top: -10%; right: -10%; width: 60%; height: 80%; background: radial-gradient(circle, rgba(216, 118, 87, 0.06) 0%, transparent 60%); pointer-events: none; }
+.services .container { position: relative; z-index: 1; }
+.services-header { margin-bottom: 72px; display: grid; grid-template-columns: 1fr 1.6fr; gap: 96px; align-items: end; }
+.services-title { font-family: var(--display); font-size: clamp(56px, 8vw, 96px); font-weight: 500; letter-spacing: -0.035em; line-height: 0.92; font-variation-settings: "opsz" 96, "wdth" 95; }
+.services-title em { font-style: normal; font-weight: 500; color: var(--accent); }
+.services-sub { font-size: 19px; line-height: 1.6; color: var(--ink-soft); }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service {
+  background: var(--bg); padding: 40px 32px 36px; display: flex; flex-direction: column; gap: 20px;
+  border-radius: 20px; border: 1px solid var(--rule); transition: all 0.4s ease; position: relative; overflow: hidden;
+}
+.service::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.5s ease; }
+.service:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(11, 11, 10, 0.1); }
+.service:hover::before { transform: scaleX(1); }
+.service-num { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; color: var(--accent); font-weight: 500; }
+.service-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--bg-card); border: 1px solid var(--rule); display: flex; align-items: center; justify-content: center; color: var(--accent); }
+.service-title { font-family: var(--display); font-size: 30px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.1; }
+.service-title em { font-style: italic; color: var(--accent); }
+.service-body { font-size: 15px; line-height: 1.6; color: var(--ink-soft); }
+
+/* TESTIMONIAL DARK FLIP */
+.testimonial { padding: 180px 0; background: var(--ink); color: white; position: relative; overflow: hidden; }
+.testimonial::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(216, 118, 87, 0.15) 0%, transparent 50%); pointer-events: none; }
+.testimonial::after { display: none; }
+.testimonial .container { position: relative; z-index: 1; }
+.testimonial-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 40px; display: flex; align-items: center; gap: 12px; }
+
+.quote { font-family: var(--display); font-size: clamp(32px, 4.5vw, 56px); font-weight: 400; line-height: 1.25; letter-spacing: -0.02em; max-width: 1100px; font-style: normal; color: white; font-variation-settings: "opsz" 96, "wdth" 95, "wght" 400; }
+.quote-highlight { background: linear-gradient(180deg, transparent 60%, rgba(216, 118, 87, 0.35) 60%); padding: 0 4px; }
+.quote-author { margin-top: 56px; display: flex; align-items: center; gap: 16px; }
+.author-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%); display: flex; align-items: center; justify-content: center; font-family: var(--display); font-weight: 600; font-size: 20px; color: white; }
+.author-info { display: flex; flex-direction: column; gap: 2px; }
+.author-name { font-size: 15px; font-weight: 500; color: white; }
+.author-role { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: rgba(255, 255, 255, 0.6); }
+
+/* CAROUSEL */
+.carousel { position: relative; }
+.carousel-track {
+  display: grid; min-height: 360px;
+}
+.carousel-slide {
+  grid-column: 1; grid-row: 1;
+  opacity: 0; pointer-events: none; visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0s linear 0.6s;
+}
+.carousel-slide.active {
+  opacity: 1; pointer-events: auto; visibility: visible;
+  transition: opacity 0.6s ease, visibility 0s linear;
+}
+.carousel-controls {
+  margin-top: 64px; display: flex; align-items: center; gap: 24px;
+  padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.carousel-arrow {
+  width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent; color: white; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: all 0.3s ease;
+}
+.carousel-arrow:hover {
+  background: var(--accent); border-color: var(--accent);
+  transform: translateY(-1px); box-shadow: 0 10px 24px -8px rgba(139, 58, 47, 0.6);
+}
+.carousel-dots { display: flex; gap: 10px; }
+.dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25); border: none; cursor: pointer;
+  transition: all 0.3s ease; padding: 0;
+}
+.dot:hover { background: rgba(255, 255, 255, 0.5); }
+.dot.active {
+  background: var(--accent-soft);
+  width: 32px; border-radius: 999px;
+  box-shadow: 0 0 0 4px rgba(216, 118, 87, 0.15);
+}
+.carousel-counter {
+  margin-left: auto; font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.06em; color: rgba(255, 255, 255, 0.7);
+}
+
+/* CURRENTLY */
+.currently { padding: 140px 0; border-bottom: 1px solid var(--rule); }
+.currently-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 96px; align-items: start; }
+.currently-list { display: flex; flex-direction: column; }
+.now-item { display: grid; grid-template-columns: 120px 1fr auto; gap: 24px; padding: 24px 0; border-top: 1px solid var(--rule); align-items: baseline; transition: padding 0.3s ease; }
+.now-item:hover { padding-left: 8px; }
+.now-item:last-child { border-bottom: 1px solid var(--rule); }
+.now-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+.now-content { font-size: 17px; line-height: 1.55; color: var(--ink); }
+.now-content em { font-family: var(--display); font-style: italic; color: var(--accent); }
+.now-time { font-family: var(--mono); font-size: 11px; color: var(--ink-muted); letter-spacing: 0.04em; }
+
+/* FOOTER */
+footer { padding: 160px 0 50px; background: var(--ink); color: white; position: relative; overflow: hidden; }
+footer::before { content: ""; position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: radial-gradient(circle at 70% 40%, rgba(216, 118, 87, 0.18) 0%, transparent 50%); pointer-events: none; }
+footer .container { position: relative; z-index: 1; }
+.footer-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 32px; display: flex; align-items: center; gap: 12px; }
+
+.footer-cta { font-family: var(--display); font-size: clamp(56px, 9vw, 144px); font-weight: 500; line-height: 0.94; letter-spacing: -0.035em; margin-bottom: 48px; max-width: 1200px; font-variation-settings: "opsz" 96, "wdth" 95; }
+.footer-cta em { font-style: normal; font-weight: 500; color: var(--accent-soft); }
+.footer-sub { font-size: 19px; color: rgba(255, 255, 255, 0.7); max-width: 680px; margin-bottom: 56px; line-height: 1.6; }
+.footer-email {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--display); font-size: clamp(28px, 4vw, 48px); color: white;
+  text-decoration: none; padding: 16px 32px; border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 999px; transition: all 0.3s ease; font-weight: 500;
+}
+.footer-email:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 20px 48px -12px rgba(139, 58, 47, 0.6); }
+.footer-email .arrow { transition: transform 0.3s; }
+.footer-email:hover .arrow { transform: translate(4px, -2px); }
+.footer-bottom { margin-top: 120px; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.15); display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 12px; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.05em; flex-wrap: wrap; gap: 16px; }
+.footer-bottom a { color: rgba(255, 255, 255, 0.5); text-decoration: none; margin-left: 24px; transition: color 0.2s; }
+.footer-bottom a:hover { color: var(--accent-soft); }
+
+@media (max-width: 1024px) {
+  .work-grid { grid-template-columns: 1fr; }
+  .case.featured { grid-column: span 1; }
+  .service-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 900px) {
+  .container { padding: 0 20px; }
+  .nav-links li:not(:last-child) { display: none; }
+  .hero { padding-top: 110px; padding-bottom: 80px; }
+  .about, .work, .services, .currently, .process, .tools { padding: 80px 0; }
+  .testimonial { padding: 100px 0; }
+  .about-grid, .services-header, .currently-grid, .process-header, .tools-header { grid-template-columns: 1fr; gap: 32px; }
+  .process-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 24px 0; }
+  .stat:nth-child(2) { border-right: none; }
+  .stat { padding-bottom: 16px; }
+  .work-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .client-list { grid-template-columns: 1fr; }
+  .case-attrs { flex-wrap: wrap; gap: 16px 24px; }
+  .now-item { grid-template-columns: 1fr; gap: 6px; }
+  .now-time { display: none; }
+  .testimonial::after { font-size: 200px; }
+  footer { padding: 80px 0 40px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-bottom > div:last-child a:first-child { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" class="brand"><span class="brand-dot"></span>Elvina Garcia<sup>01</sup></a>
+    <ul class="nav-links">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact" class="nav-cta">Get in touch <span class="arrow">→</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <div class="status-pill">Available for Q1 2027 · Davao, PH (UTC+8)</div>
+    <h1>Designing the unglamorous, mission-critical parts of SaaS.</h1>
+    <p class="hero-sub">Beautiful software is easy. Software people can trust with their work is harder. That's the part I design.</p>
+    <div class="hero-cta">
+      <a href="#work" class="btn btn-primary">View selected work <span class="arrow">→</span></a>
+      <a href="#contact" class="btn btn-secondary">Start a project</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">06</div><div class="stat-label">Years designing<br>complex software</div></div>
+      <div class="stat"><div class="stat-num">12<span class="plus">+</span></div><div class="stat-label">Products shipped<br>end-to-end</div></div>
+      <div class="stat"><div class="stat-num">05</div><div class="stat-label">Industries<br>across B2B SaaS</div></div>
+      <div class="stat"><div class="stat-num">01</div><div class="stat-label">Founding designer<br>most of the time</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="clients">
+  <div class="container">
+    <div class="section-label">Trusted by teams building serious software</div>
+    <div class="client-list">
+      <div class="client"><div class="client-name">Primoro</div><a href="primoro.html"></a><div class="client-domain">Dental practice OS</div></div>
+      <div class="client"><div class="client-name">Cargoos <a href="navix.html" class="case-anchor"><article class="case"></article></div><div class="client-domain">Driver performance</div></div>
+      <div class="client"><div class="client-name">Navix Health</div><a href="navix.html"></a><div class="client-domain">Behavioral health platform</div></div>
+      <div class="client"><div class="client-name">Atlas ATS <a href="atlas.html" class="case-anchor"><article class="case"></article></div><div class="client-domain">Recruitment SaaS</div></div>
+      <div class="client"><div class="client-name">Truckpedia</div><div class="client-domain">Logistics</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <div class="about-eyebrow">About</div>
+        <h2 class="about-title">Hey, I'm <em>Elvina</em>.</h2>
+      </div>
+      <div class="about-body">
+        <p>I'm a Product Designer, and I've made it my mission to create digital experiences that are as seamless as they are delightful. Whether it's crafting B2B SaaS web and mobile apps or designing those oh-so-satisfying screens, I'm all about making things that just feel right for the user.</p>
+        <p>I've worked across industries like Behavioral Healthcare, Recruitment, and Logistics, which means I'm no stranger to complex challenges. But that's where the fun begins! I dive into projects with a sprint-based approach — no dragging timelines here, just focused feature drops, productive sync-ups, and a little room for tweaks and revisions (because hey, perfection is a process). 🤸‍♂️</p>
+        <p>🎨 Figma is my playground — think of me as a wizard with auto-layouts, components, and advanced prototyping. I'm all about making designs scalable and beautifully consistent, thanks to my passion for design systems and component libraries. Oh, and did I mention? I'm all in for leveraging AI-generated images to spice up the design process.</p>
+        <p>Here's what really drives me though: I want to design products that don't feel like <em>new tools to learn</em>. The B2B work I care about most is the kind where the software becomes a co-pilot — something that engraves itself into the systems users already navigate, instead of asking them to open yet another tab. The best compliment I can get isn't "this is beautiful." It's "I forget I'm using it."</p>
+        <p>Based in Davao, Philippines, I bring a little bit of that island spirit into my work — laid back but serious about delivering results. My goal? To create designs that look amazing and make users' lives easier, all while bringing your vision to life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <div class="process-header">
+      <div>
+        <div class="about-eyebrow">Process</div>
+        <h2 class="process-title">Design <em>process</em></h2>
+      </div>
+      <p class="process-sub">A repeatable, sprint-based flow that takes a fuzzy idea and turns it into a shipped, documented, handed-off product.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Discovery & <em>Research</em></h3>
+        <p class="step-body">I dive deep into your business and user needs through research and analysis to identify key pain points.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Ideation & <em>Concept</em></h3>
+        <p class="step-body">I brainstorm and outline innovative solutions, focusing on user journeys and core features.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Wireframing & <em>Structure</em></h3>
+        <p class="step-body">I create detailed, responsive wireframes to map out the structure and flow of your product.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <h3 class="step-title"><em>Prototyping</em></h3>
+        <p class="step-body">I bring designs to life with interactive prototypes that simulate real interactions and reveal usability issues early.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">05</div>
+        <h3 class="step-title">Testing & <em>Iteration</em></h3>
+        <p class="step-body">I test designs with real users, gather insights, and refine the product through continuous iterations.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">06</div>
+        <h3 class="step-title">Handoff & <em>Docs</em></h3>
+        <p class="step-body">I provide detailed design systems and documentation for a smooth handoff to developers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tools">
+  <div class="container">
+    <div class="tools-header">
+      <div>
+        <div class="about-eyebrow">Tools</div>
+        <h2 class="about-title">My <em>digital</em> sidekicks.</h2>
+      </div>
+      <p class="tools-sub">The toolkit that makes me look like a genius — most of the time.</p>
+    </div>
+    <div class="tools-grid">
+      <div class="tool">
+        <div class="tool-name">Figma</div>
+        <div class="tool-cat">Design · Prototyping</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">FigJam</div>
+        <div class="tool-cat">Whiteboard · Flows</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">Notion</div>
+        <div class="tool-cat">Docs · Specs</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">Claude</div>
+        <div class="tool-cat">AI · Research</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">Loom</div>
+        <div class="tool-cat">Walkthroughs</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">Slack</div>
+        <div class="tool-cat">Async sync</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">Jira</div>
+        <div class="tool-cat">Sprint tracking</div>
+      </div>
+      <div class="tool">
+        <div class="tool-name">Confluence</div>
+        <div class="tool-cat">Project tracking</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="container">
+    <div class="work-header">
+      <div>
+        <div class="section-label" style="margin-bottom: 24px;">Selected work</div>
+        <h2 class="work-title">Recent <em>case studies</em></h2>
+      </div>
+      <div class="section-label" style="margin-bottom: 8px;">2020 — 2026</div>
+    </div>
+    <div class="work-grid">
+
+      <article class="case featured">
+        <div class="case-preview preview-foxbury">
+          <a href="#" class="case-link">Read case study →</a>
+          <div class="preview-decor">
+            <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="40" width="520" height="240" rx="14" fill="white" opacity="0.95"/>
+              <rect x="60" y="60" width="130" height="220" rx="6" fill="#c8a572" opacity="0.2"/>
+              <circle cx="92" cy="90" r="10" fill="#8b6f3f"/>
+              <rect x="72" y="124" width="100" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="72" y="138" width="80" height="6" rx="2" fill="#8b6f3f" opacity="0.3"/>
+              <rect x="72" y="164" width="100" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="72" y="178" width="70" height="6" rx="2" fill="#8b6f3f" opacity="0.3"/>
+              <rect x="72" y="204" width="100" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="72" y="218" width="60" height="6" rx="2" fill="#8b6f3f" opacity="0.3"/>
+              <rect x="72" y="244" width="100" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="210" y="60" width="350" height="64" rx="6" fill="#8b6f3f" opacity="0.15"/>
+              <rect x="228" y="80" width="140" height="10" rx="2" fill="#8b6f3f"/>
+              <rect x="228" y="100" width="90" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="500" y="80" width="44" height="22" rx="11" fill="#8b6f3f"/>
+              <rect x="210" y="140" width="167" height="140" rx="6" fill="#8b6f3f" opacity="0.1"/>
+              <rect x="222" y="156" width="80" height="8" rx="2" fill="#8b6f3f" opacity="0.7"/>
+              <rect x="222" y="174" width="140" height="6" rx="2" fill="#8b6f3f" opacity="0.4"/>
+              <rect x="222" y="188" width="120" height="6" rx="2" fill="#8b6f3f" opacity="0.4"/>
+              <rect x="222" y="220" width="110" height="36" rx="6" fill="#8b6f3f" opacity="0.25"/>
+              <rect x="393" y="140" width="167" height="140" rx="6" fill="#8b6f3f" opacity="0.1"/>
+              <rect x="405" y="156" width="80" height="8" rx="2" fill="#8b6f3f" opacity="0.7"/>
+              <rect x="405" y="174" width="140" height="6" rx="2" fill="#8b6f3f" opacity="0.4"/>
+              <rect x="405" y="188" width="120" height="6" rx="2" fill="#8b6f3f" opacity="0.4"/>
+              <rect x="405" y="220" width="110" height="36" rx="6" fill="#8b6f3f" opacity="0.25"/>
+            </svg>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-number">01 / Healthcare · Featured</span><span class="case-year">2025 — 2026</span></div>
+          <h3 class="case-title">Foxbury / <em>Primoro</em></h3>
+          <p class="case-summary">Lead design for a modern dental practice operating system.</p>
+          <div class="case-tags"><span class="tag">Dental SaaS</span><span class="tag">Multi-product</span><span class="tag">RBAC</span><span class="tag">Web + Tablet</span></div>
+          <div class="case-attrs">
+            <div class="case-attr"><div class="attr-label">Role</div><div class="attr-value">Lead designer</div></div>
+            <div class="case-attr"><div class="attr-label">Surface</div><div class="attr-value">Web, Tablet and Mobile App </div></div>
+            <div class="case-attr"><div class="attr-label">Scope</div><div class="attr-value">End-to-end · Multi-product</div></div>
+          </div>
+        </div>
+      </article>
+
+      <a href="navix.html" class="case-anchor"><article class="case">
+        <div class="case-preview preview-navix">
+          <span class="case-link">Read case study →</span>
+          <div class="preview-decor">
+            <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="40" width="520" height="210" rx="14" fill="white" opacity="0.95"/>
+              <rect x="60" y="60" width="160" height="10" rx="2" fill="#1a3a3a"/>
+              <rect x="60" y="80" width="100" height="6" rx="2" fill="#1a3a3a" opacity="0.4"/>
+              <rect x="60" y="110" width="220" height="44" rx="6" fill="#1a3a3a" opacity="0.08"/>
+              <rect x="60" y="164" width="220" height="44" rx="6" fill="#3d7373" opacity="0.4"/>
+              <rect x="300" y="110" width="240" height="120" rx="6" fill="#1a3a3a" opacity="0.06"/>
+              <circle cx="340" cy="140" r="12" fill="#3d7373"/>
+              <rect x="360" y="134" width="100" height="6" rx="2" fill="#1a3a3a" opacity="0.5"/>
+              <rect x="360" y="146" width="70" height="5" rx="2" fill="#1a3a3a" opacity="0.3"/>
+              <rect x="320" y="180" width="200" height="6" rx="2" fill="#1a3a3a" opacity="0.3"/>
+              <rect x="320" y="194" width="160" height="6" rx="2" fill="#1a3a3a" opacity="0.3"/>
+              <rect x="320" y="208" width="180" height="6" rx="2" fill="#1a3a3a" opacity="0.3"/>
+            </svg>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-number">Behavioral Healthcare · Platform</span><span class="case-year">2021 — 2025</span></div>
+          <h3 class="case-title">Navix Health <em>Platform</em></h3>
+          <p class="case-summary">Lead designer on a behavioral health operations platform. Designed the system across web and mobile, partnered with a junior designer, and led a brand refresh for a more premium, enterprise-ready feel.</p>
+          <div class="case-tags"><span class="tag">Platform</span><span class="tag">CRM</span><span class="tag">EHR</span><span class="tag">RCM</span><span class="tag">Design system</span></div>
+          <div class="case-attrs">
+            <div class="case-attr"><div class="attr-label">Role</div><div class="attr-value">Foundation product designer</div></div>
+            <div class="case-attr"><div class="attr-label">Surface</div><div class="attr-value">Web · Mobile · AI</div></div>
+          </div>
+        </div>
+      </article></a>
+
+      <article class="case">
+        <div class="case-preview preview-cargoos">
+          <a href="#" class="case-link">Read case study →</a>
+          <div class="preview-decor">
+            <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+              <rect x="50" y="40" width="500" height="210" rx="14" fill="white" opacity="0.95"/>
+              <rect x="70" y="60" width="460" height="32" rx="6" fill="#0b0b0a" opacity="0.08"/>
+              <circle cx="92" cy="76" r="8" fill="#8B3A2F"/>
+              <rect x="110" y="72" width="80" height="8" rx="2" fill="#0b0b0a" opacity="0.7"/>
+              <rect x="450" y="70" width="60" height="12" rx="6" fill="#8B3A2F" opacity="0.3"/>
+              <rect x="70" y="105" width="460" height="28" rx="4" fill="#0b0b0a" opacity="0.04"/>
+              <rect x="80" y="113" width="80" height="6" rx="2" fill="#0b0b0a" opacity="0.6"/>
+              <rect x="200" y="113" width="60" height="6" rx="2" fill="#0b0b0a" opacity="0.4"/>
+              <rect x="300" y="113" width="100" height="6" rx="2" fill="#0b0b0a" opacity="0.4"/>
+              <rect x="430" y="111" width="40" height="10" rx="3" fill="#8B3A2F"/>
+              <rect x="70" y="140" width="460" height="28" rx="4" fill="#0b0b0a" opacity="0.04"/>
+              <rect x="80" y="148" width="80" height="6" rx="2" fill="#0b0b0a" opacity="0.6"/>
+              <rect x="200" y="148" width="60" height="6" rx="2" fill="#0b0b0a" opacity="0.4"/>
+              <rect x="300" y="148" width="100" height="6" rx="2" fill="#0b0b0a" opacity="0.4"/>
+              <rect x="430" y="146" width="40" height="10" rx="3" fill="#c8a572"/>
+              <rect x="70" y="175" width="460" height="28" rx="4" fill="#0b0b0a" opacity="0.04"/>
+              <rect x="80" y="183" width="80" height="6" rx="2" fill="#0b0b0a" opacity="0.6"/>
+              <rect x="200" y="183" width="60" height="6" rx="2" fill="#0b0b0a" opacity="0.4"/>
+              <rect x="300" y="183" width="100" height="6" rx="2" fill="#0b0b0a" opacity="0.4"/>
+              <rect x="430" y="181" width="40" height="10" rx="3" fill="#4a453e"/>
+              <rect x="70" y="210" width="460" height="32" rx="4" fill="#0b0b0a" opacity="0.06"/>
+            </svg>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-number">03 / Operations</span><span class="case-year">2025 — 2026</span></div>
+          <h3 class="case-title"><em>CPS</em></h3>
+          <p class="case-summary">Configurable carrier scoring platform with admin panel handling 100+ parameters and audit-first design. Carrier-facing dashboard surfaces score causation in plain language.</p>
+          <div class="case-tags"><span class="tag">Logistics</span><span class="tag">Audit trails</span><span class="tag">Data-dense</span></div>
+          <div class="case-attrs">
+            <div class="case-attr"><div class="attr-label">Role</div><div class="attr-value">Sole designer</div></div>
+            <div class="case-attr"><div class="attr-label">Surface</div><div class="attr-value">Web + Mobile</div></div>
+          </div>
+        </div>
+      </article>
+
+      <a href="atlas.html" class="case-anchor"><article class="case">
+        <div class="case-preview preview-atlas">
+          <span class="case-link">Read case study →</span>
+          <div class="preview-decor">
+            <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+              <rect x="50" y="40" width="500" height="210" rx="14" fill="white" opacity="0.95"/>
+              <rect x="70" y="60" width="105" height="180" rx="8" fill="#8B3A2F" opacity="0.12"/>
+              <rect x="80" y="72" width="60" height="8" rx="2" fill="#8B3A2F" opacity="0.8"/>
+              <rect x="80" y="90" width="40" height="6" rx="2" fill="#8B3A2F" opacity="0.5"/>
+              <rect x="80" y="110" width="85" height="40" rx="4" fill="white"/>
+              <rect x="80" y="156" width="85" height="40" rx="4" fill="white"/>
+              <rect x="185" y="60" width="105" height="180" rx="8" fill="#8B3A2F" opacity="0.12"/>
+              <rect x="195" y="72" width="60" height="8" rx="2" fill="#8B3A2F" opacity="0.8"/>
+              <rect x="195" y="110" width="85" height="40" rx="4" fill="white"/>
+              <rect x="300" y="60" width="105" height="180" rx="8" fill="#8B3A2F" opacity="0.12"/>
+              <rect x="310" y="72" width="60" height="8" rx="2" fill="#8B3A2F" opacity="0.8"/>
+              <rect x="310" y="110" width="85" height="40" rx="4" fill="white"/>
+              <rect x="310" y="156" width="85" height="40" rx="4" fill="white"/>
+              <rect x="310" y="202" width="85" height="30" rx="4" fill="white"/>
+              <rect x="415" y="60" width="105" height="180" rx="8" fill="#8B3A2F" opacity="0.12"/>
+              <rect x="425" y="72" width="60" height="8" rx="2" fill="#8B3A2F" opacity="0.8"/>
+              <rect x="425" y="110" width="85" height="40" rx="4" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-number">Recruitment · Executive Search</span><span class="case-year">2023 — 2024</span></div>
+          <h3 class="case-title">Atlas <em>ATS</em></h3>
+          <p class="case-summary">Led the UX and UI redesign of a legacy applicant tracking system into a modern collaborative hiring engine — built for the pace and stakes of executive search.</p>
+          <div class="case-tags"><span class="tag">Recruitment</span><span class="tag">Pipeline</span><span class="tag">Collaboration</span></div>
+          <div class="case-attrs">
+            <div class="case-attr"><div class="attr-label">Role</div><div class="attr-value">Lead UX and UI Designer</div></div>
+            <div class="case-attr"><div class="attr-label">Surface</div><div class="attr-value">Web</div></div>
+          </div>
+        </div>
+      </article></a>
+
+      <article class="case">
+        <div class="case-preview preview-truckpedia">
+          <a href="#" class="case-link">Read case study →</a>
+          <div class="preview-decor">
+            <svg viewBox="0 0 600 280" xmlns="http://www.w3.org/2000/svg">
+              <rect x="180" y="20" width="240" height="240" rx="32" fill="white" opacity="0.95"/>
+              <rect x="200" y="50" width="200" height="14" rx="3" fill="#2d3748"/>
+              <rect x="200" y="72" width="120" height="8" rx="2" fill="#2d3748" opacity="0.5"/>
+              <rect x="200" y="95" width="200" height="60" rx="8" fill="#2d3748" opacity="0.1"/>
+              <circle cx="220" cy="125" r="12" fill="#4a5568"/>
+              <rect x="240" y="118" width="100" height="6" rx="2" fill="#2d3748" opacity="0.6"/>
+              <rect x="240" y="130" width="60" height="5" rx="2" fill="#2d3748" opacity="0.4"/>
+              <rect x="200" y="165" width="95" height="50" rx="8" fill="#2d3748" opacity="0.08"/>
+              <rect x="305" y="165" width="95" height="50" rx="8" fill="#2d3748" opacity="0.08"/>
+              <rect x="200" y="225" width="200" height="20" rx="10" fill="#2d3748"/>
+            </svg>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-top"><span class="case-number">05 / Logistics</span><span class="case-year">2022 — 2023</span></div>
+          <h3 class="case-title"><em>Truckpedia</em></h3>
+          <p class="case-summary">Driver-facing mobile app for load tracking, status updates, and document capture in the field.</p>
+          <div class="case-tags"><span class="tag">Mobile-first</span><span class="tag">Field ops</span></div>
+          <div class="case-attrs">
+            <div class="case-attr"><div class="attr-label">Role</div><div class="attr-value">Product designer</div></div>
+            <div class="case-attr"><div class="attr-label">Surface</div><div class="attr-value">Mobile</div></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <div class="section-label" style="margin-bottom: 24px;">Services</div>
+        <h2 class="services-title">What I do <em>best</em></h2>
+      </div>
+      <p class="services-sub">Three ways I work with teams shipping serious software — from end-to-end product ownership to focused audits when you need a second pair of senior eyes on something complex.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service">
+        <div class="service-num">Engagement</div>
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 3v18"/></svg></div>
+        <h3 class="service-title">End-to-end <em>product design</em></h3>
+        <p class="service-body">Discovery through shipped product. Solo or embedded with your team. Best fit for early-stage to Series B companies where one designer owns the surface.</p>
+      </div>
+      <div class="service">
+        <div class="service-num">Engagement</div>
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3 class="service-title">Heuristic reviews <em>& audits</em></h3>
+        <p class="service-body">Structured evaluation for complex platforms. Nielsen's heuristics plus B2B-specific frameworks for permissions, data density, and power-user workflows.</p>
+      </div>
+      <div class="service">
+        <div class="service-num">Engagement</div>
+        <div class="service-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg></div>
+        <h3 class="service-title">Healthcare <em>partnership</em></h3>
+        <p class="service-body">Embedded design support for EHRs, practice management, scheduling, and audit systems. Domain familiarity included.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <div class="container">
+    <div class="testimonial-label">What they say</div>
+    <div class="carousel">
+      <div class="carousel-track">
+
+        <div class="carousel-slide active" data-slide="0">
+          <blockquote class="quote">Elvina brought creativity, thoughtfulness, and a strong user-centric mindset to every project. <span class="quote-highlight">Her contributions made a meaningful impact</span> on our product experience and internal workflows.</blockquote>
+          <div class="quote-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <span class="author-name">Justin Lu</span>
+              <span class="author-role">CEO & Co-founder, Truckpedia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-slide="1">
+          <blockquote class="quote"><span style="opacity: 0.4; font-style: normal; font-family: var(--mono); font-size: 0.45em; letter-spacing: 0.05em;">[Testimonial content from Harry will go here. Designed to hold roughly two to three sentences — enough to feel substantial, short enough to read in one breath.]</span></blockquote>
+          <div class="quote-author">
+            <div class="author-avatar">H</div>
+            <div class="author-info">
+              <span class="author-name">Harry Leak</span>
+              <span class="author-role">Primoro / Foxbury Dental</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-slide" data-slide="2">
+          <blockquote class="quote"><span style="opacity: 0.4; font-style: normal; font-family: var(--mono); font-size: 0.45em; letter-spacing: 0.05em;">[Testimonial content from Judy will go here. Best lines are specific — mention what Elvina actually did rather than generic praise.]</span></blockquote>
+          <div class="quote-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <span class="author-name">Judy Abunda</span>
+              <span class="author-role">—</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="carousel-controls">
+        <button class="carousel-arrow" id="prevSlide" aria-label="Previous testimonial">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        </button>
+        <div class="carousel-dots">
+          <button class="dot active" data-target="0" aria-label="Slide 1"></button>
+          <button class="dot" data-target="1" aria-label="Slide 2"></button>
+          <button class="dot" data-target="2" aria-label="Slide 3"></button>
+        </div>
+        <button class="carousel-arrow" id="nextSlide" aria-label="Next testimonial">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+        <div class="carousel-counter">
+          <span id="currentSlide">01</span><span style="opacity: 0.4;"> / 03</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+    const prev = document.getElementById('prevSlide');
+    const next = document.getElementById('nextSlide');
+    const counter = document.getElementById('currentSlide');
+    let current = 0;
+
+    function goTo(index) {
+      current = (index + slides.length) % slides.length;
+      slides.forEach((s, i) => s.classList.toggle('active', i === current));
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      counter.textContent = String(current + 1).padStart(2, '0');
+    }
+
+    prev.addEventListener('click', () => goTo(current - 1));
+    next.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') goTo(current - 1);
+      if (e.key === 'ArrowRight') goTo(current + 1);
+    });
+  })();
+</script>
+
+<section class="currently">
+  <div class="container">
+    <div class="currently-grid">
+      <div>
+        <div class="about-eyebrow">Now</div>
+        <h2 class="about-title">Currently</h2>
+      </div>
+      <div class="currently-list">
+        <div class="now-item">
+          <div class="now-label">Working on</div>
+          <div class="now-content">Bunch of things I wanted to do during childhood.</div>
+          <div class="now-time">This days</div>
+        </div>
+        <div class="now-item">
+          <div class="now-label">Reading</div>
+          <div class="now-content">M. Krogerous & R. Tschappeler's <em>The Decision Book</em>. Plus essentialism by Greg McKeown.</div>
+          <div class="now-time">Ongoing</div>
+        </div>
+        <div class="now-item">
+          <div class="now-label">Building</div>
+          <div class="now-content">A library of structured UX skills for AI-assisted design workflows — heuristic reviewers, critique partners, QA tooling.</div>
+          <div class="now-time">2026</div>
+        </div>
+        <div class="now-item">
+          <div class="now-label">Off-hours</div>
+          <div class="now-content">Drumming in worship contexts. Slowly building toward a real <em>Zildjian</em> setup. Playing with my cats. Coffee hopping. Badminton. </div>
+          <div class="now-time">Weekends</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-eyebrow">Get in touch</div>
+    <h2 class="footer-cta">Let's talk <em>UX</em>.</h2>
+    <p class="footer-sub">Building B2B software where users truly depend on what you ship? Whether it's a fresh idea, an ongoing project, or just a question — I'd love to hear about it.</p>
+    <a href="mailto:elvinagarcia.design@gmail.com" class="footer-email">📩 elvinagarcia.design@gmail.com <span class="arrow">→</span></a>
+    <div class="footer-bottom">
+      <div>© 2026 Elvina Garcia · Davao, Philippines · Crafted with care</div>
+      <div><a href="#">LinkedIn</a><a href="#">Read.cv</a><a href="#">Dribbble</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

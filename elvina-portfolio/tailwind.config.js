@@ -29,7 +29,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Geist', 'sans-serif'],
+        sans: ['Bricolage Grotesque', 'sans-serif'],
+        mono: ['Geist Mono', 'monospace'],
       },
     },
   },

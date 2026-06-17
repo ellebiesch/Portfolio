@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navix Health Platform — Elvina Garcia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FFFFFF;
+  --bg-soft: #F7F6F2;
+  --bg-card: #FAFAF7;
+  --ink: #0B0B0A;
+  --ink-soft: #4A453E;
+  --ink-muted: #8E887F;
+  --rule: #E8E4DC;
+  --accent: #E8623C;
+  --accent-soft: #D87657;
+  --accent-glow: #F4D4C5;
+  --gold: #C8A572;
+  --display: 'Bricolage Grotesque', sans-serif;
+  --sans: 'Bricolage Grotesque', sans-serif;
+  --mono: 'Geist Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+.container { max-width: 1320px; margin: 0 auto; padding: 0 32px; position: relative; }
+.prose-container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%); border-bottom: 1px solid rgba(232, 228, 220, 0.6); z-index: 100; }
+nav .container { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; padding-bottom: 16px; }
+.brand { font-family: var(--display); font-weight: 600; font-size: 22px; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.brand-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; display: inline-block; }
+.brand sup { font-family: var(--mono); font-size: 10px; vertical-align: super; margin-left: 2px; color: var(--ink-muted); font-weight: 400; }
+.nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+.nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 400; transition: color 0.2s; position: relative; }
+.nav-links a:not(.nav-cta)::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 1px; background: var(--accent); transition: width 0.3s ease; }
+.nav-links a:not(.nav-cta):hover::after { width: 100%; }
+.nav-cta { font-size: 13px; font-weight: 500; padding: 10px 18px; border-radius: 999px; background: var(--accent); color: white !important; transition: all 0.25s; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px -4px rgba(139, 58, 47, 0.4); }
+.nav-cta:hover { background: var(--ink) !important; transform: translateY(-1px); box-shadow: 0 10px 24px -8px rgba(11, 11, 10, 0.4); }
+
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; margin-bottom: 32px; transition: gap 0.25s, color 0.25s; }
+.back-link:hover { gap: 14px; color: var(--accent); }
+
+/* HERO */
+.case-hero { padding-top: 140px; padding-bottom: 60px; position: relative; overflow: hidden; }
+.case-hero::before { content: ""; position: absolute; top: 0; right: -10%; width: 70%; height: 100%; background: radial-gradient(circle at 70% 30%, rgba(216, 118, 87, 0.12) 0%, transparent 60%); pointer-events: none; z-index: 0; }
+.case-hero .container { position: relative; z-index: 1; }
+.case-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+.case-h1 { font-family: var(--display); font-size: clamp(56px, 9vw, 144px); font-weight: 500; line-height: 1.0; letter-spacing: -0.04em; font-variation-settings: "opsz" 96, "wdth" 95; margin-bottom: 32px; max-width: 1100px; }
+.case-tagline { font-size: 22px; line-height: 1.5; color: var(--ink-soft); max-width: 720px; margin-bottom: 64px; }
+
+.case-meta-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; padding: 32px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-bottom: 80px; }
+.meta-item { padding-right: 24px; border-right: 1px solid var(--rule); }
+.meta-item:last-child { border-right: none; }
+.meta-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 8px; }
+.meta-value { font-family: var(--display); font-size: 20px; font-weight: 500; line-height: 1.25; letter-spacing: -0.01em; font-variation-settings: "opsz" 72, "wdth" 95; }
+
+.case-cover { height: 540px; border-radius: 24px; overflow: hidden; background: linear-gradient(135deg, #1a3a3a 0%, #2a5454 50%, #3d7373 100%); position: relative; margin-bottom: 120px; display: flex; align-items: center; justify-content: center; box-shadow: 0 32px 80px -24px rgba(26, 58, 58, 0.4); }
+.cover-decor svg { width: 75%; height: auto; filter: drop-shadow(0 16px 40px rgba(0,0,0,0.25)); }
+.placeholder-badge { position: absolute; top: 24px; left: 24px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255, 255, 255, 0.7); background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 999px; z-index: 2; }
+
+/* SECTIONS */
+.section { padding: 80px 0; }
+.section-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+.section-h2 { font-family: var(--display); font-size: clamp(40px, 5.5vw, 72px); font-weight: 500; line-height: 1.0; letter-spacing: -0.03em; font-variation-settings: "opsz" 96, "wdth" 95; margin-bottom: 32px; max-width: 900px; }
+.section-h2 em { font-style: normal; font-weight: 600; color: var(--accent); }
+.section-h3 { font-family: var(--display); font-size: 32px; font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 16px; font-variation-settings: "opsz" 72, "wdth" 95; }
+.section-h3 em { font-style: normal; font-weight: 600; color: var(--accent); }
+
+.prose p { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 24px; }
+.prose p.lead { font-size: 24px; line-height: 1.45; color: var(--ink); font-weight: 400; margin-bottom: 32px; }
+.prose p.lead::first-letter { font-family: var(--display); font-size: 1.5em; font-weight: 600; color: var(--accent); margin-right: 0.05em; }
+.prose strong { color: var(--ink); font-weight: 600; }
+.prose ul { margin: 24px 0; padding: 0; list-style: none; }
+.prose ul li { font-size: 18px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 16px; padding-left: 24px; position: relative; }
+.prose ul li::before { content: ""; position: absolute; left: 0; top: 14px; width: 12px; height: 1px; background: var(--accent); }
+.prose ul li strong { color: var(--ink); font-weight: 600; }
+
+/* IMAGE BLOCK */
+.image-block { margin: 64px 0; border-radius: 20px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; min-height: 420px; box-shadow: 0 24px 60px -20px rgba(11, 11, 10, 0.15); }
+.image-block.tall { min-height: 560px; }
+.image-block.short { min-height: 320px; }
+.image-block .placeholder-decor svg { width: 70%; height: auto; filter: drop-shadow(0 12px 32px rgba(0,0,0,0.2)); }
+.image-caption { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--ink-muted); text-align: center; margin-top: 16px; margin-bottom: 64px; }
+.bg-navix-light { background: linear-gradient(135deg, #2a5454 0%, #3d7373 60%, #5a9090 100%); }
+.bg-navix-dark { background: linear-gradient(135deg, #0f2828 0%, #1a3a3a 60%, #2a5454 100%); }
+.bg-navix-mobile { background: linear-gradient(135deg, #1a3a3a 0%, #3d7373 100%); }
+
+/* BEFORE / AFTER COMPARISON */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 48px 0; }
+.compare-card { border-radius: 20px; overflow: hidden; border: 1px solid var(--rule); background: var(--bg-soft); display: flex; flex-direction: column; transition: all 0.4s ease; }
+.compare-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(11, 11, 10, 0.1); }
+.compare-visual { min-height: 280px; position: relative; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid var(--rule); }
+.compare-visual.before { background: linear-gradient(135deg, #d4cdc0 0%, #c4bcae 100%); }
+.compare-visual.after { background: linear-gradient(135deg, #2a5454 0%, #3d7373 60%, #5a9090 100%); }
+.compare-tag { position: absolute; top: 16px; left: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: white; background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(8px); padding: 5px 10px; border-radius: 999px; }
+.compare-tag.before-tag { background: rgba(0, 0, 0, 0.2); color: var(--ink-soft); }
+.compare-visual svg { width: 70%; opacity: 0.85; }
+.compare-body { padding: 24px 28px 28px; }
+.compare-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 8px; }
+.compare-title { font-family: var(--display); font-size: 22px; font-weight: 500; line-height: 1.2; letter-spacing: -0.015em; font-variation-settings: "opsz" 72, "wdth" 95; }
+
+/* CHALLENGES LIST WITH X/CHECK MARKERS */
+.challenges { background: var(--bg-soft); border-radius: 20px; padding: 48px 56px; margin: 32px 0; }
+.challenges-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+.challenges-label .marker { width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; }
+.challenges-label.positive .marker { background: #2A6F4A; }
+.challenges-label.positive { color: #2A6F4A; }
+.challenges ul { margin: 0; padding: 0; list-style: none; }
+.challenges li { padding-left: 32px; position: relative; font-size: 17px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 14px; }
+.challenges li:last-child { margin-bottom: 0; }
+.challenges li strong { color: var(--ink); font-weight: 600; margin-right: 4px; }
+.challenges li::before { content: ""; position: absolute; left: 0; top: 11px; width: 14px; height: 1px; background: var(--accent); }
+.challenges.positive li::before { background: #2A6F4A; }
+
+/* TWO COL */
+.two-col { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; max-width: 1100px; margin: 0 auto; }
+.col-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); padding-top: 8px; }
+
+/* MODULES GRID */
+.modules-section { margin: 56px 0 32px; }
+.modules-category { margin-bottom: 48px; }
+.modules-category:last-child { margin-bottom: 0; }
+.category-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 12px; }
+.category-label::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.modules-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.module-card { background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 14px; padding: 22px 20px; transition: all 0.4s ease; position: relative; overflow: hidden; }
+.module-card::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.5s ease; }
+.module-card:hover { transform: translateY(-3px); background: white; box-shadow: 0 12px 28px -10px rgba(11, 11, 10, 0.1); }
+.module-card:hover::before { transform: scaleX(1); }
+.module-name { font-family: var(--display); font-size: 19px; font-weight: 500; line-height: 1.15; letter-spacing: -0.015em; margin-bottom: 8px; font-variation-settings: "opsz" 72, "wdth" 95; }
+.module-desc { font-size: 13px; line-height: 1.5; color: var(--ink-soft); }
+.ehr-intro { padding: 20px 24px; background: var(--bg-soft); border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; margin-bottom: 20px; }
+.ehr-intro p { font-size: 15px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+.pattern-note { margin-top: 20px; padding: 24px 28px; background: var(--ink); color: white; border-radius: 14px; display: flex; gap: 16px; align-items: flex-start; }
+.pattern-note .pattern-icon { color: var(--accent-soft); font-size: 22px; font-weight: 600; line-height: 1; flex-shrink: 0; padding-top: 2px; }
+.pattern-note strong { color: white; font-weight: 600; display: block; margin-bottom: 6px; font-family: var(--display); font-size: 17px; letter-spacing: -0.01em; }
+.pattern-note div { font-size: 14px; line-height: 1.6; color: rgba(255, 255, 255, 0.8); }
+
+/* OUTCOMES */
+.outcomes { background: var(--ink); color: white; padding: 140px 0; border-radius: 32px; margin: 80px 0; position: relative; overflow: hidden; }
+.outcomes::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(216, 118, 87, 0.18) 0%, transparent 50%); pointer-events: none; }
+.outcomes .container { position: relative; z-index: 1; }
+.outcomes .section-eyebrow { color: var(--accent-soft); }
+.outcomes .section-h2 { color: white; }
+.outcomes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; margin-top: 64px; padding-top: 48px; border-top: 1px solid rgba(255, 255, 255, 0.15); }
+.outcome-stat { font-family: var(--display); font-size: 38px; font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; color: var(--accent-soft); font-variation-settings: "opsz" 96, "wdth" 95; margin-bottom: 16px; }
+.outcome-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255, 255, 255, 0.6); margin-bottom: 8px; }
+.outcome-desc { font-size: 16px; line-height: 1.55; color: rgba(255, 255, 255, 0.8); }
+
+/* LEARNINGS - same as findings grid */
+.findings-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.finding { background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 20px; padding: 40px 32px; transition: all 0.4s ease; position: relative; overflow: hidden; }
+.finding::before { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform 0.5s ease; }
+.finding:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(11, 11, 10, 0.1); }
+.finding:hover::before { transform: scaleX(1); }
+.finding-num { font-family: var(--display); font-size: 56px; font-weight: 600; line-height: 1; color: var(--accent); letter-spacing: -0.04em; margin-bottom: 20px; font-variation-settings: "opsz" 96, "wdth" 95; }
+.finding-title { font-family: var(--display); font-size: 24px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.2; margin-bottom: 12px; font-variation-settings: "opsz" 72, "wdth" 95; }
+.finding-body { font-size: 16px; line-height: 1.6; color: var(--ink-soft); }
+
+/* NOTE BAR */
+.note-bar { background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 12px; padding: 20px 24px; margin: 32px 0; display: flex; gap: 14px; align-items: flex-start; font-size: 14px; line-height: 1.55; color: var(--ink-soft); }
+.note-bar .icon { color: var(--accent); flex-shrink: 0; font-family: var(--mono); font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; padding-top: 2px; }
+
+/* NEXT CASE */
+.next-case { padding: 120px 0; border-top: 1px solid var(--rule); position: relative; }
+.next-case-link { display: block; text-decoration: none; color: var(--ink); padding: 64px 0; transition: padding 0.4s ease; }
+.next-case-link:hover { padding-left: 24px; }
+.next-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 16px; }
+.next-title { font-family: var(--display); font-size: clamp(56px, 8vw, 112px); font-weight: 500; line-height: 1.0; letter-spacing: -0.04em; font-variation-settings: "opsz" 96, "wdth" 95; display: flex; align-items: center; gap: 32px; }
+.next-title em { font-style: normal; font-weight: 600; color: var(--accent); }
+.next-arrow { font-family: var(--display); font-weight: 500; color: var(--accent); transition: transform 0.4s ease; display: inline-block; }
+.next-case-link:hover .next-arrow { transform: translateX(16px); }
+
+/* FOOTER */
+footer { padding: 120px 0 50px; background: var(--ink); color: white; position: relative; overflow: hidden; }
+footer::before { content: ""; position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: radial-gradient(circle at 70% 40%, rgba(216, 118, 87, 0.18) 0%, transparent 50%); pointer-events: none; }
+footer .container { position: relative; z-index: 1; }
+.footer-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 32px; }
+.footer-cta { font-family: var(--display); font-size: clamp(48px, 7vw, 112px); font-weight: 500; line-height: 1.0; letter-spacing: -0.04em; margin-bottom: 32px; max-width: 1100px; font-variation-settings: "opsz" 96, "wdth" 95; }
+.footer-cta em { font-style: normal; font-weight: 600; color: var(--accent-soft); }
+.footer-sub { font-size: 18px; color: rgba(255, 255, 255, 0.7); max-width: 680px; margin-bottom: 48px; line-height: 1.6; }
+.footer-email { display: inline-flex; align-items: center; gap: 12px; font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: white; text-decoration: none; padding: 16px 32px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px; transition: all 0.3s ease; font-weight: 500; }
+.footer-email:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 20px 48px -12px rgba(139, 58, 47, 0.6); }
+.footer-email .arrow { transition: transform 0.3s; }
+.footer-email:hover .arrow { transform: translate(4px, -2px); }
+.footer-bottom { margin-top: 100px; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.15); display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 12px; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.05em; flex-wrap: wrap; gap: 16px; }
+.footer-bottom a { color: rgba(255, 255, 255, 0.5); text-decoration: none; margin-left: 24px; transition: color 0.2s; }
+.footer-bottom a:hover { color: var(--accent-soft); }
+
+@media (max-width: 900px) {
+  .container { padding: 0 20px; }
+  .prose-container { padding: 0 20px; }
+  .nav-links li:not(:last-child) { display: none; }
+  .case-hero { padding-top: 110px; padding-bottom: 60px; }
+  .case-meta-strip { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 24px 0; }
+  .meta-item { border-right: none; padding-right: 0; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .meta-item:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 0; }
+  .case-cover { height: 340px; margin-bottom: 60px; }
+  .section { padding: 60px 0; }
+  .image-block { min-height: 280px; }
+  .compare-grid { grid-template-columns: 1fr; gap: 16px; }
+  .two-col { grid-template-columns: 1fr; gap: 24px; }
+  .modules-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .findings-grid { grid-template-columns: 1fr; gap: 16px; }
+  .challenges { padding: 32px 28px; }
+  .outcomes { padding: 80px 0; border-radius: 20px; }
+  .outcomes-grid { grid-template-columns: 1fr; gap: 40px; }
+  .next-title { flex-direction: column; align-items: flex-start; gap: 16px; }
+  footer { padding: 80px 0 40px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-bottom > div:last-child a:first-child { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-dot"></span>Elvina Garcia<sup>01</sup></a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get in touch <span class="arrow">→</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="container">
+    <a href="index.html#work" class="back-link">← All case studies</a>
+    <div class="case-eyebrow">Case Study · Behavioral Health</div>
+    <h1 class="case-h1">Navix Health</h1>
+    <p class="case-tagline">A behavioral health operations platform — CRM, EHR, RCM, scheduling, documentation, and admin in one workspace. I led design across the system as it grew from a lightweight tool into a full operating platform for clinics.</p>
+
+    <div class="case-meta-strip">
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">Lead Designer</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Timeline</div>
+        <div class="meta-value">2021 — 2025</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Platform</div>
+        <div class="meta-value">Web · Mobile</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Industry</div>
+        <div class="meta-value">Behavioral Health</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Team</div>
+        <div class="meta-value">1 Junior Designer · 2 PMs · 17 Engineers</div>
+      </div>
+    </div>
+
+    <div class="case-cover">
+      <div class="placeholder-badge">Cover · Hero shot of the redesigned Navix platform</div>
+      <div class="cover-decor">
+        <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="40" width="720" height="340" rx="18" fill="white" opacity="0.97"/>
+          <rect x="40" y="40" width="720" height="48" rx="18" fill="#1a3a3a" opacity="0.1"/>
+          <circle cx="80" cy="64" r="6" fill="#1a3a3a" opacity="0.4"/>
+          <circle cx="100" cy="64" r="6" fill="#1a3a3a" opacity="0.4"/>
+          <circle cx="120" cy="64" r="6" fill="#1a3a3a" opacity="0.4"/>
+          <rect x="60" y="118" width="180" height="262" rx="10" fill="#1a3a3a" opacity="0.05"/>
+          <rect x="80" y="138" width="100" height="10" rx="2" fill="#1a3a3a" opacity="0.6"/>
+          <rect x="80" y="158" width="70" height="6" rx="2" fill="#1a3a3a" opacity="0.3"/>
+          <rect x="80" y="186" width="140" height="36" rx="6" fill="#3d7373" opacity="0.4"/>
+          <rect x="80" y="232" width="140" height="36" rx="6" fill="#1a3a3a" opacity="0.08"/>
+          <rect x="80" y="278" width="140" height="36" rx="6" fill="#1a3a3a" opacity="0.08"/>
+          <rect x="80" y="324" width="140" height="36" rx="6" fill="#1a3a3a" opacity="0.08"/>
+          <rect x="260" y="118" width="480" height="120" rx="10" fill="#1a3a3a" opacity="0.06"/>
+          <circle cx="296" cy="156" r="16" fill="#3d7373"/>
+          <rect x="328" y="148" width="160" height="10" rx="2" fill="#1a3a3a" opacity="0.6"/>
+          <rect x="328" y="166" width="100" height="6" rx="2" fill="#1a3a3a" opacity="0.3"/>
+          <rect x="276" y="194" width="450" height="6" rx="2" fill="#1a3a3a" opacity="0.3"/>
+          <rect x="276" y="208" width="380" height="6" rx="2" fill="#1a3a3a" opacity="0.3"/>
+          <rect x="260" y="258" width="232" height="122" rx="10" fill="#1a3a3a" opacity="0.06"/>
+          <rect x="508" y="258" width="232" height="122" rx="10" fill="#1a3a3a" opacity="0.06"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="prose-container prose">
+    <div class="section-eyebrow">Overview</div>
+    <p class="lead">Navix began as a lightweight system with a handful of basic modules — simple medication management, a client list, a hub, and document uploads. What it became is something much bigger: a behavioral health operations platform spanning CRM, EHR, revenue cycle management, scheduling, internal communications, and the admin surface that runs the business behind the clinic.</p>
+    <p>As Lead Designer, my work covered the entire workspace — not a single product area. That meant defining how clinical workflows (notes, incident reports, group sessions, rounding) coexisted with operational ones (billing, scheduling, time reporting, document management) without forcing clinicians and admins to learn two different products.</p>
+    <p>The EHR alone was a sub-platform of its own: 12+ top-level modules — Hub, Admissions, Clinical, Medical, Medications, Nursing, Labs, Documents, Outcomes, Attendance, Rounds — each containing nested workflows for notes, logs, assessments, and health metrics. The challenge wasn't just designing screens; it was designing <em>reusable patterns</em> that could behave consistently across dozens of different clinical contexts.</p>
+  </div>
+</section>
+
+<!-- BEFORE: CHALLENGES -->
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-label">The Problem</div>
+      <div class="prose">
+        <h2 class="section-h2">Where Navix was falling short</h2>
+        <p>The early Navix worked, but it didn't <em>scale</em>. Each module was being built in isolation — clinical tools, billing tools, scheduling tools — and the experience reflected that. Staff were forced to navigate around the product instead of through it, and the gaps showed up in every workflow.</p>
+
+        <div class="challenges">
+          <div class="challenges-label"><span class="marker">✕</span> Before — Key challenges</div>
+          <ul>
+            <li><strong>Disconnected modules.</strong> CRM, clinical, and billing functions felt like separate products bolted together.</li>
+            <li><strong>Minimal clinical depth.</strong> Documentation and medication tools were limited to add/edit/delete operations.</li>
+            <li><strong>Generic documentation.</strong> Notes were static, without adaptation to encounter type or role.</li>
+            <li><strong>Weak brand identity.</strong> Inconsistent UI gave the platform a "prototype" look across modules.</li>
+            <li><strong>Workflow gaps.</strong> Clinicians lacked access to historical logs, outcomes, and context across the platform.</li>
+            <li><strong>Inefficient space use.</strong> Data-heavy workflows crammed into layouts without hierarchy.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MY ROLE -->
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-label">My Role</div>
+      <div class="prose">
+        <h2 class="section-h2">Lead designer across the whole platform</h2>
+        <p>I led the design on Navix end-to-end, partnered with one junior designer, and worked directly with PMs, engineers, clinical advisors, and stakeholders. My responsibility wasn't a single product — it was the entire workspace: web and mobile, clinical and operational, internal-facing and admin.</p>
+        <ul>
+          <li><strong>Cross-module design</strong> — CRM, EHR (12+ clinical areas including Nursing, Clinical, Medications, Labs, Rounds, Group Notes, Incident Reports), RCM, Calendar, Time Reporting, Documents and Messaging </li>
+          <li><strong>Reusable system patterns</strong> — Notes, Logs, Assessments, HealthMetrics, and Documents designed once and applied across multiple clinical modules</li>
+          <li><strong>Admin surface</strong> — User Management, Form Templates, System Settings, Group Schedules, RCM Management, Reports, Integrations</li>
+          <li><strong>Design system & governance</strong> — the foundation every new module was built on</li>
+          <li><strong>Brand & UI refresh</strong> — refreshing visual identity for a more premium, enterprise-ready feel</li>
+          <li><strong>Mentoring</strong> — guiding the junior designer through critiques, handoffs, and component decisions</li>
+          <li><strong>Stakeholder collaboration</strong> — translating clinical and operational input into structured product decisions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AFTER: ENHANCEMENTS -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">The Approach</div>
+    <h2 class="section-h2">From scattered tools to one operating platform</h2>
+    <div class="prose-container prose">
+      <p>The goal wasn't just to add features — it was to make Navix feel like <strong>one product</strong> instead of a collection of them. We expanded scope across CRM, EHR, RCM, scheduling, documentation, and admin tooling, while running a parallel branding and UI refresh to anchor the platform in a more premium identity. Each new module had to fit a shared design language and reinforce the system, not fragment it.</p>
+    </div>
+
+    <div class="modules-section">
+      <div class="modules-category">
+        <div class="category-label">CRM & Communication</div>
+        <div class="modules-grid">
+          <div class="module-card"><div class="module-name">CRM</div><div class="module-desc">Client relationships, intake, and lifecycle tracking.</div></div>
+          <div class="module-card"><div class="module-name">Messaging</div><div class="module-desc">Internal staff communication, contextual to care.</div></div>
+        </div>
+      </div>
+
+      <div class="modules-category">
+        <div class="category-label">EHR · A clinical workspace within the platform</div>
+        <div class="ehr-intro">
+          <p>The EHR isn't a single module — it's a deeply nested clinical workspace with 12+ top-level areas (Hub, Admissions, Clinical, Medical, Medications, Nursing, Labs, Documents, Outcomes, Attendance, Rounds), each containing its own sub-modules for Notes, Logs, Assessments, HealthMetrics, and more. Plus a persistent patient context strip — allergies, identifiers, risk flags, episode selector — that follows the user across every screen.</p>
+        </div>
+        <div class="modules-grid">
+          <div class="module-card"><div class="module-name">Hub</div><div class="module-desc">Patient overview surfacing actions, recent activity, and key clinical context.</div></div>
+          <div class="module-card"><div class="module-name">Admissions</div><div class="module-desc">Intake, episode setup, and admission documentation.</div></div>
+          <div class="module-card"><div class="module-name">Authorizations</div><div class="module-desc">Insurance and treatment authorization tracking.</div></div>
+          <div class="module-card"><div class="module-name">Clinical</div><div class="module-desc">Treatment plans, diagnoses, and clinical decision-making.</div></div>
+          <div class="module-card"><div class="module-name">Medical</div><div class="module-desc">Medical history, conditions, and ongoing care management.</div></div>
+          <div class="module-card"><div class="module-name">Medications</div><div class="module-desc">Prescriptions, logs, dosage history, and compliance trails.</div></div>
+          <div class="module-card"><div class="module-name">Nursing</div><div class="module-desc">Notes, logs, assessments, health metrics, and nursing documents.</div></div>
+          <div class="module-card"><div class="module-name">Labs</div><div class="module-desc">Ordering, tracking, and results management.</div></div>
+          <div class="module-card"><div class="module-name">Documents</div><div class="module-desc">Chart-level document management and clinical records.</div></div>
+          <div class="module-card"><div class="module-name">Outcomes</div><div class="module-desc">Structured progress tracking and team-based outcomes.</div></div>
+          <div class="module-card"><div class="module-name">Attendance</div><div class="module-desc">Session attendance, participation, and group tracking.</div></div>
+          <div class="module-card"><div class="module-name">Rounds</div><div class="module-desc">Clinical rounding workflows and multi-clinician handoffs.</div></div>
+          <div class="module-card"><div class="module-name">Incident Reports</div><div class="module-desc">Compliance-grade reporting with audit trails.</div></div>
+          <div class="module-card"><div class="module-name">Group Notes</div><div class="module-desc">Multi-client session documentation with selection patterns.</div></div>
+          <div class="module-card"><div class="module-name">Patient Context Strip</div><div class="module-desc">Allergies, identifiers, risk flags, episode selector — persistent across every screen.</div></div>
+        </div>
+        <div class="pattern-note">
+          <span class="pattern-icon">↻</span>
+          <div>
+            <strong>Reusable patterns</strong> — Notes, Logs, Assessments, HealthMetrics, and Documents repeat across multiple EHR modules. Designing them as system components meant Nursing's Logs and Medications' Logs behave the same way, even though they hold different data. One pattern, many surfaces.
+          </div>
+        </div>
+      </div>
+
+      <div class="modules-category">
+        <div class="category-label">Operations</div>
+        <div class="modules-grid">
+          <div class="module-card"><div class="module-name">RCM</div><div class="module-desc">Revenue cycle — billing, claims, and reimbursement.</div></div>
+          <div class="module-card"><div class="module-name">Calendar</div><div class="module-desc">Appointments and care coordination at a glance.</div></div>
+          <div class="module-card"><div class="module-name">Group Schedules</div><div class="module-desc">Multi-clinician, multi-client session planning.</div></div>
+          <div class="module-card"><div class="module-name">Time Reporting</div><div class="module-desc">Staff hours, billable time, and payroll-ready exports.</div></div>
+          <div class="module-card"><div class="module-name">Company Documents</div><div class="module-desc">Centralized document management across the business.</div></div>
+        </div>
+      </div>
+
+      <div class="modules-category">
+        <div class="category-label">Admin Surface</div>
+        <div class="modules-grid">
+          <div class="module-card"><div class="module-name">User Management</div><div class="module-desc">Roles, permissions, and RBAC across the platform.</div></div>
+          <div class="module-card"><div class="module-name">Form Templates</div><div class="module-desc">Configurable forms, assessments, and intake builders.</div></div>
+          <div class="module-card"><div class="module-name">System Settings</div><div class="module-desc">Org-wide configuration and policy controls.</div></div>
+          <div class="module-card"><div class="module-name">Reports</div><div class="module-desc">Operational and clinical reporting in one place.</div></div>
+          <div class="module-card"><div class="module-name">Integrations</div><div class="module-desc">Connecting Navix to the systems clinics already run.</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prose-container prose" style="padding-top: 32px;">
+      <p>Alongside these modules, we executed a <strong>branding and UI refresh</strong> for a cleaner, more consistent design language. Special focus was placed on <strong>screen real estate optimization</strong> — because in healthcare operations, every pixel carries weight. Clinicians and admins both work in data-dense environments, and the platform had to respect that without overwhelming either group.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CASE STUDY VISUALS: BEFORE / AFTER -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">Case study visuals</div>
+    <h2 class="section-h2">Before, and after</h2>
+
+    <div class="note-bar">
+      <span class="icon">Note</span>
+      <span>Due to sensitive healthcare information, only limited screenshots are provided. The visuals here focus on layout shifts, hierarchy, and how the redesign handles density — without showing real client data.</span>
+    </div>
+
+    <!-- Hub Before/After -->
+    <h3 class="section-h3" style="margin-top: 64px; margin-bottom: 24px;">The Hub</h3>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-visual before">
+          <span class="compare-tag before-tag">Before</span>
+          <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="30" width="340" height="180" rx="6" fill="white" opacity="0.7"/>
+            <rect x="50" y="50" width="120" height="8" rx="2" fill="#5B564E" opacity="0.5"/>
+            <rect x="50" y="70" width="80" height="6" rx="2" fill="#5B564E" opacity="0.3"/>
+            <rect x="50" y="100" width="300" height="30" rx="4" fill="#5B564E" opacity="0.1"/>
+            <rect x="50" y="140" width="300" height="30" rx="4" fill="#5B564E" opacity="0.1"/>
+            <rect x="50" y="180" width="140" height="20" rx="4" fill="#5B564E" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="compare-body">
+          <div class="compare-label">Before</div>
+          <div class="compare-title">Generic layout with weak hierarchy</div>
+        </div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-visual after">
+          <span class="compare-tag">After</span>
+          <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="20" width="360" height="200" rx="8" fill="white" opacity="0.95"/>
+            <rect x="35" y="35" width="80" height="8" rx="2" fill="#1a3a3a"/>
+            <rect x="35" y="50" width="60" height="6" rx="2" fill="#1a3a3a" opacity="0.4"/>
+            <rect x="35" y="72" width="160" height="60" rx="6" fill="#1a3a3a" opacity="0.06"/>
+            <circle cx="55" cy="92" r="8" fill="#3d7373"/>
+            <rect x="70" y="86" width="80" height="6" rx="2" fill="#1a3a3a" opacity="0.6"/>
+            <rect x="70" y="98" width="60" height="5" rx="2" fill="#1a3a3a" opacity="0.3"/>
+            <rect x="35" y="142" width="160" height="60" rx="6" fill="#3d7373" opacity="0.2"/>
+            <rect x="50" y="156" width="50" height="14" rx="7" fill="#3d7373"/>
+            <rect x="50" y="178" width="120" height="5" rx="2" fill="#1a3a3a" opacity="0.4"/>
+            <rect x="210" y="72" width="155" height="130" rx="6" fill="#1a3a3a" opacity="0.06"/>
+            <rect x="225" y="88" width="80" height="6" rx="2" fill="#1a3a3a" opacity="0.5"/>
+            <rect x="225" y="102" width="120" height="4" rx="2" fill="#1a3a3a" opacity="0.3"/>
+            <rect x="225" y="112" width="100" height="4" rx="2" fill="#1a3a3a" opacity="0.3"/>
+            <rect x="225" y="122" width="110" height="4" rx="2" fill="#1a3a3a" opacity="0.3"/>
+            <rect x="225" y="140" width="60" height="18" rx="9" fill="#3d7373" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="compare-body">
+          <div class="compare-label">After</div>
+          <div class="compare-title">Surfaces actions and recent activity without overwhelming</div>
+        </div>
+      </div>
+    </div>
+    <p class="image-caption">The redesigned Hub maximizes screen real estate by surfacing key actions and recent activity. In healthcare, every pixel counts — layouts must balance clarity with accessibility.</p>
+
+    <!-- Group Notes Before/After -->
+    <h3 class="section-h3" style="margin-top: 80px; margin-bottom: 24px;">Group Notes</h3>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-visual before">
+          <span class="compare-tag before-tag">Before</span>
+          <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="30" width="340" height="180" rx="6" fill="white" opacity="0.7"/>
+            <rect x="50" y="50" width="100" height="8" rx="2" fill="#5B564E" opacity="0.5"/>
+            <rect x="50" y="78" width="300" height="120" rx="4" fill="#5B564E" opacity="0.08"/>
+            <rect x="60" y="92" width="280" height="4" rx="2" fill="#5B564E" opacity="0.4"/>
+            <rect x="60" y="104" width="260" height="4" rx="2" fill="#5B564E" opacity="0.4"/>
+            <rect x="60" y="116" width="280" height="4" rx="2" fill="#5B564E" opacity="0.3"/>
+            <rect x="60" y="128" width="220" height="4" rx="2" fill="#5B564E" opacity="0.3"/>
+            <rect x="60" y="140" width="280" height="4" rx="2" fill="#5B564E" opacity="0.3"/>
+            <rect x="60" y="152" width="240" height="4" rx="2" fill="#5B564E" opacity="0.3"/>
+            <rect x="60" y="164" width="260" height="4" rx="2" fill="#5B564E" opacity="0.3"/>
+            <rect x="60" y="176" width="200" height="4" rx="2" fill="#5B564E" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="compare-body">
+          <div class="compare-label">Before</div>
+          <div class="compare-title">Cluttered free-text fields with no structure</div>
+        </div>
+      </div>
+      <div class="compare-card">
+        <div class="compare-visual after">
+          <span class="compare-tag">After</span>
+          <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="20" width="360" height="200" rx="8" fill="white" opacity="0.95"/>
+            <rect x="35" y="35" width="100" height="8" rx="2" fill="#1a3a3a"/>
+            <rect x="35" y="55" width="80" height="6" rx="2" fill="#1a3a3a" opacity="0.4"/>
+            <rect x="35" y="75" width="330" height="28" rx="4" fill="#1a3a3a" opacity="0.04"/>
+            <rect x="45" y="83" width="50" height="12" rx="6" fill="#3d7373" opacity="0.5"/>
+            <rect x="105" y="83" width="50" height="12" rx="6" fill="#1a3a3a" opacity="0.15"/>
+            <rect x="165" y="83" width="50" height="12" rx="6" fill="#1a3a3a" opacity="0.15"/>
+            <rect x="225" y="83" width="50" height="12" rx="6" fill="#1a3a3a" opacity="0.15"/>
+            <rect x="285" y="83" width="60" height="12" rx="6" fill="#1a3a3a" opacity="0.15"/>
+            <rect x="35" y="115" width="330" height="36" rx="4" fill="white" stroke="#1a3a3a" stroke-opacity="0.1"/>
+            <rect x="45" y="125" width="100" height="6" rx="2" fill="#1a3a3a" opacity="0.5"/>
+            <rect x="45" y="137" width="200" height="4" rx="2" fill="#1a3a3a" opacity="0.3"/>
+            <circle cx="355" cy="133" r="6" fill="#3d7373"/>
+            <rect x="35" y="159" width="330" height="36" rx="4" fill="white" stroke="#1a3a3a" stroke-opacity="0.1"/>
+            <rect x="45" y="169" width="100" height="6" rx="2" fill="#1a3a3a" opacity="0.5"/>
+            <rect x="45" y="181" width="180" height="4" rx="2" fill="#1a3a3a" opacity="0.3"/>
+            <rect x="349" y="166" width="14" height="8" rx="4" fill="#1a3a3a" opacity="0.15"/>
+          </svg>
+        </div>
+        <div class="compare-body">
+          <div class="compare-label">After</div>
+          <div class="compare-title">Structured, high-density documentation</div>
+        </div>
+      </div>
+    </div>
+    <p class="image-caption">Group Notes were reimagined into structured, high-density documentation. Instead of cluttered free-text areas, the new design organizes participation logs, outcomes, and observations — keeping dense clinical data scannable and efficient.</p>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="section">
+  <div class="container">
+    <div class="outcomes">
+      <div class="container">
+        <div class="section-eyebrow">Outcomes</div>
+        <h2 class="section-h2">What shipped, and what it changed</h2>
+
+        <div class="outcomes-grid">
+          <div>
+            <div class="outcome-stat">Clinical depth</div>
+            <div class="outcome-label">Beyond basic CRUD</div>
+            <div class="outcome-desc">Submodules let clinicians manage care across Labs, Vitals, Outcomes, and Assessments — not just add/edit/delete.</div>
+          </div>
+          <div>
+            <div class="outcome-stat">Efficiency gains</div>
+            <div class="outcome-label">Faster documentation</div>
+            <div class="outcome-desc">Structured tools reduced documentation and review time, freeing clinicians from repetitive context switching.</div>
+          </div>
+          <div>
+            <div class="outcome-stat">Premium perception</div>
+            <div class="outcome-label">Enterprise-ready feel</div>
+            <div class="outcome-desc">Stakeholders described the enhanced platform as "more premium and enterprise-ready" after the brand and UI refresh.</div>
+          </div>
+          <div>
+            <div class="outcome-stat">Density made usable</div>
+            <div class="outcome-label">Screen real estate</div>
+            <div class="outcome-desc">Optimized layouts ensured rich, complex data could be navigated quickly without overwhelming clinicians.</div>
+          </div>
+          <div>
+            <div class="outcome-stat">Scalable foundation</div>
+            <div class="outcome-label">Modular system</div>
+            <div class="outcome-desc">The design system enabled new modules to be added without breaking patterns — a foundation that compounds over time.</div>
+          </div>
+          <div>
+            <div class="outcome-stat">Trust through design</div>
+            <div class="outcome-label">Adoption signal</div>
+            <div class="outcome-desc">A polished, consistent UI helped clinicians feel the product belonged in their clinical environment — a quiet but real driver of adoption.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LEARNINGS -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">Learnings</div>
+    <h2 class="section-h2">What this work taught me</h2>
+
+    <div class="findings-grid">
+      <div class="finding">
+        <div class="finding-num">01</div>
+        <h3 class="finding-title">Brand is UX</h3>
+        <p class="finding-body">The refreshed identity was as impactful as the new features in building trust. A clinical platform that looks unfinished feels unsafe — and clinicians notice.</p>
+      </div>
+      <div class="finding">
+        <div class="finding-num">02</div>
+        <h3 class="finding-title">One platform, not many products</h3>
+        <p class="finding-body">Designing across CRM, EHR, RCM, scheduling, and admin in parallel taught me that <em>cohesion is the feature</em>. Behavioral health teams already juggle enough systems — Navix had to feel like one workspace, not 15 modules sharing a sidebar.</p>
+      </div>
+      <div class="finding">
+        <div class="finding-num">03</div>
+        <h3 class="finding-title">Clarity drives adoption</h3>
+        <p class="finding-body">Structured notes and improved history views directly boosted clinician satisfaction. Adoption follows when the tool stops fighting the user.</p>
+      </div>
+      <div class="finding">
+        <div class="finding-num">04</div>
+        <h3 class="finding-title">Patterns over screens</h3>
+        <p class="finding-body">In a platform this nested, designing individual screens doesn't scale. Logs, Assessments, and HealthMetrics had to behave the same way across Nursing, Medications, and Clinical — even though each held different data. The senior move was designing patterns, not pages.</p>
+      </div>
+      <div class="finding">
+        <div class="finding-num">05</div>
+        <h3 class="finding-title">Designing for density</h3>
+        <p class="finding-body">In industries like healthcare, where information is vast and critical, smart use of space is as important as functionality. Every pixel pulls weight.</p>
+      </div>
+      <div class="finding">
+        <div class="finding-num">06</div>
+        <h3 class="finding-title">Cohesion is the feature</h3>
+        <p class="finding-body">When users live inside a platform for hours a day, consistency stops being an aesthetic choice and becomes an operational one. A predictable system is a fast system.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT CASE -->
+<section class="next-case">
+  <div class="container">
+    <a href="#" class="next-case-link">
+      <div class="next-label">Next case study</div>
+      <div class="next-title"><em>CPS</em> — Cargoos <span class="next-arrow">→</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-eyebrow">Get in touch</div>
+    <h2 class="footer-cta">Let's talk <em>UX</em>.</h2>
+    <p class="footer-sub">Building B2B software where users truly depend on what you ship? Whether it's a fresh idea, an ongoing project, or just a question — I'd love to hear about it.</p>
+    <a href="mailto:elvinagarcia.design@gmail.com" class="footer-email">📩 elvinagarcia.design@gmail.com <span class="arrow">→</span></a>
+    <div class="footer-bottom">
+      <div>© 2026 Elvina Garcia · Davao, Philippines · Crafted with care</div>
+      <div><a href="#">LinkedIn</a><a href="#">Read.cv</a><a href="#">Dribbble</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

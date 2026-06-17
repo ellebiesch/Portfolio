@@ -4,7 +4,7 @@
       <loading-element v-if="loading" />
       <router-view v-if="!loading" />
 
-    <footer-element v-if="!loading" class="absolute bottom-0 w-full" />
+    <footer-element v-if="!loading" class="w-full" />
 </template>
 
 <script>

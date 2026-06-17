@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atlas ATS — Elvina Garcia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #FFFFFF;
+  --bg-soft: #F7F6F2;
+  --bg-card: #FAFAF7;
+  --ink: #0B0B0A;
+  --ink-soft: #4A453E;
+  --ink-muted: #8E887F;
+  --rule: #E8E4DC;
+  --accent: #8B3A2F;
+  --accent-soft: #D87657;
+  --accent-glow: #F4D4C5;
+  --gold: #C8A572;
+  --display: 'Bricolage Grotesque', sans-serif;
+  --sans: 'Bricolage Grotesque', sans-serif;
+  --mono: 'Geist Mono', monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-weight: 400; line-height: 1.5; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden; }
+.container { max-width: 1320px; margin: 0 auto; padding: 0 32px; position: relative; }
+.prose-container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+
+/* NAV */
+nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%); border-bottom: 1px solid rgba(232, 228, 220, 0.6); z-index: 100; }
+nav .container { display: flex; align-items: center; justify-content: space-between; padding-top: 16px; padding-bottom: 16px; }
+.brand { font-family: var(--display); font-weight: 600; font-size: 22px; letter-spacing: -0.01em; color: var(--ink); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.brand-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; display: inline-block; }
+.brand sup { font-family: var(--mono); font-size: 10px; vertical-align: super; margin-left: 2px; color: var(--ink-muted); font-weight: 400; }
+.nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
+.nav-links a { color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 400; transition: color 0.2s; position: relative; }
+.nav-links a:not(.nav-cta)::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 1px; background: var(--accent); transition: width 0.3s ease; }
+.nav-links a:not(.nav-cta):hover::after { width: 100%; }
+.nav-cta { font-size: 13px; font-weight: 500; padding: 10px 18px; border-radius: 999px; background: var(--accent); color: white !important; transition: all 0.25s; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px -4px rgba(139, 58, 47, 0.4); }
+.nav-cta:hover { background: var(--ink) !important; transform: translateY(-1px); box-shadow: 0 10px 24px -8px rgba(11, 11, 10, 0.4); }
+
+.back-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); text-decoration: none; margin-bottom: 32px; transition: gap 0.25s, color 0.25s; }
+.back-link:hover { gap: 14px; color: var(--accent); }
+
+/* HERO */
+.case-hero { padding-top: 140px; padding-bottom: 60px; position: relative; overflow: hidden; }
+.case-hero::before { content: ""; position: absolute; top: 0; right: -10%; width: 70%; height: 100%; background: radial-gradient(circle at 70% 30%, rgba(216, 118, 87, 0.12) 0%, transparent 60%); pointer-events: none; z-index: 0; }
+.case-hero .container { position: relative; z-index: 1; }
+.case-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+.case-h1 { font-family: var(--display); font-size: clamp(56px, 9vw, 144px); font-weight: 500; line-height: 1.0; letter-spacing: -0.04em; font-variation-settings: "opsz" 96, "wdth" 95; margin-bottom: 32px; max-width: 1100px; }
+.case-tagline { font-size: 22px; line-height: 1.5; color: var(--ink-soft); max-width: 720px; margin-bottom: 64px; }
+
+.case-meta-strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; padding: 32px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-bottom: 80px; }
+.meta-item { padding-right: 20px; border-right: 1px solid var(--rule); }
+.meta-item:last-child { border-right: none; }
+.meta-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 8px; }
+.meta-value { font-family: var(--display); font-size: 17px; font-weight: 500; line-height: 1.3; letter-spacing: -0.005em; font-variation-settings: "opsz" 72, "wdth" 95; }
+
+.case-cover { height: 540px; border-radius: 24px; overflow: hidden; background: linear-gradient(135deg, #2d3142 0%, #4f5b7c 50%, #8093b0 100%); position: relative; margin-bottom: 120px; display: flex; align-items: center; justify-content: center; box-shadow: 0 32px 80px -24px rgba(45, 49, 66, 0.4); }
+.cover-decor svg { width: 78%; height: auto; filter: drop-shadow(0 16px 40px rgba(0,0,0,0.25)); }
+.placeholder-badge { position: absolute; top: 24px; left: 24px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255, 255, 255, 0.7); background: rgba(0, 0, 0, 0.3); backdrop-filter: blur(8px); padding: 6px 12px; border-radius: 999px; z-index: 2; }
+
+/* SECTIONS */
+.section { padding: 80px 0; }
+.section-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+.section-h2 { font-family: var(--display); font-size: clamp(40px, 5.5vw, 72px); font-weight: 500; line-height: 1.0; letter-spacing: -0.03em; font-variation-settings: "opsz" 96, "wdth" 95; margin-bottom: 32px; max-width: 900px; }
+.section-h2 em { font-style: normal; font-weight: 600; color: var(--accent); }
+.section-h3 { font-family: var(--display); font-size: 32px; font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 16px; font-variation-settings: "opsz" 72, "wdth" 95; }
+.section-h3 em { font-style: normal; font-weight: 600; color: var(--accent); }
+
+.prose p { font-size: 19px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 24px; }
+.prose p.lead { font-size: 24px; line-height: 1.45; color: var(--ink); font-weight: 400; margin-bottom: 32px; }
+.prose p.lead::first-letter { font-family: var(--display); font-size: 1.5em; font-weight: 600; color: var(--accent); margin-right: 0.05em; }
+.prose strong { color: var(--ink); font-weight: 600; }
+.prose ul { margin: 24px 0; padding: 0; list-style: none; }
+.prose ul li { font-size: 18px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 16px; padding-left: 24px; position: relative; }
+.prose ul li::before { content: ""; position: absolute; left: 0; top: 14px; width: 12px; height: 1px; background: var(--accent); }
+.prose ul li strong { color: var(--ink); font-weight: 600; }
+
+/* TWO COL */
+.two-col { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; align-items: start; max-width: 1100px; margin: 0 auto; }
+.col-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); padding-top: 8px; }
+
+/* CHALLENGES / GOALS LIST */
+.challenges { background: var(--bg-soft); border-radius: 20px; padding: 48px 56px; margin: 32px 0; border-left: 3px solid var(--accent); }
+.challenges-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+.challenges-label .marker { width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: white; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; }
+.challenges-label.positive .marker { background: #2A6F4A; }
+.challenges-label.positive { color: #2A6F4A; }
+.challenges.positive { border-left-color: #2A6F4A; }
+.challenges ul { margin: 0; padding: 0; list-style: none; }
+.challenges li { padding-left: 32px; position: relative; font-size: 17px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 14px; }
+.challenges li:last-child { margin-bottom: 0; }
+.challenges li strong { color: var(--ink); font-weight: 600; }
+.challenges li::before { content: ""; position: absolute; left: 0; top: 11px; width: 14px; height: 1px; background: var(--accent); }
+.challenges.positive li::before { background: #2A6F4A; }
+
+/* PROCESS STEPS */
+.process-flow { margin: 64px 0; }
+.process-step { display: grid; grid-template-columns: 80px 1fr; gap: 40px; padding: 40px 0; border-top: 1px solid var(--rule); align-items: start; }
+.process-step:last-child { border-bottom: 1px solid var(--rule); }
+.process-step-num { font-family: var(--display); font-size: 56px; font-weight: 600; line-height: 1; color: var(--accent); letter-spacing: -0.04em; font-variation-settings: "opsz" 96, "wdth" 95; }
+.process-step-content h3 { font-family: var(--display); font-size: 28px; font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 12px; font-variation-settings: "opsz" 72, "wdth" 95; }
+.process-step-content p { font-size: 17px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 0; }
+.process-step-content .artifact-pill { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; padding: 6px 14px; background: var(--bg-soft); border: 1px solid var(--rule); border-radius: 999px; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+
+/* IMAGE BLOCK */
+.image-block { margin: 48px 0; border-radius: 20px; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; min-height: 420px; box-shadow: 0 24px 60px -20px rgba(11, 11, 10, 0.15); }
+.image-block.short { min-height: 320px; }
+.image-block .placeholder-decor svg { width: 70%; height: auto; filter: drop-shadow(0 12px 32px rgba(0,0,0,0.2)); }
+.image-caption { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--ink-muted); text-align: center; margin-top: 16px; margin-bottom: 48px; }
+.bg-atlas-light { background: linear-gradient(135deg, #4f5b7c 0%, #8093b0 60%, #a8b5cc 100%); }
+.bg-atlas-mid { background: linear-gradient(135deg, #2d3142 0%, #4f5b7c 60%, #6a7693 100%); }
+.bg-atlas-dark { background: linear-gradient(135deg, #1c1f2c 0%, #2d3142 60%, #4f5b7c 100%); }
+.bg-warm { background: linear-gradient(135deg, #f4ebe0 0%, #e8d4b8 50%, #c8a572 100%); }
+
+/* TWO IMAGES SIDE BY SIDE */
+.image-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 48px 0; }
+.image-pair .image-block { margin: 0; min-height: 360px; }
+
+/* OUTCOMES */
+.outcomes { background: var(--ink); color: white; padding: 140px 0; border-radius: 32px; margin: 80px 0; position: relative; overflow: hidden; }
+.outcomes::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 30% 50%, rgba(216, 118, 87, 0.18) 0%, transparent 50%); pointer-events: none; }
+.outcomes .container { position: relative; z-index: 1; }
+.outcomes .section-eyebrow { color: var(--accent-soft); }
+.outcomes .section-h2 { color: white; }
+.outcomes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 48px; margin-top: 64px; padding-top: 48px; border-top: 1px solid rgba(255, 255, 255, 0.15); }
+.outcome-stat { font-family: var(--display); font-size: 38px; font-weight: 500; line-height: 1.1; letter-spacing: -0.02em; color: var(--accent-soft); font-variation-settings: "opsz" 96, "wdth" 95; margin-bottom: 16px; }
+.outcome-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255, 255, 255, 0.6); margin-bottom: 8px; }
+.outcome-desc { font-size: 16px; line-height: 1.55; color: rgba(255, 255, 255, 0.8); }
+
+/* CONCLUSION */
+.conclusion { padding: 120px 0; background: var(--bg-soft); border-radius: 32px; margin: 80px 0; position: relative; }
+.conclusion .container { position: relative; }
+.conclusion-quote { font-family: var(--display); font-size: clamp(32px, 4.5vw, 56px); font-weight: 400; line-height: 1.25; letter-spacing: -0.025em; max-width: 1100px; font-variation-settings: "opsz" 96, "wdth" 95; color: var(--ink); }
+.conclusion-quote em { font-style: normal; font-weight: 600; color: var(--accent); }
+
+/* NEXT PHASE - NDA */
+.next-phase {
+  margin: 64px 0; padding: 48px 56px;
+  background: linear-gradient(135deg, rgba(45, 49, 66, 0.04) 0%, rgba(139, 58, 47, 0.04) 100%);
+  border: 1px solid var(--rule); border-radius: 24px; position: relative; overflow: hidden;
+}
+.next-phase::before {
+  content: ""; position: absolute; top: 0; right: 0; width: 40%; height: 100%;
+  background: radial-gradient(circle at 80% 50%, rgba(216, 118, 87, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.next-phase-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; position: relative; }
+.next-phase h3 { font-family: var(--display); font-size: 32px; font-weight: 500; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 16px; font-variation-settings: "opsz" 72, "wdth" 95; position: relative; }
+.next-phase p { font-size: 17px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 16px; position: relative; }
+.next-phase-focus { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); position: relative; }
+.next-phase-focus-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 16px; }
+.next-phase-focus ul { list-style: none; padding: 0; margin: 0; }
+.next-phase-focus li { padding-left: 28px; position: relative; font-size: 16px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 12px; }
+.next-phase-focus li::before { content: "→"; position: absolute; left: 0; top: 0; color: var(--accent); font-family: var(--mono); font-weight: 500; }
+.next-phase-focus li strong { color: var(--ink); font-weight: 600; }
+.nda-note { margin-top: 32px; padding: 16px 20px; background: rgba(0, 0, 0, 0.04); border-radius: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--ink-soft); display: flex; gap: 12px; align-items: flex-start; position: relative; line-height: 1.5; }
+.nda-note .lock { color: var(--accent); flex-shrink: 0; }
+
+/* NEXT CASE */
+.next-case { padding: 120px 0; border-top: 1px solid var(--rule); position: relative; }
+.next-case-link { display: block; text-decoration: none; color: var(--ink); padding: 64px 0; transition: padding 0.4s ease; }
+.next-case-link:hover { padding-left: 24px; }
+.next-label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); margin-bottom: 16px; }
+.next-title { font-family: var(--display); font-size: clamp(56px, 8vw, 112px); font-weight: 500; line-height: 1.0; letter-spacing: -0.04em; font-variation-settings: "opsz" 96, "wdth" 95; display: flex; align-items: center; gap: 32px; }
+.next-title em { font-style: normal; font-weight: 600; color: var(--accent); }
+.next-arrow { font-family: var(--display); font-weight: 500; color: var(--accent); transition: transform 0.4s ease; display: inline-block; }
+.next-case-link:hover .next-arrow { transform: translateX(16px); }
+
+/* FOOTER */
+footer { padding: 120px 0 50px; background: var(--ink); color: white; position: relative; overflow: hidden; }
+footer::before { content: ""; position: absolute; top: 0; right: 0; width: 60%; height: 100%; background: radial-gradient(circle at 70% 40%, rgba(216, 118, 87, 0.18) 0%, transparent 50%); pointer-events: none; }
+footer .container { position: relative; z-index: 1; }
+.footer-eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 32px; }
+.footer-cta { font-family: var(--display); font-size: clamp(48px, 7vw, 112px); font-weight: 500; line-height: 1.0; letter-spacing: -0.04em; margin-bottom: 32px; max-width: 1100px; font-variation-settings: "opsz" 96, "wdth" 95; }
+.footer-cta em { font-style: normal; font-weight: 600; color: var(--accent-soft); }
+.footer-sub { font-size: 18px; color: rgba(255, 255, 255, 0.7); max-width: 680px; margin-bottom: 48px; line-height: 1.6; }
+.footer-email { display: inline-flex; align-items: center; gap: 12px; font-family: var(--display); font-size: clamp(28px, 4vw, 40px); color: white; text-decoration: none; padding: 16px 32px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 999px; transition: all 0.3s ease; font-weight: 500; }
+.footer-email:hover { background: var(--accent); border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 20px 48px -12px rgba(139, 58, 47, 0.6); }
+.footer-email .arrow { transition: transform 0.3s; }
+.footer-email:hover .arrow { transform: translate(4px, -2px); }
+.footer-bottom { margin-top: 100px; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.15); display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 12px; color: rgba(255, 255, 255, 0.5); letter-spacing: 0.05em; flex-wrap: wrap; gap: 16px; }
+.footer-bottom a { color: rgba(255, 255, 255, 0.5); text-decoration: none; margin-left: 24px; transition: color 0.2s; }
+.footer-bottom a:hover { color: var(--accent-soft); }
+
+@media (max-width: 900px) {
+  .container { padding: 0 20px; }
+  .prose-container { padding: 0 20px; }
+  .nav-links li:not(:last-child) { display: none; }
+  .case-hero { padding-top: 110px; padding-bottom: 60px; }
+  .case-meta-strip { grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 24px 0; }
+  .meta-item { border-right: none; padding-right: 0; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .meta-item:nth-last-child(-n+2) { border-bottom: none; padding-bottom: 0; }
+  .case-cover { height: 340px; margin-bottom: 60px; }
+  .section { padding: 60px 0; }
+  .image-block { min-height: 280px; }
+  .image-pair { grid-template-columns: 1fr; gap: 16px; }
+  .two-col { grid-template-columns: 1fr; gap: 24px; }
+  .process-step { grid-template-columns: 1fr; gap: 16px; padding: 32px 0; }
+  .process-step-num { font-size: 40px; }
+  .challenges { padding: 32px 28px; }
+  .next-phase { padding: 32px 28px; }
+  .outcomes { padding: 80px 0; border-radius: 20px; }
+  .outcomes-grid { grid-template-columns: 1fr; gap: 32px; }
+  .conclusion { padding: 80px 0; border-radius: 20px; }
+  .next-title { flex-direction: column; align-items: flex-start; gap: 16px; }
+  footer { padding: 80px 0 40px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .footer-bottom > div:last-child a:first-child { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="brand"><span class="brand-dot"></span>Elvina Garcia<sup>01</sup></a>
+    <ul class="nav-links">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Get in touch <span class="arrow">→</span></a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="case-hero">
+  <div class="container">
+    <a href="index.html#work" class="back-link">← All case studies</a>
+    <div class="case-eyebrow">Case Study · Recruitment</div>
+    <h1 class="case-h1">Atlas ATS</h1>
+    <p class="case-tagline">Transforming a legacy applicant tracking system into a modern, collaborative hiring engine — built for the pace and stakes of executive search.</p>
+
+    <div class="case-meta-strip">
+      <div class="meta-item">
+        <div class="meta-label">Role</div>
+        <div class="meta-value">Lead UX/UI Designer</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Engagement</div>
+        <div class="meta-value">Freelance · Retainer</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Timeline</div>
+        <div class="meta-value">2023 — 2024</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Platform</div>
+        <div class="meta-value">Web</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Industry</div>
+        <div class="meta-value">Recruitment SaaS</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Team</div>
+        <div class="meta-value">PMs · Engineers · Recruiter advisors</div>
+      </div>
+    </div>
+
+    <div class="case-cover">
+      <div class="placeholder-badge">Cover · Hero shot of the redesigned Atlas ATS</div>
+      <div class="cover-decor">
+        <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
+          <rect x="40" y="40" width="720" height="340" rx="18" fill="white" opacity="0.97"/>
+          <rect x="40" y="40" width="720" height="48" rx="18" fill="#2d3142" opacity="0.1"/>
+          <rect x="60" y="60" width="80" height="10" rx="2" fill="#2d3142" opacity="0.6"/>
+          <rect x="660" y="56" width="80" height="18" rx="9" fill="#2d3142"/>
+          <!-- Kanban-style pipeline -->
+          <rect x="60" y="118" width="170" height="262" rx="10" fill="#2d3142" opacity="0.05"/>
+          <rect x="80" y="138" width="80" height="10" rx="2" fill="#2d3142" opacity="0.7"/>
+          <rect x="80" y="155" width="30" height="6" rx="2" fill="#2d3142" opacity="0.4"/>
+          <rect x="80" y="176" width="130" height="56" rx="6" fill="white"/>
+          <circle cx="98" cy="194" r="10" fill="#4f5b7c"/>
+          <rect x="116" y="188" width="70" height="6" rx="2" fill="#2d3142" opacity="0.7"/>
+          <rect x="116" y="200" width="50" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+          <rect x="80" y="216" width="30" height="10" rx="5" fill="#4f5b7c" opacity="0.3"/>
+          <rect x="80" y="240" width="130" height="56" rx="6" fill="white"/>
+          <circle cx="98" cy="258" r="10" fill="#8093b0"/>
+          <rect x="116" y="252" width="70" height="6" rx="2" fill="#2d3142" opacity="0.7"/>
+          <rect x="116" y="264" width="50" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+          <rect x="80" y="304" width="130" height="56" rx="6" fill="white"/>
+          <!-- Col 2 -->
+          <rect x="245" y="118" width="170" height="262" rx="10" fill="#2d3142" opacity="0.05"/>
+          <rect x="265" y="138" width="80" height="10" rx="2" fill="#2d3142" opacity="0.7"/>
+          <rect x="265" y="155" width="30" height="6" rx="2" fill="#2d3142" opacity="0.4"/>
+          <rect x="265" y="176" width="130" height="56" rx="6" fill="white"/>
+          <circle cx="283" cy="194" r="10" fill="#4f5b7c"/>
+          <rect x="301" y="188" width="70" height="6" rx="2" fill="#2d3142" opacity="0.7"/>
+          <rect x="301" y="200" width="50" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+          <rect x="265" y="240" width="130" height="56" rx="6" fill="white"/>
+          <circle cx="283" cy="258" r="10" fill="#c8a572"/>
+          <rect x="301" y="252" width="70" height="6" rx="2" fill="#2d3142" opacity="0.7"/>
+          <rect x="301" y="264" width="50" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+          <!-- Col 3 -->
+          <rect x="430" y="118" width="170" height="262" rx="10" fill="#2d3142" opacity="0.05"/>
+          <rect x="450" y="138" width="80" height="10" rx="2" fill="#2d3142" opacity="0.7"/>
+          <rect x="450" y="155" width="30" height="6" rx="2" fill="#2d3142" opacity="0.4"/>
+          <rect x="450" y="176" width="130" height="56" rx="6" fill="white"/>
+          <circle cx="468" cy="194" r="10" fill="#8B3A2F"/>
+          <rect x="486" y="188" width="70" height="6" rx="2" fill="#2d3142" opacity="0.7"/>
+          <rect x="486" y="200" width="50" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+          <!-- Col 4 -->
+          <rect x="615" y="118" width="125" height="262" rx="10" fill="#2d3142" opacity="0.05"/>
+          <rect x="635" y="138" width="80" height="10" rx="2" fill="#2d3142" opacity="0.7"/>
+          <rect x="635" y="155" width="30" height="6" rx="2" fill="#2d3142" opacity="0.4"/>
+          <rect x="635" y="176" width="85" height="56" rx="6" fill="white"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="section">
+  <div class="prose-container prose">
+    <div class="section-eyebrow">Overview</div>
+    <p class="lead">Atlas is a recruitment platform that connects fast-growing companies with top executive talent. Internally, they relied on a custom-built Applicant Tracking System — but it was holding them back.</p>
+    <p>The system had outdated, manual workflows, a cluttered and unintuitive UI, and weak collaboration tools. Engaged as a <strong>freelance designer on retainer</strong>, I led the UX/UI redesign of the Atlas ATS — transforming it into a modern, intuitive platform focused on clarity, collaboration, and recruiter productivity.</p>
+  </div>
+</section>
+
+<!-- CHALLENGE -->
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-label">Challenge</div>
+      <div class="prose">
+        <h2 class="section-h2">A legacy system holding the team back</h2>
+        <p>The legacy ATS was reactive and inconsistent. Recruiters were doing their actual job — finding and placing executive talent — <em>around</em> the tool rather than <em>with</em> it.</p>
+        <div class="challenges">
+          <div class="challenges-label"><span class="marker">✕</span> Before — Key challenges</div>
+          <ul>
+            <li>Recruiters relied on <strong>spreadsheets, email threads, and disconnected tools</strong> to fill in what the ATS couldn't do.</li>
+            <li><strong>Candidate pipelines</strong> were hard to track or manage, with no clear sense of stage or ownership.</li>
+            <li><strong>Collaboration</strong> between recruiters and account managers was inefficient — context lived in heads and inboxes, not the system.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOAL -->
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div class="col-label">Goal</div>
+      <div class="prose">
+        <h2 class="section-h2">A hiring engine, not just a tracker</h2>
+        <p>The redesign had to do four things — together, not in isolation:</p>
+        <div class="challenges positive">
+          <div class="challenges-label positive"><span class="marker">✓</span> Goals for the redesign</div>
+          <ul>
+            <li><strong>Centralize</strong> the end-to-end hiring workflow in one place.</li>
+            <li><strong>Improve collaboration</strong> across recruiting teams and with clients.</li>
+            <li><strong>Streamline</strong> sourcing, candidate tracking, and client handoff.</li>
+            <li><strong>Increase recruiter speed</strong> and overall system usability.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN PROCESS -->
+<section class="section">
+  <div class="container">
+    <div class="section-eyebrow">Design Process</div>
+    <h2 class="section-h2">A lean, sprint-based approach</h2>
+    <div class="prose-container prose">
+      <p>We followed a lean, sprint-based approach to deliver fast iterations while staying closely aligned with client feedback. Each phase fed directly into the next, with early artifacts surfacing decisions before pixels were ever pushed.</p>
+    </div>
+
+    <div class="process-flow">
+
+      <div class="process-step">
+        <div class="process-step-num">01</div>
+        <div class="process-step-content">
+          <h3>Kickoff & Alignment</h3>
+          <p>Gathered goals, challenges, and must-haves directly with the client. This was where we surfaced the gap between what the legacy system did and what recruiters actually needed day-to-day.</p>
+          <span class="artifact-pill">Artifact · Client Empathy Map</span>
+        </div>
+      </div>
+
+      <div class="image-pair">
+        <div class="image-block bg-atlas-light">
+          <span class="placeholder-badge">Image · Client Empathy Map</span>
+          <div class="placeholder-decor">
+            <svg viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="40" width="420" height="280" rx="14" fill="white" opacity="0.97"/>
+              <circle cx="250" cy="180" r="40" fill="#4f5b7c" opacity="0.3"/>
+              <rect x="230" y="172" width="40" height="6" rx="2" fill="#2d3142"/>
+              <rect x="220" y="184" width="60" height="5" rx="2" fill="#2d3142" opacity="0.6"/>
+              <line x1="250" y1="80" x2="250" y2="140" stroke="#2d3142" stroke-opacity="0.2" stroke-width="1"/>
+              <line x1="250" y1="220" x2="250" y2="280" stroke="#2d3142" stroke-opacity="0.2" stroke-width="1"/>
+              <line x1="190" y1="180" x2="100" y2="180" stroke="#2d3142" stroke-opacity="0.2" stroke-width="1"/>
+              <line x1="310" y1="180" x2="400" y2="180" stroke="#2d3142" stroke-opacity="0.2" stroke-width="1"/>
+              <rect x="60" y="60" width="120" height="64" rx="8" fill="#2d3142" opacity="0.06"/>
+              <rect x="70" y="72" width="50" height="8" rx="2" fill="#2d3142" opacity="0.7"/>
+              <rect x="70" y="88" width="100" height="4" rx="2" fill="#2d3142" opacity="0.4"/>
+              <rect x="70" y="98" width="80" height="4" rx="2" fill="#2d3142" opacity="0.4"/>
+              <rect x="70" y="108" width="90" height="4" rx="2" fill="#2d3142" opacity="0.4"/>
+              <rect x="320" y="60" width="120" height="64" rx="8" fill="#2d3142" opacity="0.06"/>
+              <rect x="330" y="72" width="60" height="8" rx="2" fill="#2d3142" opacity="0.7"/>
+              <rect x="330" y="88" width="100" height="4" rx="2" fill="#2d3142" opacity="0.4"/>
+              <rect x="330" y="98" width="90" height="4" rx="2" fill="#2d3142" opacity="0.4"/>
+              <rect x="60" y="236" width="120" height="64" rx="8" fill="#2d3142" opacity="0.06"/>
+              <rect x="70" y="248" width="50" height="8" rx="2" fill="#2d3142" opacity="0.7"/>
+              <rect x="70" y="264" width="100" height="4" rx="2" fill="#2d3142" opacity="0.4"/>
+              <rect x="320" y="236" width="120" height="64" rx="8" fill="#2d3142" opacity="0.06"/>
+              <rect x="330" y="248" width="40" height="8" rx="2" fill="#2d3142" opacity="0.7"/>
+              <rect x="330" y="264" width="100" height="4" rx="2" fill="#2d3142" opacity="0.4"/>
+              <rect x="330" y="274" width="80" height="4" rx="2" fill="#2d3142" opacity="0.4"/>
+            </svg>
+          </div>
+        </div>
+        <div class="image-block bg-warm">
+          <span class="placeholder-badge">Image · Competitor Analysis</span>
+          <div class="placeholder-decor">
+            <svg viewBox="0 0 500 360" xmlns="http://www.w3.org/2000/svg">
+              <rect x="40" y="40" width="420" height="280" rx="14" fill="white" opacity="0.97"/>
+              <rect x="60" y="60" width="100" height="10" rx="2" fill="#8b6f3f"/>
+              <rect x="60" y="76" width="60" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="60" y="106" width="380" height="36" rx="6" fill="#8b6f3f" opacity="0.08"/>
+              <rect x="80" y="118" width="80" height="6" rx="2" fill="#8b6f3f" opacity="0.7"/>
+              <rect x="200" y="118" width="60" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="290" y="118" width="100" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="60" y="150" width="380" height="36" rx="6" fill="white" stroke="#8b6f3f" stroke-opacity="0.15"/>
+              <rect x="80" y="162" width="80" height="6" rx="2" fill="#8b6f3f" opacity="0.7"/>
+              <rect x="200" y="162" width="60" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="290" y="162" width="60" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <circle cx="420" cy="168" r="8" fill="#c8a572"/>
+              <rect x="60" y="194" width="380" height="36" rx="6" fill="white" stroke="#8b6f3f" stroke-opacity="0.15"/>
+              <rect x="80" y="206" width="80" height="6" rx="2" fill="#8b6f3f" opacity="0.7"/>
+              <rect x="200" y="206" width="60" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="290" y="206" width="90" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <circle cx="420" cy="212" r="8" fill="#8b6f3f" opacity="0.4"/>
+              <rect x="60" y="238" width="380" height="36" rx="6" fill="white" stroke="#8b6f3f" stroke-opacity="0.15"/>
+              <rect x="80" y="250" width="80" height="6" rx="2" fill="#8b6f3f" opacity="0.7"/>
+              <rect x="200" y="250" width="60" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <rect x="290" y="250" width="70" height="6" rx="2" fill="#8b6f3f" opacity="0.5"/>
+              <circle cx="420" cy="256" r="8" fill="#c8a572"/>
+              <rect x="60" y="282" width="380" height="20" rx="6" fill="#8b6f3f" opacity="0.04"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num">02</div>
+        <div class="process-step-content">
+          <h3>Competitive Benchmarking</h3>
+          <p>Studied existing ATS platforms to map what users already expected — and where there was room to do something smarter. Used these patterns as both reference and contrast.</p>
+        </div>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num">03</div>
+        <div class="process-step-content">
+          <h3>Low-Fidelity Wireframes</h3>
+          <p>Sketched core screens — Add Job, List View, Candidate Cards — to establish structure and test flows before committing to visual decisions. Wireframes were also the fastest way to collect early client feedback and adjust direction.</p>
+          <span class="artifact-pill">Artifact · Core flow wireframes</span>
+        </div>
+      </div>
+
+      <div class="image-block bg-atlas-mid">
+        <span class="placeholder-badge">Image · Low-fidelity wireframes</span>
+        <div class="placeholder-decor">
+          <svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="40" width="200" height="320" rx="10" fill="white" opacity="0.95"/>
+            <rect x="60" y="60" width="80" height="8" rx="2" fill="#2d3142" opacity="0.7"/>
+            <rect x="60" y="76" width="50" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+            <rect x="60" y="96" width="160" height="32" rx="4" fill="#2d3142" opacity="0.08"/>
+            <rect x="60" y="136" width="160" height="32" rx="4" fill="#2d3142" opacity="0.08"/>
+            <rect x="60" y="176" width="160" height="32" rx="4" fill="#2d3142" opacity="0.08"/>
+            <rect x="60" y="216" width="160" height="32" rx="4" fill="#2d3142" opacity="0.08"/>
+            <rect x="60" y="320" width="160" height="20" rx="10" fill="#2d3142" opacity="0.4"/>
+            <rect x="260" y="40" width="200" height="320" rx="10" fill="white" opacity="0.95"/>
+            <rect x="280" y="60" width="80" height="8" rx="2" fill="#2d3142" opacity="0.7"/>
+            <rect x="280" y="76" width="50" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+            <rect x="280" y="96" width="160" height="50" rx="4" fill="#2d3142" opacity="0.08"/>
+            <rect x="290" y="108" width="80" height="6" rx="2" fill="#2d3142" opacity="0.6"/>
+            <rect x="290" y="120" width="100" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+            <rect x="280" y="154" width="160" height="50" rx="4" fill="#2d3142" opacity="0.08"/>
+            <rect x="280" y="212" width="160" height="50" rx="4" fill="#2d3142" opacity="0.08"/>
+            <rect x="280" y="270" width="160" height="50" rx="4" fill="#2d3142" opacity="0.08"/>
+            <rect x="480" y="40" width="200" height="320" rx="10" fill="white" opacity="0.95"/>
+            <rect x="500" y="60" width="80" height="8" rx="2" fill="#2d3142" opacity="0.7"/>
+            <rect x="500" y="76" width="50" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+            <rect x="500" y="106" width="160" height="220" rx="4" fill="#2d3142" opacity="0.06"/>
+            <circle cx="520" cy="130" r="10" fill="#2d3142" opacity="0.3"/>
+            <rect x="540" y="124" width="80" height="6" rx="2" fill="#2d3142" opacity="0.6"/>
+            <rect x="540" y="136" width="60" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+            <rect x="510" y="160" width="140" height="40" rx="4" fill="white"/>
+            <rect x="510" y="210" width="140" height="40" rx="4" fill="white"/>
+            <rect x="510" y="260" width="140" height="40" rx="4" fill="white"/>
+          </svg>
+        </div>
+      </div>
+      <p class="image-caption">Low-fidelity wireframes — Add Job flow, list view, and candidate cards</p>
+
+      <div class="process-step">
+        <div class="process-step-num">04</div>
+        <div class="process-step-content">
+          <h3>High-Fidelity Design in Figma</h3>
+          <p>Built out detailed UI mockups focused on clarity, hierarchy, and ease of use. Every screen was designed against recruiter task flows — not just visual polish — so the high-fi work directly answered the goals we'd set at kickoff.</p>
+        </div>
+      </div>
+
+      <div class="image-block bg-atlas-dark">
+        <span class="placeholder-badge">Image · High-fidelity Figma designs</span>
+        <div class="placeholder-decor">
+          <svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="40" width="720" height="380" rx="14" fill="white" opacity="0.97"/>
+            <rect x="40" y="40" width="720" height="48" rx="14" fill="#2d3142" opacity="0.1"/>
+            <rect x="60" y="60" width="120" height="10" rx="2" fill="#2d3142" opacity="0.7"/>
+            <rect x="660" y="56" width="80" height="18" rx="9" fill="#4f5b7c"/>
+            <rect x="60" y="108" width="180" height="294" rx="10" fill="#2d3142" opacity="0.04"/>
+            <rect x="80" y="124" width="100" height="8" rx="2" fill="#2d3142" opacity="0.7"/>
+            <rect x="80" y="148" width="140" height="28" rx="4" fill="white"/>
+            <rect x="80" y="184" width="140" height="28" rx="4" fill="#4f5b7c" opacity="0.3"/>
+            <rect x="80" y="220" width="140" height="28" rx="4" fill="white"/>
+            <rect x="80" y="256" width="140" height="28" rx="4" fill="white"/>
+            <rect x="80" y="292" width="140" height="28" rx="4" fill="white"/>
+            <rect x="260" y="108" width="240" height="294" rx="10" fill="#2d3142" opacity="0.04"/>
+            <rect x="280" y="124" width="120" height="10" rx="2" fill="#2d3142" opacity="0.7"/>
+            <rect x="280" y="142" width="80" height="6" rx="2" fill="#2d3142" opacity="0.4"/>
+            <rect x="280" y="166" width="200" height="60" rx="6" fill="white"/>
+            <circle cx="304" cy="186" r="14" fill="#4f5b7c" opacity="0.5"/>
+            <rect x="326" y="178" width="80" height="6" rx="2" fill="#2d3142" opacity="0.7"/>
+            <rect x="326" y="190" width="60" height="5" rx="2" fill="#2d3142" opacity="0.4"/>
+            <rect x="280" y="234" width="200" height="60" rx="6" fill="white"/>
+            <rect x="280" y="302" width="200" height="60" rx="6" fill="white"/>
+            <rect x="520" y="108" width="220" height="294" rx="10" fill="#2d3142" opacity="0.04"/>
+            <rect x="540" y="124" width="120" height="10" rx="2" fill="#2d3142" opacity="0.7"/>
+            <rect x="540" y="148" width="180" height="80" rx="6" fill="white"/>
+            <rect x="540" y="240" width="180" height="40" rx="6" fill="white"/>
+            <rect x="540" y="292" width="180" height="40" rx="6" fill="white"/>
+            <rect x="540" y="350" width="80" height="32" rx="16" fill="#8B3A2F"/>
+          </svg>
+        </div>
+      </div>
+      <p class="image-caption">High-fidelity UI — focused on clarity, hierarchy, and ease of use</p>
+
+    </div>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="section">
+  <div class="container">
+    <div class="outcomes">
+      <div class="container">
+        <div class="section-eyebrow">Results</div>
+        <h2 class="section-h2">What the redesign actually changed</h2>
+
+        <div class="outcomes-grid">
+          <div>
+            <div class="outcome-stat">Less task-switching</div>
+            <div class="outcome-label">Visibility</div>
+            <div class="outcome-desc">Improved visibility across the hiring workflow meant recruiters spent less time hunting for information across tools.</div>
+          </div>
+          <div>
+            <div class="outcome-stat">Better collaboration</div>
+            <div class="outcome-label">Cross-functional</div>
+            <div class="outcome-desc">Increased cross-functional team collaboration — especially with clients — as context lived in the system, not in inboxes.</div>
+          </div>
+          <div>
+            <div class="outcome-stat">Clearer ownership</div>
+            <div class="outcome-label">Early tester feedback</div>
+            <div class="outcome-desc">Testers reported clearer ownership, faster updates, and less manual tracking across the candidate pipeline.</div>
+          </div>
+          <div>
+            <div class="outcome-stat">Ready to scale</div>
+            <div class="outcome-label">Growth-ready platform</div>
+            <div class="outcome-desc">Positioned Atlas to scale alongside the business — the system can hold more recruiters, clients, and complexity without breaking.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCLUSION -->
+<section class="section">
+  <div class="container">
+    <div class="conclusion">
+      <div class="container">
+        <div class="section-eyebrow">Conclusion</div>
+        <p class="conclusion-quote">The redesign transformed Atlas from a legacy tool into a <em>collaborative hiring engine</em>. By focusing on clarity, task efficiency, and recruiter collaboration, the system now supports the fast pace and high stakes of executive search — instead of slowing it down.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT PHASE -->
+<section class="section">
+  <div class="container">
+    <div class="prose-container">
+      <div class="next-phase">
+        <div class="next-phase-label">Next Phase · In progress</div>
+        <h3>A visual and functional upgrade — without losing the recruiter-first feel</h3>
+        <p>We're now working on a major visual and functional upgrade to elevate the platform's UI and brand identity, while keeping accessibility and clarity at the core for recruiters.</p>
+        <p>The goal is to scale the platform without sacrificing speed or usability — so Atlas remains a high-performing, recruiter-first system as the business grows.</p>
+
+        <div class="next-phase-focus">
+          <div class="next-phase-focus-label">Key areas of focus</div>
+          <ul>
+            <li>A <strong>redesigned "Add Job" flow</strong> for faster, more flexible job setup</li>
+            <li><strong>Streamlined automation setup</strong> to reduce friction in task configuration</li>
+            <li>Exploration of <strong>AI-powered enhancements</strong> — smart candidate suggestions, automated screening prompts, and next-step nudges</li>
+          </ul>
+        </div>
+
+        <div class="nda-note">
+          <span class="lock">🔒</span>
+          <span>Due to NDA restrictions, designs for the newest version cannot be publicly shared at this time. Happy to walk through them in conversation.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEXT CASE -->
+<section class="next-case">
+  <div class="container">
+    <a href="#" class="next-case-link">
+      <div class="next-label">Next case study</div>
+      <div class="next-title"><em>Truckpedia</em> <span class="next-arrow">→</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-eyebrow">Get in touch</div>
+    <h2 class="footer-cta">Let's talk <em>UX</em>.</h2>
+    <p class="footer-sub">Building B2B software where users truly depend on what you ship? Whether it's a fresh idea, an ongoing project, or just a question — I'd love to hear about it.</p>
+    <a href="mailto:elvinagarcia.design@gmail.com" class="footer-email">📩 elvinagarcia.design@gmail.com <span class="arrow">→</span></a>
+    <div class="footer-bottom">
+      <div>© 2026 Elvina Garcia · Davao, Philippines · Crafted with care</div>
+      <div><a href="#">LinkedIn</a><a href="#">Read.cv</a><a href="#">Dribbble</a></div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
