@@ -14,7 +14,6 @@ import FooterElement from '../components/FooterElement.vue';
 export default {
   components: {
     NavigationElement,
-    LoadingElement,
     FooterElement
   },
   data() {
@@ -31,4 +30,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.main-view {
+  animation: fadeIn 0.15s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+</style>

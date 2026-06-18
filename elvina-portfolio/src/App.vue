@@ -20,6 +20,9 @@ export default {
   },
   mounted() {
     this.isMobile = window.innerWidth < 768
+     setTimeout(() => {
+    this.isLoading = false
+  }, 800)
   },
 }
 </script>

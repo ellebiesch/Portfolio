@@ -7,8 +7,7 @@
           <h2 class="process-title">Design <em>process</em></h2>
         </div>
         <p class="process-sub">
-          A repeatable, sprint-based flow that takes a fuzzy idea and turns it into a shipped,
-          documented, handed-off product.
+          Not a waterfall. Not a vague "design thinking" loop. A sprint-based flow built for B2B teams that need to ship without burning cycles on process theater..
         </p>
       </div>
       <div class="process-grid">
@@ -31,33 +30,33 @@ export default {
       steps: [
         {
           num: '01',
-          title: 'Discovery & <em>Research</em>',
-          body: 'I dive deep into your business and user needs through research and analysis to identify key pain points.',
+          title: '<em>Dig before you draw</em>',
+          body: "I don't open Figma until I understand the business constraint, the user's actual job, and what's already been tried.  Most design problems are scoping problems in disguise.",
         },
         {
           num: '02',
-          title: 'Ideation & <em>Concept</em>',
-          body: 'I brainstorm and outline innovative solutions, focusing on user journeys and core features.',
+          title: '<em>Structure before visuals</em>',
+          body: "Information architecture, user flows, and content hierarchy first. Pretty screens built on broken logic just fail faster.",
         },
         {
           num: '03',
-          title: 'Wireframing & <em>Structure</em>',
-          body: 'I create detailed, responsive wireframes to map out the structure and flow of your product.',
+          title: '<em>High-fidelity fast</em>',
+          body: "I work at high fidelity earlier than most designers. Stakeholders react to real screens — not wireframes. It cuts revision cycles significantly.",
         },
         {
           num: '04',
-          title: '<em>Prototyping</em>',
-          body: 'I bring designs to life with interactive prototypes that simulate real interactions and reveal usability issues early.',
+          title: '<em>Prototype what matters</em>',
+          body: "Not everything needs a prototype. The interactions that carry the most risk from complex flows, edge cases, permission states — those get built and tested before engineering touches them.",
         },
         {
           num: '05',
-          title: 'Testing & <em>Iteration</em>',
-          body: 'I test designs with real users, gather insights, and refine the product through continuous iterations.',
+          title: ' <em>Ship-ready handoff</em>',
+          body: "Annotated specs, component documentation, edge case coverage. Engineers shouldn't have to guess. If they're guessing, the handoff failed.",
         },
-        {
+         {
           num: '06',
-          title: 'Handoff & <em>Docs</em>',
-          body: 'I provide detailed design systems and documentation for a smooth handoff to developers.',
+          title: '<em>Reflect and iterate</em>',
+          body: "Good design doesn't stop at launch. I track what lands, what doesn't, and feed that back into the next cycle.",
         },
       ],
     };
@@ -121,6 +120,7 @@ export default {
   border-radius: 20px;
   overflow: hidden;
 }
+
 .process-step {
   background: var(--bg);
   padding: 40px 32px 36px;

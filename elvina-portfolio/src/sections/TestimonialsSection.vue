@@ -73,8 +73,9 @@ export default {
           role: 'CEO & Co-founder, Truckpedia',
         },
         {
-          placeholder:
-            '[Testimonial content from Harry will go here. Designed to hold roughly two to three sentences — enough to feel substantial, short enough to read in one breath.]',
+          before:
+            "Elvina has been an incredible design partner on Primoro. She doesn't just deliver screens, she thinks through the product with you.",
+            highlight: 'The quality of work has consistently exceeded expectations.',
           initial: 'H',
           name: 'Harry Leak',
           role: 'Business Director, Primoro / Foxbury Dental',

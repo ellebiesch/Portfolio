@@ -504,6 +504,9 @@ export default {
 .case-page--atlas .case-meta-strip {
   grid-template-columns: repeat(6, 1fr);
 }
+.case-page--atlass .cover-decor :deep(svg) {
+  width: 400%;
+}
 .case-page--atlas .case-cover {
   background: linear-gradient(135deg, #2d3142 0%, #4f5b7c 50%, #8093b0 100%);
   box-shadow: 0 32px 80px -24px rgba(45, 49, 66, 0.4);

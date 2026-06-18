@@ -22,8 +22,8 @@
           </div>
           <h3 class="service-title">End-to-end <em>product design</em></h3>
           <p class="service-body">
-            Discovery through shipped product. Solo or embedded with your team. Best fit for
-            early-stage to Series B companies where one designer owns the surface.
+            From the first research session to the final handoff doc. Solo or embedded. 
+            Best fit for early-stage to Series B teams where one designer needs to own the whole surface and actually ship.
           </p>
         </div>
         <div class="service">
@@ -50,7 +50,7 @@
           </div>
           <h3 class="service-title">Healthcare <em>partnership</em></h3>
           <p class="service-body">
-            Embedded design support for EHRs, practice management, scheduling, and audit systems.
+            Embedded design support for EHRs, practice management, scheduling, compliance and audit systems.
             Domain familiarity included.
           </p>
         </div>

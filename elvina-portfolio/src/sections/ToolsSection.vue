@@ -4,9 +4,9 @@
       <div class="tools-header">
         <div>
           <div class="about-eyebrow">Tools</div>
-          <h2 class="about-title">My <em>digital</em> sidekicks.</h2>
+          <h2 class="about-title">What I <em>work</em>with </h2>
         </div>
-        <p class="tools-sub">The toolkit that makes me look like a genius — most of the time.</p>
+        <p class="tools-sub">The toolkit behind every screen I've shipped.</p>
       </div>
       <div class="tools-grid">
         <div v-for="tool in tools" :key="tool.name" class="tool">

@@ -1,20 +1,17 @@
 <template>
   <footer id="contact">
     <div class="container">
-      <div class="footer-eyebrow">Get in touch</div>
+      <div class="footer-eyebrow">Let's build something that holds up</div>
       <h2 class="footer-cta">Let's talk <em>UX</em>.</h2>
       <p class="footer-sub">
-        Building B2B software where users truly depend on what you ship? Whether it's a fresh idea,
-        an ongoing project, or just a question — I'd love to hear about it.
+        Got a product that matters? Let's make sure the design matches. If you're building software people depend on — not just use — I want to hear about it.
       </p>
       <a href="mailto:elvinagarcia.design@gmail.com" class="footer-email">
         📩 elvinagarcia.design@gmail.com <span class="arrow">→</span>
       </a>
       <div class="footer-bottom">
-        <div>© 2026 Elvina Garcia · Davao, Philippines · Crafted with care</div>
-        <div>
-          <p> Design that matters </p>
-        </div>
+        <div>© 2026 Elvina Garcia · Davao, Philippines · Design that matters</div>
+        
       </div>
     </div>
   </footer>
