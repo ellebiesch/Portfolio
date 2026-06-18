@@ -2,7 +2,7 @@
   <nav>
     <div class="container">
       <router-link to="/home" class="brand">
-        <span class="brand-dot"></span>Elvina Garcia<sup>01</sup>
+        <span class="brand-dot"></span>Elvina Garcia<sup></sup>
       </router-link>
       <ul class="nav-links">
         <li><router-link :to="{ path: '/home', hash: '#work' }">Work</router-link></li>

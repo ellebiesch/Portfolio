@@ -7,13 +7,13 @@
           >← All case studies</router-link
         >
         <div class="case-eyebrow">Case Study · Dental SaaS · In Progress</div>
-        <h1 class="case-h1">Foxbury / <em>Primoro</em></h1>
+        <h1 class="case-h1"><em>Primoro</em></h1>
         <p class="case-tagline">A modern dental practice operating system</p>
 
         <div class="case-meta-strip">
           <div class="meta-item">
             <div class="meta-label">Role</div>
-            <div class="meta-value">Lead Product Designer / Consultant</div>
+            <div class="meta-value">Lead Product Designer </div>
           </div>
           <div class="meta-item">
             <div class="meta-label">Engagement</div>
@@ -25,7 +25,7 @@
           </div>
           <div class="meta-item">
             <div class="meta-label">Platform</div>
-            <div class="meta-value">Web · Tablet</div>
+            <div class="meta-value">Web · Tablet · Mobile </div>
           </div>
           <div class="meta-item">
             <div class="meta-label">Industry</div>
@@ -45,15 +45,12 @@
         <div class="section-eyebrow">A bit of context</div>
         <p class="lead">
           Primoro is a multi-product operating system for modern dental practices — designed to
-          replace the patchwork of legacy tools clinical and admin teams stitch together. Think
-          appointment manager, staff communication hub, consent templates, tasks, and Primoro Pay,
-          all in one platform.
+          replace the patchwork of legacy tools clinical and admin teams stitch together. 
         </p>
         <p>
-          I'm leading design across the system on a freelance/consultant retainer, partnering closely
+          I'm leading design across the system on a freelance retainer, partnering closely
           with the founder team to ship modules end-to-end — from research through high-fidelity
-          prototypes and engineering handoff. The work spans multiple user roles (clinical, admin,
-          front-desk) and surfaces (desktop web, tablet for chairside), with RBAC and operational
+          prototypes and engineering handoff. The work spans multiple user roles with RBAC and operational
           workflows baked into nearly every screen.
         </p>
       </div>
@@ -82,68 +79,8 @@
         </div>
       </div>
     </section>
-
-    <!-- WHEN IT SHIPS -->
-    <section class="expect-section">
-      <div class="container">
-        <div class="expect-eyebrow">When it ships</div>
-        <h2 class="expect-heading">Here's what the case study will <em>likely cover</em>.</h2>
-
-        <div class="expect-grid">
-          <div class="expect-card">
-            <div class="expect-tag">Module 01</div>
-            <h3 class="expect-title">Staff Portal & Communication Hub</h3>
-            <p class="expect-desc">
-              Designing for cross-role coordination — clinical, admin, and front-desk staff working
-              from the same shared workspace without stepping on each other.
-            </p>
-          </div>
-          <div class="expect-card">
-            <div class="expect-tag">Module 02</div>
-            <h3 class="expect-title">Appointment Manager</h3>
-            <p class="expect-desc">
-              Spec v2.1 → v2.2 — accessibility flows, arrival states, tablet boundaries, waitlist
-              logic, deposit timing, and AI calendar suggestions.
-            </p>
-          </div>
-          <div class="expect-card">
-            <div class="expect-tag">Module 03</div>
-            <h3 class="expect-title">Tasks Manager</h3>
-            <p class="expect-desc">
-              List, Calendar, and Timeline views, filter panels, work packages, and tablet-optimized
-              Surgery Checklist screens.
-            </p>
-          </div>
-          <div class="expect-card">
-            <div class="expect-tag">Module 04</div>
-            <h3 class="expect-title">Primoro Pay</h3>
-            <p class="expect-desc">
-              Payment flow mapping across FOH dashboard, patient list, and Pay module — invoices,
-              refunds, ledger, and reconciliation.
-            </p>
-          </div>
-          <div class="expect-card">
-            <div class="expect-tag">Module 05</div>
-            <h3 class="expect-title">Consent Template Library</h3>
-            <p class="expect-desc">
-              Digitizing legacy paper-based consent forms into a configurable template library with
-              version control and audit trails.
-            </p>
-          </div>
-          <div class="expect-card">
-            <div class="expect-tag">System</div>
-            <h3 class="expect-title">Design System & RBAC Patterns</h3>
-            <p class="expect-desc">
-              Building the Primoro design system in Figma — typography, color, components — and
-              establishing role-based UI patterns across the platform.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+ </div>
 </template>
-
 <script>
 export default {
   name: 'CaseStudyPrimoro',
@@ -152,7 +89,8 @@ export default {
 
 <style scoped>
 .case-page--primoro {
-  --accent: #8b3a2f;
+  --accent: #000000;
+
 }
 .case-page--primoro .case-meta-strip {
   grid-template-columns: repeat(6, 1fr);

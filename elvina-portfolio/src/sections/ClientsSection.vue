@@ -13,7 +13,7 @@
         </div>
         <router-link to="/case-studies/navix" class="client">
           <div class="client-name">Navix Health</div>
-          <div class="client-domain">Behavioral health platform</div>
+          <div class="client-domain">Behavioral healthcare platform</div>
         </router-link>
         <router-link to="/case-studies/atlas" class="client">
           <div class="client-name">Atlas ATS</div>

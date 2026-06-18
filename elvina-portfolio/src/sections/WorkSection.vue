@@ -9,18 +9,18 @@
         <div class="section-label work-range">2020 — 2026</div>
       </div>
       <div class="work-grid">
-        <!-- Foxbury / Primoro (featured) -->
+        <!-- Primoro (featured) -->
         <case-card
           to="/case-studies/primoro"
           featured
           preview-class="preview-foxbury"
           number="01 / Healthcare · Featured"
-          year="2025 — 2026"
+          year="2025 — Present"
           title="Foxbury / <em>Primoro</em>"
           summary="Lead design for a modern dental practice operating system."
-          :tags="['Dental SaaS', 'Multi-product', 'RBAC', 'Web + Tablet']"
+          :tags="['Dental SaaS', 'Multi-product', 'RBAC', 'Web + Tablet + Mobile']"
           :attrs="[
-            { label: 'Role', value: 'Lead designer' },
+            { label: 'Role', value: 'Lead Product designer · Freelance Retainer' },
             { label: 'Surface', value: 'Web, Tablet and Mobile App' },
             { label: 'Scope', value: 'End-to-end · Multi-product' },
           ]"
@@ -63,7 +63,7 @@
           year="2021 — 2025"
           title="Navix Health <em>Platform</em>"
           summary="Lead designer on a behavioral health operations platform. Designed the system across web and mobile, partnered with a junior designer, and led a brand refresh for a more premium, enterprise-ready feel."
-          :tags="['Platform', 'CRM', 'EHR', 'RCM', 'Design system']"
+          :tags="['Cross-Platform', 'Design system', 'AI Integrated Tools']"
           :attrs="[
             { label: 'Role', value: 'Foundation product designer' },
             { label: 'Surface', value: 'Web · Mobile · AI' },
@@ -91,12 +91,12 @@
         <case-card
           preview-class="preview-cargoos"
           number="03 / Operations"
-          year="2025 — 2026"
+          year="2025 — Present"
           title="<em>CPS</em>"
           summary="Configurable carrier scoring platform with admin panel handling 100+ parameters and audit-first design. Carrier-facing dashboard surfaces score causation in plain language."
-          :tags="['Logistics', 'Audit trails', 'Data-dense']"
+          :tags="['Logstics', 'Scoring system']"
           :attrs="[
-            { label: 'Role', value: 'Sole designer' },
+            { label: 'Role', value: 'Sole Product designer · Part-time' },
             { label: 'Surface', value: 'Web + Mobile' },
           ]"
         >
@@ -173,8 +173,8 @@
           summary="Driver-facing mobile app for load tracking, status updates, and document capture in the field."
           :tags="['Mobile-first', 'Field ops']"
           :attrs="[
-            { label: 'Role', value: 'Product designer' },
-            { label: 'Surface', value: 'Mobile' },
+            { label: 'Role', value: 'UX and UI designer' },
+            { label: 'Surface', value: 'Web + Mobile' },
           ]"
         >
           <template #preview>

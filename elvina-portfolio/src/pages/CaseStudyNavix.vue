@@ -1,5 +1,19 @@
 <template>
   <div class="case-page case-page--navix">
+      <!-- PASSWORD GATE -->
+    <div v-if="!unlocked" class="gate">
+      <div class="gate-box">
+        <p class="gate-label">This case study is password protected.</p>
+        <input
+          v-model="password"
+          type="password"
+          placeholder="Enter password"
+          @keyup.enter="unlock"
+        />
+        <button @click="unlock">View case study</button>
+        <p v-if="error" class="gate-error">Incorrect password. Try again.</p>
+      </div>
+    </div>
     <!-- HERO -->
     <section class="case-hero">
       <div class="container">
@@ -11,7 +25,7 @@
         <p class="case-tagline">
           A behavioral health operations platform — CRM, EHR, RCM, scheduling, documentation, and
           admin in one workspace. I led design across the system as it grew from a lightweight tool
-          into a full operating platform for clinics.
+          into a full operating platform for behavioral practices.
         </p>
 
         <div class="case-meta-strip">
@@ -80,7 +94,7 @@
         </p>
         <p>
           As Lead Designer, my work covered the entire workspace — not a single product area. That
-          meant defining how clinical workflows (notes, incident reports, group sessions, rounding)
+          meant defining how clinical workflows (notes, incident reports, group sessions, rounds)
           coexisted with operational ones (billing, scheduling, time reporting, document management)
           without forcing clinicians and admins to learn two different products.
         </p>
@@ -642,7 +656,7 @@
       <div class="container">
         <router-link to="/case-studies/primoro" class="next-case-link">
           <div class="next-label">Next case study</div>
-          <div class="next-title"><em>Foxbury / Primoro</em> <span class="next-arrow">→</span></div>
+          <div class="next-title"><em> Primoro</em> <span class="next-arrow">→</span></div>
         </router-link>
       </div>
     </section>
@@ -652,17 +666,82 @@
 <script>
 export default {
   name: 'CaseStudyNavix',
-};
+  data() {
+    return {
+      unlocked: false,
+      password: '',
+      error: false,
+    }
+  },
+  methods: {
+    unlock() {
+      if (this.password === 'elvinaworks2021') {
+        this.unlocked = true
+        this.error = false
+      } else {
+        this.error = true
+      }
+    },
+  },
+}
 </script>
 
 <style scoped>
+.gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #faf9f7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.gate-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.gate-label {
+  font-size: 15px;
+  color: #888;
+}
+input {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  width: 280px;
+  outline: none;
+}
+button {
+  padding: 12px 24px;
+  background: #E8623C;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.gate-error {
+  font-size: 13px;
+  color: #E8623C;
+}
 /* Navix uses the default accent (#E8623C), so no override needed. */
 .case-page--navix .case-cover {
   background: linear-gradient(135deg, #1a3a3a 0%, #2a5454 50%, #3d7373 100%);
   box-shadow: 0 32px 80px -24px rgba(26, 58, 58, 0.4);
 }
 .case-page--navix .cover-decor :deep(svg) {
-  width: 75%;
+  width: 400%;
+}
+.case-page--navix .section-h2 + .prose-container {
+  max-width: 100%;
+  margin-left: 0;
 }
 .case-page--navix .meta-value {
   font-size: 20px;
@@ -676,5 +755,7 @@ export default {
 }
 .case-page--navix .pad-top {
   padding-top: 32px;
+  max-width: 100%;
+  margin-left: 0;
 }
 </style>
