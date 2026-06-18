@@ -93,6 +93,7 @@
 }
 .meta-item {
   padding-right: 24px;
+  padding-left: 24px;
   border-right: 1px solid var(--rule);
 }
 .meta-item:last-child {

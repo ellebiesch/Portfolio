@@ -13,7 +13,7 @@
       <div class="footer-bottom">
         <div>© 2026 Elvina Garcia · Davao, Philippines · Crafted with care</div>
         <div>
-          <a href="#">LinkedIn</a><a href="#">Read.cv</a><a href="#">Dribbble</a>
+          <p> Design that matters </p>
         </div>
       </div>
     </div>

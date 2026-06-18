@@ -145,6 +145,7 @@ export default {
 }
 .stat {
   padding-right: 32px;
+  padding-left: 32px;
   border-right: 1px solid var(--rule);
 }
 .stat:last-child {

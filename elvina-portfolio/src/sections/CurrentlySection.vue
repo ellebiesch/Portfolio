@@ -28,7 +28,7 @@ export default {
         {
           label: 'Working on',
           content: 'Bunch of things I wanted to do during childhood.',
-          time: 'This days',
+          time: 'These days',
         },
         {
           label: 'Reading',

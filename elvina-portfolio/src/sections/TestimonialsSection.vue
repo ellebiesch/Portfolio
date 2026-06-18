@@ -77,7 +77,7 @@ export default {
             '[Testimonial content from Harry will go here. Designed to hold roughly two to three sentences — enough to feel substantial, short enough to read in one breath.]',
           initial: 'H',
           name: 'Harry Leak',
-          role: 'Primoro / Foxbury Dental',
+          role: 'Business Director, Primoro / Foxbury Dental',
         },
         {
           placeholder:
