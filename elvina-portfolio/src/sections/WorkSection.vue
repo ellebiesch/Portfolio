@@ -63,7 +63,7 @@
           year="2021 — 2025"
           title="Navix Health <em>Platform</em>"
           summary="Lead designer on a behavioral health operations platform. Designed the system across web and mobile, partnered with a junior designer, and led a brand refresh for a more premium, enterprise-ready feel."
-          :tags="['Cross-Platform', 'Design system', 'AI Integrated Tools']"
+          :tags="['Behavioral Healthcare', 'Cross-Platform', 'Design system', 'AI Integrated Tools']"
           :attrs="[
             { label: 'Role', value: 'Foundation product designer' },
             { label: 'Surface', value: 'Web · Mobile · AI' },
@@ -93,8 +93,8 @@
           number="03 / Operations"
           year="2025 — Present"
           title="<em>CPS</em>"
-          summary="Configurable carrier scoring platform with admin panel handling 100+ parameters and audit-first design. Carrier-facing dashboard surfaces score causation in plain language."
-          :tags="['Logstics', 'Scoring system']"
+          summary="Driver scoring app with configurable carrier scoring platform with admin panel handling 100+ parameters and audit-first design. Carrier-facing dashboard surfaces score causation in plain language."
+          :tags="['Logistics', 'Scoring system']"
           :attrs="[
             { label: 'Role', value: 'Sole Product designer · Part-time' },
             { label: 'Surface', value: 'Web + Mobile' },
@@ -134,10 +134,10 @@
           number="Recruitment · Executive Search"
           year="2023 — 2024"
           title="Atlas <em>ATS</em>"
-          summary="Led the UX and UI redesign of a legacy applicant tracking system into a modern collaborative hiring engine — built for the pace and stakes of executive search."
+          summary="Redesigned a legacy ATS into a modern collaborative hiring engine built for executive search. Atlas won the EY National Business Competition 2024."
           :tags="['Recruitment', 'Pipeline', 'Collaboration']"
           :attrs="[
-            { label: 'Role', value: 'Lead UX and UI Designer' },
+            { label: 'Role', value: 'Sole Product designer · Award-winning'},
             { label: 'Surface', value: 'Web' },
           ]"
         >

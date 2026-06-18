@@ -30,7 +30,7 @@
         </div>
         <div class="stat">
           <div class="stat-num">01</div>
-          <div class="stat-label">Founding designer<br />most of the time</div>
+          <div class="stat-label">Award winning work.<br/>Every time.</div>
         </div>
       </div>
     </div>

@@ -8,36 +8,28 @@
         </div>
         <div class="about-body">
           <p>
-            I'm a Product Designer, and I've made it my mission to create digital experiences that
-            are as seamless as they are delightful. Whether it's crafting B2B SaaS web and mobile
-            apps or designing those oh-so-satisfying screens, I'm all about making things that just
-            feel right for the user.
+            I design because I believe most software treats its users as an afterthought. 
+            And in the industries I worked in, that's not a minor inconvenience, it's a real cost that shows up in people's bodies, their time, and their livelihoods. 
+            The people using these products aren't browsing. They're working. They're stressed. They're accountable for outcomes that matter. 
+            They deserve software that was designed with that in mind. That's the problem I show up to solve.
           </p>
           <p>
-            I've worked across industries like Behavioral Healthcare, Recruitment, and Logistics,
-            which means I'm no stranger to complex challenges. But that's where the fun begins! I
-            dive into projects with a sprint-based approach — no dragging timelines here, just
-            focused feature drops, productive sync-ups, and a little room for tweaks and revisions
-            (because hey, perfection is a process). 🤸‍♂️
+           I'm not interested in design that wins awards for how it looks. 
+           I'm interested in design that earns trust — from the person using it at 11pm on a double shift, 
+           from the founder who bet their company on it, from the engineer who has to build it without a thousand revision cycles. 
+           Design that holds up when the stakes are real.
           </p>
           <p>
-            🎨 Figma is my playground — think of me as a wizard with auto-layouts, components, and
-            advanced prototyping. I'm all about making designs scalable and beautifully consistent,
-            thanks to my passion for design systems and component libraries. Oh, and did I mention?
-            I'm all in for leveraging AI-generated images to spice up the design process.
+            I ask a lot of whys. I challenge requirements when they don't serve the user. 
+            I push back on scope when it creates complexity that nobody asked for. 
+            I'd rather slow down a conversation by two hours than ship something that creates confusion for two years.
           </p>
           <p>
-            Here's what really drives me though: I want to design products that don't feel like
-            <em>new tools to learn</em>. The B2B work I care about most is the kind where the
-            software becomes a co-pilot — something that engraves itself into the systems users
-            already navigate, instead of asking them to open yet another tab. The best compliment I
-            can get isn't "this is beautiful." It's "I forget I'm using it."
+            Six years of this work has taught me one thing above everything else: the best software is the kind people stop noticing. 
+            Not because it's forgettable but because it fits so well into how they already think and work that it stops feeling like a tool and starts feeling like an extension of themselves.
+            That's what I'm building toward. Every project. Every screen. Every decision.
           </p>
-          <p>
-            Based in Davao, Philippines, I bring a little bit of that island spirit into my work —
-            laid back but serious about delivering results. My goal? To create designs that look
-            amazing and make users' lives easier, all while bringing your vision to life.
-          </p>
+          
         </div>
       </div>
     </div>
