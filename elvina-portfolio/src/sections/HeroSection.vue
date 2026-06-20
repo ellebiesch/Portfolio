@@ -1,7 +1,7 @@
 <template>
   <section class="hero">
     <div class="container">
-      <div class="status-pill">Available for Q1 2027 · Davao, PH (UTC+8)</div>
+      <div class="status-pill"> Open to the right opportunity · Davao, PH (UTC+8)</div>
       <h1>Designing the unglamorous, mission-critical parts of SaaS.</h1>
       <p class="hero-sub">
         Beautiful software is easy. Software people can trust with their work is harder. That's the

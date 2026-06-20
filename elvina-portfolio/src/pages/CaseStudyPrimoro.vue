@@ -92,6 +92,9 @@ export default {
   --accent: #000000;
 
 }
+.case-page--atlas .prose p.lead::first-letter {
+  color: #E8623C !important;
+}
 .case-page--primoro .case-meta-strip {
   grid-template-columns: repeat(6, 1fr);
   margin-bottom: 0;
@@ -152,9 +155,9 @@ export default {
 .status-tag .dot {
   width: 8px;
   height: 8px;
-  background: var(--accent);
+  background: #E8623C;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(139, 58, 47, 0.2);
+  box-shadow: 0 0 0 4px rgba(232, 98, 60, 0.2);
   animation: primoro-pulse 2s infinite;
 }
 @keyframes primoro-pulse {
