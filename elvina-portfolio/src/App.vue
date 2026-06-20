@@ -20,9 +20,11 @@ export default {
   },
   mounted() {
     this.isMobile = window.innerWidth < 768
-     setTimeout(() => {
-    this.isLoading = false
-  }, 800)
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.isLoading = false
+      }, 1500)
+    })
   },
 }
 </script>

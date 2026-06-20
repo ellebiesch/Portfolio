@@ -16,8 +16,8 @@
           preview-class="preview-foxbury"
           number="01 / Healthcare · Featured"
           year="2025 — Present"
-          title="Foxbury / <em>Primoro</em>"
-          summary="Lead design for a modern dental practice operating system."
+          title="<em>Primoro</em>"
+          summary="Lead designer for a modern dental practice operating system."
           :tags="['Dental SaaS', 'Multi-product', 'RBAC', 'Web + Tablet + Mobile']"
           :attrs="[
             { label: 'Role', value: 'Lead Product designer · Freelance Retainer' },
@@ -93,10 +93,10 @@
           number="03 / Operations"
           year="2025 — Present"
           title="<em>CPS</em>"
-          summary="Driver scoring app with configurable carrier scoring platform with admin panel handling 100+ parameters and audit-first design. Carrier-facing dashboard surfaces score causation in plain language."
+          summary=" Driver scoring platform that builds carrier credibility through trip data. I own design and product strategy — the design follows the findings, not the other way around."
           :tags="['Logistics', 'Scoring system']"
           :attrs="[
-            { label: 'Role', value: 'Sole Product designer · Part-time' },
+            { label: 'Role', value: ' Product Designer + Strategist · Part-time' },
             { label: 'Surface', value: 'Web + Mobile' },
           ]"
         >
@@ -134,7 +134,7 @@
           number="Recruitment · Executive Search"
           year="2023 — 2024"
           title="Atlas <em>ATS</em>"
-          summary="Redesigned a legacy ATS into a modern collaborative hiring engine built for executive search. Atlas won the EY National Business Competition 2024."
+          summary="Redesigned a legacy ATS into a modern collaborative hiring engine built for executive search including SIFT AI, the platform's candidate querying and comparison feature. Atlas won the EY National Business Competition 2024."
           :tags="['Recruitment', 'Pipeline', 'Collaboration']"
           :attrs="[
             { label: 'Role', value: 'Sole Product designer · Award-winning'},
@@ -170,8 +170,8 @@
           number="05 / Logistics"
           year="2022 — 2023"
           title="<em>Truckpedia</em>"
-          summary="Driver-facing mobile app for load tracking, status updates, and document capture in the field."
-          :tags="['Mobile-first', 'Field ops']"
+          summary="Enhanced the TMS experience across web and mobile — dispatch calendar, accounting module, load creation, and the driver app. Designed to make every carrier's day a little less chaotic."
+          :tags="['Logistics · TMS · Web + Mobile', 'Field ops']"
           :attrs="[
             { label: 'Role', value: 'UX and UI designer' },
             { label: 'Surface', value: 'Web + Mobile' },

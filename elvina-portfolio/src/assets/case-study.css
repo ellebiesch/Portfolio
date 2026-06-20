@@ -207,6 +207,7 @@
 .prose p.lead::first-letter {
   font-family: var(--display);
   font-size: 1.5em;
+  color: #E8623C !important;
   font-weight: 600;
   color: var(--accent);
   margin-right: 0.05em;
