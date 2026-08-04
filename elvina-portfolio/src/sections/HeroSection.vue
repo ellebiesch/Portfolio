@@ -2,7 +2,13 @@
   <section class="hero">
     <div class="container">
       <div class="status-pill"> Open to the right opportunity · Davao, PH (UTC+8)</div>
-      <h1>Designing the unglamorous, mission-critical parts of SaaS.</h1>
+      <h1>
+        Designing the
+        <mark
+          style="background: #c35132; color: white; padding: 2px 6px; border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone;"
+          >unglamorous, mission-critical parts of SaaS.</mark
+        >
+      </h1>
       <p class="hero-sub">
         Beautiful software is easy. Software people can trust with their work is harder. That's the
         part I design.

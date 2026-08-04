@@ -41,68 +41,12 @@
         </div>
 
         <div class="case-cover">
-          <div class="placeholder-badge">Cover · Hero shot of the redesigned Atlas ATS</div>
-          <div class="cover-decor">
-              <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
-  <!-- Window chrome -->
-  <rect x="40" y="40" width="720" height="340" rx="18" fill="white" opacity="0.97" />
-  <rect x="40" y="40" width="720" height="48" rx="18" fill="#2d3142" opacity="0.1" />
-  <rect x="60" y="60" width="120" height="10" rx="2" fill="#2d3142" opacity="0.6" />
-  <rect x="660" y="56" width="80" height="18" rx="9" fill="#4f5b7c" />
-
-  <!-- Table header -->
-  <rect x="60" y="108" width="680" height="32" rx="4" fill="#2d3142" opacity="0.06" />
-  <rect x="80" y="118" width="80" height="6" rx="2" fill="#2d3142" opacity="0.5" />
-  <rect x="220" y="118" width="60" height="6" rx="2" fill="#2d3142" opacity="0.5" />
-  <rect x="340" y="118" width="80" height="6" rx="2" fill="#2d3142" opacity="0.5" />
-  <rect x="480" y="118" width="60" height="6" rx="2" fill="#2d3142" opacity="0.5" />
-  <rect x="600" y="118" width="80" height="6" rx="2" fill="#2d3142" opacity="0.5" />
-
-  <!-- Row 1 -->
-  <rect x="60" y="148" width="680" height="40" rx="4" fill="white" />
-  <circle cx="80" cy="168" r="10" fill="#4f5b7c" opacity="0.6" />
-  <rect x="100" y="162" width="80" height="6" rx="2" fill="#2d3142" opacity="0.7" />
-  <rect x="100" y="174" width="50" height="5" rx="2" fill="#2d3142" opacity="0.3" />
-  <rect x="220" y="164" width="60" height="8" rx="4" fill="#4f5b7c" opacity="0.2" />
-  <rect x="340" y="164" width="80" height="6" rx="2" fill="#2d3142" opacity="0.4" />
-  <rect x="480" y="164" width="50" height="8" rx="4" fill="#2a6f4a" opacity="0.2" />
-  <rect x="600" y="164" width="60" height="6" rx="2" fill="#2d3142" opacity="0.3" />
-
-  <!-- Row 2 -->
-  <rect x="60" y="196" width="680" height="40" rx="4" fill="#2d3142" opacity="0.02" />
-  <circle cx="80" cy="216" r="10" fill="#8093b0" opacity="0.6" />
-  <rect x="100" y="210" width="90" height="6" rx="2" fill="#2d3142" opacity="0.7" />
-  <rect x="100" y="222" width="60" height="5" rx="2" fill="#2d3142" opacity="0.3" />
-  <rect x="220" y="212" width="60" height="8" rx="4" fill="#c8a572" opacity="0.3" />
-  <rect x="340" y="212" width="70" height="6" rx="2" fill="#2d3142" opacity="0.4" />
-  <rect x="480" y="212" width="50" height="8" rx="4" fill="#4f5b7c" opacity="0.2" />
-  <rect x="600" y="212" width="70" height="6" rx="2" fill="#2d3142" opacity="0.3" />
-
-  <!-- Row 3 -->
-  <rect x="60" y="244" width="680" height="40" rx="4" fill="white" />
-  <circle cx="80" cy="264" r="10" fill="#8B3A2F" opacity="0.6" />
-  <rect x="100" y="258" width="70" height="6" rx="2" fill="#2d3142" opacity="0.7" />
-  <rect x="100" y="270" width="80" height="5" rx="2" fill="#2d3142" opacity="0.3" />
-  <rect x="220" y="260" width="60" height="8" rx="4" fill="#4f5b7c" opacity="0.2" />
-  <rect x="340" y="260" width="90" height="6" rx="2" fill="#2d3142" opacity="0.4" />
-  <rect x="480" y="260" width="50" height="8" rx="4" fill="#2a6f4a" opacity="0.2" />
-  <rect x="600" y="260" width="50" height="6" rx="2" fill="#2d3142" opacity="0.3" />
-
-  <!-- Row 4 -->
-  <rect x="60" y="292" width="680" height="40" rx="4" fill="#2d3142" opacity="0.02" />
-  <circle cx="80" cy="312" r="10" fill="#c8a572" opacity="0.6" />
-  <rect x="100" y="306" width="85" height="6" rx="2" fill="#2d3142" opacity="0.7" />
-  <rect x="100" y="318" width="55" height="5" rx="2" fill="#2d3142" opacity="0.3" />
-  <rect x="220" y="308" width="60" height="8" rx="4" fill="#8B3A2F" opacity="0.2" />
-  <rect x="340" y="308" width="75" height="6" rx="2" fill="#2d3142" opacity="0.4" />
-  <rect x="480" y="308" width="50" height="8" rx="4" fill="#c8a572" opacity="0.3" />
-  <rect x="600" y="308" width="65" height="6" rx="2" fill="#2d3142" opacity="0.3" />
-
-  <!-- Row 5 -->
-  <rect x="60" y="340" width="680" height="24" rx="4" fill="white" opacity="0.5" />
-  <rect x="80" y="349" width="60" height="5" rx="2" fill="#2d3142" opacity="0.3" />
-</svg>
-          </div>
+          <div class="placeholder-badge">Cover · Atlas ATS dashboard</div>
+          <img
+            :src="coverImage"
+            alt="Atlas ATS dashboard: candidate pipeline funnel, status tiles, and a new-candidates table"
+            class="cover-shot"
+          />
         </div>
       </div>
     </section>
@@ -219,91 +163,20 @@
           <div class="image-pair">
            <div class="image-block bg-atlas-light" >
            <span class="placeholder-badge">Image · Client Empathy Map</span>
-             <svg width="100%" viewBox="0 0 680 480" role="img" style="margin: 24px auto; display: block;">
-               <title>Client empathy map</title>
-              <rect x="40" y="40" width="600" height="400" rx="8" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-              <line x1="340" y1="40" x2="340" y2="440" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-              <line x1="40" y1="240" x2="640" y2="240" stroke="rgba(255,255,255,0.3)" stroke-width="0.5"/>
-              <text x="110" y="72" fill="white" font-size="13" font-weight="500" text-anchor="middle" font-family="sans-serif">Says</text>
-              <text x="570" y="72" fill="white" font-size="13" font-weight="500" text-anchor="middle" font-family="sans-serif">Thinks</text>
-              <text x="110" y="420" fill="white" font-size="13" font-weight="500" text-anchor="middle" font-family="sans-serif">Does</text>
-              <text x="570" y="420" fill="white" font-size="13" font-weight="500" text-anchor="middle" font-family="sans-serif">Feels</text>
-              <rect x="58" y="85" width="120" height="36" rx="4" fill="rgba(255,255,255,0.15)"/>
-              <text x="118" y="107" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Too old to use</text>
-              <rect x="58" y="130" width="140" height="48" rx="4" fill="rgba(255,255,255,0.15)"/>
-              <text x="128" y="150" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Wants clarity</text>
-              <text x="128" y="166" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">and simplicity</text>
-              <rect x="58" y="188" width="130" height="36" rx="4" fill="rgba(255,255,255,0.15)"/>
-              <text x="123" y="210" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Used for a long time</text>
-              <rect x="370" y="85" width="150" height="36" rx="4" fill="rgba(255,255,255,0.1)"/>
-              <text x="445" y="107" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Should make things easier</text>
-              <rect x="370" y="130" width="140" height="48" rx="4" fill="rgba(255,255,255,0.1)"/>
-              <text x="440" y="150" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Certain requirements</text>
-              <text x="440" y="166" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">already in place</text>
-              <rect x="530" y="130" width="90" height="36" rx="4" fill="rgba(255,255,255,0.1)"/>
-              <text x="575" y="152" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">High stakes</text>
-              <rect x="58" y="260" width="120" height="36" rx="4" fill="rgba(255,255,255,0.08)"/>
-              <text x="118" y="282" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Adding candidates</text>
-              <rect x="58" y="305" width="130" height="36" rx="4" fill="rgba(255,255,255,0.08)"/>
-              <text x="123" y="327" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Follow-up on documents</text>
-              <rect x="58" y="350" width="140" height="36" rx="4" fill="rgba(255,255,255,0.08)"/>
-              <text x="128" y="372" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Reaching out to candidates</text>
-              <rect x="200" y="350" width="110" height="36" rx="4" fill="rgba(255,255,255,0.08)"/>
-              <text x="255" y="372" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Updating status</text>
-              <rect x="370" y="260" width="120" height="48" rx="4" fill="rgba(232,98,60,0.3)"/>
-              <text x="430" y="280" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Can't track</text>
-              <text x="430" y="296" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">candidate info</text>
-              <rect x="500" y="260" width="120" height="36" rx="4" fill="rgba(232,98,60,0.3)"/>
-              <text x="560" y="282" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Annoyed by stages</text>
-              <rect x="370" y="318" width="130" height="48" rx="4" fill="rgba(232,98,60,0.3)"/>
-              <text x="435" y="338" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">Pressured to track</text>
-              <text x="435" y="354" fill="white" font-size="11" text-anchor="middle" font-family="sans-serif">candidate status</text>
-              <circle cx="340" cy="240" r="32" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.4)" stroke-width="0.5"/>
-              <circle cx="340" cy="228" r="12" fill="rgba(255,255,255,0.4)"/>
-              <ellipse cx="340" cy="258" rx="18" ry="10" fill="rgba(255,255,255,0.3)"/>
-             </svg>
+             <img
+               :src="empathyMap"
+               alt="Client empathy map with Says, Thinks, Does, and Feels quadrants of sticky notes"
+               class="artifact-shot"
+             />
            </div>
-       
+
               <div class="image-block" style="background: #f4ebd9;">
                <span class="placeholder-badge">Image · Competitor Analysis</span>
-               <svg width="90%" viewBox="0 0 680 420" role="img" style="margin: 24px auto; display: block;">
-                <rect x="40" y="40" width="600" height="360" rx="8" fill="none" stroke="#ccc" stroke-width="0.5"/>
-                <rect x="40" y="40" width="600" height="40" rx="4" fill="#f0f0f0"/>
-                <text x="190" y="65" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Value Proposition</text>
-                <text x="360" y="65" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Advantages</text>
-                <text x="530" y="65" font-family="sans-serif" font-size="11" fill="#666" text-anchor="middle">Disadvantages</text>
-                <line x1="130" y1="40" x2="130" y2="400" stroke="#ccc" stroke-width="0.5"/>
-                <line x1="280" y1="40" x2="280" y2="400" stroke="#ccc" stroke-width="0.5"/>
-                <line x1="440" y1="40" x2="440" y2="400" stroke="#ccc" stroke-width="0.5"/>
-                <line x1="40" y1="160" x2="640" y2="160" stroke="#ccc" stroke-width="0.5"/>
-                <line x1="40" y1="280" x2="640" y2="280" stroke="#ccc" stroke-width="0.5"/>
-                <rect x="50" y="88" width="70" height="28" rx="4" fill="#6c5ce7"/>
-                <text x="85" y="106" font-family="sans-serif" font-size="11" fill="white" font-weight="600" text-anchor="middle">JazzHR</text>
-                <rect x="148" y="88" width="80" height="20" rx="3" fill="#81ecec" opacity="0.7"/>
-                <rect x="236" y="88" width="70" height="20" rx="3" fill="#81ecec" opacity="0.7"/>
-                <rect x="148" y="116" width="110" height="20" rx="3" fill="#81ecec" opacity="0.7"/>
-                <rect x="298" y="88" width="70" height="20" rx="3" fill="#55efc4" opacity="0.7"/>
-                <rect x="376" y="88" width="55" height="20" rx="3" fill="#55efc4" opacity="0.7"/>
-                <rect x="298" y="116" width="80" height="20" rx="3" fill="#55efc4" opacity="0.7"/>
-                <rect x="458" y="88" width="80" height="20" rx="3" fill="#fd79a8" opacity="0.6"/>
-                <rect x="546" y="88" width="70" height="20" rx="3" fill="#fd79a8" opacity="0.6"/>
-                <rect x="50" y="200" width="70" height="28" rx="4" fill="#00b894"/>
-                <text x="85" y="218" font-family="sans-serif" font-size="11" fill="white" font-weight="600" text-anchor="middle">Workable</text>
-                <rect x="148" y="200" width="75" height="20" rx="3" fill="#fd79a8" opacity="0.7"/>
-                <rect x="231" y="200" width="90" height="20" rx="3" fill="#fd79a8" opacity="0.7"/>
-                <rect x="298" y="200" width="70" height="20" rx="3" fill="#55efc4" opacity="0.7"/>
-                <rect x="376" y="200" width="85" height="20" rx="3" fill="#55efc4" opacity="0.7"/>
-                <rect x="458" y="200" width="70" height="20" rx="3" fill="#fd79a8" opacity="0.6"/>
-                <rect x="536" y="200" width="80" height="20" rx="3" fill="#fd79a8" opacity="0.6"/>
-                <rect x="50" y="310" width="70" height="28" rx="4" fill="#e17055"/>
-                <text x="85" y="328" font-family="sans-serif" font-size="11" fill="white" font-weight="600" text-anchor="middle">Freshworks</text>
-                <rect x="148" y="310" width="65" height="20" rx="3" fill="#74b9ff" opacity="0.7"/>
-                <rect x="221" y="310" width="90" height="20" rx="3" fill="#74b9ff" opacity="0.7"/>
-                <rect x="298" y="310" width="85" height="20" rx="3" fill="#55efc4" opacity="0.7"/>
-                <rect x="391" y="310" width="70" height="20" rx="3" fill="#55efc4" opacity="0.7"/>
-                <rect x="458" y="310" width="75" height="20" rx="3" fill="#fd79a8" opacity="0.6"/>
-                <rect x="541" y="310" width="80" height="20" rx="3" fill="#fd79a8" opacity="0.6"/>
-              </svg>
+               <img
+                 :src="competitorAnalysis"
+                 alt="Competitor comparison board for JazzHR, Workable, and Freshworks with similarities, differences, and opportunities"
+                 class="artifact-shot"
+               />
             </div>
              </div>
           <div class="process-step">
@@ -336,116 +209,19 @@
               <div class="image-pair">
                 <div class="image-block" style="background: #f5f5f5;">
                   <span class="placeholder-badge">Image · Jobs list view</span>
-                  <svg width="95%" viewBox="0 0 340 390" role="img" style="margin: 16px auto; display: block;">
-                    <rect x="0" y="0" width="340" height="380" rx="8" fill="white" stroke="#e0e0e0" stroke-width="0.5"/>
-                    <rect x="0" y="0" width="340" height="36" rx="8" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="0.5"/>
-                    <rect x="8" y="13" width="20" height="3" rx="1" fill="#bbb"/>
-                    <rect x="8" y="20" width="14" height="3" rx="1" fill="#bbb"/>
-                    <circle cx="320" cy="18" r="8" fill="#ddd"/>
-                    <circle cx="302" cy="18" r="6" fill="#ddd"/>
-                    <rect x="0" y="36" width="60" height="344" fill="#fafafa" stroke="#e0e0e0" stroke-width="0.5"/>
-                    <rect x="8" y="52" width="44" height="6" rx="2" fill="#ddd"/>
-                    <rect x="8" y="66" width="38" height="6" rx="2" fill="#ddd"/>
-                    <rect x="8" y="80" width="40" height="6" rx="2" fill="#ddd"/>
-                    <rect x="8" y="94" width="32" height="6" rx="2" fill="#2d3142" opacity="0.7"/>
-                    <rect x="8" y="108" width="36" height="6" rx="2" fill="#ddd"/>
-                    <rect x="68" y="44" width="60" height="10" rx="2" fill="#1a1a1a" opacity="0.7"/>
-                    <rect x="68" y="60" width="80" height="6" rx="2" fill="#bbb"/>
-                    <rect x="68" y="76" width="100" height="22" rx="4" fill="white" stroke="#ddd" stroke-width="0.5"/>
-                    <rect x="76" y="84" width="55" height="5" rx="2" fill="#ccc"/>
-                    <rect x="178" y="76" width="70" height="22" rx="4" fill="white" stroke="#ddd" stroke-width="0.5"/>
-                    <rect x="186" y="84" width="40" height="5" rx="2" fill="#ccc"/>
-                    <rect x="258" y="76" width="74" height="22" rx="4" fill="#2d3142"/>
-                    <rect x="268" y="84" width="44" height="5" rx="2" fill="white" opacity="0.8"/>
-                    <rect x="68" y="108" width="264" height="22" rx="2" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="0.5"/>
-                    <rect x="76" y="116" width="60" height="5" rx="2" fill="#888"/>
-                    <rect x="168" y="116" width="36" height="5" rx="2" fill="#888"/>
-                    <rect x="224" y="116" width="40" height="5" rx="2" fill="#888"/>
-                    <rect x="290" y="116" width="30" height="5" rx="2" fill="#888"/>
-                    <rect x="68" y="130" width="264" height="28" rx="2" fill="white" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="141" width="80" height="5" rx="2" fill="#333" opacity="0.7"/>
-                    <rect x="168" y="141" width="50" height="5" rx="2" fill="#bbb"/>
-                    <circle cx="234" cy="144" r="6" fill="#ddd"/>
-                    <circle cx="244" cy="144" r="6" fill="#ddd"/>
-                    <rect x="292" y="137" width="36" height="12" rx="6" fill="#e8f5e9"/>
-                    <rect x="298" y="141" width="22" height="5" rx="2" fill="#4caf50" opacity="0.7"/>
-                    <rect x="68" y="158" width="264" height="28" rx="2" fill="#fafafa" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="169" width="70" height="5" rx="2" fill="#333" opacity="0.7"/>
-                    <rect x="168" y="169" width="50" height="5" rx="2" fill="#bbb"/>
-                    <circle cx="234" cy="172" r="6" fill="#ddd"/>
-                    <rect x="292" y="165" width="36" height="12" rx="6" fill="#fff3e0"/>
-                    <rect x="298" y="169" width="22" height="5" rx="2" fill="#ff9800" opacity="0.7"/>
-                    <rect x="68" y="186" width="264" height="28" rx="2" fill="white" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="197" width="75" height="5" rx="2" fill="#333" opacity="0.7"/>
-                    <rect x="168" y="197" width="50" height="5" rx="2" fill="#bbb"/>
-                    <circle cx="234" cy="200" r="6" fill="#ddd"/>
-                    <circle cx="244" cy="200" r="6" fill="#ddd"/>
-                    <rect x="292" y="193" width="36" height="12" rx="6" fill="#fce4ec"/>
-                    <rect x="298" y="197" width="22" height="5" rx="2" fill="#e91e63" opacity="0.7"/>
-                    <rect x="68" y="214" width="264" height="28" rx="2" fill="#fafafa" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="225" width="65" height="5" rx="2" fill="#333" opacity="0.7"/>
-                    <rect x="168" y="225" width="50" height="5" rx="2" fill="#bbb"/>
-                    <circle cx="234" cy="228" r="6" fill="#ddd"/>
-                    <rect x="292" y="221" width="36" height="12" rx="6" fill="#e8f5e9"/>
-                    <rect x="298" y="225" width="22" height="5" rx="2" fill="#4caf50" opacity="0.7"/>
-                    <text x="170" y="370" font-family="sans-serif" font-size="10" fill="#999" text-anchor="middle">Jobs list view</text>
-                  </svg>
+                  <img
+                    :src="wireframeJobsList"
+                    alt="Low-fidelity wireframe of the jobs list view with search, filters, and status column"
+                    class="artifact-shot"
+                  />
                 </div>
                 <div class="image-block" style="background: #f5f5f5;">
                   <span class="placeholder-badge">Image · Edit job form</span>
-                  <svg width="95%" viewBox="0 0 340 390" role="img" style="margin: 16px auto; display: block;">
-                    <rect x="0" y="0" width="340" height="380" rx="8" fill="white" stroke="#e0e0e0" stroke-width="0.5"/>
-                    <rect x="0" y="0" width="340" height="36" rx="8" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="0.5"/>
-                    <rect x="8" y="13" width="20" height="3" rx="1" fill="#bbb"/>
-                    <rect x="8" y="20" width="14" height="3" rx="1" fill="#bbb"/>
-                    <circle cx="320" cy="18" r="8" fill="#ddd"/>
-                    <circle cx="302" cy="18" r="6" fill="#ddd"/>
-                    <rect x="0" y="36" width="60" height="344" fill="#fafafa" stroke="#e0e0e0" stroke-width="0.5"/>
-                    <rect x="8" y="52" width="44" height="6" rx="2" fill="#ddd"/>
-                    <rect x="8" y="66" width="38" height="6" rx="2" fill="#ddd"/>
-                    <rect x="8" y="80" width="40" height="6" rx="2" fill="#ddd"/>
-                    <rect x="8" y="94" width="32" height="6" rx="2" fill="#2d3142" opacity="0.7"/>
-                    <rect x="8" y="108" width="36" height="6" rx="2" fill="#ddd"/>
-                    <rect x="68" y="44" width="50" height="9" rx="2" fill="#1a1a1a" opacity="0.7"/>
-                    <rect x="68" y="58" width="40" height="6" rx="2" fill="#888"/>
-                    <rect x="68" y="72" width="40" height="5" rx="2" fill="#aaa"/>
-                    <rect x="68" y="82" width="130" height="22" rx="4" fill="white" stroke="#ddd" stroke-width="0.5"/>
-                    <rect x="76" y="90" width="90" height="5" rx="2" fill="#bbb"/>
-                    <rect x="206" y="82" width="110" height="22" rx="4" fill="white" stroke="#ddd" stroke-width="0.5"/>
-                    <rect x="214" y="90" width="60" height="5" rx="2" fill="#bbb"/>
-                    <rect x="68" y="110" width="130" height="22" rx="4" fill="white" stroke="#ddd" stroke-width="0.5"/>
-                    <rect x="76" y="118" width="40" height="5" rx="2" fill="#bbb"/>
-                    <rect x="68" y="138" width="60" height="7" rx="2" fill="#333" opacity="0.6"/>
-                    <rect x="68" y="150" width="248" height="20" rx="2" fill="#f5f5f5" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="157" width="120" height="4" rx="2" fill="#888"/>
-                    <rect x="234" y="157" width="30" height="4" rx="2" fill="#888"/>
-                    <rect x="280" y="157" width="30" height="4" rx="2" fill="#888"/>
-                    <rect x="68" y="170" width="248" height="20" rx="2" fill="white" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="177" width="110" height="4" rx="2" fill="#bbb"/>
-                    <rect x="234" y="173" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="280" y="173" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="68" y="190" width="248" height="20" rx="2" fill="#fafafa" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="197" width="95" height="4" rx="2" fill="#bbb"/>
-                    <rect x="234" y="193" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="280" y="193" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="68" y="210" width="248" height="20" rx="2" fill="white" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="217" width="130" height="4" rx="2" fill="#bbb"/>
-                    <rect x="234" y="213" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="280" y="213" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="68" y="230" width="248" height="20" rx="2" fill="#fafafa" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="237" width="105" height="4" rx="2" fill="#bbb"/>
-                    <rect x="234" y="233" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="280" y="233" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="68" y="250" width="248" height="20" rx="2" fill="white" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="76" y="257" width="80" height="4" rx="2" fill="#bbb"/>
-                    <rect x="234" y="253" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="280" y="253" width="30" height="12" rx="2" fill="#f0f0f0" stroke="#eee" stroke-width="0.5"/>
-                    <rect x="232" y="350" width="50" height="20" rx="4" fill="white" stroke="#ddd" stroke-width="0.5"/>
-                    <rect x="240" y="357" width="28" height="5" rx="2" fill="#bbb"/>
-                    <rect x="290" y="350" width="50" height="20" rx="4" fill="#2d3142"/>
-                    <rect x="300" y="357" width="30" height="5" rx="2" fill="white" opacity="0.8"/>
-                    <text x="170" y="370" font-family="sans-serif" font-size="10" fill="#999" text-anchor="middle">Edit job form</text>
-                  </svg>
+                  <img
+                    :src="wireframeEditJob"
+                    alt="Low-fidelity wireframe of the edit job form with job info, work setup, and requirements"
+                    class="artifact-shot"
+                  />
                 </div>
               </div>
             </div>
@@ -465,72 +241,24 @@
               </p>
             </div>
           </div>
-          <div class="image-block bg-atlas-dark" style="position: relative; min-height: 400px; overflow: hidden;">
-              <span class="placeholder-badge">Image · High-fidelity Figma designs</span>
-              <svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; position: absolute; top: 0; left: 0;">
-
-                <!-- Full white card edge to edge -->
-                <rect x="0" y="40" width="800" height="360" fill="white" opacity="0.97" />
-
-                <!-- Tab bar -->
-                <rect x="0" y="40" width="800" height="32" fill="#2d3142" opacity="0.04" />
-                <rect x="20" y="52" width="70" height="8" rx="2" fill="#4f5b7c" opacity="0.7" />
-                <rect x="20" y="59" width="70" height="2" rx="1" fill="#4f5b7c" opacity="0.8" />
-                <rect x="108" y="52" width="80" height="8" rx="2" fill="#2d3142" opacity="0.2" />
-                <rect x="204" y="52" width="90" height="8" rx="2" fill="#2d3142" opacity="0.2" />
-                <rect x="310" y="52" width="78" height="8" rx="2" fill="#2d3142" opacity="0.2" />
-                <rect x="404" y="52" width="82" height="8" rx="2" fill="#2d3142" opacity="0.2" />
-                <rect x="502" y="52" width="70" height="8" rx="2" fill="#2d3142" opacity="0.2" />
-
-                <!-- Warning banner -->
-                <rect x="20" y="84" width="760" height="36" rx="5" fill="#D85A30" opacity="0.1" />
-                <circle cx="38" cy="102" r="8" fill="#D85A30" opacity="0.7" />
-                <rect x="54" y="96" width="110" height="7" rx="2" fill="#D85A30" opacity="0.8" />
-                <rect x="54" y="108" width="260" height="5" rx="2" fill="#D85A30" opacity="0.4" />
-
-                <!-- Upload dropzone -->
-                <rect x="20" y="130" width="760" height="56" rx="5" fill="#2d3142" opacity="0.03" stroke="#2d3142" stroke-width="0.8" stroke-dasharray="5,4" stroke-opacity="0.15" />
-                <circle cx="360" cy="158" r="11" fill="#4f5b7c" opacity="0.25" />
-                <rect x="378" y="153" width="120" height="8" rx="2" fill="#2d3142" opacity="0.25" />
-
-                <!-- Section label -->
-                <rect x="20" y="202" width="100" height="9" rx="2" fill="#2d3142" opacity="0.45" />
-
-                <!-- Form row 1 — 4 fields -->
-                <rect x="20" y="220" width="170" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="204" y="220" width="170" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="388" y="220" width="190" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="592" y="220" width="188" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-
-                <!-- Form row 2 — 5 fields -->
-                <rect x="20" y="258" width="120" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="154" y="258" width="120" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="288" y="258" width="100" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="402" y="258" width="160" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="576" y="258" width="204" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-
-                <!-- Form row 3 — salary pairs -->
-                <rect x="20" y="296" width="80" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="110" y="296" width="80" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="204" y="296" width="80" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="294" y="296" width="80" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="388" y="296" width="110" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="512" y="296" width="130" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="656" y="296" width="124" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-
-                <!-- Form row 4 -->
-                <rect x="20" y="334" width="170" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="204" y="334" width="170" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="388" y="334" width="190" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-                <rect x="592" y="334" width="188" height="24" rx="3" fill="#2d3142" opacity="0.05" stroke="#2d3142" stroke-width="0.5" stroke-opacity="0.15" />
-
-                <!-- Back + Next buttons -->
-                <rect x="658" y="372" width="56" height="24" rx="4" fill="#2d3142" opacity="0.12" />
-                <rect x="724" y="372" width="56" height="24" rx="4" fill="#8B3A2F" opacity="0.85" />
-
-              </svg>
+          <div class="image-pair">
+            <div class="image-block bg-atlas-dark">
+              <span class="placeholder-badge">Image · Jobs list</span>
+              <img
+                :src="hifiJobsList"
+                alt="High-fidelity Atlas jobs list with candidate avatars, rejected/failed/declined counts, and job status"
+                class="artifact-shot"
+              />
             </div>
-          
+            <div class="image-block bg-atlas-dark">
+              <span class="placeholder-badge">Image · Candidate view</span>
+              <img
+                :src="hifiCandidate"
+                alt="High-fidelity Atlas candidate view with requirements answers alongside a resume portal"
+                class="artifact-shot"
+              />
+            </div>
+          </div>
           <p class="image-caption">
             High-fidelity UI — focused on clarity, hierarchy, and ease of use
           </p>
@@ -653,8 +381,27 @@
 </template>
 
 <script>
+import coverImage from '@/assets/atlas-cover-dashboard.png';
+import empathyMap from '@/assets/atlas-empathy-map.png';
+import competitorAnalysis from '@/assets/atlas-competitor-analysis.png';
+import wireframeJobsList from '@/assets/atlas-wireframe-jobs-list.png';
+import wireframeEditJob from '@/assets/atlas-wireframe-edit-job.png';
+import hifiJobsList from '@/assets/atlas-hifi-jobs-list.png';
+import hifiCandidate from '@/assets/atlas-hifi-candidate.png';
+
 export default {
   name: 'CaseStudyAtlas',
+  data() {
+    return {
+      coverImage,
+      empathyMap,
+      competitorAnalysis,
+      wireframeJobsList,
+      wireframeEditJob,
+      hifiJobsList,
+      hifiCandidate,
+    };
+  },
 };
 </script>
 
@@ -675,8 +422,23 @@ export default {
 .case-page--atlas .prose p.lead::first-letter {
   color: #E8623C !important;
 }
-.case-page--atlas .cover-decor :deep(svg) {
-  width: 400%;
+/* Real screenshots — contained rather than cropped, so artifact boards
+   (empathy map, competitor grid, wireframes) stay readable end to end. */
+.case-page--atlas .cover-shot {
+  max-width: 92%;
+  max-height: 84%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 24px 60px -16px rgba(0, 0, 0, 0.45);
+}
+.case-page--atlas .artifact-shot {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 28px;
+}
+.case-page--atlas .image-pair .artifact-shot {
+  padding: 20px;
 }
 .case-page--atlas .image-pair {
   align-items: stretch;

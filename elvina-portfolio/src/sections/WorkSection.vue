@@ -89,9 +89,10 @@
 
         <!-- CPS / Cargoos (no page) -->
         <case-card
+          to="/case-studies/cps"
           preview-class="preview-cargoos"
           number="03 / Operations"
-          year="2025 — Present"
+          year="2025 — 2026"
           title="<em>CPS</em>"
           summary=" Driver scoring platform that builds carrier credibility through trip data. I own design and product strategy — the design follows the findings, not the other way around."
           :tags="['Logistics', 'Scoring system']"
@@ -166,6 +167,7 @@
 
         <!-- Truckpedia (no page) -->
         <case-card
+          to="/case-studies/truckpedia"
           preview-class="preview-truckpedia"
           number="05 / Logistics"
           year="2022 — 2023"

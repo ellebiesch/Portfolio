@@ -52,31 +52,12 @@
         </div>
 
         <div class="case-cover">
-          <div class="placeholder-badge">Cover · Hero shot of the redesigned Navix platform</div>
-          <div class="cover-decor">
-            <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg">
-              <rect x="40" y="40" width="720" height="340" rx="18" fill="white" opacity="0.97" />
-              <rect x="40" y="40" width="720" height="48" rx="18" fill="#1a3a3a" opacity="0.1" />
-              <circle cx="80" cy="64" r="6" fill="#1a3a3a" opacity="0.4" />
-              <circle cx="100" cy="64" r="6" fill="#1a3a3a" opacity="0.4" />
-              <circle cx="120" cy="64" r="6" fill="#1a3a3a" opacity="0.4" />
-              <rect x="60" y="118" width="180" height="262" rx="10" fill="#1a3a3a" opacity="0.05" />
-              <rect x="80" y="138" width="100" height="10" rx="2" fill="#1a3a3a" opacity="0.6" />
-              <rect x="80" y="158" width="70" height="6" rx="2" fill="#1a3a3a" opacity="0.3" />
-              <rect x="80" y="186" width="140" height="36" rx="6" fill="#3d7373" opacity="0.4" />
-              <rect x="80" y="232" width="140" height="36" rx="6" fill="#1a3a3a" opacity="0.08" />
-              <rect x="80" y="278" width="140" height="36" rx="6" fill="#1a3a3a" opacity="0.08" />
-              <rect x="80" y="324" width="140" height="36" rx="6" fill="#1a3a3a" opacity="0.08" />
-              <rect x="260" y="118" width="480" height="120" rx="10" fill="#1a3a3a" opacity="0.06" />
-              <circle cx="296" cy="156" r="16" fill="#3d7373" />
-              <rect x="328" y="148" width="160" height="10" rx="2" fill="#1a3a3a" opacity="0.6" />
-              <rect x="328" y="166" width="100" height="6" rx="2" fill="#1a3a3a" opacity="0.3" />
-              <rect x="276" y="194" width="450" height="6" rx="2" fill="#1a3a3a" opacity="0.3" />
-              <rect x="276" y="208" width="380" height="6" rx="2" fill="#1a3a3a" opacity="0.3" />
-              <rect x="260" y="258" width="232" height="122" rx="10" fill="#1a3a3a" opacity="0.06" />
-              <rect x="508" y="258" width="232" height="122" rx="10" fill="#1a3a3a" opacity="0.06" />
-            </svg>
-          </div>
+          <div class="placeholder-badge">Cover · Group Notes — Navix Health platform</div>
+          <img
+            :src="coverImage"
+            alt="Navix Health Group Notes list, grouped by Not Started, In Progress, and Completed"
+            class="cover-shot"
+          />
         </div>
       </div>
     </section>
@@ -419,14 +400,11 @@
           <div class="compare-card">
             <div class="compare-visual before">
               <span class="compare-tag before-tag">Before</span>
-              <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-                <rect x="30" y="30" width="340" height="180" rx="6" fill="white" opacity="0.7" />
-                <rect x="50" y="50" width="120" height="8" rx="2" fill="#5B564E" opacity="0.5" />
-                <rect x="50" y="70" width="80" height="6" rx="2" fill="#5B564E" opacity="0.3" />
-                <rect x="50" y="100" width="300" height="30" rx="4" fill="#5B564E" opacity="0.1" />
-                <rect x="50" y="140" width="300" height="30" rx="4" fill="#5B564E" opacity="0.1" />
-                <rect x="50" y="180" width="140" height="20" rx="4" fill="#5B564E" opacity="0.15" />
-              </svg>
+              <img
+                :src="hubBefore"
+                alt="Legacy medical records screen: a long single-column list of demographic fields"
+                class="compare-shot"
+              />
             </div>
             <div class="compare-body">
               <div class="compare-label">Before</div>
@@ -436,24 +414,11 @@
           <div class="compare-card">
             <div class="compare-visual after">
               <span class="compare-tag">After</span>
-              <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-                <rect x="20" y="20" width="360" height="200" rx="8" fill="white" opacity="0.95" />
-                <rect x="35" y="35" width="80" height="8" rx="2" fill="#1a3a3a" />
-                <rect x="35" y="50" width="60" height="6" rx="2" fill="#1a3a3a" opacity="0.4" />
-                <rect x="35" y="72" width="160" height="60" rx="6" fill="#1a3a3a" opacity="0.06" />
-                <circle cx="55" cy="92" r="8" fill="#3d7373" />
-                <rect x="70" y="86" width="80" height="6" rx="2" fill="#1a3a3a" opacity="0.6" />
-                <rect x="70" y="98" width="60" height="5" rx="2" fill="#1a3a3a" opacity="0.3" />
-                <rect x="35" y="142" width="160" height="60" rx="6" fill="#3d7373" opacity="0.2" />
-                <rect x="50" y="156" width="50" height="14" rx="7" fill="#3d7373" />
-                <rect x="50" y="178" width="120" height="5" rx="2" fill="#1a3a3a" opacity="0.4" />
-                <rect x="210" y="72" width="155" height="130" rx="6" fill="#1a3a3a" opacity="0.06" />
-                <rect x="225" y="88" width="80" height="6" rx="2" fill="#1a3a3a" opacity="0.5" />
-                <rect x="225" y="102" width="120" height="4" rx="2" fill="#1a3a3a" opacity="0.3" />
-                <rect x="225" y="112" width="100" height="4" rx="2" fill="#1a3a3a" opacity="0.3" />
-                <rect x="225" y="122" width="110" height="4" rx="2" fill="#1a3a3a" opacity="0.3" />
-                <rect x="225" y="140" width="60" height="18" rx="9" fill="#3d7373" opacity="0.5" />
-              </svg>
+              <img
+                :src="hubAfter"
+                alt="Redesigned Navix Hub: a client header with tabbed sections and grouped information cards"
+                class="compare-shot"
+              />
             </div>
             <div class="compare-body">
               <div class="compare-label">After</div>
@@ -472,19 +437,11 @@
           <div class="compare-card">
             <div class="compare-visual before">
               <span class="compare-tag before-tag">Before</span>
-              <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-                <rect x="30" y="30" width="340" height="180" rx="6" fill="white" opacity="0.7" />
-                <rect x="50" y="50" width="100" height="8" rx="2" fill="#5B564E" opacity="0.5" />
-                <rect x="50" y="78" width="300" height="120" rx="4" fill="#5B564E" opacity="0.08" />
-                <rect x="60" y="92" width="280" height="4" rx="2" fill="#5B564E" opacity="0.4" />
-                <rect x="60" y="104" width="260" height="4" rx="2" fill="#5B564E" opacity="0.4" />
-                <rect x="60" y="116" width="280" height="4" rx="2" fill="#5B564E" opacity="0.3" />
-                <rect x="60" y="128" width="220" height="4" rx="2" fill="#5B564E" opacity="0.3" />
-                <rect x="60" y="140" width="280" height="4" rx="2" fill="#5B564E" opacity="0.3" />
-                <rect x="60" y="152" width="240" height="4" rx="2" fill="#5B564E" opacity="0.3" />
-                <rect x="60" y="164" width="260" height="4" rx="2" fill="#5B564E" opacity="0.3" />
-                <rect x="60" y="176" width="200" height="4" rx="2" fill="#5B564E" opacity="0.3" />
-              </svg>
+              <img
+                :src="groupNoteBefore"
+                alt="Legacy group note: free-text boxes stacked per client with no structure"
+                class="compare-shot"
+              />
             </div>
             <div class="compare-body">
               <div class="compare-label">Before</div>
@@ -494,25 +451,11 @@
           <div class="compare-card">
             <div class="compare-visual after">
               <span class="compare-tag">After</span>
-              <svg viewBox="0 0 400 240" xmlns="http://www.w3.org/2000/svg">
-                <rect x="20" y="20" width="360" height="200" rx="8" fill="white" opacity="0.95" />
-                <rect x="35" y="35" width="100" height="8" rx="2" fill="#1a3a3a" />
-                <rect x="35" y="55" width="80" height="6" rx="2" fill="#1a3a3a" opacity="0.4" />
-                <rect x="35" y="75" width="330" height="28" rx="4" fill="#1a3a3a" opacity="0.04" />
-                <rect x="45" y="83" width="50" height="12" rx="6" fill="#3d7373" opacity="0.5" />
-                <rect x="105" y="83" width="50" height="12" rx="6" fill="#1a3a3a" opacity="0.15" />
-                <rect x="165" y="83" width="50" height="12" rx="6" fill="#1a3a3a" opacity="0.15" />
-                <rect x="225" y="83" width="50" height="12" rx="6" fill="#1a3a3a" opacity="0.15" />
-                <rect x="285" y="83" width="60" height="12" rx="6" fill="#1a3a3a" opacity="0.15" />
-                <rect x="35" y="115" width="330" height="36" rx="4" fill="white" stroke="#1a3a3a" stroke-opacity="0.1" />
-                <rect x="45" y="125" width="100" height="6" rx="2" fill="#1a3a3a" opacity="0.5" />
-                <rect x="45" y="137" width="200" height="4" rx="2" fill="#1a3a3a" opacity="0.3" />
-                <circle cx="355" cy="133" r="6" fill="#3d7373" />
-                <rect x="35" y="159" width="330" height="36" rx="4" fill="white" stroke="#1a3a3a" stroke-opacity="0.1" />
-                <rect x="45" y="169" width="100" height="6" rx="2" fill="#1a3a3a" opacity="0.5" />
-                <rect x="45" y="181" width="180" height="4" rx="2" fill="#1a3a3a" opacity="0.3" />
-                <rect x="349" y="166" width="14" height="8" rx="4" fill="#1a3a3a" opacity="0.15" />
-              </svg>
+              <img
+                :src="groupNoteAfter"
+                alt="Redesigned Navix group note: structured fields, per-client participation ratings, and treatment plan references"
+                class="compare-shot"
+              />
             </div>
             <div class="compare-body">
               <div class="compare-label">After</div>
@@ -664,10 +607,21 @@
 </template>
 
 <script>
+import coverImage from '@/assets/navix-group-notes-list.png';
+import hubBefore from '@/assets/navix-hub-before.png';
+import hubAfter from '@/assets/navix-hub-after.png';
+import groupNoteBefore from '@/assets/navix-group-note-before.png';
+import groupNoteAfter from '@/assets/navix-group-note-after.png';
+
 export default {
   name: 'CaseStudyNavix',
   data() {
     return {
+      coverImage,
+      hubBefore,
+      hubAfter,
+      groupNoteBefore,
+      groupNoteAfter,
       unlocked: false,
       password: '',
       error: false,
@@ -736,8 +690,32 @@ button {
   background: linear-gradient(135deg, #1a3a3a 0%, #2a5454 50%, #3d7373 100%);
   box-shadow: 0 32px 80px -24px rgba(26, 58, 58, 0.4);
 }
-.case-page--navix .cover-decor :deep(svg) {
-  width: 400%;
+/* Real product screenshots — anchored top so the header/nav stays visible
+   while the tall page body crops away. */
+.case-page--navix .cover-shot {
+  width: 92%;
+  height: 88%;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 12px;
+  box-shadow: 0 24px 60px -16px rgba(0, 0, 0, 0.45);
+}
+.case-page--navix .compare-shot {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: top center;
+}
+.case-page--navix .compare-visual {
+  min-height: 340px;
+  overflow: hidden;
+}
+@media (max-width: 900px) {
+  .case-page--navix .compare-visual {
+    min-height: 240px;
+  }
 }
 .case-page--navix .section-h2 + .prose-container {
   max-width: 100%;
