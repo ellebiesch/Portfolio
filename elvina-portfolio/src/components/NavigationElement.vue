@@ -1,8 +1,8 @@
 <template>
   <nav>
     <div class="container">
-      <router-link to="/home" class="brand">
-        <span class="brand-dot"></span>Elvina Garcia<sup></sup>
+      <router-link to="/home" class="brand" aria-label="Elvina Garcia — home">
+        <brand-mark />
       </router-link>
       <ul class="nav-links">
         <li><router-link :to="{ path: '/home', hash: '#work' }">Work</router-link></li>
@@ -19,8 +19,11 @@
 </template>
 
 <script>
+import BrandMark from './BrandMark.vue';
+
 export default {
   name: 'NavigationElement',
+  components: { BrandMark },
 };
 </script>
 
@@ -44,30 +47,20 @@ nav .container {
   padding-bottom: 16px;
 }
 .brand {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 22px;
-  letter-spacing: -0.01em;
+  font-size: 30px; /* drives the mark's height via its 1em sizing */
   color: var(--ink);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  transition: opacity 0.25s;
 }
-.brand-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--accent);
-  border-radius: 50%;
-  display: inline-block;
+.brand:hover {
+  opacity: 0.7;
 }
-.brand sup {
-  font-family: var(--mono);
-  font-size: 10px;
-  vertical-align: super;
-  margin-left: 2px;
-  color: var(--ink-muted);
-  font-weight: 400;
+@media (max-width: 900px) {
+  .brand {
+    font-size: 26px;
+  }
 }
 .nav-links {
   display: flex;
