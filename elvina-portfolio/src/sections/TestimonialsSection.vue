@@ -10,7 +10,7 @@
             class="carousel-slide"
             :class="{ active: i === current }"
           >
-            <blockquote class="quote">
+            <blockquote class="quote" :class="{ 'is-long': slide.long }">
               <template v-if="slide.highlight">
                 {{ slide.before }}<span class="quote-highlight">{{ slide.highlight }}</span
                 >{{ slide.after }}
@@ -81,11 +81,16 @@ export default {
           role: 'Business Director, Primoro / Foxbury Dental',
         },
         {
-          placeholder:
-            '[Testimonial content from Judy will go here. Best lines are specific — mention what Elvina actually did rather than generic praise.]',
+          before:
+            'Elvina consistently stays on top of requirements and makes sure nothing important slips through the cracks. She asks thoughtful questions early, clarifies ambiguities before they become problems, and ',
+          highlight:
+            "isn't afraid to push back when something could negatively impact the product or user experience",
+          after:
+            '. Her communication with both stakeholders and developers makes collaboration smooth and efficient.',
+          long: true,
           initial: 'J',
           name: 'Judy Abunda',
-          role: '—',
+          role: 'Manager, CPS',
         },
       ],
     };
@@ -163,6 +168,12 @@ export default {
   font-style: normal;
   color: white;
   font-variation-settings: 'opsz' 96, 'wdth' 95, 'wght' 400;
+}
+/* Longer quotes step down a size so they don't overrun the slide. */
+.quote.is-long {
+  font-size: clamp(24px, 2.9vw, 38px);
+  line-height: 1.3;
+  max-width: 1000px;
 }
 .quote-highlight {
   background: linear-gradient(180deg, transparent 60%, rgba(216, 118, 87, 0.35) 60%);

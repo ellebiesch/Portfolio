@@ -4,10 +4,7 @@
       <div class="status-pill"> Open to the right opportunity · Davao, PH (UTC+8)</div>
       <h1>
         Designing the
-        <mark
-          style="background: #c35132; color: white; padding: 2px 6px; border-radius: 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone;"
-          >unglamorous, mission-critical parts of SaaS.</mark
-        >
+        <mark class="hl">unglamorous, mission-critical parts of SaaS.</mark>
       </h1>
       <p class="hero-sub">
         Beautiful software is easy. Software people can trust with their work is harder. That's the
@@ -124,6 +121,18 @@ export default {
   margin-bottom: 48px;
   font-variation-settings: 'opsz' 96, 'wdth' 90;
   animation: fadeUp 0.9s ease-out 0.1s both;
+}
+/* Accent rule under the phrase instead of a filled highlight —
+   scales with the type and skips descenders. */
+.hero h1 .hl {
+  background: none;
+  color: inherit;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.12em;
+  text-decoration-skip-ink: auto;
 }
 .hero-sub {
   font-size: 21px;

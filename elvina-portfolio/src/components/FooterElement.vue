@@ -7,7 +7,9 @@
         Got a product that matters? Let's make sure the design matches. If you're building software people depend on — not just use — I want to hear about it.
       </p>
       <a href="mailto:elvinagarcia.design@gmail.com" class="footer-email">
-        📩 elvinagarcia.design@gmail.com <span class="arrow">→</span>
+        <span class="email-icon" aria-hidden="true">📩</span>
+        <span class="email-text">elvinagarcia.design@gmail.com</span>
+        <span class="arrow">→</span>
       </a>
       <div class="footer-bottom">
         <div>© 2026 Elvina Garcia · Davao, Philippines · Design that matters</div>
@@ -91,6 +93,16 @@ footer .container {
   border-radius: 999px;
   transition: all 0.3s ease;
   font-weight: 500;
+  /* Never exceed the viewport — the address has no natural break points. */
+  max-width: 100%;
+}
+.email-text {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.email-icon,
+.footer-email .arrow {
+  flex-shrink: 0;
 }
 .footer-email:hover {
   background: var(--accent);
@@ -132,12 +144,33 @@ footer .container {
   footer {
     padding: 80px 0 40px;
   }
+  .footer-email {
+    font-size: clamp(20px, 4.4vw, 32px);
+    padding: 14px 24px;
+    gap: 10px;
+  }
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 72px;
   }
   .footer-bottom > div:last-child a:first-child {
     margin-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  /* Full-width block instead of a pill — the address needs the whole row. */
+  .footer-email {
+    display: flex;
+    width: 100%;
+    font-size: 17px;
+    padding: 16px 20px;
+    border-radius: 20px;
+    gap: 10px;
+  }
+  .footer-sub {
+    font-size: 17px;
+    margin-bottom: 40px;
   }
 }
 </style>
