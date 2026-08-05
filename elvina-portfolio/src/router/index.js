@@ -6,6 +6,7 @@ import CaseStudyNavix from '@/pages/CaseStudyNavix.vue';
 import CaseStudyAtlas from '@/pages/CaseStudyAtlas.vue';
 import CaseStudyPrimoro from '@/pages/CaseStudyPrimoro.vue';
 import CaseStudyPending from '@/pages/CaseStudyPending.vue';
+import CaseStudyTruckpedia from '@/pages/CaseStudyTruckpedia.vue';
 
 const routes = [
   {
@@ -58,23 +59,7 @@ const routes = [
       },
       {
         path: '/case-studies/truckpedia',
-        component: CaseStudyPending,
-        meta: {
-          caseInfo: {
-            title: 'Truckpedia',
-            eyebrow: 'Case Study · Logistics · TMS',
-            tagline: 'Making every carrier’s day a little less chaotic',
-            status: 'Wrapped · Write-up pending',
-            context:
-              'Truckpedia is a transport management system spanning web and mobile. I worked across the dispatch calendar, accounting module, load creation, and the driver app — enhancing the experience for the people running loads all day.',
-            facts: [
-              { label: 'Role', value: 'UX and UI Designer' },
-              { label: 'Timeline', value: '2022 — 2023' },
-              { label: 'Platform', value: 'Web · Mobile' },
-              { label: 'Industry', value: 'Logistics · TMS' },
-            ],
-          },
-        },
+        component: CaseStudyTruckpedia,
       },
     ],
   },
