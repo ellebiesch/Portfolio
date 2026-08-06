@@ -22,8 +22,8 @@
           </div>
           <h3 class="service-title">End-to-end <em>product design</em></h3>
           <p class="service-body">
-            From the first research session to the final handoff doc. Solo or embedded. 
-            Best fit for early-stage to Series B teams where one designer needs to own the whole surface and actually ship.
+            From discovery through implementation, I partner with teams to design products that
+            solve complex operational problems and not just polished interfaces.
           </p>
         </div>
         <div class="service">
@@ -34,10 +34,10 @@
               <path d="m21 21-4.3-4.3" />
             </svg>
           </div>
-          <h3 class="service-title">Heuristic reviews <em>& audits</em></h3>
+          <h3 class="service-title">UX reviews <em>& product audits</em></h3>
           <p class="service-body">
-            Structured evaluation for complex platforms. Nielsen's heuristics plus B2B-specific
-            frameworks for permissions, data density, and power-user workflows.
+            Structured evaluations that uncover workflow friction, usability issues, and product
+            risks before they become expensive engineering problems.
           </p>
         </div>
         <div class="service">
@@ -48,10 +48,10 @@
               <circle cx="12" cy="12" r="9" />
             </svg>
           </div>
-          <h3 class="service-title">Healthcare <em>partnership</em></h3>
+          <h3 class="service-title">Healthcare <em>product design</em></h3>
           <p class="service-body">
-            Embedded design support for EHRs, practice management, scheduling, compliance and audit systems.
-            Domain familiarity included.
+            Embedded product design support for EHRs, practice management platforms, scheduling
+            systems, compliance workflows, and AI-assisted healthcare products.
           </p>
         </div>
       </div>

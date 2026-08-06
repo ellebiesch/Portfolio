@@ -17,10 +17,10 @@
           number="01 / Healthcare · Featured"
           year="2025 — Present"
           title="<em>Primoro</em>"
-          summary="Lead designer for a modern dental practice operating system."
+          summary="Founding Product Designer for a multi-product dental practice operating system designed to streamline clinical workflows, and day-to-day practice operations."
           :tags="['Dental SaaS', 'Multi-product', 'RBAC', 'Web + Tablet + Mobile']"
           :attrs="[
-            { label: 'Role', value: 'Lead Product designer · Freelance Retainer' },
+            { label: 'Role', value: 'Founding Product Designer · Freelance Retainer' },
             { label: 'Surface', value: 'Web, Tablet and Mobile App' },
             { label: 'Scope', value: 'End-to-end · Multi-product' },
           ]"
@@ -61,8 +61,8 @@
           preview-class="preview-navix"
           number="Behavioral Healthcare · Platform"
           year="2021 — 2025"
-          title="Navix Health <em>Platform</em>"
-          summary="Lead designer on a behavioral health operations platform. Designed the system across web and mobile, partnered with a junior designer, and led a brand refresh for a more premium, enterprise-ready feel."
+          title="Navix <em>Health</em>"
+          summary="Designed core experiences across a behavioral healthcare platform from EMR documentation and CRM workflows to AI-assisted tools and a scalable design system used across web and mobile."
           :tags="['Behavioral Healthcare', 'Cross-Platform', 'Design system', 'AI Integrated Tools']"
           :attrs="[
             { label: 'Role', value: 'Foundation product designer' },
@@ -94,7 +94,7 @@
           number="03 / Operations"
           year="2025 — 2026"
           title="<em>CPS</em>"
-          summary=" Driver scoring platform that builds carrier credibility through trip data. I own design and product strategy — the design follows the findings, not the other way around."
+          summary="Designed a driver performance platform that helps carriers improve safety, credibility, and operational visibility through trip intelligence and scoring."
           :tags="['Logistics', 'Scoring system']"
           :attrs="[
             { label: 'Role', value: ' Product Designer + Strategist · Part-time' },
@@ -135,7 +135,7 @@
           number="Recruitment · Executive Search"
           year="2023 — 2024"
           title="Atlas <em>ATS</em>"
-          summary="Redesigned a legacy ATS into a modern collaborative hiring engine built for executive search including SIFT AI, the platform's candidate querying and comparison feature. Atlas won the EY National Business Competition 2024."
+          summary="Redesigned a legacy applicant tracking system into a modern hiring platform for executive search firms, including AI-assisted candidate search and comparison. Winner of the EY National Business Competition 2024."
           :tags="['Recruitment', 'Pipeline', 'Collaboration']"
           :attrs="[
             { label: 'Role', value: 'Sole Product designer · Award-winning'},
@@ -172,7 +172,7 @@
           number="05 / Logistics"
           year="2022 — 2023"
           title="<em>Truckpedia</em>"
-          summary="Enhanced the TMS experience across web and mobile — dispatch calendar, accounting module, load creation, and the driver app. Designed to make every carrier's day a little less chaotic."
+          summary="Improved a transportation management platform used by carriers to manage dispatch, accounting, settlements, maintenance, and driver operations across web and mobile."
           :tags="['Logistics · TMS · Web + Mobile', 'Field ops']"
           :attrs="[
             { label: 'Role', value: 'UX and UI designer' },

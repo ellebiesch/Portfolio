@@ -1,7 +1,10 @@
 <template>
   <section class="testimonial">
     <div class="container">
-      <div class="testimonial-label">What they say</div>
+      <div class="testimonial-label">Testimonials</div>
+      <p class="testimonial-intro">
+        Trusted by founders and product teams building products that people rely on every day.
+      </p>
       <div class="carousel">
         <div class="carousel-track">
           <div
@@ -153,10 +156,17 @@ export default {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--accent-soft);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.testimonial-intro {
+  font-size: 19px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 680px;
+  margin-bottom: 56px;
 }
 .quote {
   font-family: var(--display);

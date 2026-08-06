@@ -3,12 +3,17 @@
     <div class="container">
       <div class="status-pill"> Open to the right opportunity · Davao, PH (UTC+8)</div>
       <h1>
-        Designing the
-        <mark class="hl">unglamorous, mission-critical parts of SaaS.</mark>
+        Designing complex SaaS products
+        <mark class="hl">people depend on to do real work.</mark>
       </h1>
       <p class="hero-sub">
-        Beautiful software is easy. Software people can trust with their work is harder. That's the
-        part I design.
+        Beautiful interfaces are easy to admire. Trusted software is harder to build.
+      </p>
+      <p class="hero-note">
+        I design products where clarity, speed, and reliability matter more than visual
+        novelty—especially in healthcare, AI, and operational SaaS. The people using these products
+        aren't browsing. They're making decisions, managing risk, and keeping businesses running. My
+        job is to make that work feel simpler.
       </p>
       <div class="hero-cta">
         <router-link :to="{ path: '/home', hash: '#work' }" class="btn btn-primary">
@@ -134,13 +139,21 @@ export default {
   text-underline-offset: 0.12em;
   text-decoration-skip-ink: auto;
 }
+/* Both hero paragraphs run the full container row, matching the headline block. */
 .hero-sub {
   font-size: 21px;
   line-height: 1.5;
-  color: var(--ink-soft);
-  max-width: 640px;
-  margin-bottom: 56px;
+  color: var(--ink);
+  margin-bottom: 20px;
   animation: fadeUp 1s ease-out 0.2s both;
+}
+/* Supporting paragraph — steps down from the lead so the two read as a pair. */
+.hero-note {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 56px;
+  animation: fadeUp 1.05s ease-out 0.25s both;
 }
 .hero-cta {
   display: flex;

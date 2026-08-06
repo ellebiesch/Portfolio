@@ -1,10 +1,12 @@
 <template>
   <footer id="contact">
     <div class="container">
-      <div class="footer-eyebrow">Let's build something that holds up</div>
-      <h2 class="footer-cta">Let's talk <em>UX</em>.</h2>
+      <div class="footer-eyebrow">Contact</div>
+      <h2 class="footer-cta">Let's build software <em>people trust</em>.</h2>
       <p class="footer-sub">
-        Got a product that matters? Let's make sure the design matches. If you're building software people depend on — not just use — I want to hear about it.
+        If you're building software people depend on whether in healthcare, AI, or operational SaaS,
+        I'd love to help turn complex workflows into products that feel clear, dependable, and ready
+        for production.
       </p>
       <a href="mailto:elvinagarcia.design@gmail.com" class="footer-email">
         <span class="email-icon" aria-hidden="true">📩</span>

@@ -7,7 +7,8 @@
           <h2 class="process-title">Design <em>process</em></h2>
         </div>
         <p class="process-sub">
-          Not a waterfall. Not a vague "design thinking" loop. A sprint-based flow built for B2B teams that need to ship without burning cycles on process theater..
+          Not a waterfall. Not a vague "design thinking" loop. A sprint-based flow built for B2B
+          teams that need to ship without burning cycles on process theater.
         </p>
       </div>
       <div class="process-grid">
@@ -30,33 +31,33 @@ export default {
       steps: [
         {
           num: '01',
-          title: '<em>Dig before you draw</em>',
-          body: "I don't open Figma until I understand the business constraint, the user's actual job, and what's already been tried.  Most design problems are scoping problems in disguise.",
+          title: '<em>Understand the problem</em>',
+          body: "I don't open Figma until I understand the business goal, user workflow, technical constraints, and what's already been tried. Most design problems start long before the first screen.",
         },
         {
           num: '02',
-          title: '<em>Structure before visuals</em>',
-          body: "Information architecture, user flows, and content hierarchy first. Pretty screens built on broken logic just fail faster.",
+          title: '<em>Design the system first</em>',
+          body: 'Information architecture, workflows, permissions, and content hierarchy come before UI. Strong visuals can’t compensate for weak product logic.',
         },
         {
           num: '03',
-          title: '<em>High-fidelity fast</em>',
-          body: "I work at high fidelity earlier than most designers. Stakeholders react to real screens — not wireframes. It cuts revision cycles significantly.",
+          title: '<em>Validate with realistic interfaces</em>',
+          body: 'I move into high fidelity earlier than most designers because stakeholders respond more accurately to products that feel real. It leads to faster decisions and fewer revisions.',
         },
         {
           num: '04',
-          title: '<em>Prototype what matters</em>',
-          body: "Not everything needs a prototype. The interactions that carry the most risk from complex flows, edge cases, permission states — those get built and tested before engineering touches them.",
+          title: '<em>Prototype high risk interactions</em>',
+          body: 'Not everything needs a prototype. Complex workflows, permissions, edge cases, and multi-step tasks do. Those interactions get tested before engineering begins implementation.',
         },
         {
           num: '05',
-          title: ' <em>Ship-ready handoff</em>',
-          body: "Annotated specs, component documentation, edge case coverage. Engineers shouldn't have to guess. If they're guessing, the handoff failed.",
+          title: '<em>Prepare for implementation</em>',
+          body: "Every handoff includes specifications, component guidance, interaction notes, and edge cases. Engineers shouldn't have to interpret design decisions, they should be able to build them confidently.",
         },
-         {
+        {
           num: '06',
-          title: '<em>Reflect and iterate</em>',
-          body: "Good design doesn't stop at launch. I track what lands, what doesn't, and feed that back into the next cycle.",
+          title: '<em>Learn after launch</em>',
+          body: "Shipping isn't the finish line. I look at feedback, recurring friction, and adoption patterns to improve the next iteration.",
         },
       ],
     };

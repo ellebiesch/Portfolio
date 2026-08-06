@@ -8,28 +8,32 @@
         </div>
         <div class="about-body">
           <p>
-            I design because I believe most software treats its users as an afterthought. 
-            And in the industries I worked in, that's not a minor inconvenience, it's a real cost that shows up in people's bodies, their time, and their livelihoods. 
-            The people using these products aren't browsing. They're working. They're stressed. They're accountable for outcomes that matter. 
-            They deserve software that was designed with that in mind. That's the problem I show up to solve.
+            I design software because I believe too many enterprise products ask people to work
+            around the software instead of with it.
           </p>
           <p>
-           I'm not interested in design that wins awards for how it looks. 
-           I'm interested in design that earns trust — from the person using it at 11pm on a double shift, 
-           from the founder who bet their company on it, from the engineer who has to build it without a thousand revision cycles. 
-           Design that holds up when the stakes are real.
+            The people I design for aren't casually browsing. They're clinicians documenting patient
+            care, operations teams coordinating hundreds of moving parts, recruiters making hiring
+            decisions, and dispatchers keeping businesses running. Their software shouldn't add
+            cognitive load, it should remove it. That's where I do my best work: translating messy
+            operational problems into products people can trust under pressure.
           </p>
           <p>
-            I ask a lot of whys. I challenge requirements when they don't serve the user. 
-            I push back on scope when it creates complexity that nobody asked for. 
-            I'd rather slow down a conversation by two hours than ship something that creates confusion for two years.
+            Over the past six years I've worked across healthcare, logistics, recruitment, and
+            operational SaaS, partnering closely with founders, product managers, and engineers to
+            design products from early concepts through implementation.
           </p>
           <p>
-            Six years of this work has taught me one thing above everything else: the best software is the kind people stop noticing. 
-            Not because it's forgettable but because it fits so well into how they already think and work that it stops feeling like a tool and starts feeling like an extension of themselves.
-            That's what I'm building toward. Every project. Every screen. Every decision.
+            I ask a lot of <em>why</em>. I challenge requirements when they don't solve the user's
+            problem. I push back on complexity when simpler solutions exist. I'd rather spend two
+            extra hours questioning an idea than spend two years supporting the wrong one.
           </p>
-          
+          <p>
+            The best software isn't the software people admire. It's the software they stop noticing
+            because it fits naturally into how they already think and work. That's what I'm building
+            toward with every product.
+          </p>
+
         </div>
       </div>
     </div>
