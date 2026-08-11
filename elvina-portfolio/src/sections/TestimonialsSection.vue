@@ -81,7 +81,7 @@ export default {
             highlight: 'The quality of work has consistently exceeded expectations.',
           initial: 'H',
           name: 'Harry Leak',
-          role: 'Business Director, Primoro / Foxbury Dental',
+          role: 'Business Director, Primoro',
         },
         {
           before:
