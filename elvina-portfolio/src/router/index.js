@@ -4,7 +4,6 @@ import ErrorView from '../views/ErrorView.vue';
 import MainPage from '../pages/MainPage.vue';
 import CaseStudyNavix from '@/pages/CaseStudyNavix.vue';
 import CaseStudyAtlas from '@/pages/CaseStudyAtlas.vue';
-import CaseStudyPrimoro from '@/pages/CaseStudyPrimoro.vue';
 import CaseStudyPending from '@/pages/CaseStudyPending.vue';
 import CaseStudyTruckpedia from '@/pages/CaseStudyTruckpedia.vue';
 
@@ -32,11 +31,7 @@ const routes = [
         component: CaseStudyAtlas,
       },
       {
-        path: '/case-studies/primoro',
-        component: CaseStudyPrimoro,
-      },
-      {
-        // Not written up yet — Primoro-style holding page until the case study lands
+        // Not written up yet — holding page until the case study lands
         path: '/case-studies/cps',
         component: CaseStudyPending,
         meta: {

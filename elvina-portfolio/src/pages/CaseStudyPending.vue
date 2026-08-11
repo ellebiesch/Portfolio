@@ -64,7 +64,6 @@
 
 <script>
 const CASE_STUDIES = [
-  { to: '/case-studies/primoro', name: 'Primoro' },
   { to: '/case-studies/navix', name: 'Navix Health' },
   { to: '/case-studies/atlas', name: 'Atlas ATS' },
 ];

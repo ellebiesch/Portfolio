@@ -89,9 +89,6 @@ export default {
 .preview-navix {
   background: linear-gradient(135deg, #1a3a3a 0%, #2a5454 50%, #3d7373 100%);
 }
-.preview-foxbury {
-  background: linear-gradient(135deg, #f4ebe0 0%, #e8d4b8 50%, #c8a572 100%);
-}
 .preview-cargoos {
   background: linear-gradient(135deg, #0b0b0a 0%, #2a2624 60%, #4a453e 100%);
 }

@@ -597,9 +597,9 @@
     <!-- NEXT CASE -->
     <section class="next-case">
       <div class="container">
-        <router-link to="/case-studies/primoro" class="next-case-link">
+        <router-link to="/case-studies/atlas" class="next-case-link">
           <div class="next-label">Next case study</div>
-          <div class="next-title"><em> Primoro</em> <span class="next-arrow">→</span></div>
+          <div class="next-title"><em> Atlas ATS</em> <span class="next-arrow">→</span></div>
         </router-link>
       </div>
     </section>

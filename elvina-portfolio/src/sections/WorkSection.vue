@@ -9,52 +9,6 @@
         <div class="section-label work-range">2020 — 2026</div>
       </div>
       <div class="work-grid">
-        <!-- Primoro (featured) -->
-        <case-card
-          to="/case-studies/primoro"
-          featured
-          preview-class="preview-foxbury"
-          number="01 / Healthcare · Featured"
-          year="2025 — Present"
-          title="<em>Primoro</em>"
-          summary="Founding Product Designer for a multi-product dental practice operating system designed to streamline clinical workflows, and day-to-day practice operations."
-          :tags="['Dental SaaS', 'Multi-product', 'RBAC', 'Web + Tablet + Mobile']"
-          :attrs="[
-            { label: 'Role', value: 'Founding Product Designer · Freelance Retainer' },
-            { label: 'Surface', value: 'Web, Tablet and Mobile App' },
-            { label: 'Scope', value: 'End-to-end · Multi-product' },
-          ]"
-        >
-          <template #preview>
-            <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg">
-              <rect x="40" y="40" width="520" height="240" rx="14" fill="white" opacity="0.95" />
-              <rect x="60" y="60" width="130" height="220" rx="6" fill="#c8a572" opacity="0.2" />
-              <circle cx="92" cy="90" r="10" fill="#8b6f3f" />
-              <rect x="72" y="124" width="100" height="6" rx="2" fill="#8b6f3f" opacity="0.5" />
-              <rect x="72" y="138" width="80" height="6" rx="2" fill="#8b6f3f" opacity="0.3" />
-              <rect x="72" y="164" width="100" height="6" rx="2" fill="#8b6f3f" opacity="0.5" />
-              <rect x="72" y="178" width="70" height="6" rx="2" fill="#8b6f3f" opacity="0.3" />
-              <rect x="72" y="204" width="100" height="6" rx="2" fill="#8b6f3f" opacity="0.5" />
-              <rect x="72" y="218" width="60" height="6" rx="2" fill="#8b6f3f" opacity="0.3" />
-              <rect x="72" y="244" width="100" height="6" rx="2" fill="#8b6f3f" opacity="0.5" />
-              <rect x="210" y="60" width="350" height="64" rx="6" fill="#8b6f3f" opacity="0.15" />
-              <rect x="228" y="80" width="140" height="10" rx="2" fill="#8b6f3f" />
-              <rect x="228" y="100" width="90" height="6" rx="2" fill="#8b6f3f" opacity="0.5" />
-              <rect x="500" y="80" width="44" height="22" rx="11" fill="#8b6f3f" />
-              <rect x="210" y="140" width="167" height="140" rx="6" fill="#8b6f3f" opacity="0.1" />
-              <rect x="222" y="156" width="80" height="8" rx="2" fill="#8b6f3f" opacity="0.7" />
-              <rect x="222" y="174" width="140" height="6" rx="2" fill="#8b6f3f" opacity="0.4" />
-              <rect x="222" y="188" width="120" height="6" rx="2" fill="#8b6f3f" opacity="0.4" />
-              <rect x="222" y="220" width="110" height="36" rx="6" fill="#8b6f3f" opacity="0.25" />
-              <rect x="393" y="140" width="167" height="140" rx="6" fill="#8b6f3f" opacity="0.1" />
-              <rect x="405" y="156" width="80" height="8" rx="2" fill="#8b6f3f" opacity="0.7" />
-              <rect x="405" y="174" width="140" height="6" rx="2" fill="#8b6f3f" opacity="0.4" />
-              <rect x="405" y="188" width="120" height="6" rx="2" fill="#8b6f3f" opacity="0.4" />
-              <rect x="405" y="220" width="110" height="36" rx="6" fill="#8b6f3f" opacity="0.25" />
-            </svg>
-          </template>
-        </case-card>
-
         <!-- Navix -->
         <case-card
           to="/case-studies/navix"

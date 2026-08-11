@@ -3,10 +3,6 @@
     <div class="container">
       <div class="section-label">Trusted by teams building serious software</div>
       <div class="client-list">
-        <router-link to="/case-studies/primoro" class="client">
-          <div class="client-name">Primoro</div>
-          <div class="client-domain">Dental practice OS</div>
-        </router-link>
         <div class="client">
           <div class="client-name">Cargoos</div>
           <div class="client-domain">Driver performance</div>
@@ -42,7 +38,7 @@ export default {
 }
 .client-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background: var(--rule);
   border-top: 1px solid var(--rule);
