@@ -7,7 +7,7 @@
       <ul class="nav-links">
         <li><router-link :to="{ path: '/home', hash: '#work' }">Work</router-link></li>
         <li><router-link :to="{ path: '/home', hash: '#about' }">About</router-link></li>
-        <li><router-link :to="{ path: '/home', hash: '#services' }">Services</router-link></li>
+        <li><router-link :to="{ path: '/home', hash: '#expertise' }">Expertise</router-link></li>
         <li>
           <router-link :to="{ path: '/home', hash: '#contact' }" class="nav-cta">
             Get in touch <span class="arrow">→</span>

@@ -1,57 +1,56 @@
 <template>
-  <section id="services" class="services">
+  <section id="expertise" class="services">
     <div class="container">
-      <div class="services-header">
-        <div>
-          <div class="section-label services-eyebrow">Services</div>
-          <h2 class="services-title">What I do <em>best</em></h2>
-        </div>
-        <p class="services-sub">
-          Three ways I work with teams shipping serious software — from end-to-end product ownership
-          to focused audits when you need a second pair of senior eyes on something complex.
-        </p>
+      <div v-reveal class="services-header">
+        <div class="section-label services-eyebrow">Expertise</div>
+        <h2 class="services-title">Where I'm most <em>useful</em>.</h2>
       </div>
       <div class="service-grid">
-        <div class="service">
-          <div class="service-num">Engagement</div>
+        <div v-reveal class="service">
+          <div class="service-num">01</div>
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <rect x="3" y="3" width="18" height="18" rx="3" />
               <path d="M3 9h18M9 3v18" />
             </svg>
           </div>
-          <h3 class="service-title">End-to-end <em>product design</em></h3>
+          <h3 class="service-title">New product areas with <em>too many open questions</em></h3>
           <p class="service-body">
-            From discovery through implementation, I partner with teams to design products that
-            solve complex operational problems and not just polished interfaces.
+            Give me a dense specification, scattered requirements, or an early product idea, and
+            I'll work out the actors, workflow, states, dependencies, and decisions the interface
+            needs to support.
           </p>
         </div>
-        <div class="service">
-          <div class="service-num">Engagement</div>
+        <div v-reveal="90" class="service">
+          <div class="service-num">02</div>
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <circle cx="11" cy="11" r="7" />
               <path d="m21 21-4.3-4.3" />
             </svg>
           </div>
-          <h3 class="service-title">UX reviews <em>& product audits</em></h3>
+          <h3 class="service-title">
+            Existing products that have <em>outgrown their structure</em>
+          </h3>
           <p class="service-body">
-            Structured evaluations that uncover workflow friction, usability issues, and product
-            risks before they become expensive engineering problems.
+            As SaaS products expand, navigation gets crowded, patterns drift, and features stop
+            behaving like parts of the same product. I help teams find the underlying structure
+            again.
           </p>
         </div>
-        <div class="service">
-          <div class="service-num">Engagement</div>
+        <div v-reveal="180" class="service">
+          <div class="service-num">03</div>
           <div class="service-icon">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M12 2v20M2 12h20" />
               <circle cx="12" cy="12" r="9" />
             </svg>
           </div>
-          <h3 class="service-title">Healthcare <em>product design</em></h3>
+          <h3 class="service-title">Teams that need design to <em>stay close to the build</em></h3>
           <p class="service-body">
-            Embedded product design support for EHRs, practice management platforms, scheduling
-            systems, compliance workflows, and AI-assisted healthcare products.
+            I prepare detailed interactions, component behavior, responsive requirements, and edge
+            cases, then review the implementation with engineering and QA. The work isn't finished
+            because the Figma file is tidy.
           </p>
         </div>
       </div>
@@ -87,19 +86,17 @@ export default {
   position: relative;
   z-index: 1;
 }
+/* Single column now — the section leads with the title alone, no standfirst. */
 .services-header {
   margin-bottom: 72px;
-  display: grid;
-  grid-template-columns: 1fr 1.6fr;
-  gap: 96px;
-  align-items: end;
+  max-width: 900px;
 }
 .services-eyebrow {
   margin-bottom: 24px;
 }
 .services-title {
   font-family: var(--display);
-  font-size: clamp(56px, 8vw, 96px);
+  font-size: clamp(48px, 7vw, 80px);
   font-weight: 500;
   letter-spacing: -0.035em;
   line-height: 0.92;
@@ -109,11 +106,6 @@ export default {
   font-style: normal;
   font-weight: 500;
   color: var(--accent);
-}
-.services-sub {
-  font-size: 19px;
-  line-height: 1.6;
-  color: var(--ink-soft);
 }
 .service-grid {
   display: grid;
@@ -128,7 +120,8 @@ export default {
   gap: 20px;
   border-radius: 20px;
   border: 1px solid var(--rule);
-  transition: all 0.4s ease;
+  /* Named properties, not `all` — see the note in StrengthsSection. */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
   overflow: hidden;
 }
@@ -171,10 +164,10 @@ export default {
 }
 .service-title {
   font-family: var(--display);
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 400;
   letter-spacing: -0.015em;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 .service-title em {
   font-style: italic;
@@ -194,10 +187,6 @@ export default {
 @media (max-width: 900px) {
   .services {
     padding: 80px 0;
-  }
-  .services-header {
-    grid-template-columns: 1fr;
-    gap: 32px;
   }
 }
 </style>

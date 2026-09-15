@@ -10,6 +10,39 @@
   padding: 0 32px;
 }
 
+/* ------------------------------------------------------------
+   Case-study hero entrance.
+
+   Keyframes rather than the v-reveal directive: this block is above
+   the fold on load, so there is nothing to wait for — it should just
+   play. Everything below the fold uses v-reveal instead. `fadeUp` is
+   defined in style.css, which loads first.
+------------------------------------------------------------ */
+.case-hero .back-link {
+  animation: fadeUp 0.7s ease-out both;
+}
+.case-hero .case-eyebrow {
+  animation: fadeUp 0.7s ease-out 0.08s both;
+}
+.case-hero .case-h1 {
+  animation: fadeUp 0.8s ease-out 0.16s both;
+}
+.case-hero .case-tagline {
+  animation: fadeUp 0.8s ease-out 0.24s both;
+}
+.case-hero .case-meta-strip {
+  animation: fadeUp 0.8s ease-out 0.32s both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-hero .back-link,
+  .case-hero .case-eyebrow,
+  .case-hero .case-h1,
+  .case-hero .case-tagline,
+  .case-hero .case-meta-strip {
+    animation: none;
+  }
+}
+
 .back-link {
   display: inline-flex;
   align-items: center;
@@ -34,6 +67,11 @@
   padding-bottom: 60px;
   position: relative;
   overflow: hidden;
+  /* Keeps the grain layer's mix-blend-mode contained to this section —
+     without it, `overlay` can composite against whatever sits behind the
+     fixed, translucent nav bar above, instead of just this section's own
+     background. */
+  isolation: isolate;
 }
 .case-hero::before {
   content: '';
@@ -50,6 +88,76 @@
   position: relative;
   z-index: 1;
 }
+
+/* ------------------------------------------------------------
+   Dark gradient hero — opt-in via `is-dark` on .case-hero. Each page
+   sets --hero-gradient (and optionally --hero-eyebrow) in its own
+   scoped style to its brand color; this block only supplies the
+   shared text/border treatment so it isn't rewritten per page.
+------------------------------------------------------------ */
+.case-hero.is-dark {
+  background: var(--hero-gradient);
+  color: white;
+}
+.case-hero.is-dark .back-link {
+  color: rgba(255, 255, 255, 0.65);
+}
+.case-hero.is-dark .back-link:hover {
+  color: white;
+}
+.case-hero.is-dark .case-eyebrow {
+  color: var(--hero-eyebrow, rgba(255, 255, 255, 0.8));
+}
+.case-hero.is-dark .case-h1 {
+  color: white;
+}
+.case-hero.is-dark .case-h1 em {
+  color: var(--hero-eyebrow, var(--accent-soft));
+}
+.case-hero.is-dark .case-tagline {
+  color: rgba(255, 255, 255, 0.75);
+}
+.case-hero.is-dark .case-meta-strip {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.case-hero.is-dark .meta-item {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+.case-hero.is-dark .meta-label {
+  color: rgba(255, 255, 255, 0.5);
+}
+.case-hero.is-dark .meta-value {
+  color: white;
+}
+.case-hero.is-dark .placeholder-badge {
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Grain layer, shared by every dark hero (including CPS's bespoke one).
+   Opacity 0.5 is the "50% density" the noise was asked for; blended with
+   `overlay` so it reads as texture in the gradient rather than a haze
+   sitting on top of it.
+
+   The texture lives in its own file (./noise.svg) rather than inlined as a
+   CSS data-URI — a raw <svg>/<filter> string surviving unescaped inside a
+   CSS url() is fragile, and `isolation: isolate` below is needed regardless
+   so the blend mode can't reach past this section into whatever is
+   compositing behind it (the fixed, translucent nav bar in particular). */
+.hero-noise {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url('noise.svg');
+  background-size: 220px 220px;
+  /* Tailwind's Preflight resets `background-repeat: no-repeat` on every
+     element (*, ::before, ::after) sitewide — without this, the texture
+     rendered once, un-tiled, in the top-left corner instead of tiling
+     across the gradient. That was the stray box. */
+  background-repeat: repeat;
+}
+
 .case-eyebrow {
   font-family: var(--mono);
   font-size: 12px;

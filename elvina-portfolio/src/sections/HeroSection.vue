@@ -1,44 +1,34 @@
 <template>
   <section class="hero">
     <div class="container">
-      <div class="status-pill"> Open to the right opportunity · Davao, PH (UTC+8)</div>
+      <div class="status-pill">Senior Product Designer · Davao, Philippines · UTC+8</div>
       <h1>
-        Designing complex SaaS products
-        <mark class="hl">people depend on to do real work.</mark>
+        Designing the
+        <mark class="hl">unglamorous, mission-critical</mark>
+        parts of SaaS.
       </h1>
       <p class="hero-sub">
-        Beautiful interfaces are easy to admire. Trusted software is harder to build.
+        Most products look convincing in a demo. The real test starts when different roles need
+        different things from the same workflow, the data does not arrive neatly, and the edge case
+        becomes the everyday case.
       </p>
       <p class="hero-note">
-        I design products where clarity, speed, and reliability matter more than visual
-        novelty—especially in healthcare, AI, and operational SaaS. The people using these products
-        aren't browsing. They're making decisions, managing risk, and keeping businesses running. My
-        job is to make that work feel simpler.
+        That is the reality I design for, from product logic through implementation until the
+        product holds up without someone explaining how it was supposed to work.
       </p>
       <div class="hero-cta">
         <router-link :to="{ path: '/home', hash: '#work' }" class="btn btn-primary">
           View selected work <span class="arrow">→</span>
         </router-link>
         <router-link :to="{ path: '/home', hash: '#contact' }" class="btn btn-secondary">
-          Start a project
+          Get in touch <span class="arrow">→</span>
         </router-link>
       </div>
       <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num">06</div>
-          <div class="stat-label">Years designing<br />complex software</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">12<span class="plus">+</span></div>
-          <div class="stat-label">Products shipped<br />end-to-end</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">05</div>
-          <div class="stat-label">Industries<br />across B2B SaaS</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">01</div>
-          <div class="stat-label">Award winning work.<br/>Every time.</div>
+        <div v-for="(stat, i) in stats" :key="stat.label" class="stat">
+          <div class="stat-num">{{ padded(counts[i]) }}</div>
+          <!-- eslint-disable-next-line vue/no-v-html -->
+          <div class="stat-label" v-html="stat.label"></div>
         </div>
       </div>
     </div>
@@ -46,8 +36,52 @@
 </template>
 
 <script>
+const COUNT_MS = 1100;
+// Held back until the stats row's own fadeUp (0.4s delay) has started.
+const COUNT_START_MS = 600;
+
 export default {
   name: 'HeroSection',
+  data() {
+    return {
+      stats: [
+        { value: 6, label: 'Years in product<br />and UX design' },
+        { value: 15, label: 'Products designed<br />and shipped' },
+        { value: 5, label: 'Industries across<br />B2B SaaS' },
+        { value: 3, label: 'Core product surfaces<br />Web · Mobile · AI' },
+      ],
+      counts: [0, 0, 0, 0],
+      startTimer: null,
+      frame: null,
+    };
+  },
+  mounted() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      this.counts = this.stats.map((s) => s.value);
+      return;
+    }
+    this.startTimer = setTimeout(this.runCount, COUNT_START_MS);
+  },
+  beforeUnmount() {
+    clearTimeout(this.startTimer);
+    cancelAnimationFrame(this.frame);
+  },
+  methods: {
+    // Two digits, so 6 reads as 06 and lines up with 15 in the same row.
+    padded(n) {
+      return String(n).padStart(2, '0');
+    },
+    runCount() {
+      const started = performance.now();
+      const step = (now) => {
+        const t = Math.min((now - started) / COUNT_MS, 1);
+        const eased = 1 - Math.pow(1 - t, 3);
+        this.counts = this.stats.map((s) => Math.round(s.value * eased));
+        if (t < 1) this.frame = requestAnimationFrame(step);
+      };
+      this.frame = requestAnimationFrame(step);
+    },
+  },
 };
 </script>
 

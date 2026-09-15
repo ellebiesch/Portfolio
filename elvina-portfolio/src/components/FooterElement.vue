@@ -1,21 +1,26 @@
 <template>
   <footer id="contact">
     <div class="container">
-      <div class="footer-eyebrow">Contact</div>
-      <h2 class="footer-cta">Let's build software <em>people trust</em>.</h2>
-      <p class="footer-sub">
-        If you're building software people depend on whether in healthcare, AI, or operational SaaS,
-        I'd love to help turn complex workflows into products that feel clear, dependable, and ready
-        for production.
+      <div v-reveal class="footer-eyebrow">Contact</div>
+      <h2 v-reveal="80" class="footer-cta">Bring me the <em>complicated part</em>.</h2>
+      <p v-reveal="160" class="footer-sub">
+        If you're building complex operational software and need a designer who can get as deep into
+        the product logic as the interface, let's talk.
       </p>
-      <a href="mailto:elvinagarcia.design@gmail.com" class="footer-email">
+      <a v-reveal="240" href="mailto:elvinagarcia.design@gmail.com" class="footer-email">
         <span class="email-icon" aria-hidden="true">📩</span>
         <span class="email-text">elvinagarcia.design@gmail.com</span>
         <span class="arrow">→</span>
       </a>
+      <!-- Secondary CTAs from the copy revision — needs a LinkedIn URL and a
+           résumé PDF dropped into /public before these go live.
+      <div class="footer-links">
+        <a href="LINKEDIN_URL" target="_blank" rel="noopener">View LinkedIn <span class="arrow">→</span></a>
+        <a href="/elvina-garcia-resume.pdf" download>Download résumé <span class="arrow">→</span></a>
+      </div>
+      -->
       <div class="footer-bottom">
-        <div>© 2026 Elvina Garcia · Davao, Philippines · Design that matters</div>
-        
+        <div>© 2026 Elvina Garcia · Senior Product Designer · Davao, Philippines</div>
       </div>
     </div>
   </footer>
@@ -93,7 +98,9 @@ footer .container {
   padding: 16px 32px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
-  transition: all 0.3s ease;
+  /* Named properties, not `all` — see the note in StrengthsSection. */
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
   font-weight: 500;
   /* Never exceed the viewport — the address has no natural break points. */
   max-width: 100%;

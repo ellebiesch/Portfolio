@@ -1,24 +1,30 @@
 <template>
   <section class="clients">
     <div class="container">
-      <div class="section-label">Trusted by teams building serious software</div>
-      <div class="client-list">
+      <div v-reveal class="section-label">Trusted by teams building complex products</div>
+      <!-- Revealed as one block, not per cell: the 1px grid gap IS the divider
+           rule, so fading cells individually flashes the rule colour through. -->
+      <div v-reveal="90" class="client-list">
         <div class="client">
+          <div class="client-name">Primoro</div>
+          <div class="client-domain">Dental practice operating system</div>
+        </div>
+        <router-link to="/case-studies/cps" class="client">
           <div class="client-name">Cargoos</div>
           <div class="client-domain">Driver performance</div>
-        </div>
+        </router-link>
         <router-link to="/case-studies/navix" class="client">
           <div class="client-name">Navix Health</div>
-          <div class="client-domain">Behavioral healthcare platform</div>
+          <div class="client-domain">Behavioral healthcare</div>
         </router-link>
         <router-link to="/case-studies/atlas" class="client">
           <div class="client-name">Atlas ATS</div>
-          <div class="client-domain">Recruitment SaaS</div>
+          <div class="client-domain">Executive recruitment</div>
         </router-link>
-        <div class="client">
+        <router-link to="/case-studies/truckpedia" class="client">
           <div class="client-name">Truckpedia</div>
-          <div class="client-domain">Logistics</div>
-        </div>
+          <div class="client-domain">Transportation management</div>
+        </router-link>
       </div>
     </div>
   </section>
@@ -36,9 +42,12 @@ export default {
   border-bottom: 1px solid var(--rule);
   background: var(--bg-soft);
 }
+/* Five cells, one row. The 1px gap doubles as the divider rule, so the column
+   count has to divide the item count exactly — an orphan cell renders as a
+   solid rule-coloured block. Hence 5 → 1 with no intermediate step. */
 .client-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 1px;
   background: var(--rule);
   border-top: 1px solid var(--rule);
@@ -87,7 +96,7 @@ export default {
   position: relative;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .client-list {
     grid-template-columns: 1fr;
   }

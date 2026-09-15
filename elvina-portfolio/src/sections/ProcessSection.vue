@@ -1,17 +1,20 @@
 <template>
   <section class="process">
     <div class="container">
-      <div class="process-header">
+      <div v-reveal class="process-header">
         <div>
           <div class="about-eyebrow">Process</div>
-          <h2 class="process-title">Design <em>process</em></h2>
+          <h2 class="process-title">How I approach the <em>work</em>.</h2>
         </div>
         <p class="process-sub">
-          Not a waterfall. Not a vague "design thinking" loop. A sprint-based flow built for B2B
-          teams that need to ship without burning cycles on process theater.
+          Some problems need research. Some need a workflow mapped on a whiteboard. Others need a
+          realistic prototype before anyone can see what's wrong. I use enough process to make a
+          sound decision, then keep moving.
         </p>
       </div>
-      <div class="process-grid">
+      <!-- Whole grid, not per step — same 1px-gap-as-rule constraint as the
+           client list: fading cells individually shows the rule through. -->
+      <div v-reveal="90" class="process-grid">
         <div v-for="step in steps" :key="step.num" class="process-step">
           <div class="step-num">{{ step.num }}</div>
           <!-- eslint-disable-next-line vue/no-v-html -->
@@ -31,33 +34,23 @@ export default {
       steps: [
         {
           num: '01',
-          title: '<em>Understand the problem</em>',
-          body: "I don't open Figma until I understand the business goal, user workflow, technical constraints, and what's already been tried. Most design problems start long before the first screen.",
+          title: '<em>Get the real context</em>',
+          body: 'I speak with product, engineering, and the people who understand the day-to-day work. I clarify who does what, where the current process breaks, and what the business actually needs to change.',
         },
         {
           num: '02',
-          title: '<em>Design the system first</em>',
-          body: 'Information architecture, workflows, permissions, and content hierarchy come before UI. Strong visuals can’t compensate for weak product logic.',
+          title: '<em>Work out how the product behaves</em>',
+          body: 'For complex products, the screen is the final layer. I map the structure, roles, permissions, states, and dependencies first, along with what should happen when something fails or falls outside the expected flow.',
         },
         {
           num: '03',
-          title: '<em>Validate with realistic interfaces</em>',
-          body: 'I move into high fidelity earlier than most designers because stakeholders respond more accurately to products that feel real. It leads to faster decisions and fewer revisions.',
+          title: '<em>Design something the team can challenge</em>',
+          body: 'Once the logic is stable enough, I move into realistic interfaces and prototype the interactions carrying the most risk. This is usually where vague requirements become visible and disagreements become much easier to resolve.',
         },
         {
           num: '04',
-          title: '<em>Prototype high risk interactions</em>',
-          body: 'Not everything needs a prototype. Complex workflows, permissions, edge cases, and multi-step tasks do. Those interactions get tested before engineering begins implementation.',
-        },
-        {
-          num: '05',
-          title: '<em>Prepare for implementation</em>',
-          body: "Every handoff includes specifications, component guidance, interaction notes, and edge cases. Engineers shouldn't have to interpret design decisions, they should be able to build them confidently.",
-        },
-        {
-          num: '06',
-          title: '<em>Learn after launch</em>',
-          body: "Shipping isn't the finish line. I look at feedback, recurring friction, and adoption patterns to improve the next iteration.",
+          title: '<em>Stay through implementation</em>',
+          body: "I document the details engineers shouldn't have to guess, review the built experience, and work with engineering and QA to close the remaining gaps. A good Figma file isn't the result. The working product is.",
         },
       ],
     };
@@ -112,9 +105,11 @@ export default {
   line-height: 1.6;
   color: var(--ink-soft);
 }
+/* Four steps in a 2×2 — the gap-as-rule trick leaves a solid orphan cell if the
+   column count doesn't divide the step count. */
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   background: var(--rule);
   border: 1px solid var(--rule);
@@ -179,11 +174,6 @@ export default {
   color: var(--ink-soft);
 }
 
-@media (max-width: 1024px) {
-  .process-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 @media (max-width: 900px) {
   .process {
     padding: 80px 0;

@@ -1,366 +1,472 @@
 <template>
   <div class="case-page case-page--atlas">
     <!-- HERO -->
-    <section class="case-hero">
+    <section class="case-hero is-dark">
+      <div class="hero-noise"></div>
       <div class="container">
         <router-link :to="{ path: '/home', hash: '#work' }" class="back-link"
           >← All case studies</router-link
         >
-        <div class="case-eyebrow">Case Study · Recruitment · EY National Business Competition 2024 Winner</div>
+        <div class="case-eyebrow">Case Study · Recruitment</div>
         <h1 class="case-h1">Atlas ATS</h1>
-        <p class="case-tagline">
-         Redesigned a legacy ATS into a modern collaborative hiring engine including SIFT AI, the platform's candidate querying and comparison feature. 
-         Built for the pace and stakes of executive search.
+        <p class="case-subhead">
+          Turning a legacy ATS into a decision workspace for executive search
         </p>
 
-        <div class="case-meta-strip">
-          <div class="meta-item">
-            <div class="meta-label">Role</div>
-            <div class="meta-value">Lead UX/UI Designer</div>
+        <template v-if="published">
+          <div class="case-lede">
+            <p>
+              Executive search involves more than moving candidates through stages. Recruiters
+              need to define nuanced requirements, assess evidence, coordinate internally, and
+              present confident recommendations to clients.
+            </p>
+            <p>
+              I redesigned Atlas around that work, from opening a role to building a shortlist,
+              and later designed SIFT AI, its candidate querying and comparison feature.
+            </p>
           </div>
-          <div class="meta-item">
-            <div class="meta-label">Engagement</div>
-            <div class="meta-value">Freelance · Retainer</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Timeline</div>
-            <div class="meta-value">2023 — 2024</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Platform</div>
-            <div class="meta-value">Web</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Industry</div>
-            <div class="meta-value">Recruitment SaaS</div>
-          </div>
-          <div class="meta-item">
-            <div class="meta-label">Team</div>
-            <div class="meta-value">PMs · Engineers · Recruiter advisors</div>
-          </div>
-        </div>
 
-        <div class="case-cover">
-          <div class="placeholder-badge">Cover · Atlas ATS dashboard</div>
-          <img
-            :src="coverImage"
-            alt="Atlas ATS dashboard: candidate pipeline funnel, status tiles, and a new-candidates table"
-            class="cover-shot"
-          />
+          <div class="case-meta-strip">
+            <div class="meta-item">
+              <div class="meta-label">Role</div>
+              <div class="meta-value">Sole Product Designer</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Engagement</div>
+              <div class="meta-value">Freelance · Retainer</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Timeline</div>
+              <div class="meta-value">2023 — 2024</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Platform</div>
+              <div class="meta-value">Web</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Industry</div>
+              <div class="meta-value">Recruitment SaaS</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Team</div>
+              <div class="meta-value">Product Managers · Engineers · Recruiter Advisors</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Recognition</div>
+              <div class="meta-value">EY National Business Competition 2024 Winner</div>
+            </div>
+          </div>
+
+          <div class="case-cover">
+            <div class="placeholder-badge">Cover · Atlas ATS dashboard</div>
+            <img
+              :src="coverImage"
+              alt="Atlas ATS dashboard: candidate pipeline funnel, status tiles, and a new-candidates table"
+              class="cover-shot"
+            />
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- COMING SOON -->
+    <section v-if="!published" class="coming-soon">
+      <div class="container">
+        <div class="coming-soon-inner">
+          <div class="coming-soon-badge">
+            <span class="status-dot"></span>
+            Coming soon
+          </div>
+          <h2 class="coming-soon-title">This case study isn't published yet.</h2>
+          <p class="coming-soon-body">
+            I am still brewing this up accordingly. Or get in touch if you'd like a walkthrough
+            sooner.
+          </p>
+          <div class="coming-soon-actions">
+            <router-link :to="{ path: '/home', hash: '#work' }" class="coming-soon-secondary">
+              ← Back to case studies
+            </router-link>
+            <router-link :to="{ path: '/home', hash: '#contact' }" class="coming-soon-primary">
+              Get in touch <span class="arrow">→</span>
+            </router-link>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- OVERVIEW -->
-    <section class="section">
+    <template v-if="published">
+    <!-- THE PROBLEM -->
+    <section v-reveal class="section">
       <div class="prose-container prose">
-        <div class="section-eyebrow">Overview</div>
-        <p class="lead">
-          Atlas is an executive search and recruitment platform built for the firms that place C-suite talent under pressure and on deadline. 
-          Internally, they were running on a custom ATS that had outgrown itself.
+        <div class="section-eyebrow">The Problem</div>
+        <h2 class="section-h2">The work had outgrown the system</h2>
+        <p>
+          Atlas already stored jobs and candidate records, but much of the actual recruitment work
+          happened around it.
         </p>
         <p>
-          The workflows were manual, the UI was cluttered, and collaboration between recruiters and clients happened mostly outside the system. 
-          I came in as a freelance designer on retainer to redesign it from the ground up and 
-          eventually designed SIFT AI, the platform's core candidate querying and comparison feature.
+          Recruiters used spreadsheets to organize candidates, email threads to exchange context,
+          and separate tools to keep searches moving. The system held information, but it did not
+          give teams a reliable picture of progress, ownership, or candidate fit.
         </p>
+        <p class="lead">That created four connected problems:</p>
       </div>
-    </section>
-
-    <!-- CHALLENGE -->
-    <section class="section">
       <div class="container">
-        <div class="two-col">
-          <div class="col-label">Challenge</div>
-          <div class="prose">
-            <h2 class="section-h2">A legacy system holding the team back</h2>
-            <p>
-              The legacy ATS wasn't broken, it just couldn't keep up. 
-              Recruiters were managing executive searches across spreadsheets, email threads, 
-              and disconnected tools because the system couldn't hold the complexity of what they actually did.
-              <em>with</em> it.
+        <div class="findings-grid">
+          <div class="finding">
+            <div class="finding-num">01</div>
+            <h3 class="finding-title">The pipeline was difficult to read</h3>
+            <p class="finding-body">
+              Recruiters could not quickly understand where candidates stood, what had changed, or
+              where attention was needed.
             </p>
-            <div class="challenges">
-              <div class="challenges-label"><span class="marker">✕</span> Before — Key challenges</div>
-              <ul>
-                <li>
-                  Recruiters relied on
-                  <strong>spreadsheets, email threads, and disconnected tools</strong> to fill in
-                  what the ATS couldn't do.
-                </li>
-                <li>
-                  <strong>Candidate pipelines</strong> were hard to track or manage, with no clear
-                  sense of stage or ownership.
-                </li>
-                <li>
-                  <strong>Collaboration</strong> between recruiters and account managers was
-                  inefficient. Context lived in heads and inboxes, not the system.
-                </li>
-                <li>
-                  <strong>No intelligence layer</strong> to help surface, compare, or prioritize candidates at scale.
-                </li>
-              </ul>
-            </div>
+          </div>
+          <div class="finding">
+            <div class="finding-num">02</div>
+            <h3 class="finding-title">Role requirements lacked structure</h3>
+            <p class="finding-body">
+              Important distinctions between required and preferred qualifications were difficult
+              to carry consistently from role creation into candidate evaluation.
+            </p>
+          </div>
+          <div class="finding">
+            <div class="finding-num">03</div>
+            <h3 class="finding-title">Candidate evidence was fragmented</h3>
+            <p class="finding-body">
+              Profiles, résumés, requirement responses, notes, and team context were not brought
+              together around the hiring decision.
+            </p>
+          </div>
+          <div class="finding">
+            <div class="finding-num">04</div>
+            <h3 class="finding-title">Collaboration happened outside the product</h3>
+            <p class="finding-body">
+              Status updates and candidate context lived across inboxes, spreadsheets, and
+              individual team members rather than inside the shared workflow.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container challenge-block">
+        <div class="two-col">
+          <div class="col-label">The Design Challenge</div>
+          <div class="prose">
+            <p>
+              How could Atlas support the full executive-search process without making recruiters
+              manage another layer of administration?
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- GOAL -->
-    <section class="section">
+    <!-- MY ROLE -->
+    <section v-reveal class="section">
       <div class="container">
         <div class="two-col">
-          <div class="col-label">Goal</div>
+          <div class="col-label">My Role</div>
           <div class="prose">
-            <h2 class="section-h2">A hiring engine, not just a tracker</h2>
-            <p>The redesign had to do four things — together, not in isolation:</p>
-            <div class="challenges positive">
-              <div class="challenges-label positive">
-                <span class="marker">✓</span> Goals for the redesign
-              </div>
-              <ul>
-                <li><strong>Centralize</strong> the end-to-end hiring workflow in one place.</li>
-                <li>
-                  <strong>Improve collaboration</strong> across recruiting teams and with clients.
-                </li>
-                <li><strong>Streamline</strong> sourcing, candidate tracking, and client handoff.</li>
-                <li><strong>Increase recruiter speed</strong> and overall system usability.</li>
-                 <li><strong>Build an AI layer</strong> that actually reduces recruiter workload.</li>
-              </ul>
-            </div>
+            <p>
+              As the sole product designer, I worked with product managers, engineers, and
+              recruiter advisors to redesign the experience from initial workflow definition
+              through high-fidelity design and implementation handoff.
+            </p>
+            <p><strong>My work covered:</strong></p>
+            <ul>
+              <li>Workflow mapping and information architecture</li>
+              <li>Job creation and management</li>
+              <li>Candidate sourcing and evaluation</li>
+              <li>Pipeline and stage management</li>
+              <li>Bulk actions and workflow automation</li>
+              <li>Client and team collaboration</li>
+              <li>SIFT AI candidate querying and comparison</li>
+              <li>Responsive patterns and reusable components</li>
+              <li>Prototypes, specifications, and developer handoff</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- DESIGN PROCESS -->
-    <section class="section">
+    <!-- THE SYSTEM -->
+    <section v-reveal class="section">
+      <div class="prose-container prose">
+        <div class="section-eyebrow">The System</div>
+        <h2 class="section-h2">Designing around the decisions recruiters make</h2>
+        <p>I did not approach Atlas as a collection of screens that needed a visual refresh.</p>
+        <p>I mapped the core recruitment journey and the decisions required at each stage:</p>
+      </div>
       <div class="container">
-        <div class="section-eyebrow">Design Process</div>
-        <h2 class="section-h2">A lean, sprint-based approach</h2>
-        <div class="prose-container prose">
-          <p>
-            We followed a lean, sprint-based approach to deliver fast iterations while staying
-            closely aligned with client feedback. Each phase fed directly into the next, with early
-            artifacts surfacing decisions before pixels were ever pushed.
-          </p>
+        <div class="flow-row">
+          <template v-for="(step, i) in recruitmentJourney" :key="step">
+            <span class="flow-step">{{ step }}</span>
+            <span v-if="i < recruitmentJourney.length - 1" class="flow-arrow">→</span>
+          </template>
         </div>
+      </div>
+      <div class="prose-container prose">
+        <p style="margin-top: 32px">
+          This exposed where information was being repeated, where ownership became unclear, and
+          where recruiters were leaving the system to complete the work.
+        </p>
+        <p>The redesign focused on four product decisions.</p>
+      </div>
+    </section>
 
+    <!-- THE APPROACH -->
+    <section v-reveal class="section">
+      <div class="container">
+        <div class="section-eyebrow">The Approach</div>
         <div class="process-flow">
+          <!-- 01 -->
           <div class="process-step">
             <div class="process-step-num">01</div>
             <div class="process-step-content">
-              <h3>Kickoff & Alignment</h3>
+              <h3>Make the pipeline readable at a glance</h3>
               <p>
-                Gathered goals, challenges, and must-haves directly with the client. This was where
-                we surfaced the gap between what the legacy system did and what recruiters actually
-                needed day-to-day.
+                Recruiters often manage several roles and large candidate pools simultaneously.
+                They need to scan, compare, and act without opening every record individually.
               </p>
-              <span class="artifact-pill">Artifact · Client Empathy Map</span>
+              <p>
+                I moved Atlas toward a list-first experience that made active jobs, candidate
+                counts, pipeline status, ownership, and exceptions easier to review together.
+              </p>
+
+              <div class="image-block">
+                <img
+                  :src="hifiJobsList"
+                  alt="High-fidelity Atlas jobs list with candidate avatars, rejected/failed/declined counts, and job status"
+                />
+              </div>
+
+              <p style="margin-top: 32px">
+                Filters, search, status indicators, and bulk actions supported the way recruiters
+                actually worked through a queue. Detailed candidate cards remained useful in
+                focused contexts, but the main pipeline prioritized visibility and control.
+              </p>
+              <p>
+                The goal was not to place more information on the screen. It was to make the next
+                point of attention obvious.
+              </p>
             </div>
           </div>
 
-          <div class="image-pair">
-           <div class="image-block bg-atlas-light" >
-           <span class="placeholder-badge">Image · Client Empathy Map</span>
-             <img
-               :src="empathyMap"
-               alt="Client empathy map with Says, Thinks, Does, and Feels quadrants of sticky notes"
-               class="artifact-shot"
-             />
-           </div>
-
-              <div class="image-block" style="background: #f4ebd9;">
-               <span class="placeholder-badge">Image · Competitor Analysis</span>
-               <img
-                 :src="competitorAnalysis"
-                 alt="Competitor comparison board for JazzHR, Workable, and Freshworks with similarities, differences, and opportunities"
-                 class="artifact-shot"
-               />
-            </div>
-             </div>
+          <!-- 02 -->
           <div class="process-step">
             <div class="process-step-num">02</div>
             <div class="process-step-content">
-              <h3>Competitive Benchmarking</h3>
+              <h3>Make role setup shorter without making it shallower</h3>
               <p>
-                Studied existing ATS platforms to map what users already expected and where there
-                was room to do something smarter. Used these patterns as both reference and contrast.
+                The original Add Job workflow spread information across five steps. It asked
+                recruiters to commit to too much detail before the search could begin.
+              </p>
+              <p>
+                I reorganized the flow into three focused stages, grouping related information and
+                moving secondary configuration out of the critical path.
+              </p>
+              <div class="pattern-note">
+                <span class="pattern-icon">↻</span>
+                <div>
+                  <strong>Required vs. preferred</strong>
+                  Separating these explicitly mattered beyond the form itself. It created a clearer
+                  evaluation framework that could follow the role into candidate review.
+                </div>
+              </div>
+              <p style="margin-top: 20px">
+                The improvement was not simply fewer steps. It was a stronger connection between
+                how the role was defined and how candidates would later be assessed.
               </p>
             </div>
           </div>
 
+          <!-- 03 -->
           <div class="process-step">
             <div class="process-step-num">03</div>
             <div class="process-step-content">
-              <h3>Low-Fidelity Wireframes</h3>
+              <h3>Keep the evidence beside the decision</h3>
               <p>
-                Sketched core screens: Add Job, List View, Candidate Cards to establish structure
-                and test flows before committing to visual decisions. Wireframes were also the
-                fastest way to collect early client feedback and adjust direction.
+                Candidate evaluation becomes slower when recruiters have to reconstruct the
+                complete picture from separate tabs, files, and conversations.
               </p>
-              <span class="artifact-pill">Artifact · Core flow wireframes</span>
-            </div>
-          </div>
+              <p>
+                I designed the candidate workspace to bring requirement responses, profile
+                information, application details, and résumé content into one review experience.
+              </p>
 
-          <div class="image-block bg-atlas-mid">
-            <span class="placeholder-badge">Image · Low-fidelity wireframes</span>
-            <div class="placeholder-decor">
-              <div class="image-pair">
-                <div class="image-block" style="background: #f5f5f5;">
-                  <span class="placeholder-badge">Image · Jobs list view</span>
-                  <img
-                    :src="wireframeJobsList"
-                    alt="Low-fidelity wireframe of the jobs list view with search, filters, and status column"
-                    class="artifact-shot"
-                  />
-                </div>
-                <div class="image-block" style="background: #f5f5f5;">
-                  <span class="placeholder-badge">Image · Edit job form</span>
-                  <img
-                    :src="wireframeEditJob"
-                    alt="Low-fidelity wireframe of the edit job form with job info, work setup, and requirements"
-                    class="artifact-shot"
-                  />
-                </div>
+              <div class="image-block">
+                <img
+                  :src="hifiCandidate"
+                  alt="High-fidelity Atlas candidate view with requirement answers alongside a résumé portal"
+                />
               </div>
+
+              <p style="margin-top: 32px">
+                Recruiters could evaluate the candidate against the role while keeping the original
+                evidence visible. Status and progression controls stayed within the same context,
+                reducing the need to move between the candidate record and the pipeline.
+              </p>
+              <p>
+                This made Atlas more useful at the point where judgment was actually happening, not
+                only as a place to store the result afterward.
+              </p>
             </div>
           </div>
-          <p class="image-caption">
-            Low-fidelity wireframes — Add Job flow, list view, and candidate cards
-          </p>
 
+          <!-- 04 -->
           <div class="process-step">
             <div class="process-step-num">04</div>
             <div class="process-step-content">
-              <h3>High-Fidelity Design in Figma</h3>
+              <h3>Use AI to support comparison, not replace judgment</h3>
               <p>
-                Built out detailed UI mockups focused on clarity, hierarchy, and ease of use. Every
-                screen was designed against recruiter task flows, not just visual polish so the
-                high-fi work directly answered the goals we'd set at kickoff.
+                As Atlas evolved, I designed SIFT AI to help recruiters query and compare candidate
+                information across a search.
+              </p>
+              <p>
+                The feature addressed a specific problem: once a search contains many qualified
+                candidates, finding meaningful differences manually becomes slow and inconsistent.
+              </p>
+              <p>
+                SIFT allowed recruiters to interrogate the candidate pool and compare relevant
+                information without giving the system final authority over the hiring decision.
+              </p>
+              <p>
+                The recruiter remained responsible for defining what mattered and interpreting the
+                result. AI reduced the effort required to retrieve and organize evidence; it did
+                not decide who should be hired.
               </p>
             </div>
           </div>
-          <div class="image-pair">
-            <div class="image-block bg-atlas-dark">
-              <span class="placeholder-badge">Image · Jobs list</span>
-              <img
-                :src="hifiJobsList"
-                alt="High-fidelity Atlas jobs list with candidate avatars, rejected/failed/declined counts, and job status"
-                class="artifact-shot"
-              />
-            </div>
-            <div class="image-block bg-atlas-dark">
-              <span class="placeholder-badge">Image · Candidate view</span>
-              <img
-                :src="hifiCandidate"
-                alt="High-fidelity Atlas candidate view with requirements answers alongside a resume portal"
-                class="artifact-shot"
-              />
-            </div>
-          </div>
-          <p class="image-caption">
-            High-fidelity UI — focused on clarity, hierarchy, and ease of use
-          </p>
         </div>
-        <div class="process-step">
-            <div class="process-step-num">05</div>
-            <div class="process-step-content">
-              <h3>SIFT AI</h3>
-              <p>
-                Designed the AI-powered candidate querying and comparison feature. 
-                SIFT lets recruiters query, compare, and manage candidates automatically, 
-                reducing the manual screening load that was previously handled outside the system entirely.
-              </p>
-            </div>
-          </div>
       </div>
     </section>
 
-    <!-- RESULTS -->
-    <section class="section">
+    <!-- DESIGN SYSTEM -->
+    <section v-reveal class="section">
+      <div class="prose-container prose">
+        <div class="section-eyebrow">Design System</div>
+        <h2 class="section-h2">Building one product language</h2>
+        <p>
+          The redesign also needed a reusable interface foundation. Atlas contained repeated
+          structures across jobs, candidates, pipelines, filters, status controls, tables, and
+          forms.
+        </p>
+        <p>
+          I created reusable components and responsive patterns so that new workflows could build
+          from established behavior instead of introducing another one-off solution.
+        </p>
+        <p>
+          The system supported both dense operational views and more focused candidate-review
+          experiences while keeping navigation, actions, and status treatment consistent.
+        </p>
+      </div>
+    </section>
+
+    <!-- OUTCOMES -->
+    <section v-reveal class="section">
       <div class="container">
         <div class="outcomes">
           <div class="container">
-            <div class="section-eyebrow">Results</div>
-            <h2 class="section-h2">What the redesign actually changed</h2>
+            <div class="section-eyebrow">Outcomes</div>
+            <h2 class="section-h2">What changed</h2>
+            <div class="prose" style="max-width: 720px">
+              <p style="color: rgba(255, 255, 255, 0.8)">
+                The redesign moved Atlas beyond basic applicant tracking and gave executive-search
+                teams a more connected working environment.
+              </p>
+            </div>
             <div class="outcomes-grid">
               <div>
-                <div class="outcome-stat">Less task-switching</div>
-                <div class="outcome-label">Visibility</div>
+                <div class="outcome-stat">A visible search pipeline</div>
                 <div class="outcome-desc">
-                  Improved visibility across the hiring workflow meant recruiters spent less time
-                  hunting for information across tools.
+                  Jobs, candidate stages, ownership, and areas requiring attention could be
+                  reviewed from a clearer operational view.
                 </div>
               </div>
               <div>
-                <div class="outcome-stat">Better collaboration</div>
-                <div class="outcome-label">Cross-functional</div>
+                <div class="outcome-stat">A more focused Add Job flow</div>
                 <div class="outcome-desc">
-                  Increased cross-functional team collaboration — especially with clients — as
-                  context lived in the system, not in inboxes.
+                  Role creation was reduced from five stages to three, with required and preferred
+                  qualifications carried into the evaluation structure.
                 </div>
               </div>
               <div>
-                <div class="outcome-stat">Clearer ownership</div>
-                <div class="outcome-label">Early tester feedback</div>
+                <div class="outcome-stat">Candidate evidence in one workspace</div>
                 <div class="outcome-desc">
-                  Testers reported clearer ownership, faster updates, and less manual tracking across
-                  the candidate pipeline.
+                  Candidate details, requirement responses, résumé content, and progression
+                  controls were brought closer to the hiring decision.
                 </div>
               </div>
               <div>
-                <div class="outcome-stat">Ready to scale</div>
-                <div class="outcome-label">Growth-ready platform</div>
+                <div class="outcome-stat">Less dependence on disconnected tools</div>
                 <div class="outcome-desc">
-                  Positioned Atlas to scale alongside the business — the system can hold more
-                  recruiters, clients, and complexity without breaking.
+                  The product created shared places for candidate status, ownership, and search
+                  context that previously lived across separate working documents and
+                  conversations.
                 </div>
               </div>
+              <div>
+                <div class="outcome-stat">AI-assisted querying and comparison</div>
+                <div class="outcome-desc">
+                  SIFT introduced a faster way to examine and compare candidate information while
+                  keeping recruiters responsible for the decision.
+                </div>
+              </div>
+              <div>
+                <div class="outcome-stat">A reusable foundation</div>
+                <div class="outcome-desc">
+                  Shared components and interaction patterns gave the platform a more consistent
+                  base for future workflows and product growth.
+                </div>
+              </div>
+            </div>
+            <div class="prose outcomes-caveat">
+              <p style="color: rgba(255, 255, 255, 0.65)">
+                Atlas was later recognized through the EY National Business Competition 2024.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONCLUSION -->
-    <section class="section">
+    <!-- LEARNINGS -->
+    <section v-reveal class="section">
       <div class="container">
         <div class="conclusion">
           <div class="container">
-            <div class="section-eyebrow">Conclusion</div>
+            <div class="section-eyebrow">What I Learned</div>
             <p class="conclusion-quote">
-              The redesign transformed Atlas from a legacy tool into a
-              <em>collaborative hiring engine</em>. By focusing on clarity, task efficiency, and
-              recruiter collaboration, the system now supports the fast pace and high stakes of
-              executive search — instead of slowing it down.
+              Recruitment software should not make every decision for the recruiter. It should
+              make the evidence easier to find, the process easier to follow, and ownership harder
+              to lose.
+            </p>
+            <p class="conclusion-quote">
+              The strongest part of the redesign was not adding more functionality. It was bringing
+              the information and actions surrounding a hiring decision into the same
+              <em>working context</em>.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- NEXT PHASE -->
-    <section class="section">
+    <!-- WHAT CAME NEXT -->
+    <section v-reveal class="section">
       <div class="container">
         <div class="prose-container">
           <div class="next-phase">
-            <div class="next-phase-label">Conclusion</div>
-            <h3>A visual and functional upgrade — without losing the recruiter-first feel</h3>
+            <div class="next-phase-label">What Came Next</div>
+            <h3>More was already scoped</h3>
             <p>
-              Atlas went from a legacy tool to a collaborative hiring engine with an AI layer that actually ships. 
-              By focusing on clarity, recruiter workflows, and building SIFT AI as a first-class feature. 
-              The system now supports the pace and stakes of executive search instead of slowing it down.
-            </p>
-            <p>
-              Before the engagement wrapped, the next wave of work was already scoped. 
-              A faster Add Job flow, streamlined automation setup, and early exploration of AI-powered candidate suggestions and screening prompts.
+              Before the engagement concluded, additional work was explored around faster role
+              creation, stage automation, candidate suggestions, and AI-assisted screening prompts.
             </p>
             <div class="nda-note">
               <span class="lock">🔒</span>
               <span
-                >Due to NDA restrictions, designs for the newest version cannot be publicly shared at
-                this time. Happy to walk through them in conversation.</span
+                >Due to NDA restrictions, the newest version of Atlas and portions of SIFT AI
+                cannot be shown publicly. I can walk through my decisions and contribution during
+                an interview.</span
               >
             </div>
           </div>
@@ -369,23 +475,20 @@
     </section>
 
     <!-- NEXT CASE -->
-    <section class="next-case">
+    <section v-reveal class="next-case">
       <div class="container">
-        <router-link to="/case-studies/navix" class="next-case-link">
+        <router-link to="/case-studies/truckpedia" class="next-case-link">
           <div class="next-label">Next case study</div>
-          <div class="next-title"><em>Navix Health</em> <span class="next-arrow">→</span></div>
+          <div class="next-title"><em>Truckpedia</em> <span class="next-arrow">→</span></div>
         </router-link>
       </div>
     </section>
+    </template>
   </div>
 </template>
 
 <script>
 import coverImage from '@/assets/atlas-cover-dashboard.png';
-import empathyMap from '@/assets/atlas-empathy-map.png';
-import competitorAnalysis from '@/assets/atlas-competitor-analysis.png';
-import wireframeJobsList from '@/assets/atlas-wireframe-jobs-list.png';
-import wireframeEditJob from '@/assets/atlas-wireframe-edit-job.png';
 import hifiJobsList from '@/assets/atlas-hifi-jobs-list.png';
 import hifiCandidate from '@/assets/atlas-hifi-candidate.png';
 
@@ -393,13 +496,21 @@ export default {
   name: 'CaseStudyAtlas',
   data() {
     return {
+      // Flip to true once the refreshed Atlas write-up is ready to publish —
+      // the full case study markup below stays intact, just gated behind
+      // this while the "coming soon" state is shown instead.
+      published: false,
       coverImage,
-      empathyMap,
-      competitorAnalysis,
-      wireframeJobsList,
-      wireframeEditJob,
       hifiJobsList,
       hifiCandidate,
+      recruitmentJourney: [
+        'Define the role',
+        'Source candidates',
+        'Evaluate fit',
+        'Progress the search',
+        'Compare the shortlist',
+        'Present candidates',
+      ],
     };
   },
 };
@@ -407,23 +518,30 @@ export default {
 
 <style scoped>
 .case-page--atlas {
-  --accent: #E8623C;
+  --accent: #e8623c;
+}
+.case-page--atlas .case-hero {
+  --hero-gradient: linear-gradient(150deg, #14161f 0%, #2d3142 45%, #4f5b7c 78%, #8093b0 100%);
 }
 .case-page--atlas .case-meta-strip {
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
-.case-page--atlas .process-flow {
-  overflow: visible;
+.case-page--atlas .meta-value {
+  font-size: 17px;
 }
-
-.case-page--atlas .process-step {
-  overflow: visible;
+.case-page--atlas .findings-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
-.case-page--atlas .prose p.lead::first-letter {
-  color: #E8623C !important;
+.case-page--atlas .outcomes-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
-/* Real screenshots — contained rather than cropped, so artifact boards
-   (empathy map, competitor grid, wireframes) stay readable end to end. */
+.case-page--atlas .outcomes-caveat {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+/* Real screenshots — contained rather than cropped, so the dense table and
+   candidate-detail layouts stay readable end to end. */
 .case-page--atlas .cover-shot {
   max-width: 92%;
   max-height: 84%;
@@ -431,36 +549,227 @@ export default {
   border-radius: 10px;
   box-shadow: 0 24px 60px -16px rgba(0, 0, 0, 0.45);
 }
-.case-page--atlas .artifact-shot {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  padding: 28px;
-}
-.case-page--atlas .image-pair .artifact-shot {
-  padding: 20px;
-}
-.case-page--atlas .image-pair {
-  align-items: stretch;
-}
-
-.case-page--atlas .image-pair .image-block {
-  min-height: 360px;
-}
 .case-page--atlas .case-cover {
   background: linear-gradient(135deg, #2d3142 0%, #4f5b7c 50%, #8093b0 100%);
   box-shadow: 0 32px 80px -24px rgba(45, 49, 66, 0.4);
 }
-.bg-atlas-light {
-  background: linear-gradient(135deg, #4f5b7c 0%, #8093b0 60%, #a8b5cc 100%);
+.case-page--atlas .image-block {
+  height: 480px;
+  min-height: 0;
+  background: var(--bg-soft);
 }
-.bg-atlas-mid {
-  background: linear-gradient(135deg, #2d3142 0%, #4f5b7c 60%, #6a7693 100%);
+.case-page--atlas .image-block img {
+  max-width: 92%;
+  max-height: 88%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 20px 44px -16px rgba(0, 0, 0, 0.25);
 }
-.bg-atlas-dark {
-  background: linear-gradient(135deg, #1c1f2c 0%, #2d3142 60%, #4f5b7c 100%);
+
+/* COMING SOON — replaces the full write-up while `published` is false. */
+.coming-soon {
+  padding: 160px 0 200px;
 }
-.bg-warm {
-  background: linear-gradient(135deg, #f4ebe0 0%, #e8d4b8 50%, #c8a572 100%);
+.coming-soon-inner {
+  max-width: 620px;
+  margin: 0 auto;
+  text-align: center;
+}
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 18px;
+  margin-bottom: 32px;
+  border-radius: 999px;
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.coming-soon-badge .status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  animation: statusPulse 1.8s ease-in-out infinite;
+}
+@keyframes statusPulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+.coming-soon-title {
+  font-family: var(--display);
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin-bottom: 20px;
+  font-variation-settings: 'opsz' 96, 'wdth' 95;
+}
+.coming-soon-body {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+  margin-bottom: 40px;
+}
+.coming-soon-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.coming-soon-secondary {
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.coming-soon-secondary:hover {
+  color: var(--accent);
+}
+.coming-soon-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  background: var(--ink);
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px -4px rgba(11, 11, 10, 0.2);
+}
+.coming-soon-primary:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -8px rgba(139, 58, 47, 0.4);
+}
+.coming-soon-primary .arrow {
+  transition: transform 0.25s;
+}
+.coming-soon-primary:hover .arrow {
+  transform: translateX(4px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .coming-soon-badge .status-dot {
+    animation: none;
+  }
+}
+@media (max-width: 900px) {
+  .coming-soon {
+    padding: 100px 0 120px;
+  }
+}
+
+/* Hero dek + lede — same pattern as CaseStudyNavix.vue / CaseStudyCPS.vue. */
+.case-subhead {
+  font-family: var(--display);
+  font-size: clamp(22px, 2.6vw, 30px);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: white;
+  max-width: 760px;
+  margin-bottom: 24px;
+  font-variation-settings: 'opsz' 48, 'wdth' 95;
+  animation: fadeUp 0.8s ease-out 0.2s both;
+}
+.case-lede {
+  max-width: 720px;
+  margin-bottom: 64px;
+  animation: fadeUp 0.8s ease-out 0.26s both;
+}
+.case-lede p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 16px;
+}
+.case-lede p:last-child {
+  margin-bottom: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .case-subhead,
+  .case-lede {
+    animation: none;
+  }
+}
+
+/* Design-challenge divider, same treatment as the other case studies. */
+.case-page--atlas .challenge-block {
+  margin-top: 96px;
+  padding-top: 56px;
+  border-top: 1px solid var(--rule);
+}
+
+/* Flow row — "A → B → C" sequences as pills, same component as CPS's trust
+   loop / trip lifecycle. */
+.flow-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin: 28px 0;
+}
+.flow-step {
+  padding: 10px 18px;
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.flow-arrow {
+  color: var(--accent);
+  font-family: var(--mono);
+  flex-shrink: 0;
+}
+
+/* Closing statement — smaller than the shared hero-scale pull-quote, with
+   spacing between the two stacked paragraphs. */
+.case-page--atlas .conclusion-quote {
+  font-size: clamp(22px, 2.3vw, 27px);
+  font-weight: 400;
+  line-height: 1.55;
+  max-width: none;
+}
+.case-page--atlas .conclusion-quote + .conclusion-quote {
+  margin-top: 28px;
+}
+.case-page--atlas .conclusion {
+  padding: 64px 0;
+}
+
+@media (max-width: 900px) {
+  .case-page--atlas .case-meta-strip {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .case-page--atlas .findings-grid {
+    grid-template-columns: 1fr;
+  }
+  .case-page--atlas .image-block {
+    height: 340px;
+  }
 }
 </style>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220">
+  <!-- x/y/width/height pinned to exactly the rect's own bounds (not the
+       filter's default -10%/120% region) — stitchTiles stitches the
+       primitive subregion, and if that region is bigger than the tile
+       CSS actually repeats, the first tile renders visibly different
+       from its neighbors instead of tiling seamlessly. -->
+  <filter id="n" x="0%" y="0%" width="100%" height="100%">
+    <feTurbulence
+      type="fractalNoise"
+      baseFrequency="0.7"
+      numOctaves="3"
+      stitchTiles="stitch"
+      seed="7"
+      x="0%"
+      y="0%"
+      width="100%"
+      height="100%"
+    />
+    <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 1 0" />
+  </filter>
+  <rect width="220" height="220" filter="url(#n)" />
+</svg>

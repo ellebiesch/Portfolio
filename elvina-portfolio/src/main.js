@@ -7,8 +7,11 @@ import VueLazyLoad from 'vue-lazyload-next'
 import vuetify from './plugins/vuetify';
 import router from './router';
 import { MotionPlugin } from '@vueuse/motion';
+import reveal from './directives/reveal';
 
 const app = createApp(App);
+
+app.directive('reveal', reveal);
 
 app.use(MotionPlugin).use(router).use(vuetify)
 .use(VueLazyLoad, {

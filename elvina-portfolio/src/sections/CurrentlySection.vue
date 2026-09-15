@@ -2,12 +2,17 @@
   <section class="currently">
     <div class="container">
       <div class="currently-grid">
-        <div>
-          <div class="about-eyebrow">Now</div>
-          <h2 class="currently-title">Currently</h2>
+        <div v-reveal>
+          <div class="about-eyebrow">Currently</div>
+          <h2 class="currently-title">Away from the <em>screens</em>.</h2>
         </div>
         <div class="currently-list">
-          <div v-for="item in items" :key="item.label" class="now-item">
+          <div
+            v-for="(item, i) in items"
+            :key="item.label"
+            v-reveal="100 + i * 90"
+            class="now-item"
+          >
             <div class="now-label">{{ item.label }}</div>
             <!-- eslint-disable-next-line vue/no-v-html -->
             <div class="now-content" v-html="item.content"></div>
@@ -26,26 +31,21 @@ export default {
     return {
       items: [
         {
-          label: 'Working on',
-          content: 'Bunch of things I wanted to do during childhood.',
-          time: 'These days',
-        },
-        {
           label: 'Reading',
           content:
-            "M. Krogerous & R. Tschappeler's <em>The Decision Book</em>. Plus essentialism by Greg McKeown.",
+            '<em>The Decision Book</em> by Mikael Krogerus and Roman Tschäppeler, alongside <em>Essentialism</em> by Greg McKeown.',
           time: 'Ongoing',
         },
         {
           label: 'Building',
           content:
-            'A library of structured UX skills for AI-assisted design workflows — heuristic reviewers, critique partners, QA tooling.',
+            'A set of reusable UX review, critique, and QA workflows for AI-assisted product design. Mainly because I like finding repeatable ways to catch problems before they get expensive.',
           time: '2026',
         },
         {
           label: 'Off-hours',
           content:
-            'Drumming in worship contexts. Slowly building toward a real <em>Zildjian</em> setup. Playing with my cats. Coffee hopping. Badminton.',
+            'Learning drums, playing badminton, long walks, coffee hopping, and slowly building a proper <em>Zildjian</em> setup while eight cats monitor the budget.',
           time: 'Weekends',
         },
       ],
@@ -72,6 +72,11 @@ export default {
   line-height: 0.98;
   letter-spacing: -0.025em;
   font-variation-settings: 'opsz' 96, 'wdth' 95;
+}
+.currently-title em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--accent);
 }
 .currently-list {
   display: flex;

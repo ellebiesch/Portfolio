@@ -2,11 +2,12 @@
   <div class="main-page">
     <hero-section />
     <clients-section />
-    <about-section />
-    <process-section />
-    <tools-section />
+    <engagement-section />
     <work-section />
+    <about-section />
     <services-section />
+    <process-section />
+    <strengths-section />
     <testimonials-section />
     <currently-section />
   </div>
@@ -15,9 +16,10 @@
 <script>
 import HeroSection from '@/sections/HeroSection.vue';
 import ClientsSection from '@/sections/ClientsSection.vue';
+import EngagementSection from '@/sections/EngagementSection.vue';
 import AboutSection from '@/sections/AboutSection.vue';
 import ProcessSection from '@/sections/ProcessSection.vue';
-import ToolsSection from '@/sections/ToolsSection.vue';
+import StrengthsSection from '@/sections/StrengthsSection.vue';
 import WorkSection from '@/sections/WorkSection.vue';
 import ServicesSection from '@/sections/ServicesSection.vue';
 import TestimonialsSection from '@/sections/TestimonialsSection.vue';
@@ -28,9 +30,10 @@ export default {
   components: {
     HeroSection,
     ClientsSection,
+    EngagementSection,
     AboutSection,
     ProcessSection,
-    ToolsSection,
+    StrengthsSection,
     WorkSection,
     ServicesSection,
     TestimonialsSection,

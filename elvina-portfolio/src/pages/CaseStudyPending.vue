@@ -1,26 +1,40 @@
 <template>
   <div class="case-page case-page--pending">
     <!-- HERO -->
-    <section class="case-hero">
-      <div class="container">
-        <router-link :to="{ path: '/home', hash: '#work' }" class="back-link"
-          >← All case studies</router-link
-        >
-        <div class="case-eyebrow">{{ meta.eyebrow }}</div>
-        <h1 class="case-h1"><em>{{ meta.title }}</em></h1>
-        <p class="case-tagline">{{ meta.tagline }}</p>
+    <section class="cps-hero">
+      <div class="cps-hero-glow"></div>
+      <div class="hero-noise"></div>
+      <div class="container cps-hero-inner">
+        <div class="cps-hero-top">
+          <router-link :to="{ path: '/home', hash: '#work' }" class="back-link back-link--light"
+            >← All case studies</router-link
+          >
+          <span class="cps-badge">CPS</span>
+        </div>
 
-        <div class="case-meta-strip">
-          <div v-for="item in meta.facts" :key="item.label" class="meta-item">
-            <div class="meta-label">{{ item.label }}</div>
-            <div class="meta-value">{{ item.value }}</div>
+        <div class="cps-hero-copy">
+          <div class="cps-eyebrow">{{ meta.eyebrow }}</div>
+          <h1 class="cps-h1"><em>{{ meta.title }}</em></h1>
+          <p class="cps-hero-meta-line">
+            <template v-for="(item, i) in meta.facts" :key="item.label">
+              <span>{{ item.value }}</span
+              ><span v-if="i < meta.facts.length - 1" class="sep">·</span>
+            </template>
+          </p>
+        </div>
+
+        <div class="cps-hero-phone">
+          <img :src="heroShot" alt="Driver CPS score screen on the Cargoos mobile app" class="cps-phone-img" />
+          <div class="cps-glass-bar">
+            <span class="spark">✦</span>
+            <span>660 CPS Score · Good — 70 points to Elite</span>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTEXT -->
-    <section class="section">
+    <section v-reveal class="section">
       <div class="prose-container prose">
         <div class="section-eyebrow">A bit of context</div>
         <p class="lead">{{ meta.context }}</p>
@@ -28,7 +42,7 @@
     </section>
 
     <!-- COMING SOON -->
-    <section class="section">
+    <section v-reveal class="section">
       <div class="container">
         <div class="coming-soon">
           <div class="coming-soon-inner">
@@ -63,6 +77,8 @@
 </template>
 
 <script>
+import heroShot from '@/assets/work/cargoos-cps-score-mobile.png';
+
 const CASE_STUDIES = [
   { to: '/case-studies/navix', name: 'Navix Health' },
   { to: '/case-studies/atlas', name: 'Atlas ATS' },
@@ -79,6 +95,9 @@ const FALLBACK = {
 
 export default {
   name: 'CaseStudyPending',
+  data() {
+    return { heroShot };
+  },
   computed: {
     meta() {
       return { ...FALLBACK, ...(this.$route.meta.caseInfo || {}) };
@@ -94,9 +113,170 @@ export default {
 .case-page--pending {
   --accent: #000000;
 }
-.case-page--pending .case-meta-strip {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+/* ============================================================
+   CPS HERO — full-bleed, using the same dark/orange gradient as
+   the Cargoos card preview (preview-cargoos in CaseCard.vue), with
+   the real mobile screenshot floating over it instead of a mockup.
+============================================================ */
+.cps-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 140px 0 0;
+  background: linear-gradient(150deg, #0b0b0a 0%, #241f1a 45%, #4a3226 78%, #6b3d26 100%);
+  color: white;
+}
+.cps-hero-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 15%, rgba(232, 98, 60, 0.28) 0%, transparent 55%),
+    radial-gradient(circle at 85% 70%, rgba(200, 165, 114, 0.16) 0%, transparent 50%);
+  pointer-events: none;
+}
+.cps-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+.cps-hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  animation: fadeUp 0.7s ease-out both;
+}
+.back-link--light {
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 0;
+}
+.back-link--light:hover {
+  color: var(--accent-soft, #d87657);
+}
+.cps-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.cps-hero-copy {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 72px;
+  animation: fadeUp 0.85s ease-out 0.1s both;
+}
+.cps-eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f0a888;
+  margin-bottom: 24px;
+}
+.cps-h1 {
+  font-family: var(--display);
+  font-size: clamp(44px, 7vw, 96px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-variation-settings: 'opsz' 96, 'wdth' 90;
+  margin-bottom: 24px;
+}
+.cps-h1 em {
+  font-style: italic;
+  font-weight: 400;
+}
+.cps-hero-meta-line {
+  font-family: var(--mono);
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.65);
+}
+.cps-hero-meta-line .sep {
+  margin: 0 10px;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* Floating phone + glass callout.
+   The callout used to float as an absolutely-positioned overlay near the
+   bottom of the screenshot, which put it on top of the phone's own tab bar —
+   half on light content, half on dark, unreadable either way. It now sits
+   below the phone entirely, so it never competes with real app content and
+   always reads against the plain gradient. */
+.cps-hero-phone {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 90px;
+  animation: fadeUp 0.9s ease-out 0.2s both;
+}
+.cps-phone-img {
+  width: min(78vw, 340px);
+  border-radius: 44px;
+  box-shadow: 0 40px 90px -24px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  animation: cps-float 6s ease-in-out infinite;
+}
+@keyframes cps-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+.cps-glass-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(84vw, 380px);
+  padding: 14px 22px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(14px) saturate(160%);
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+  text-align: center;
+  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5);
+}
+.cps-glass-bar .spark {
+  color: #f0a888;
+  flex-shrink: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cps-phone-img,
+  .cps-hero-top,
+  .cps-hero-copy,
+  .cps-hero-phone {
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .cps-hero {
+    padding-top: 110px;
+  }
+  .cps-hero-top {
+    margin-bottom: 48px;
+  }
+  .cps-hero-copy {
+    margin-bottom: 56px;
+  }
+  .cps-glass-bar {
+    font-size: 12px;
+    padding: 12px 18px;
+  }
 }
 
 .coming-soon {

@@ -2,38 +2,31 @@
   <section id="about" class="about">
     <div class="container">
       <div class="about-grid">
-        <div>
+        <div v-reveal>
           <div class="about-eyebrow">About</div>
           <h2 class="about-title">Hey, I'm <em>Elvina</em>.</h2>
         </div>
-        <div class="about-body">
+        <div v-reveal="120" class="about-body">
           <p>
-            I design software because I believe too many enterprise products ask people to work
-            around the software instead of with it.
+            I'm usually the designer asked to look at the part of the product everyone has quietly
+            agreed is “a bit complicated.” Sometimes that means rebuilding a legacy workflow.
+            Sometimes it means working out an entirely new module from a long specification, several
+            conversations, and a suspicious number of open questions. Either way, I want to
+            understand how the work is actually done before deciding what belongs on the screen.
           </p>
           <p>
-            The people I design for aren't casually browsing. They're clinicians documenting patient
-            care, operations teams coordinating hundreds of moving parts, recruiters making hiring
-            decisions, and dispatchers keeping businesses running. Their software shouldn't add
-            cognitive load, it should remove it. That's where I do my best work: translating messy
-            operational problems into products people can trust under pressure.
+            Over the past six years I've worked across healthcare, logistics, recruitment, finance,
+            conversational AI, and operational SaaS. I move between the larger product structure and
+            the details that quietly break a workflow: unclear ownership, missing states,
+            conflicting permissions, information arriving too late to be useful.
           </p>
           <p>
-            Over the past six years I've worked across healthcare, logistics, recruitment, and
-            operational SaaS, partnering closely with founders, product managers, and engineers to
-            design products from early concepts through implementation.
+            I ask <em>why</em> a lot. Not to make the process heavier, but because the first request
+            is rarely the real problem. My background in information technology also means I'm
+            comfortable discussing system behavior, implementation constraints, and what engineering
+            needs beyond a polished handoff. I care about visual craft. I just don't separate it
+            from whether the product makes sense.
           </p>
-          <p>
-            I ask a lot of <em>why</em>. I challenge requirements when they don't solve the user's
-            problem. I push back on complexity when simpler solutions exist. I'd rather spend two
-            extra hours questioning an idea than spend two years supporting the wrong one.
-          </p>
-          <p>
-            The best software isn't the software people admire. It's the software they stop noticing
-            because it fits naturally into how they already think and work. That's what I'm building
-            toward with every product.
-          </p>
-
         </div>
       </div>
     </div>

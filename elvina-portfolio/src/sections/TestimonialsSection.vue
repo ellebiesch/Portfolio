@@ -1,11 +1,9 @@
 <template>
   <section class="testimonial">
     <div class="container">
-      <div class="testimonial-label">Testimonials</div>
-      <p class="testimonial-intro">
-        Trusted by founders and product teams building products that people rely on every day.
-      </p>
-      <div class="carousel">
+      <div v-reveal class="testimonial-label">Testimonials</div>
+      <h2 v-reveal="80" class="testimonial-title">What it's like to <em>work with me</em>.</h2>
+      <div v-reveal="160" class="carousel">
         <div class="carousel-track">
           <div
             v-for="(slide, i) in slides"
@@ -73,7 +71,7 @@ export default {
           after: ' on our product experience and internal workflows.',
           initial: 'J',
           name: 'Justin Lu',
-          role: 'CEO & Co-founder, Truckpedia',
+          role: 'CEO and Co-founder, Truckpedia',
         },
         {
           before:
@@ -161,12 +159,21 @@ export default {
   align-items: center;
   gap: 12px;
 }
-.testimonial-intro {
-  font-size: 19px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 680px;
-  margin-bottom: 56px;
+.testimonial-title {
+  font-family: var(--display);
+  font-size: clamp(36px, 4.5vw, 64px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: white;
+  max-width: 900px;
+  margin-bottom: 64px;
+  font-variation-settings: 'opsz' 96, 'wdth' 95;
+}
+.testimonial-title em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--accent-soft);
 }
 .quote {
   font-family: var(--display);
