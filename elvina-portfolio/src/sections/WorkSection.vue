@@ -151,8 +151,14 @@ export default {
 }
 .work-title em {
   font-style: normal;
-  font-weight: 500;
-  color: var(--accent);
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--fire-5);
+  background: var(--fire-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .work-sub {
   margin-top: 24px;

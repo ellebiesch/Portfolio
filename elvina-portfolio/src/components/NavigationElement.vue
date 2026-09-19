@@ -72,7 +72,7 @@ nav .container {
   color: var(--ink);
   text-decoration: none;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
   transition: color 0.2s;
   position: relative;
 }
@@ -94,7 +94,7 @@ nav .container {
   font-weight: 500;
   padding: 10px 18px;
   border-radius: 999px;
-  background: var(--accent);
+  background: var(--fire-gradient);
   color: white !important;
   transition: all 0.25s;
   display: inline-flex;

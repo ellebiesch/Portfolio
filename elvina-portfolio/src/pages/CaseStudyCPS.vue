@@ -503,7 +503,7 @@ export default {
    rule for consecutive instances of itself. */
 .case-page--cps .conclusion-quote {
   font-size: clamp(22px, 2.3vw, 27px);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.55;
   max-width: none;
 }

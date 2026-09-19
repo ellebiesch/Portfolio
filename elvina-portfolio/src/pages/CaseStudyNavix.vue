@@ -501,7 +501,6 @@ export default {
 </script>
 
 <style scoped>
-/* Navix uses the default accent (#E8623C), so no override needed. */
 .case-page--navix .case-hero {
   --hero-gradient: linear-gradient(150deg, #0f2323 0%, #1a3a3a 45%, #2a5454 78%, #3d7373 100%);
   --hero-eyebrow: #8fd4c4;
@@ -622,7 +621,7 @@ export default {
    shared .conclusion-quote size (clamp 32–56px) was built for the latter. */
 .case-page--navix .conclusion-quote {
   font-size: clamp(22px, 2.3vw, 27px);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.55;
   max-width: none;
 }

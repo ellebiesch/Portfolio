@@ -165,7 +165,7 @@ export default {
 .service-title {
   font-family: var(--display);
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.15;
 }

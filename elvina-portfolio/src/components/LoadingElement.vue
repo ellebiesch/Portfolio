@@ -128,9 +128,9 @@ export default {
   text-align: center;
 }
 .loading-title {
-  font-family: 'Bricolage Grotesque', sans-serif;
+  font-family: var(--display);
   font-size: 22px;
-  font-weight: 800;
+  font-weight: 700;
   color: #1a1a1a;
   margin: 0;
   letter-spacing: -0.3px;

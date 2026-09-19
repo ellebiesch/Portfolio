@@ -178,7 +178,7 @@ export default {
 .quote {
   font-family: var(--display);
   font-size: clamp(32px, 4.5vw, 56px);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.25;
   letter-spacing: -0.02em;
   max-width: 1100px;
@@ -213,7 +213,7 @@ export default {
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
+  background: linear-gradient(135deg, var(--fire-3) 0%, var(--accent) 100%);
   display: flex;
   align-items: center;
   justify-content: center;

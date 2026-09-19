@@ -166,7 +166,7 @@ export default {
 .step-title :deep(em) {
   font-style: normal;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--fire-3);
 }
 .step-body {
   font-size: 15px;
