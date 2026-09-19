@@ -309,13 +309,12 @@
   font-size: 24px;
   line-height: 1.45;
   color: var(--ink);
-  font-weight: 400;
+  font-weight: 300;
   margin-bottom: 32px;
 }
 .prose p.lead::first-letter {
   font-family: var(--display);
   font-size: 1.5em;
-  color: #E8623C !important;
   font-weight: 600;
   color: var(--accent);
   margin-right: 0.05em;
@@ -817,7 +816,7 @@
 .conclusion-quote {
   font-family: var(--display);
   font-size: clamp(32px, 4.5vw, 56px);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.25;
   letter-spacing: -0.025em;
   max-width: 1100px;

@@ -96,7 +96,7 @@ export default {
 .engagement-lead {
   font-family: var(--display);
   font-size: clamp(26px, 2.6vw, 34px);
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
   margin-bottom: 28px;

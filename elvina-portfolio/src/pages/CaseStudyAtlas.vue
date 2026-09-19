@@ -517,9 +517,6 @@ export default {
 </script>
 
 <style scoped>
-.case-page--atlas {
-  --accent: #e8623c;
-}
 .case-page--atlas .case-hero {
   --hero-gradient: linear-gradient(150deg, #14161f 0%, #2d3142 45%, #4f5b7c 78%, #8093b0 100%);
 }
@@ -750,7 +747,7 @@ export default {
    spacing between the two stacked paragraphs. */
 .case-page--atlas .conclusion-quote {
   font-size: clamp(22px, 2.3vw, 27px);
-  font-weight: 400;
+  font-weight: 300;
   line-height: 1.55;
   max-width: none;
 }

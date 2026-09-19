@@ -13,13 +13,38 @@
   --ink-soft: #4a453e;
   --ink-muted: #8e887f;
   --rule: #e8e4dc;
-  --accent: #e8623c;
-  --accent-soft: #d87657;
-  --accent-glow: #f4d4c5;
+  /* AAA-safe (≥7:1 on white, and ≥7:1 for white text placed on top of it —
+     see the contrast note below). --accent-soft stays light: it's only ever
+     used as light text on dark surfaces (footer, testimonial band, dark case
+     hero), where it already clears 9.9:1. */
+  --accent: #953415;
+  --accent-soft: #f8a565;
+  --accent-glow: #f6d9bf;
   --gold: #c8a572;
   --display: 'Bricolage Grotesque', sans-serif;
   --sans: 'Bricolage Grotesque', sans-serif;
-  --mono: 'Geist Mono', monospace;
+  --mono: 'Bricolage Grotesque', sans-serif;
+
+  /* Fire branding — the site's one accent gradient. Every stop is capped at
+     a luminance that keeps white text at ≥7:1 (WCAG AAA), since the
+     gradient sits behind white button labels as well as behind itself as a
+     text fill. That's why it reads as dark-to-ember rather than
+     dark-to-bright-orange — a lighter peak would fail AAA under white text. */
+  --fire-1: #080504;
+  --fire-2: #241009;
+  --fire-3: #5c1c10;
+  --fire-4: #7a2712;
+  --fire-5: #953415;
+  --fire-6: #953415;
+  --fire-gradient: linear-gradient(
+    100deg,
+    var(--fire-1) 0%,
+    var(--fire-2) 24%,
+    var(--fire-3) 46%,
+    var(--fire-4) 68%,
+    var(--fire-5) 88%,
+    var(--fire-6) 100%
+  );
 }
 
 /* ===========================================================
@@ -37,11 +62,22 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--sans);
-  font-weight: 400;
-  line-height: 1.5;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+strong,
+b {
+  font-weight: 600;
+}
+/* Smaller paragraph tier — 14px/21px/300, for secondary body copy. */
+.text-sm {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 300;
 }
 
 /* ===========================================================
@@ -113,14 +149,14 @@ body {
   cursor: pointer;
 }
 .btn-primary {
-  background: var(--ink);
+  background: var(--fire-gradient);
   color: #ffffff;
-  box-shadow: 0 4px 16px -4px rgba(11, 11, 10, 0.2);
+  box-shadow: 0 4px 16px -4px rgba(11, 11, 10, 0.35);
 }
 .btn-primary:hover {
-  background: var(--accent);
+  filter: brightness(1.1);
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px -8px rgba(139, 58, 47, 0.5);
+  box-shadow: 0 12px 28px -8px rgba(168, 57, 26, 0.55);
 }
 .btn-secondary {
   background: transparent;

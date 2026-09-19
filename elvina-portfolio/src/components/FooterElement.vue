@@ -8,9 +8,7 @@
         the product logic as the interface, let's talk.
       </p>
       <a v-reveal="240" href="mailto:elvinagarcia.design@gmail.com" class="footer-email">
-        <span class="email-icon" aria-hidden="true">📩</span>
         <span class="email-text">elvinagarcia.design@gmail.com</span>
-        <span class="arrow">→</span>
       </a>
       <!-- Secondary CTAs from the copy revision — needs a LinkedIn URL and a
            résumé PDF dropped into /public before these go live.
@@ -90,9 +88,10 @@ footer .container {
 .footer-email {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 24px;
   font-family: var(--display);
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(18px, 2.2vw, 24px);
   color: white;
   text-decoration: none;
   padding: 16px 32px;
@@ -108,22 +107,13 @@ footer .container {
 .email-text {
   min-width: 0;
   overflow-wrap: anywhere;
-}
-.email-icon,
-.footer-email .arrow {
-  flex-shrink: 0;
+  text-align: center;
 }
 .footer-email:hover {
   background: var(--accent);
   border-color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 20px 48px -12px rgba(139, 58, 47, 0.6);
-}
-.footer-email .arrow {
-  transition: transform 0.3s;
-}
-.footer-email:hover .arrow {
-  transform: translate(4px, -2px);
 }
 .footer-bottom {
   margin-top: 120px;
@@ -156,7 +146,7 @@ footer .container {
   .footer-email {
     font-size: clamp(20px, 4.4vw, 32px);
     padding: 14px 24px;
-    gap: 10px;
+    gap: 16px;
   }
   .footer-bottom {
     flex-direction: column;
@@ -175,7 +165,7 @@ footer .container {
     font-size: 17px;
     padding: 16px 20px;
     border-radius: 20px;
-    gap: 10px;
+    gap: 14px;
   }
   .footer-sub {
     font-size: 17px;

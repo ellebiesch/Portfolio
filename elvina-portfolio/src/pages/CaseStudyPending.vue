@@ -190,7 +190,7 @@ export default {
 }
 .cps-h1 em {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 300;
 }
 .cps-hero-meta-line {
   font-family: var(--mono);
@@ -361,7 +361,7 @@ export default {
 .coming-soon-title .ish {
   font-style: italic;
   color: var(--accent);
-  font-weight: 400;
+  font-weight: 300;
 }
 .coming-soon-subcopy {
   font-size: 22px;

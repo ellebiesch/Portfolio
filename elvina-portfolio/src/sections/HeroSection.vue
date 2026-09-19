@@ -164,19 +164,21 @@ export default {
 /* Accent rule under the phrase instead of a filled highlight —
    scales with the type and skips descenders. */
 .hero h1 .hl {
-  background: none;
-  color: inherit;
   padding: 0;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 0.06em;
-  text-underline-offset: 0.12em;
-  text-decoration-skip-ink: auto;
+  font-family: var(--display);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--fire-5);
+  background: var(--fire-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /* Both hero paragraphs run the full container row, matching the headline block. */
 .hero-sub {
   font-size: 21px;
   line-height: 1.5;
+  font-weight: 600;
   color: var(--ink);
   margin-bottom: 20px;
   animation: fadeUp 1s ease-out 0.2s both;
