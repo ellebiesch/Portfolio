@@ -3,7 +3,7 @@
     <div class="container">
       <div class="engagement-grid">
         <div v-reveal class="engagement-head">
-          <div class="engagement-eyebrow">Current engagement · November 2025—present</div>
+          <div class="engagement-eyebrow">Current engagement</div>
           <h2 class="engagement-title">Primoro</h2>
         </div>
         <div v-reveal="120" class="engagement-body">
